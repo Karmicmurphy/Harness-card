@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.1.0",
+  "active_project": null,
+  "authority": {
+    "repo": null,
+    "branch": null,
+    "sha": null,
+    "deploy_target": null,
+    "device_or_physical_state": null
+  },
+  "evidence_state": "UNKNOWN",
+  "lane": null,
+  "last_verified_at": null,
+  "notes": "Populate only with non-sensitive current project state. Verify live authority before changing evidence state."
+}
