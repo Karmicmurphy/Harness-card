@@ -1,0 +1,41 @@
+{
+  "name": "Harness Card",
+  "version": "0.1.0",
+  "purpose": "Canonical AI operating harness for intent recovery, continuity, skill routing, bounded execution, proof, learning, and closeout across projects.",
+  "manual_triggers": [
+    "Use Harness Card",
+    "Use Harness Card and continue",
+    "Harness this",
+    "Run the harness"
+  ],
+  "bootstrap_files": [
+    "AGENTS.md",
+    "OPERATING_CONTRACT.md",
+    "ROUTING.md",
+    "state/CURRENT_PROJECT.json",
+    "state/ACTIVE_WORK_ORDER.md",
+    "projects/PROJECT_INDEX.md",
+    "skills/SKILL_SOURCES.md"
+  ],
+  "evidence_states": [
+    "CLAIMED",
+    "IMPLEMENTED_UNPROVEN",
+    "PARTIALLY_PROVEN",
+    "PROVEN_IN_TEST",
+    "PROVEN_LIVE",
+    "FAILED",
+    "BLOCKED",
+    "RETIRED"
+  ],
+  "terminal_states": [
+    "DONE",
+    "BLOCKED",
+    "FAILED",
+    "RETIRED"
+  ],
+  "privacy": {
+    "repository_expected_public": true,
+    "allow_secrets": false,
+    "allow_sensitive_personal_data": false
+  }
+}
