@@ -13,6 +13,19 @@ The user should not need to name internal skills. Route automatically from situa
 
 ## Skill triggers
 
+### Environment Preflight
+Use before BUILD-FIX when:
+- the target device/browser/runtime is known;
+- permissions, autoplay, touch, storage, cache, hardware, or mobile behavior could change implementation;
+- the project previously failed only after reaching the user's device.
+
+Actions:
+- inspect target-platform constraints;
+- search authoritative/current behavior when needed;
+- perform a minimal compatibility spike if uncertainty remains;
+- write the human interaction path before committing architecture.
+
+
 ### Intent Recovery
 Use when:
 - the latest sentence is narrower than the apparent job;
