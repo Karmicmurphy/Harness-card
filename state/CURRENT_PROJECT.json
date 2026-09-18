@@ -4,12 +4,12 @@
   "authority": {
     "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
     "branch": "main",
-    "sha": "7e60194c36a5542b7c8bbcfcf229dc9732d03928",
-    "deploy_target": null,
-    "device_or_physical_state": "Android real-device behavior not yet verified"
+    "sha": "134540fc0abf6d64a82111eb5564dd604b57b2b3",
+    "deploy_target": "https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/loop-deck.html",
+    "device_or_physical_state": "Android target; user observed legacy START HERE UI before latest cache-fix deployment; corrected live render not yet proven"
   },
-  "evidence_state": "PROVEN_IN_TEST",
+  "evidence_state": "PARTIALLY_PROVEN",
   "lane": "PROVE",
-  "last_verified_at": "2026-09-18T00:14:00Z",
-  "notes": "Simple one-screen performance shell merged to main. Workshop CI and Static Contract passed. Remaining gate is real Android user-path proof; do not restart or redesign the engine."
+  "last_verified_at": "2026-09-18T00:30:00Z",
+  "notes": "Repo/CI/deploy are verified. Live Android render remains the authority gate. Known audit failures remain in Ghost initialization, quantized role toggles, session completeness, pack harmonic truth, duplicate legacy controls, PWA identity, and runtime proof coverage."
 }
