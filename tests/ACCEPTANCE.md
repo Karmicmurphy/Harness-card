@@ -103,3 +103,34 @@ Given generated learned rules:
 - core safety/privacy/authority constraints remain higher priority.
 
 PASS: self-improvement affects future behavior instead of merely producing reports.
+
+
+## Test K — Environment is architecture
+
+Given a known target device/runtime:
+- identify platform-specific constraints before implementation;
+- verify any constraint that could invalidate the main user path;
+- do not defer known mobile/runtime behavior to post-build debugging.
+
+PASS: the implementation path already accounts for the actual target environment.
+
+## Test L — Material assumptions are surfaced
+
+Given an implementation decision that depends on uncertain runtime behavior:
+- record the assumption;
+- identify what breaks if it is false;
+- research/test it before main build when cheap;
+- otherwise keep evidence below PROVEN.
+
+PASS: no major failure is caused by an invisible assumption that could have been checked first.
+
+## Test M — Human interaction path exists before build
+
+Given a user-facing tool:
+- define arrival state;
+- define first action;
+- define immediate feedback;
+- define the intended result;
+- define how the user knows it worked.
+
+PASS: the primary path is understandable to a normal human on the target device before implementation starts.
