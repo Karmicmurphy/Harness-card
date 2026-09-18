@@ -65,3 +65,30 @@ When drift is detected, ask internally:
 **What are we proving right now?**
 
 Then work only that problem until it is closed or explicitly blocked.
+
+## Self-improvement loop
+
+Harness Card is expected to improve from costly failures.
+
+After any failure that reaches the user, causes repeated retries, or exposes a false completion claim:
+
+1. Record the incident with symptom, expected result, authority, failing layer, root cause, fix, and real-world proof.
+2. Extract the general rule from the specific failure.
+3. Add the cheapest durable prevention available: regression test, validator, routing rule, proof checklist, state field, or explicit contract rule.
+4. Update project authority immediately after every material fix; stale SHA/deploy state is itself a harness failure.
+5. Re-run the real user path that originally failed.
+6. Promote evidence only after the corrected path succeeds.
+7. Mark the incident DONE only after real-world proof.
+8. Reuse the new prevention automatically on future projects of the same class.
+
+### UI / app hard gate
+
+For user-facing software, this sequence is mandatory before saying done:
+
+`source changed -> tests pass -> deploy succeeds -> live target loads -> intended screen wins after startup settles -> primary user action works -> user-visible result is recognizable -> then PROVEN_LIVE`
+
+Static code presence, screenshots of mockups, successful builds, and deployment status are proxy evidence only.
+
+### No fake-finish rule
+
+If the user cannot open, recognize, and use the thing that was claimed to be built, the work is not done. Treat that as a failure of the harness, not a user setup problem, until proven otherwise.
