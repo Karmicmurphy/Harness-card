@@ -1,28 +1,36 @@
 # Active Work Order
 
 ## TARGET
-One sentence describing the outcome being proved.
+Prove the merged TWIS LOOP DECK simple performance shell on the target Android phone without restarting or redesigning the engine.
 
 ## CURRENT TRUTH
-Verified current facts only. Mark anything else as USER_REPORTED / HISTORICAL / ASSUMED / UNKNOWN.
+- VERIFIED_CURRENT: Authority repo is `Karmicmurphy/Ollie_Twis_Holo_workshop`, branch `main`, SHA `7e60194c36a5542b7c8bbcfcf229dc9732d03928`.
+- VERIFIED_CURRENT: Simple one-screen shell is merged into `app/loop-deck.html`.
+- VERIFIED_CURRENT: Workshop CI and Static Contract passed on the merged change lineage.
+- VERIFIED_CURRENT: Existing V2 engine remains intact behind Advanced.
+- UNKNOWN: Actual Android microphone/audio timing, PWA cache refresh, and full phone interaction on Randy's device after this merge.
+- UNKNOWN: Current public Cloudflare/Pages live URL and access behavior were not proven in this work order.
 
 ## DO NOT
-Hard exclusions, rejected ideas, limits, things not to restart, and things outside current scope.
+- Do not rebuild the Loop Deck engine.
+- Do not replace the simple surface with another feature-heavy dashboard.
+- Do not call the phone experience PROVEN_LIVE until the actual device path is exercised.
+- Do not remove the Advanced V2 screens; they are the engine room.
 
 ## LANE
-DIAGNOSE / DECIDE / RESEARCH / DESIGN / BUILD-FIX / PROVE / HANDOFF / CLOSEOUT
+PROVE
 
 ## PROFESSIONAL FRAME
-What kind of practical reasoning and evidence should lead this task?
+Mobile web audio release engineer + music performance workflow.
 
 ## ONE MOVE
-The smallest coherent action that materially advances the target.
+Open the current main build on the target Android phone and exercise the simple path: load -> KICK/BASS/HATS toggle -> Energy -> Ghost -> Fuck It/Undo -> custom sound -> Save/Load.
 
 ## PROOF
-Observable evidence that validates or falsifies the move.
+Observed real-device behavior with sound output, toggles remaining phase-aligned, Ghost capturing prior audio, local custom sound surviving reload where OPFS is supported, and saved session restoring state.
 
 ## STOP
-The condition that ends this work order.
+Stop when the Android path is either PROVEN_LIVE or BLOCKED/FAILED with a named failing layer and reproducible symptom.
 
 ## PARKING LOT
-Useful ideas that are explicitly not current scope.
+Pitch-preserving stretch, source separation, additional genre packs, richer waveform editing, and any new AI features.
