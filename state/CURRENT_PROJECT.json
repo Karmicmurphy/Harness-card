@@ -1,15 +1,15 @@
 {
   "schema_version": "0.1.0",
-  "active_project": null,
+  "active_project": "TWIS LOOP DECK",
   "authority": {
-    "repo": null,
-    "branch": null,
-    "sha": null,
+    "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
+    "branch": "main",
+    "sha": "7e60194c36a5542b7c8bbcfcf229dc9732d03928",
     "deploy_target": null,
-    "device_or_physical_state": null
+    "device_or_physical_state": "Android real-device behavior not yet verified"
   },
-  "evidence_state": "UNKNOWN",
-  "lane": null,
-  "last_verified_at": null,
-  "notes": "Populate only with non-sensitive current project state. Verify live authority before changing evidence state."
+  "evidence_state": "PROVEN_IN_TEST",
+  "lane": "PROVE",
+  "last_verified_at": "2026-09-18T00:14:00Z",
+  "notes": "Simple one-screen performance shell merged to main. Workshop CI and Static Contract passed. Remaining gate is real Android user-path proof; do not restart or redesign the engine."
 }
