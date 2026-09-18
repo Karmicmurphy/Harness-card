@@ -306,3 +306,23 @@ not:
 > EVERY BYTE EVER CREATED.
 
 That distinction must remain explicit.
+
+
+## Cloudflare
+
+Status: BLOCKED / NOT DIRECTLY INSPECTED
+
+The prior whole-estate pass recovered Cloudflare evidence indirectly from repositories, deployment URLs, issues, and project configuration, but did not have direct Cloudflare account access.
+
+Verified indirect evidence includes:
+- First3 Local runtime identity spring-sun-740b;
+- Digital Scrap Forge temporary worker deployment;
+- Ollie_Twis_Holo_workshop Cloudflare Pages / Workers AI setup;
+- Coilside Cloudflare/OpenNext plus D1/R2 work.
+
+Unresolved:
+- a Digital Scrap Forge issue states spring-sun-740b has its own source-of-truth repository;
+- that repository is not currently discoverable through the connected GitHub inventory/search.
+
+Rule:
+> An inaccessible Cloudflare account or undiscovered source repo must be labeled BLOCKED / UNKNOWN, never silently treated as absent.
