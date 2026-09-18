@@ -91,3 +91,21 @@ Pro Rig autoplay wash and dead controls
 - **BONUS SALVAGE:** The accidental startup wash became a deliberate ocean-atmosphere mechanism.
 - **VERDICT:** BLOCKED
 - **STOP:** Close only after Android retest confirms silence on load and working controls.
+
+
+### INCIDENT
+Android treated as compatibility instead of architecture
+
+- **SYMPTOM:** A phone-first audio prototype was built before Android/WebAudio interaction constraints were verified, causing autoplay-style behavior and non-obvious control response on the actual device.
+- **EXPECTED:** The known Android target should have shaped initialization, interaction, feedback, and proof before implementation.
+- **CURRENT AUTHORITY:** Harness Card operating rules plus TWIS Pro Rig Android test.
+- **LAYER:** CONTRACT / APPLICATION / MOBILE AUDIO
+- **FALSE LEADS:** Styling, deployment platform, missing features.
+- **ROOT CAUSE:** The implementation started from desired features and desktop-like assumptions instead of first proving the target environment and the human interaction path.
+- **FIX:** Add mandatory Environment + Human Interaction Preflight, assumption stop rule, interaction contract, and acceptance tests.
+- **REGRESSION / PREVENTION:** Known device/runtime constraints are architecture. No material platform assumption may pass silently into implementation.
+- **REAL-WORLD PROOF:** PENDING future project where the harness performs preflight before first build and avoids this failure class.
+- **PREVENTION ARTIFACT:** AGENTS preflight, Environment Contract, routing trigger, and acceptance Tests K-M.
+- **BONUS SALVAGE:** The failed mobile behavior produced the intentional ocean-atmosphere layer and a reusable mobile-audio release pattern.
+- **VERDICT:** BLOCKED
+- **STOP:** Close when a future target-device build demonstrates preflight prevented a comparable runtime mismatch.
