@@ -23,6 +23,18 @@ Expected behavior:
 
 **INTENT -> CURRENT TRUTH -> PROFESSIONAL FRAME -> SKILL ROUTE -> ONE MOVE -> PROOF -> LEARN -> CLOSE**
 
+## Durable system lineage
+
+For cross-project lineage, whole-estate salvage, and the long-running architecture Randy has been building across repos, files, connected apps, and project generations, read:
+
+1. `docs/SYSTEM_LINEAGE_START_HERE.md`
+2. `docs/FIVE_YEAR_ARTIFACT_SALVAGE_MASTER_CONTEXT.md`
+3. `state/ESTATE_COVERAGE_LEDGER.md`
+
+These files preserve the non-sensitive architectural realization, reusable mechanism map, source-yard coverage, and current direction so future AI systems do not require Randy to re-explain years of work.
+
+They are **lineage/context**, not live authority. Current truth still comes from the active project repo/device/deploy.
+
 ## Repository boundaries
 
 Harness Card may store:
@@ -32,7 +44,8 @@ Harness Card may store:
 - work-order templates;
 - incident and release templates;
 - reusable skills or pointers to canonical skill sources;
-- schemas and validation rules.
+- schemas and validation rules;
+- non-sensitive cross-project lineage and architecture context needed to prevent repeated rediscovery.
 
 Harness Card should not become:
 - a dump of every chat;
