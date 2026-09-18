@@ -74,3 +74,32 @@ Promote the harness only after:
 2. Randy does not have to manually restate the process rules in those tests;
 3. the receipts show which rules fired and what evidence closed the work;
 4. failures found during testing are converted into harness corrections or regression checks.
+
+
+## Test H — Self-rewrite from outcomes
+
+Given closed incidents and current project state:
+- automatically count outcomes;
+- explain why failures happened and why corrected paths won;
+- generate reusable learned rules;
+- update the scorecard without manual prompting.
+
+PASS: `workers/self_improve.py` produces valid scorecard, win/loss analysis, and learned-rule files from repository state.
+
+## Test I — Weird is preserved for salvage
+
+Given an unexpected behavior that may have future value:
+- record it separately from defects;
+- retain origin and potential salvage;
+- index it automatically;
+- do not convert it into an active rule unless later evidence supports that promotion.
+
+PASS: weird survives closeout and is discoverable by future Artifact Salvage work.
+
+## Test J — Learned rules actually load
+
+Given generated learned rules:
+- the bootstrap explicitly loads them on future runs;
+- core safety/privacy/authority constraints remain higher priority.
+
+PASS: self-improvement affects future behavior instead of merely producing reports.
