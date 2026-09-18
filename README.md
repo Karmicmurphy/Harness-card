@@ -25,15 +25,18 @@ Expected behavior:
 
 ## Durable system lineage
 
-For cross-project lineage, whole-estate salvage, and the long-running architecture Randy has been building across repos, files, connected apps, and project generations, read:
+For cross-project lineage, whole-estate salvage, the origin of the system, and the long-running architecture Randy has been building across repos, files, connected apps, and project generations, read:
 
-1. `docs/SYSTEM_LINEAGE_START_HERE.md`
-2. `docs/FIVE_YEAR_ARTIFACT_SALVAGE_MASTER_CONTEXT.md`
-3. `state/ESTATE_COVERAGE_LEDGER.md`
+1. `docs/ORIGIN_STORY.md`
+2. `docs/SYSTEM_LINEAGE_START_HERE.md`
+3. `docs/FIVE_YEAR_ARTIFACT_SALVAGE_MASTER_CONTEXT.md`
+4. `state/ESTATE_COVERAGE_LEDGER.md`
 
-These files preserve the non-sensitive architectural realization, reusable mechanism map, source-yard coverage, and current direction so future AI systems do not require Randy to re-explain years of work.
+`docs/ORIGIN_STORY.md` explains why this system exists, who the human behind it is in working terms, what he does and does not want from AI, and what future AI systems must not misunderstand.
 
-They are **lineage/context**, not live authority. Current truth still comes from the active project repo/device/deploy.
+The other lineage files preserve the non-sensitive architectural realization, reusable mechanism map, source-yard coverage, and current direction so future AI systems do not require Randy to re-explain years of work.
+
+These files are **lineage/context**, not live authority. Current truth still comes from the active project repo/device/deploy.
 
 ## Repository boundaries
 
