@@ -113,3 +113,43 @@ Repeated failure -> regression test or explicit guardrail.
 This repository is public unless changed elsewhere. Do not commit secrets, credentials, private account data, sensitive personal history, or private project material here.
 
 Use project pointers and non-sensitive operating state instead of copying private source material into the harness.
+
+## Self-improving harness contract
+
+Harness Card is not a passive checklist. It is a learning control system.
+
+A completed incident must leave at least one durable change behind:
+- a stronger rule;
+- a regression test;
+- a validator;
+- a proof gate;
+- a routing trigger;
+- an authority/state correction;
+- or a reusable skill/checklist.
+
+The improvement must target the **class of failure**, not merely the exact line of code that broke.
+
+### Failure-count rule
+
+Track material failures by user-visible attempt:
+- a failed internal CI check that never reaches the user is an internal caught failure;
+- a deployed result that the user opens and finds wrong is a user-facing failure cycle;
+- repeated retries caused by the same unresolved root cause count as repeated failure cycles.
+
+At closeout, report:
+- how many user-facing failure cycles occurred;
+- how many internal failures were caught before release;
+- why each happened;
+- what permanently changed because of each;
+- why the final attempt succeeded.
+
+### Rendered-authority rule
+
+For user-facing interfaces, rendered behavior on the target device/browser outranks:
+1. source code,
+2. unit/static tests,
+3. build output,
+4. deploy status,
+5. generated mockups.
+
+A mockup is design evidence only. Never present visual design approval as implementation proof.
