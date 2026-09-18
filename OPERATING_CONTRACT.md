@@ -153,3 +153,50 @@ For user-facing interfaces, rendered behavior on the target device/browser outra
 5. generated mockups.
 
 A mockup is design evidence only. Never present visual design approval as implementation proof.
+
+
+## Environment contract
+
+Known target environment constraints are governing requirements.
+
+Before implementation, identify which facts are:
+- VERIFIED_CURRENT;
+- USER_REPORTED_CURRENT;
+- ASSUMED;
+- UNKNOWN.
+
+For any UNKNOWN that can invalidate the user path, perform research, inspection, or a minimal spike before building the main solution.
+
+Examples include:
+- Android/iOS browser audio restrictions;
+- autoplay and user-gesture requirements;
+- service-worker/cache behavior;
+- mobile viewport/touch differences;
+- browser API availability;
+- hardware/performance limits;
+- permissions;
+- local storage/persistence semantics.
+
+A known device/browser is not "just deployment detail." It is part of architecture.
+
+### Assumption budget
+
+No material platform assumption may survive into implementation undocumented.
+
+For each material assumption:
+1. state it;
+2. say what breaks if false;
+3. verify it cheaply if possible;
+4. otherwise mark the resulting work IMPLEMENTED_UNPROVEN.
+
+### Interaction contract
+
+For every primary control or workflow, define:
+- user action;
+- immediate visual feedback;
+- intended system effect;
+- intended audible/physical/data result where relevant;
+- failure feedback;
+- target-device behavior.
+
+For music/audio tools, every primary control should have one obvious musical job unless complexity is explicitly requested.
