@@ -73,3 +73,21 @@ Loop Deck failure-cycle closeout
 - **BONUS SALVAGE:** GitHub Pages was sufficient; Cloudflare was unnecessary for this release path.
 - **VERDICT:** DONE
 - **STOP:** Closeout complete; future Loop Deck feature defects belong to a new work order.
+
+
+### INCIDENT
+Pro Rig autoplay wash and dead controls
+
+- **SYMPTOM:** On Android the page produced an immediate wash/noise texture, while PLAY and other controls appeared to do nothing useful.
+- **EXPECTED:** The page should be silent on entry; first user interaction should initialize audio; controls should cause obvious audible and visual changes.
+- **CURRENT AUTHORITY:** `Karmicmurphy/Ollie_Twis_Holo_workshop` / `main`, Pro Rig prototype.
+- **LAYER:** APPLICATION / MOBILE AUDIO / CONTRACT
+- **FALSE LEADS:** Button styling, missing deployment, Cloudflare.
+- **ROOT CAUSE:** Tone/WebAudio graph and continuous atmosphere sources were created and started at script evaluation time instead of behind a user gesture; the control model also lacked strong one-control-one-audible-job behavior.
+- **FIX:** Lazy-create the entire audio graph on first interaction, silence startup, make deck buttons control stem groups, make scenes/stems/macros auto-start safely, and preserve the wash as an intentional ocean atmosphere stem.
+- **REGRESSION / PREVENTION:** Mobile WebAudio prototypes must start silent, initialize inside a user gesture, and every primary control must produce an observable state change plus an audible job.
+- **REAL-WORLD PROOF:** PENDING user retest after deploy.
+- **PREVENTION ARTIFACT:** Incident rule plus Weird Salvage entry for the accidental ocean wash.
+- **BONUS SALVAGE:** The accidental startup wash became a deliberate ocean-atmosphere mechanism.
+- **VERDICT:** BLOCKED
+- **STOP:** Close only after Android retest confirms silence on load and working controls.
