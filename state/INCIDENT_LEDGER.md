@@ -33,11 +33,11 @@ Loop Deck looked done but phone showed old UI
 - **ROOT CAUSE:** Two independent causes: the legacy guide forcibly reopened itself after the simple shell, then the prior service worker continued serving cached application assets.
 - **FIX:** Remove guide auto-open; bump asset/cache versions; make script/style/worker fetches network-first with cache fallback.
 - **REGRESSION / PREVENTION:** Runtime landing-screen proof is required for UI changes; static file/string tests are insufficient.
-- **REAL-WORLD PROOF:** PENDING. User has not yet shown the corrected simple PERFORM surface on the target Android phone after cache-fix deployment.
+- **REAL-WORLD PROOF:** USER_REPORTED_CURRENT success. User explicitly closed the Loop Deck run as a win after using the current live link.
 - **PREVENTION ARTIFACT:** Regression test blocking the known guide auto-open plus this incident record.
 - **BONUS SALVAGE:** GitHub Pages alone is sufficient for the Loop Deck; Cloudflare is not required for this test path.
-- **VERDICT:** BLOCKED
-- **STOP:** Stop promotion to PROVEN_LIVE until a phone screenshot/interaction proves the corrected landing surface.
+- **VERDICT:** DONE
+- **STOP:** User reported the current live Loop Deck as a win; remaining feature-quality issues are future work, not blockers to this incident.
 
 ### INCIDENT
 Harness Card preserved repo state but failed to prevent false completion
@@ -50,8 +50,26 @@ Harness Card preserved repo state but failed to prevent false completion
 - **ROOT CAUSE:** Harness Card is a repo-based operating protocol, not an automatically executing runtime guard; its proof rules were applied too weakly and its active project SHA became stale after follow-up patches.
 - **FIX:** Treat rendered user path as final authority for UI work; update active authority after every material patch; record deploy target and current evidence honestly.
 - **REGRESSION / PREVENTION:** UI DONE rule: repo changed -> deploy complete -> live target loaded -> expected screen verified -> user path exercised -> only then PROVEN_LIVE.
-- **REAL-WORLD PROOF:** PENDING.
-- **PREVENTION ARTIFACT:** Incident ledger entry and corrected active work order.
+- **REAL-WORLD PROOF:** USER_REPORTED_CURRENT success of the final Loop Deck path, followed by explicit request to treat the run as a win and make the harness learn from it.
+- **PREVENTION ARTIFACT:** Incident ledger entry, rendered-authority rule, failure-count rule, self-improvement loop, and UI/app hard gate.
 - **BONUS SALVAGE:** Harness Card remains useful for continuity, but it must never be represented as an autonomous plugin or automatic enforcement layer.
-- **VERDICT:** BLOCKED
-- **STOP:** Stop calling the harness successful for UI proof until it enforces/records the live-render gate.
+- **VERDICT:** DONE
+- **STOP:** The harness has now been changed to require the missing live-render and learning gates.
+
+
+### INCIDENT
+Loop Deck failure-cycle closeout
+
+- **SYMPTOM:** Multiple iterations were needed before the user accepted the live Loop Deck as usable.
+- **EXPECTED:** One implementation pass should produce a recognizable, usable live artifact without requiring the user to debug the release process.
+- **CURRENT AUTHORITY:** Loop Deck repo `Karmicmurphy/Ollie_Twis_Holo_workshop`; Harness Card repo `Karmicmurphy/Harness-card`.
+- **LAYER:** APPLICATION / TEST-CI / DEPLOY / EDGE / CONTRACT
+- **FALSE LEADS:** Cloudflare requirement, missing plugin, absent implementation.
+- **ROOT CAUSE:** Completion was promoted from proxy evidence too early; legacy startup behavior, cache persistence, and insufficient runtime proof were not treated as first-class release risks.
+- **FIX:** Remove legacy override, repair cache/update behavior, redeploy, then let the user exercise the live path.
+- **REGRESSION / PREVENTION:** UI hard gate, rendered-authority rule, failure-count rule, sibling-failure audit after first live failure, and self-improvement loop.
+- **REAL-WORLD PROOF:** USER_REPORTED_CURRENT: user explicitly said to chalk the result up as a win.
+- **PREVENTION ARTIFACT:** `SELF_IMPROVEMENT_LOOP.md` plus updated `AGENTS.md` and `OPERATING_CONTRACT.md`.
+- **BONUS SALVAGE:** GitHub Pages was sufficient; Cloudflare was unnecessary for this release path.
+- **VERDICT:** DONE
+- **STOP:** Closeout complete; future Loop Deck feature defects belong to a new work order.
