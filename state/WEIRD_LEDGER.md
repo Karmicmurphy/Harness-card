@@ -27,3 +27,15 @@ Legacy guide overrode the new Loop Deck landing surface
 - **PRESERVE:** YES
 - **LINKED INCIDENT:** Loop Deck looked done but phone showed old UI
 - **NOTES:** Preserve the mechanism concept, not the buggy forced navigation.
+
+
+### WEIRD
+Accidental ocean wash on Pro Rig load
+
+- **OBSERVED:** The Pro Rig emitted an immediate wash/noise texture as soon as the page opened, before the user pressed PLAY.
+- **WHY WEIRD:** It was unintended startup audio caused by eager audio-engine initialization, but the user liked the ocean-wave character.
+- **ORIGIN:** TWIS PRO RIG first Android live test.
+- **POTENTIAL SALVAGE:** Intentional ocean/surf atmosphere stem, ambient transition bed, preload/idle soundscape, RUSTWIRE environment layer.
+- **PRESERVE:** YES
+- **LINKED INCIDENT:** Pro Rig autoplay wash and dead controls
+- **NOTES:** Preserve the sonic idea, not the autoplay behavior. The corrected rig now makes ocean atmosphere an explicit stem after user interaction.
