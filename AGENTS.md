@@ -102,3 +102,35 @@ If the user cannot open, recognize, and use the thing that was claimed to be bui
 - Learned rules may strengthen proof, routing, and prevention behavior.
 - Core safety, privacy, authority, and user-locked constraints outrank generated rules.
 - `state/WEIRD_LEDGER.md` is salvage memory, not mandatory behavior. Search it when Artifact Salvage, unusual mechanisms, edge cases, or prior weird outcomes may help.
+
+
+## Environment + Human Interaction Preflight
+
+Before BUILD-FIX or DESIGN becomes implementation, establish the actual use environment and human interaction path.
+
+For software, explicitly resolve:
+- target device class and operating system;
+- browser/runtime;
+- input method: touch, mouse, keyboard, microphone, camera, MIDI, etc.;
+- permission and user-gesture requirements;
+- network/offline expectations;
+- install/PWA/cache behavior;
+- screen size/orientation constraints;
+- performance limits;
+- what the user expects one tap/click to do.
+
+If any of these materially affect architecture and are UNKNOWN, research or test them before building.
+
+### Assumption stop rule
+
+Do not silently fill a platform/runtime gap with "this should work."
+
+When the target is known (for example Android phone), platform-specific behavior is part of the problem definition, not a later compatibility task.
+
+### Human-path sketch
+
+Before implementation, write the shortest human path:
+
+`user arrives -> user sees X -> user does Y -> system responds Z -> user knows it worked because Q`
+
+If that path is unclear, implementation is premature.
