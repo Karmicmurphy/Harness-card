@@ -6,10 +6,10 @@
     "branch": "main",
     "sha": "b9f0484e6673f79ce81bca74c770ee8b089d34cf",
     "deploy_target": "https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/pro-rig.html",
-    "device_or_physical_state": "V4 deployed. Desktop + phone-sized Chromium browser proof passed on PR branch; main CI rerun in progress. Real Android and real PC live sonic proof still pending."
+    "device_or_physical_state": "V4 deployed. Main CI/static/browser proof green. Live deployed browser automation passed PLAY/BREAK/VOCAL HIT/BUILD/ECHO/WASH/STOP with no visible errors, but reported PACK: FALLBACK OK. Real Android, real PC, sampled-pack live path, and sonic acceptance remain pending."
   },
-  "evidence_state": "PROVEN_IN_TEST",
+  "evidence_state": "PARTIALLY_PROVEN",
   "lane": "PROVE",
-  "last_verified_at": "2026-09-19T02:18:00Z",
-  "notes": "Chat Software Harness is active. PR #11 browser-proof harness merged to main. Automated proof now exercises silent entry, PLAY, running AudioContext, BREAK, VOCAL HIT, BUILD, ECHO, WASH and STOP at desktop and Pixel-sized Chromium. This supplements but does not replace real Android/PC listening proof."
+  "last_verified_at": "2026-09-19T02:24:00Z",
+  "notes": "Chat Software Harness first field trial has now reached deployed live-browser proof. Live automation run 1f7ad786-6ce2-47c2-8e52-27b8951d1155 passed the interaction path. Do not call PROVEN_LIVE: the run used FALLBACK OK rather than PACK READY and did not prove real Android/PC audio quality."
 }
