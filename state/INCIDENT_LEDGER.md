@@ -127,3 +127,57 @@ Controls work but the music still sounds like a browser synth experiment
 - **BONUS SALVAGE:** The current V3 interaction surface, gesture-safe audio startup, scene/stem control model, and ocean-atmosphere mechanism are reusable once connected to better musical material.
 - **VERDICT:** BLOCKED
 - **STOP:** Do not add more UI or synth features until the sonic target and source-material strategy are proven.
+
+
+### INCIDENT
+Pro Rig prototype was treated as product progress before sonic proof
+
+- **SYMPTOM:** Multiple Pro Rig iterations added professional-looking controls and technically valid audio behavior while the user still heard toy/browser-synth output.
+- **EXPECTED:** The governing success criterion should have been audible professional musical quality first, with UI/control progress secondary.
+- **CURRENT AUTHORITY:** TWIS Pro Rig history through V3 and Android screen-recording evidence.
+- **LAYER:** CREATIVE / CONTRACT / APPLICATION
+- **FALSE LEADS:** More buttons, more synth voices, more scene labels, more visual resemblance to professional decks.
+- **ROOT CAUSE:** Product intent was repeatedly translated into implementation nouns instead of the user's actual outcome: perform convincing finished-sounding music without needing producer knowledge.
+- **FIX:** Create and enforce a sonic acceptance contract; require a blind 30-second musical pass before UI growth or professional-sound claims.
+- **REGRESSION / PREVENTION:** For creative tools, define the perceptual/output acceptance test before selecting implementation mechanisms.
+- **REAL-WORLD PROOF:** USER_REPORTED_CURRENT: prior versions failed the sonic target despite working controls.
+- **PREVENTION ARTIFACT:** SONIC_ACCEPTANCE.md and V4 five-pass Compass/Salvage record.
+- **BONUS SALVAGE:** Existing phone interaction and scene-control concepts remain reusable.
+- **VERDICT:** BLOCKED
+- **STOP:** Close after a live V4 listen meets the sonic contract on target devices.
+
+
+### INCIDENT
+Pro Rig V4 first CI pass hit stale V3 contract
+
+- **SYMPTOM:** V4 JavaScript syntax and remote sample reachability passed, but Python contract collection failed because an older test still required the V3 script name.
+- **EXPECTED:** A new version should update/retire version-specific regression assertions as part of the same bounded change.
+- **CURRENT AUTHORITY:** Workshop branch `feature/pro-rig-v4-cross-device-sonic`; failing run 35414841606.
+- **LAYER:** TEST-CI / CONTRACT
+- **FALSE LEADS:** V4 engine syntax, sample CDN reachability, audio code.
+- **ROOT CAUSE:** The implementation replaced the V3 entry script without updating the old V3-specific contract before the first CI run.
+- **FIX:** Update the historical Amphitheater contract to assert V4 wiring and current engine behavior.
+- **REGRESSION / PREVENTION:** Version replacement checklist must inspect tests that pin old entrypoints before first push/merge.
+- **REAL-WORLD PROOF:** PENDING rerun after test correction.
+- **PREVENTION ARTIFACT:** Updated contract test plus this incident.
+- **BONUS SALVAGE:** CI correctly caught stale test authority before merge.
+- **VERDICT:** BLOCKED
+- **STOP:** Close when corrected CI passes.
+
+
+### INCIDENT
+Cross-device claim outran PC proof
+
+- **SYMPTOM:** The project goal expanded to "same rig on phone and PC," but only Android interaction had direct user proof.
+- **EXPECTED:** Cross-device support must be proven on at least one target phone browser and one target desktop browser before being called working everywhere.
+- **CURRENT AUTHORITY:** V4 branch targets one responsive web app; Android prior evidence exists; desktop live evidence is not yet recorded.
+- **LAYER:** CONTRACT / APPLICATION / TEST-CI
+- **FALSE LEADS:** Responsive CSS or a shared URL alone proving cross-device behavior.
+- **ROOT CAUSE:** Shared web technology was treated as implied cross-device proof rather than an implementation strategy requiring separate runtime verification.
+- **FIX:** Same code path plus desktop and Android live-path proof; add runtime diagnostics and fallback audio assets.
+- **REGRESSION / PREVENTION:** Any "works on phone and PC" claim requires separate target-device evidence records.
+- **REAL-WORLD PROOF:** PENDING.
+- **PREVENTION ARTIFACT:** V4 diagnostics and cross-device work-order proof gate.
+- **BONUS SALVAGE:** One web codebase remains the right architecture if both device proofs pass.
+- **VERDICT:** BLOCKED
+- **STOP:** Close only after both phone and PC paths are exercised.
