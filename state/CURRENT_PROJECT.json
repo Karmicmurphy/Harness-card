@@ -3,13 +3,13 @@
   "active_project": "TWIS PRO RIG V4 / LOOP DECK",
   "authority": {
     "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
-    "branch": "feature/pro-rig-v4-cross-device-sonic",
-    "sha": "34c486f5e5a7b8dc3033568972063e5e64925b09",
-    "deploy_target": "PENDING merge -> https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/pro-rig.html",
-    "device_or_physical_state": "Android V3 interaction proven; V4 phone and PC live proof pending"
+    "branch": "main",
+    "sha": "d5527703b348b65956ea4ac8a1792cc02326480f",
+    "deploy_target": "https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/pro-rig.html",
+    "device_or_physical_state": "V4 deployed by GitHub Pages. Branch and main CI/static/build/sample-reachability proofs passed. Android and PC live sonic proof still pending."
   },
-  "evidence_state": "IMPLEMENTED_UNPROVEN",
-  "lane": "BUILD-FIX -> PROVE",
-  "last_verified_at": "2026-09-19T02:12:00Z",
-  "notes": "V4 replaces browser-synth-first approach with CC0 sample-backed drums/voice, phrase-based arrangement, cross-device fallbacks, runtime diagnostics, and existing Loop Deck salvage. First V4 CI exposed a stale V3 contract and was corrected; rerun pending."
+  "evidence_state": "PROVEN_IN_TEST",
+  "lane": "PROVE",
+  "last_verified_at": "2026-09-19T02:14:00Z",
+  "notes": "V4 is merged and deployed. CI verifies JS syntax, contracts, build, remote CC0 pack reachability and fallback wiring. Do not promote to PROVEN_LIVE until the same deployed URL is exercised on Android and PC and the user accepts the sonic result."
 }
