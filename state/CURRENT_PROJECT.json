@@ -1,15 +1,15 @@
 {
   "schema_version": "0.1.0",
-  "active_project": "TWIS PRO RIG / LOOP DECK",
+  "active_project": "TWIS PRO RIG V4 / LOOP DECK",
   "authority": {
     "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
-    "branch": "main",
-    "sha": "43bc7f67b3988b56dcd6987594e0a84160e0041f",
-    "deploy_target": "https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/pro-rig.html",
-    "device_or_physical_state": "USER_REPORTED_CURRENT: Android interaction works; user screen recording proves controls respond, but sonic quality remains below professional live-set target"
+    "branch": "feature/pro-rig-v4-cross-device-sonic",
+    "sha": "34c486f5e5a7b8dc3033568972063e5e64925b09",
+    "deploy_target": "PENDING merge -> https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/pro-rig.html",
+    "device_or_physical_state": "Android V3 interaction proven; V4 phone and PC live proof pending"
   },
-  "evidence_state": "PARTIALLY_PROVEN",
-  "lane": "DIAGNOSE",
-  "last_verified_at": "2026-09-19T01:55:00Z",
-  "notes": "Interaction path is proven on Android. Musical-quality target is not proven. Current blocker is sonic architecture/content quality, not button wiring or deployment."
+  "evidence_state": "IMPLEMENTED_UNPROVEN",
+  "lane": "BUILD-FIX -> PROVE",
+  "last_verified_at": "2026-09-19T02:12:00Z",
+  "notes": "V4 replaces browser-synth-first approach with CC0 sample-backed drums/voice, phrase-based arrangement, cross-device fallbacks, runtime diagnostics, and existing Loop Deck salvage. First V4 CI exposed a stale V3 contract and was corrected; rerun pending."
 }
