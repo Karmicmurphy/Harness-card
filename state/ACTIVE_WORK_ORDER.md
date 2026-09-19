@@ -1,43 +1,50 @@
 # Active Work Order
 
 ## TARGET
-Stop iterating UI and define the sonic acceptance target for TWIS Pro Rig before any further musical-engine changes.
+Deliver one TWIS Pro Rig build that works from the same URL on Android phone and PC and sounds like an intentional professional melodic electronic performance, while preserving advanced Loop Deck import/loop capability.
 
 ## CURRENT TRUTH
-- USER_REPORTED_CURRENT: Android screen recording proves controls, scenes, BPM/scale, stems, and macros respond.
-- USER_REPORTED_CURRENT: The audible result still sounds like a browser synth experiment, not a professional amphitheater live set.
-- VERIFIED_CURRENT: Current authority is `Karmicmurphy/Ollie_Twis_Holo_workshop` / `main` / `43bc7f67b3988b56dcd6987594e0a84160e0041f`.
-- VERIFIED_CURRENT: GitHub Pages deploy target is `https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/pro-rig.html`.
-- DIAGNOSIS: The main failure is not Android interaction anymore. It is that we never established a sonic acceptance contract and kept substituting synth mechanisms/UI features for professional musical content.
+- Android V3 interaction is USER_REPORTED_CURRENT and proven by screen recording.
+- V3 sonic quality failed the user's professional-live-set target.
+- V4 is implemented on `feature/pro-rig-v4-cross-device-sonic`.
+- V4 uses CC0 sampled drums and CC0 voice texture when reachable, deterministic synth fallbacks, phrase-based harmony/melody, quantized scenes, build/drop transitions, sidechain-style ducking, master dynamics, and runtime diagnostics.
+- The existing advanced Loop Deck remains available through LOOPS / IMPORT rather than being rebuilt.
+- First V4 CI caught a stale V3 contract test; that test has been corrected.
+- Live V4 phone and PC proof are still pending.
 
 ## DO NOT
-- Do not add more controls.
-- Do not add another UI redesign.
-- Do not call this a browser limitation.
-- Do not claim professional sound from interaction proof.
-- Do not continue implementation before the sonic target is explicit.
+- Do not add cosmetic UI work unless required by the target-device path.
+- Do not claim cross-device success from responsive CSS alone.
+- Do not call CI success sonic proof.
+- Do not replace proven Loop Deck subsystems unnecessarily.
+- Do not blame Android/PC before checking the actual runtime path.
 
 ## LANE
-DIAGNOSE -> RESEARCH
+BUILD-FIX -> PROVE
 
 ## PROFESSIONAL FRAME
-Live electronic music producer + sound designer + performance-rig engineer.
+Electronic music producer + live-performance engineer + browser audio/reliability engineer.
+
+## SKILLS / MECHANISMS
+Artifact Compass, Artifact Salvage, Proof Gate, Environment Preflight, Rabbit-Hole Governor, Cost & Complexity Challenge.
 
 ## ONE MOVE
-Create a `SONIC_ACCEPTANCE.md` defining what the first 30 seconds must sound like, then run Artifact Compass + Artifact Salvage against that contract to find lawful/open/free mechanisms, sample sources, sequencing/arrangement patterns, effects, vocal assets, and mix/master approaches.
+Finish V4 CI, merge/deploy only if clean, then exercise the identical live URL on Android and PC against the same sonic/human-path contract.
 
 ## PROOF
-Before another implementation pass, the sonic contract must make it possible to answer YES/NO to:
-- Does PLAY produce a coherent piece of music?
-- Do drums sound like records, not test tones?
-- Does bass move musically with harmony?
-- Are chords/melodies phrased rather than merely repeated?
-- Are vocals/atmospheres textural and intentional?
-- Do BUILD/DROP/BREAK/PEAK sound like arrangement transitions?
-- Does the mix have convincing low-end, width, dynamics, and loudness on the target phone/headphones?
+Required:
+1. syntax/contracts/build pass;
+2. rights-clean remote performance pack URLs reachable;
+3. page opens silent;
+4. PLAY produces coherent music;
+5. stems/scenes/BUILD/DROP/VOCAL HIT have audible musical effects;
+6. network sample failure leaves a usable fallback engine;
+7. Android live path passes;
+8. PC live path passes;
+9. user accepts sonic result as materially closer to professional live-set target.
 
 ## STOP
-Stop after the sonic contract and source/mechanism shortlist are established. No implementation yet.
+DONE only after both device paths and sonic target are proven. Otherwise remain PARTIALLY_PROVEN/BLOCKED with exact failing layer.
 
 ## PARKING LOT
-Further UI polish, more scene buttons, extra deck modes, recording/export, visualizers, and nonessential controls.
+Offline vendoring of binary sample assets, Signalsmith pitch-lock integration, deeper stem separation, additional sound packs, visualizers.
