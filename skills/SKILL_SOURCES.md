@@ -25,6 +25,7 @@ Known reusable skills include:
 - capability-downshift
 - market-want-board
 - scrap-built-tiny-house-salvage
+- scam-eyes
 
 ## Harness-local canonical skills
 
