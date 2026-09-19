@@ -4,6 +4,8 @@
 Deliver one TWIS Pro Rig build that works from the same URL on Android phone and PC and sounds like an intentional professional melodic electronic performance, while preserving advanced Loop Deck import/loop capability.
 
 ## CURRENT TRUTH
+- USER-PATH PROOF: Live deployed browser automation passed PLAY, BREAK, VOCAL HIT, BUILD, ECHO, WASH, and STOP without visible errors.
+- SONIC RISK: That live run reported `PACK: FALLBACK OK`, so the intended sampled performance pack is not yet proven live.
 - VERIFIED_CURRENT: Chat Software Harness is active from `Karmicmurphy/Harness-card/skills/chat-software-harness/SKILL.md`.
 - Android V3 interaction is USER_REPORTED_CURRENT and proven by screen recording.
 - V3 sonic quality failed the user's professional-live-set target.
@@ -31,7 +33,7 @@ Electronic music producer + live-performance engineer + browser audio/reliabilit
 Artifact Compass, Artifact Salvage, Proof Gate, Environment Preflight, Rabbit-Hole Governor, Cost & Complexity Challenge.
 
 ## ONE MOVE
-Exercise the identical deployed V4 URL on Android and PC against the same sonic/human-path contract; fix only the failing layer revealed by real-device evidence.
+Prove why the live deployed browser used FALLBACK OK instead of PACK READY, then exercise the identical deployed V4 URL on real Android and real PC against the same sonic/human-path contract; fix only the failing layer revealed by evidence.
 
 ## PROOF
 Required:
