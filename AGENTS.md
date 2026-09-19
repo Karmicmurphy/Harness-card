@@ -42,6 +42,8 @@ The agent is responsible for:
 
 `Harness this` or `Run the harness` may be treated as equivalent shorthand.
 
+`Chat build mode` means load `skills/chat-software-harness/SKILL.md`, keep the current Chat as the software command center, execute with available Chat tools first, and delegate only a bounded missing capability rather than routing software work away merely because it contains code.
+
 ## Hard rules
 
 - Current verified truth outranks memory, stale docs, old handoffs, and assistant summaries.
