@@ -181,3 +181,21 @@ Cross-device claim outran PC proof
 - **BONUS SALVAGE:** One web codebase remains the right architecture if both device proofs pass.
 - **VERDICT:** BLOCKED
 - **STOP:** Close only after both phone and PC paths are exercised.
+
+
+### INCIDENT
+Harness scorecard stale during first Chat Software Harness field trial
+
+- **SYMPTOM:** `state/HARNESS_SCORECARD.json` still reported TWIS LOOP DECK at old SHA `134540fc0abf6d64a82111eb5564dd604b57b2b3`, zero incidents, zero wins, and zero losses while the Incident Ledger and current authority already contained active TWIS Pro Rig V4 work and multiple incidents.
+- **EXPECTED:** Generated scorecard should reflect current authority and summarize recorded outcomes closely enough to be trusted as a derived view.
+- **CURRENT AUTHORITY:** `Karmicmurphy/Harness-card` / `main`; first formal Chat Software Harness field trial.
+- **LAYER:** AUTHORITY / LEARNING / HARNESS
+- **FALSE LEADS:** Missing incidents, missing project state, user failure to request a refresh.
+- **ROOT CAUSE:** UNKNOWN; either the self-improvement generator has not rerun after current changes or its parser/generation path is not ingesting the current ledger/state correctly.
+- **FIX:** Treat the scorecard as stale derived data until its generation path is rerun and verified against CURRENT_PROJECT + INCIDENT_LEDGER.
+- **REGRESSION / PREVENTION:** A field-trial closeout must compare generated scorecard authority/counts against canonical state before trusting the scorecard.
+- **REAL-WORLD PROOF:** PENDING scorecard regeneration/verification.
+- **PREVENTION ARTIFACT:** First field-trial log plus this incident.
+- **BONUS SALVAGE:** The mismatch itself is a useful Fresh-Brain/Doctor check: derived state must reconcile with canonical state.
+- **VERDICT:** BLOCKED
+- **STOP:** Close when generated scorecard reflects the current project and recorded incidents.
