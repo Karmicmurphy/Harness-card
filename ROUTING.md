@@ -58,6 +58,19 @@ Use when:
 - existing old code, docs, systems, research, hardware, workflows, or failed projects may contain reusable mechanisms;
 - the user explicitly wants salvage/reuse rather than replacement.
 
+### Creative Output Quality Recovery
+Use automatically when:
+- a creative/audio tool technically works but the user says the result sounds/looks wrong, cheap, generic, toy-like, or unlike the reference outcome;
+- interaction proof exists but perceptual quality still fails;
+- repeated implementation passes are adding controls/features without improving the actual output.
+
+Actions:
+- recover the perceptual/output target in plain language;
+- define an acceptance contract before more implementation;
+- route Artifact Compass + Artifact Salvage automatically for source material, mechanisms, references, and reusable prior work;
+- prefer better source material/arrangement/mix over more UI;
+- require target-device/listening proof before promotion.
+
 ### Cost & Complexity Challenge
 Use before introducing substantial new infrastructure, dependencies, paid services, complex frameworks, or agent swarms.
 
