@@ -58,6 +58,32 @@ Use when:
 - existing old code, docs, systems, research, hardware, workflows, or failed projects may contain reusable mechanisms;
 - the user explicitly wants salvage/reuse rather than replacement.
 
+### Chat Software Harness
+Use automatically for software/repo/build/debug work when the user wants the work done interactively in Chat or when Chat already has the tools needed to execute the job.
+
+Canonical skill:
+`skills/chat-software-harness/SKILL.md`
+
+Default behavior:
+- keep Chat as the command center;
+- recover intent and live authority;
+- inspect before modifying;
+- salvage before rebuilding;
+- execute with current-session tools first;
+- apply proof gates before claiming completion;
+- write back authority/handoff state;
+- do not route to Codex, Work, Astra, or another agent merely because code is involved.
+
+Delegate only the smallest missing execution packet when a capability is genuinely unavailable here or a bounded autonomous grind is materially more efficient.
+
+Trigger phrases include:
+- “Chat build mode”;
+- “use the chat software harness”;
+- “build it here”;
+- “do this in chat, not Codex”;
+- “use Harness Card and build/fix this”;
+- equivalent intent.
+
 ### Creative Output Quality Recovery
 Use automatically when:
 - a creative/audio tool technically works but the user says the result sounds/looks wrong, cheap, generic, toy-like, or unlike the reference outcome;
