@@ -26,6 +26,15 @@ Known reusable skills include:
 - market-want-board
 - scrap-built-tiny-house-salvage
 
+## Harness-local canonical skills
+
+These skills are canonical in Harness Card because they define harness behavior rather than project/product behavior:
+
+- `chat-software-harness`
+  - canonical path: `skills/chat-software-harness/SKILL.md`
+  - purpose: make ordinary interactive Chat the default software command center; orchestrate authority recovery, salvage-first execution, proof, state writeback, and bounded delegation
+  - source policy: do not duplicate Artifact Compass, Artifact Salvage, Proof Gate, or other canonical salvage-suite skills inside it; route to them
+
 ## Source-of-truth rule
 
 Before copying any skill into Harness Card:
