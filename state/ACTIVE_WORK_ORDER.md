@@ -6,10 +6,11 @@ Deliver one TWIS Pro Rig build that works from the same URL on Android phone and
 ## CURRENT TRUTH
 - Android V3 interaction is USER_REPORTED_CURRENT and proven by screen recording.
 - V3 sonic quality failed the user's professional-live-set target.
-- V4 is implemented on `feature/pro-rig-v4-cross-device-sonic`.
+- V4 is merged to `main` at `d5527703b348b65956ea4ac8a1792cc02326480f`.
 - V4 uses CC0 sampled drums and CC0 voice texture when reachable, deterministic synth fallbacks, phrase-based harmony/melody, quantized scenes, build/drop transitions, sidechain-style ducking, master dynamics, and runtime diagnostics.
 - The existing advanced Loop Deck remains available through LOOPS / IMPORT rather than being rebuilt.
-- First V4 CI caught a stale V3 contract test; that test has been corrected.
+- V4 branch and main Workshop CI + Static Contract pass; remote CC0 pack reachability and static build pass.
+- GitHub Pages deployment completed successfully.
 - Live V4 phone and PC proof are still pending.
 
 ## DO NOT
@@ -29,7 +30,7 @@ Electronic music producer + live-performance engineer + browser audio/reliabilit
 Artifact Compass, Artifact Salvage, Proof Gate, Environment Preflight, Rabbit-Hole Governor, Cost & Complexity Challenge.
 
 ## ONE MOVE
-Finish V4 CI, merge/deploy only if clean, then exercise the identical live URL on Android and PC against the same sonic/human-path contract.
+Exercise the identical deployed V4 URL on Android and PC against the same sonic/human-path contract; fix only the failing layer revealed by real-device evidence.
 
 ## PROOF
 Required:
