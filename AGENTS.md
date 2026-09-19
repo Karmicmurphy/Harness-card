@@ -44,6 +44,8 @@ The agent is responsible for:
 
 `Chat build mode` means load `skills/chat-software-harness/SKILL.md`, keep the current Chat as the software command center, execute with available Chat tools first, and delegate only a bounded missing capability rather than routing software work away merely because it contains code.
 
+`Business build mode` means load `skills/business-operator-harness/SKILL.md`, recover the product/business state, and own the path from demand and offer through distribution, transaction, fulfillment, measurement, and the next evidence-based experiment without requiring Randy to become a marketing expert or social-media personality.
+
 ## Hard rules
 
 - Current verified truth outranks memory, stale docs, old handoffs, and assistant summaries.
