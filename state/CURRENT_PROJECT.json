@@ -1,15 +1,15 @@
 {
   "schema_version": "0.1.0",
-  "active_project": "TWIS LOOP DECK",
+  "active_project": "TWIS PRO RIG / LOOP DECK",
   "authority": {
     "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
     "branch": "main",
-    "sha": "134540fc0abf6d64a82111eb5564dd604b57b2b3",
-    "deploy_target": "https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/loop-deck.html",
-    "device_or_physical_state": "USER_REPORTED_CURRENT: live Loop Deck accepted as a win on Android"
+    "sha": "43bc7f67b3988b56dcd6987594e0a84160e0041f",
+    "deploy_target": "https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/pro-rig.html",
+    "device_or_physical_state": "USER_REPORTED_CURRENT: Android interaction works; user screen recording proves controls respond, but sonic quality remains below professional live-set target"
   },
-  "evidence_state": "PROVEN_LIVE",
-  "lane": "CLOSEOUT",
-  "last_verified_at": "2026-09-18T00:40:00Z",
-  "notes": "User explicitly closed the current Loop Deck run as a win. Three user-facing failure cycles plus one internal CI-caught implementation failure informed new Harness Card self-improvement rules. Remaining Loop Deck feature-quality issues require a new work order."
+  "evidence_state": "PARTIALLY_PROVEN",
+  "lane": "DIAGNOSE",
+  "last_verified_at": "2026-09-19T01:55:00Z",
+  "notes": "Interaction path is proven on Android. Musical-quality target is not proven. Current blocker is sonic architecture/content quality, not button wiring or deployment."
 }
