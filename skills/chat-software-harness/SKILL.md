@@ -2,7 +2,7 @@
 
 name: chat-software-harness
 version: 1.0.0
-status: IMPLEMENTED_UNPROVEN
+status: PARTIALLY_PROVEN
 canonical_repo: Karmicmurphy/Harness-card
 canonical_path: skills/chat-software-harness/SKILL.md
 
@@ -221,3 +221,20 @@ When the user says **"Chat build mode"**, perform:
 ## Success condition
 
 This skill is PROVEN when interactive Chat successfully resumes and completes software work on at least two distinct projects, including live authority recovery and proof, without requiring Randy to manually restate the operating process or move the task into Codex merely because code is involved.
+
+
+## First field trial
+
+Project: TWIS Pro Rig V4 / Loop Deck
+Date: 2026-09-18
+Result: PARTIAL WIN / PROVEN_IN_TEST
+
+The first formal use of this skill successfully recovered live authority, executed repository changes from Chat, used repair loops on two internal failures, added stronger browser proof, merged only after green checks, and wrote current state back to Harness Card.
+
+Open proof:
+- real Android V4 path;
+- real PC V4 path;
+- sonic acceptance;
+- second distinct project required by the skill's global success condition.
+
+Field-trial detail: `state/CHAT_SOFTWARE_HARNESS_FIRST_FIELD_TRIAL_2026-09-18.md`.
