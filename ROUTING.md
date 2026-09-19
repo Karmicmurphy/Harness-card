@@ -84,6 +84,30 @@ Trigger phrases include:
 - “use Harness Card and build/fix this”;
 - equivalent intent.
 
+
+### Business Operator Harness
+Use automatically for business/commercialization work when the user wants to turn a product, service, skill, or idea into a functioning business or asks how to distribute, sell, price, automate, or prove demand.
+
+Canonical skill:
+`skills/business-operator-harness/SKILL.md`
+
+Default behavior:
+- do not require the user to already know business/marketing vocabulary;
+- run demand, market, offer, pricing, trust, distribution, automation, operations, measurement, and experiment passes;
+- route to Market Want Board, Artifact Compass, Artifact Salvage, Cost & Complexity Challenge, Thought Economy, Owner Interruption Minimizer, and Proof Gate as needed;
+- treat no social following/no personal brand as a design constraint, not a blocker;
+- prefer proof-first, low-owner-burden distribution;
+- do not call a working product a proven business without transaction/acquisition evidence.
+
+Trigger phrases include:
+- “Business build mode”;
+- “help me make money with this”;
+- “how do I get this out there?”;
+- “I don't know business”;
+- “how do I sell this?”;
+- “automate the business”;
+- equivalent intent.
+
 ### Creative Output Quality Recovery
 Use automatically when:
 - a creative/audio tool technically works but the user says the result sounds/looks wrong, cheap, generic, toy-like, or unlike the reference outcome;
