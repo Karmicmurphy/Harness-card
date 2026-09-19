@@ -36,6 +36,11 @@ These skills are canonical in Harness Card because they define harness behavior 
   - purpose: make ordinary interactive Chat the default software command center; orchestrate authority recovery, salvage-first execution, proof, state writeback, and bounded delegation
   - source policy: do not duplicate Artifact Compass, Artifact Salvage, Proof Gate, or other canonical salvage-suite skills inside it; route to them
 
+- `business-operator-harness`
+  - canonical path: `skills/business-operator-harness/SKILL.md`
+  - purpose: make Harness Card operate across demand, offer, pricing, trust, distribution, automation, transaction, fulfillment, measurement, and business proof
+  - source policy: orchestrate canonical salvage-suite business/research skills rather than copying them
+
 ## Source-of-truth rule
 
 Before copying any skill into Harness Card:
