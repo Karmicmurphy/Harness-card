@@ -158,11 +158,11 @@ Pro Rig V4 first CI pass hit stale V3 contract
 - **ROOT CAUSE:** The implementation replaced the V3 entry script without updating the old V3-specific contract before the first CI run.
 - **FIX:** Update the historical Amphitheater contract to assert V4 wiring and current engine behavior.
 - **REGRESSION / PREVENTION:** Version replacement checklist must inspect tests that pin old entrypoints before first push/merge.
-- **REAL-WORLD PROOF:** PENDING rerun after test correction.
+- **REAL-WORLD PROOF:** PROVEN_IN_TEST: corrected V4 SHA `34c486f5e5a7b8dc3033568972063e5e64925b09` passed Workshop CI and Static Contract; merged main SHA `d5527703b348b65956ea4ac8a1792cc02326480f` also passed Workshop CI, Static Contract, remote sample reachability, and static build.
 - **PREVENTION ARTIFACT:** Updated contract test plus this incident.
 - **BONUS SALVAGE:** CI correctly caught stale test authority before merge.
-- **VERDICT:** BLOCKED
-- **STOP:** Close when corrected CI passes.
+- **VERDICT:** DONE
+- **STOP:** Corrected contracts passed on branch and main.
 
 
 ### INCIDENT
