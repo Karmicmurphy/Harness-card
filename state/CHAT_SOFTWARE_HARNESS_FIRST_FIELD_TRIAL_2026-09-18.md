@@ -108,3 +108,38 @@ It is not yet globally PROVEN because the skill's own success condition requires
 ## Next gate
 
 Use the deployed V4 on a real Android phone and a real PC. Record exact pass/fail evidence. Fix only the layer that actually fails.
+
+
+## Live deployed browser continuation
+
+After the first-trial log was created, the harness continued to the next proof gate against the actual deployed URL.
+
+Automation run: `1f7ad786-6ce2-47c2-8e52-27b8951d1155`
+
+Observed on the live GitHub Pages Pro Rig:
+- page opened silent;
+- initial state reported AUDIO NOT STARTED / PACK NOT LOADED;
+- PLAY SET changed the live UI to AUDIO RUNNING;
+- BREAK responded;
+- VOCAL HIT responded;
+- BUILD 4 responded;
+- ECHO responded;
+- WASH responded;
+- STOP SET returned the app to the stopped state;
+- no visible page errors, stuck states, or failed controls were reported;
+- 29 interactive elements were reported responsive.
+
+### Important finding
+The live browser reported `PACK: FALLBACK OK`, not `PACK: READY`.
+
+This is not a control-path failure because the fallback engine kept the app usable exactly as designed. It is still a sonic-quality risk because the intended CC0 sampled performance pack was not the active source during this live proof.
+
+Evidence promotion:
+- deployed live interaction path: PARTIALLY_PROVEN;
+- sampled performance-pack path: NOT PROVEN LIVE;
+- professional sonic target: NOT PROVEN LIVE;
+- real Android and real PC: NOT PROVEN LIVE.
+
+### Harness result after continuation
+
+The first formal Chat Software Harness trial now has a genuine deployed live-browser win in addition to branch/CI proof. The harness still correctly refuses to promote the project to PROVEN_LIVE because the real target devices and sonic acceptance remain open.
