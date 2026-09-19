@@ -109,3 +109,21 @@ Android treated as compatibility instead of architecture
 - **BONUS SALVAGE:** The failed mobile behavior produced the intentional ocean-atmosphere layer and a reusable mobile-audio release pattern.
 - **VERDICT:** BLOCKED
 - **STOP:** Close when a future target-device build demonstrates preflight prevented a comparable runtime mismatch.
+
+
+### INCIDENT
+Controls work but the music still sounds like a browser synth experiment
+
+- **SYMPTOM:** Android screen recording shows the Pro Rig controls responding and state changing, but the audible result still does not resemble a professional amphitheater DJ performance. The user correctly described it as a browser synth experiment rather than a finished musical instrument.
+- **EXPECTED:** Pressing PLAY should immediately produce a coherent, polished deep-melodic live-set foundation with convincing drums, bass, harmony, melodic phrasing, atmosphere, vocals, transitions, and mix/master behavior. Subsequent controls should reshape that music rather than merely trigger simple synthesis events.
+- **CURRENT AUTHORITY:** `Karmicmurphy/Ollie_Twis_Holo_workshop` / `main` / `43bc7f67b3988b56dcd6987594e0a84160e0041f`; GitHub Pages `/pro-rig.html`; Android screen recording supplied by user on 2026-09-18.
+- **LAYER:** CREATIVE / APPLICATION / CONTRACT
+- **FALSE LEADS:** Android itself, button wiring, deployment, transport state, UI responsiveness.
+- **ROOT CAUSE:** We repeatedly translated "sound like a professional amphitheater DJ set" into interface features and browser-synth mechanisms without first creating a sonic acceptance contract or sourcing/proving professional-grade musical content. We optimized interaction before sound quality.
+- **FIX:** Freeze UI growth. Define a sonic reference contract first: genre/energy target, drum quality, bass movement, harmonic language, melody behavior, vocal role, transitions, dynamics, loudness, stereo space, and what a 30-second successful performance must sound like. Then Artifact Compass/Salvage real open/permissive musical engines, samples, stems, effects, and arrangement mechanisms against that contract before implementation.
+- **REGRESSION / PREVENTION:** For music products, "controls work" is interaction proof only. No music build may be promoted until an audible reference-path test passes. Build musical content/arrangement/mix first, then expose controls. Require a SONIC_ACCEPTANCE.md before implementation.
+- **REAL-WORLD PROOF:** USER_REPORTED_CURRENT: interaction works on Android, but sonic quality target is not met. This is direct target-device evidence.
+- **PREVENTION ARTIFACT:** This incident record; next work order must create a sonic acceptance contract before further code changes.
+- **BONUS SALVAGE:** The current V3 interaction surface, gesture-safe audio startup, scene/stem control model, and ocean-atmosphere mechanism are reusable once connected to better musical material.
+- **VERDICT:** BLOCKED
+- **STOP:** Do not add more UI or synth features until the sonic target and source-material strategy are proven.
