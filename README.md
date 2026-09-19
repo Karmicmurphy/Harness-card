@@ -8,6 +8,8 @@ It is **not** a project repo and it does not own project code. It owns the rules
 
 Say: **Use Harness Card.**
 
+For interactive software work, say: **Chat build mode.**
+
 Expected behavior:
 1. Read `AGENTS.md` and `OPERATING_CONTRACT.md`.
 2. Recover the actual job from the full relevant context, not only the latest sentence.
@@ -18,6 +20,8 @@ Expected behavior:
 7. Prove the result.
 8. Record meaningful corrections, incidents, decisions, or closeout evidence.
 9. Stop when the defined condition is met.
+
+`Chat build mode` additionally loads `skills/chat-software-harness/SKILL.md` and keeps ordinary interactive Chat as the software command center when its available tools can perform the work. Code alone is not a reason to route the job into Codex, Work, Astra, or another agent.
 
 ## Core loop
 
