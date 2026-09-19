@@ -199,3 +199,39 @@ Harness scorecard stale during first Chat Software Harness field trial
 - **BONUS SALVAGE:** The mismatch itself is a useful Fresh-Brain/Doctor check: derived state must reconcile with canonical state.
 - **VERDICT:** BLOCKED
 - **STOP:** Close when generated scorecard reflects the current project and recorded incidents.
+
+
+### INCIDENT
+Split Pro Rig / Loop Deck engine architecture
+
+- **SYMPTOM:** Pro Rig and Loop Deck behaved as separate applications with separate timing/audio ownership, causing repeated divergence between performance controls and looping capability.
+- **EXPECTED:** One workstation should have one authoritative transport and one audio engine with multiple UI surfaces.
+- **CURRENT AUTHORITY:** `Karmicmurphy/Ollie_Twis_Holo_workshop` / `main` / `f39db751c41cfe9d909fa50efe5d19afa73b3d5d`.
+- **LAYER:** APPLICATION / CONTRACT / ARCHITECTURE
+- **FALSE LEADS:** More Pro Rig UI work, more Tone.js patching, separate Loop Deck and Pro Rig deployments.
+- **ROOT CAUSE:** The product evolved as two independently functioning prototypes instead of one shared musical core.
+- **FIX:** Introduce `twis-loop-core.js`, make Loop Deck V2 own the shared AudioContext-backed transport, convert Pro Rig into `loop-deck.html?mode=pro`, and route scenes/live FX through the same engine.
+- **REGRESSION / PREVENTION:** Contract tests assert Pro Rig no longer loads the legacy Tone runtime and both surfaces depend on the shared Loop Core.
+- **REAL-WORLD PROOF:** PROVEN_LIVE_BROWSER: merged main CI passes and deployed automation run `c000d5c8-bdaa-4e03-b68d-078c05d062a9` exercised the unified Pro Rig and advanced Loop workstation successfully.
+- **PREVENTION ARTIFACT:** Shared Loop Core, deterministic Loop Core tests, unified browser proof, ADR bundle.
+- **BONUS SALVAGE:** Existing OPFS, recorder worklet, sound rack, Simple Perform UI, Pro Rig scene/FX semantics, and advanced loop workstation were preserved instead of rewritten.
+- **VERDICT:** DONE
+- **STOP:** One-engine architecture is live and regression-protected.
+
+
+### INCIDENT
+Advanced mode opened a hidden non-existent page
+
+- **SYMPTOM:** Unified browser proof timed out because clicking ADVANCED left `#ldLoops` hidden.
+- **EXPECTED:** ADVANCED should reveal the real advanced loop workstation.
+- **CURRENT AUTHORITY:** PR #14 branch before merge.
+- **LAYER:** APPLICATION / TEST-CI
+- **FALSE LEADS:** Audio engine, loop rows, Playwright visibility behavior.
+- **ROOT CAUSE:** `advanced()` activated a non-existent `perform` page instead of the actual `loop` page.
+- **FIX:** Route ADVANCED to `data-page="loop"` and its matching tab.
+- **REGRESSION / PREVENTION:** Unified browser proof explicitly requires ADVANCED to reveal eight loop rows, record controls, and import control.
+- **REAL-WORLD PROOF:** PROVEN_LIVE_BROWSER on deployed main; advanced workstation opened correctly in automation run `c000d5c8-bdaa-4e03-b68d-078c05d062a9`.
+- **PREVENTION ARTIFACT:** Browser regression in `tests/pro_rig_browser_smoke.mjs`.
+- **BONUS SALVAGE:** Existing advanced Loop Deck page required no rewrite.
+- **VERDICT:** DONE
+- **STOP:** Deployed proof passed.
