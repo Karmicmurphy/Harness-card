@@ -4,14 +4,15 @@
 Deliver one TWIS Pro Rig build that works from the same URL on Android phone and PC and sounds like an intentional professional melodic electronic performance, while preserving advanced Loop Deck import/loop capability.
 
 ## CURRENT TRUTH
+- VERIFIED_CURRENT: Chat Software Harness is active from `Karmicmurphy/Harness-card/skills/chat-software-harness/SKILL.md`.
 - Android V3 interaction is USER_REPORTED_CURRENT and proven by screen recording.
 - V3 sonic quality failed the user's professional-live-set target.
-- V4 is merged to `main` at `d5527703b348b65956ea4ac8a1792cc02326480f`.
+- V4 plus browser-proof harness is merged to `main` at `b9f0484e6673f79ce81bca74c770ee8b089d34cf`.
 - V4 uses CC0 sampled drums and CC0 voice texture when reachable, deterministic synth fallbacks, phrase-based harmony/melody, quantized scenes, build/drop transitions, sidechain-style ducking, master dynamics, and runtime diagnostics.
 - The existing advanced Loop Deck remains available through LOOPS / IMPORT rather than being rebuilt.
 - V4 branch and main Workshop CI + Static Contract pass; remote CC0 pack reachability and static build pass.
 - GitHub Pages deployment completed successfully.
-- Live V4 phone and PC proof are still pending.
+- Desktop + phone-sized Chromium automated browser proof passed on the PR branch and is merged; real Android and real PC live sonic proof are still pending.
 
 ## DO NOT
 - Do not add cosmetic UI work unless required by the target-device path.
