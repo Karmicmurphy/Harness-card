@@ -4,12 +4,12 @@
   "authority": {
     "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
     "branch": "main",
-    "sha": "d5527703b348b65956ea4ac8a1792cc02326480f",
+    "sha": "b9f0484e6673f79ce81bca74c770ee8b089d34cf",
     "deploy_target": "https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/pro-rig.html",
-    "device_or_physical_state": "V4 deployed by GitHub Pages. Branch and main CI/static/build/sample-reachability proofs passed. Android and PC live sonic proof still pending."
+    "device_or_physical_state": "V4 deployed. Desktop + phone-sized Chromium browser proof passed on PR branch; main CI rerun in progress. Real Android and real PC live sonic proof still pending."
   },
   "evidence_state": "PROVEN_IN_TEST",
   "lane": "PROVE",
-  "last_verified_at": "2026-09-19T02:14:00Z",
-  "notes": "V4 is merged and deployed. CI verifies JS syntax, contracts, build, remote CC0 pack reachability and fallback wiring. Do not promote to PROVEN_LIVE until the same deployed URL is exercised on Android and PC and the user accepts the sonic result."
+  "last_verified_at": "2026-09-19T02:18:00Z",
+  "notes": "Chat Software Harness is active. PR #11 browser-proof harness merged to main. Automated proof now exercises silent entry, PLAY, running AudioContext, BREAK, VOCAL HIT, BUILD, ECHO, WASH and STOP at desktop and Pixel-sized Chromium. This supplements but does not replace real Android/PC listening proof."
 }
