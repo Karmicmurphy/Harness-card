@@ -1,15 +1,15 @@
 {
   "schema_version": "0.1.0",
-  "active_project": "TWIS PRO RIG V4 / LOOP DECK",
+  "active_project": "TWIS LOOP DECK / PRO RIG UNIFIED WORKSTATION",
   "authority": {
     "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
     "branch": "main",
-    "sha": "b9f0484e6673f79ce81bca74c770ee8b089d34cf",
+    "sha": "f39db751c41cfe9d909fa50efe5d19afa73b3d5d",
     "deploy_target": "https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/pro-rig.html",
-    "device_or_physical_state": "V4 deployed. Main CI/static/browser proof green. Live deployed browser automation passed PLAY/BREAK/VOCAL HIT/BUILD/ECHO/WASH/STOP with no visible errors, but reported PACK: FALLBACK OK. Real Android, real PC, sampled-pack live path, and sonic acceptance remain pending."
+    "device_or_physical_state": "Unified Loop Deck / Pro Rig is deployed. Static Contract, Workshop CI, deterministic Loop Core tests, unified Chromium browser proof, static build, Pages deployment, and deployed live-browser closeout all pass. Real physical Android/PC sonic preference remains a final human/device proof gate."
   },
-  "evidence_state": "PARTIALLY_PROVEN",
-  "lane": "PROVE",
-  "last_verified_at": "2026-09-19T02:24:00Z",
-  "notes": "Chat Software Harness first field trial has now reached deployed live-browser proof. Live automation run 1f7ad786-6ce2-47c2-8e52-27b8951d1155 passed the interaction path. Do not call PROVEN_LIVE: the run used FALLBACK OK rather than PACK READY and did not prove real Android/PC audio quality."
+  "evidence_state": "PROVEN_LIVE_BROWSER",
+  "lane": "CLOSEOUT -> PHYSICAL/SONIC PROOF",
+  "last_verified_at": "2026-09-19T07:03:00Z",
+  "notes": "PR #14 merged. Pro Rig now redirects into loop-deck.html?mode=pro and uses the same Loop Core, master transport, sound rack, scenes, roles, live FX, advanced loop workstation, OPFS/import path, and browser runtime. Deployed automation run c000d5c8-bdaa-4e03-b68d-078c05d062a9 passed scenes, eight roles, BUILD/DROP/ECHO/WASH/VOCAL/FUCK IT, STOP, and ADVANCED loop workstation visibility with no visible errors."
 }
