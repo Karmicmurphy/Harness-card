@@ -25,6 +25,24 @@ Do not create replacement recovery systems before reading the existing sources:
 
 Live project truth still comes from the relevant project repo/branch/device/deploy.
 
+## Capability map now exists
+
+First capability-first reconciliation artifacts:
+
+- `state/ESTATE_CAPABILITY_MAP_V1.json` — machine-readable capability/authority/overlap/invention map.
+- `docs/ESTATE_CAPABILITY_MAP_V1.md` — human-readable reconciliation and first invention candidates.
+
+Use these as an extension of the existing recovery chain, not as replacement authority. Reverify live project truth before making current-state claims.
+
+Current V1 findings include:
+
+- Workshop already contains the human-facing artifact/engine cockpit primitives;
+- Foundry already contains the typed capability lifecycle and bounded Software Builder;
+- AIOS already contains reusable scheduler/process/capability-grant/audit primitives;
+- Digital Scrapyard already contains the canonical salvage/rights/recombination method suite;
+- CERT-RIVER / PRISM-RIVER / RiverKernel remain the major unresolved independent-certification lineage;
+- the Software Builder Ollama proof now reaches the repair loop; the current live blocker is step-budget exhaustion before a passing retest, not lack of a callable coding engine.
+
 ## Current direction
 
 The working direction is:
