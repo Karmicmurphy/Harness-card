@@ -35,12 +35,16 @@ For cross-project lineage, whole-estate salvage, the origin of the system, and t
 2. `docs/SYSTEM_LINEAGE_START_HERE.md`
 3. `docs/FIVE_YEAR_ARTIFACT_SALVAGE_MASTER_CONTEXT.md`
 4. `state/ESTATE_COVERAGE_LEDGER.md`
+5. `docs/ECOSYSTEM_RECOVERY_MASTER_CONTEXT_2026-09-19.md`
+6. `state/ECOSYSTEM_AUTHORITY_INDEX.json`
 
 `docs/ORIGIN_STORY.md` explains why this system exists, who the human behind it is in working terms, what he does and does not want from AI, and what future AI systems must not misunderstand.
 
 The other lineage files preserve the non-sensitive architectural realization, reusable mechanism map, source-yard coverage, and current direction so future AI systems do not require Randy to re-explain years of work.
 
 These files are **lineage/context**, not live authority. Current truth still comes from the active project repo/device/deploy.
+
+Before creating a new core mechanism, apply the global **RECOVER BEFORE REBUILD** rule in `state/DECISIONS.md`: search ChatGPT Library/files, live project/GitHub authority, and prior lineage first; only then widen to public web research.
 
 ## Repository boundaries
 
