@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-09-20",
+  "status": "RECONCILED_FROM_CURRENT_REPO_STATE_AND_RECOVERED_LINEAGE",
+  "question": "What do we already own that we do not realize we own?",
+  "sources": [
+    "Karmicmurphy/temporal-capability-foundry@d2decb9dcd039610b42af6599c4711f979dee8eb",
+    "Karmicmurphy/Untethered-AIOS@17a717e556a639d450551d7cf3b9a77d6a1b459e",
+    "Karmicmurphy/digital-scrapyard-autopilot@40a04675b922f238cf4af8e56ab7f4d5c07cc719",
+    "Karmicmurphy/Ollie_Twis_Holo_workshop@04a5b694d3ac6ddbebaf5b2ff9314a1c619b111e",
+    "Harness Card recovered CERT-RIVER / PRISM-RIVER / RiverKernel lineage"
+  ],
+  "capabilities": [
+    {"id":"intent.compile","name":"Human Intent Compiler","owners":["temporal-capability-foundry","Harness-card"],"evidence":["Foundry capabilities/intent/intent.compile.json","Harness intent recovery rules"],"status":"PROVEN_CURRENT","reuse":"USE_OR_WRAP"},
+    {"id":"research.temporal_compass","name":"Temporal / Artifact Discovery","owners":["temporal-capability-foundry","digital-scrapyard-autopilot","Ollie_Twis_Holo_workshop"],"evidence":["Foundry temporal_compass.plan/trace","Scrapyard Artifact Compass/Salvage suite","Workshop artifact-compass.js"],"status":"MULTI_SURFACE_SAME_LINEAGE","reuse":"RECONCILE_SURFACES"},
+    {"id":"rights.gate","name":"Rights / Provenance Gate","owners":["digital-scrapyard-autopilot","temporal-capability-foundry"],"evidence":["Scrapyard Rights Gate","Foundry contracts/rights/rights.schema.json"],"status":"EXISTS","reuse":"ADAPT_DONT_REBUILD"},
+    {"id":"proof.certify","name":"Proof / Certificate / Receipt Chain","owners":["CERT-RIVER lineage","Untethered-AIOS","temporal-capability-foundry","digital-scrapyard-autopilot"],"evidence":["CERT-RIVER lineage","AIOS receipt/trace/certificate harness","Foundry proof/evaluation/promotion/activation contracts","Scrapyard Proof Gate"],"status":"HEAVY_OVERLAP","reuse":"RECONCILE_CONTRACTS_FIRST"},
+    {"id":"policy.route","name":"Policy / Routing Authority","owners":["PRISM-RIVER lineage","Harness-card","temporal-capability-foundry","Untethered-AIOS"],"evidence":["PRISM-RIVER lineage","Harness ROUTING.md","Foundry policy layer","AIOS capability authority"],"status":"HEAVY_OVERLAP","reuse":"ONE_AUTHORITY_PER_DECISION"},
+    {"id":"execution.bounded","name":"Bounded Execution Kernel","owners":["RiverKernel lineage","Untethered-AIOS","temporal-capability-foundry","Ollie_Twis_Holo_workshop"],"evidence":["RiverKernel lineage","AIOS kernel/budget/recovery","Foundry deny-by-default execution kernel","Workshop worker kit / engine harness"],"status":"HEAVY_OVERLAP","reuse":"SALVAGE_SMALLEST_PROVEN_PRIMITIVE"},
+    {"id":"learning.promote","name":"Evidence-Gated Learning / Promotion / Rollback","owners":["Harness-card","temporal-capability-foundry","Untethered-AIOS","digital-scrapyard-autopilot"],"evidence":["Harness Learning Compiler direction","Foundry learning/promotion/activation/rollback","AIOS deterministic RULE lane","Capability Downshift"],"status":"EXISTS_IN_PARTS_AND_INTEGRATED_IN_FOUNDRY","reuse":"PREFER_FOUNDRY_LIFECYCLE_WITH_HARNESS_GOVERNANCE"},
+    {"id":"continuity.recover","name":"Project Continuity / Authority Recovery","owners":["Harness-card","digital-scrapyard-autopilot"],"evidence":["Harness ecosystem authority index / estate ledger","Project Context Harvester"],"status":"EXISTS","reuse":"MAKE_DEFAULT_ENTRY_PATH"},
+    {"id":"human.work_surface","name":"Human-Facing Workshop Surface","owners":["Ollie_Twis_Holo_workshop"],"evidence":["Workshop current app, artifact compass UI, recovery surfaces, architecture proof gates"],"status":"CURRENT_PRODUCT_SURFACE","reuse":"KEEP_AS_SURFACE_NOT_TRUST_AUTHORITY"},
+    {"id":"software.builder","name":"Software Builder Worker","owners":["temporal-capability-foundry"],"evidence":["Harness state/FOUNDRY_SOFTWARE_BUILDER_V0_HANDOFF_2026-09-20.md","Foundry software-builder-v0 branch / PR lineage"],"status":"IMPLEMENTED_BLOCKED_ON_CAPABLE_CODING_ENGINE_RUNTIME","reuse":"RESUME_DONT_REDESIGN"}
+  ],
+  "invention_rules": [
+    "Return existing capability before proposing new architecture.",
+    "Treat multiple owners as an overlap to reconcile, not permission to merge repos.",
+    "Prefer wrapper, adapter, or recombination before invention.",
+    "A new capability is allowed only when no evidence-backed existing primitive satisfies the requested job.",
+    "Historical River lineage is evidence of prior ownership, not live repo authority."
+  ]
+}
