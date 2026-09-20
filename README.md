@@ -37,6 +37,7 @@ For cross-project lineage, whole-estate salvage, the origin of the system, and t
 4. `state/ESTATE_COVERAGE_LEDGER.md`
 5. `docs/ECOSYSTEM_RECOVERY_MASTER_CONTEXT_2026-09-19.md`
 6. `state/ECOSYSTEM_AUTHORITY_INDEX.json`
+7. `state/ESTATE_RECONCILIATION_INVENTION_STAGE_2026-09-20.md`
 
 `docs/ORIGIN_STORY.md` explains why this system exists, who the human behind it is in working terms, what he does and does not want from AI, and what future AI systems must not misunderstand.
 
