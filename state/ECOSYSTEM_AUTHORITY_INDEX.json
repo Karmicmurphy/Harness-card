@@ -1,0 +1,319 @@
+{
+  "generated_at": "2026-09-19",
+  "status": "RECOVERY_INDEX",
+  "purpose": "Prevent reinvention by recovering existing project authority, lineage, reusable primitives, and overlap before public research or new builds.",
+  "global_rule": "RECOVER BEFORE REBUILD",
+  "recovery_order": [
+    "ChatGPT Library/files",
+    "GitHub repositories and live project authority",
+    "prior project context/lineage",
+    "public web research only after internal recovery"
+  ],
+  "authority_law": [
+    "Current live repo/device/deploy truth outranks lineage documents.",
+    "Lineage documents preserve prior mechanisms and architecture but do not override live authority.",
+    "Do not merge whole projects merely because mechanisms overlap.",
+    "Name the primitive, record source/rights, assign one destination, build the smallest adapter, rerun focused proof, issue a receipt.",
+    "Assertion is not evidence; evidence is not proof; proof is not a certificate; a receipt is runtime truth."
+  ],
+  "canonical_stack": {
+    "connector_layer": "MCP/A2A/API/local adapters",
+    "policy_layer": "PRISM-RIVER",
+    "proof_layer": "CERT-RIVER",
+    "execution_layer": "RiverKernel / bounded runner",
+    "trust_architecture": "FlashRiver",
+    "human_work_surface": "Twis Holo Workshop",
+    "cross_project_operating_harness": "Harness Card"
+  },
+  "recovered_projects": [
+    {
+      "project": "FlashRiver / CERT-RIVER / PRISM-RIVER / RiverKernel",
+      "authority_kind": "LIBRARY_LINEAGE_AND_ARCHIVED_PROOF_PACKAGE",
+      "live_repo": "No single dedicated canonical GitHub repo verified in this sweep",
+      "strongest_recovered_sources": [
+        "MASTER_THREAD_SALVAGE_REPORT_V2.pdf",
+        "MASTER_THREAD_SALVAGE_REPORT_V2.docx",
+        "Workshop docs/FLASHRIVER_PHASE12_HARNESS_SKILLS_QUESTIONS_EXTRACTION.md"
+      ],
+      "role": "Proof-first trust architecture: PRISM routes policy/proof paths; CERT certifies claims; RiverKernel runs bounded work; FlashRiver is the whole trust architecture/lab.",
+      "reusable_primitives": [
+        "actual file access proof",
+        "claim boundary harness",
+        "no-certificate-no-use policy gate",
+        "human decision gates",
+        "proof plan/readiness/failure/repair/rerun lifecycle",
+        "dirty-key/cache honesty",
+        "no-broadening audit",
+        "receipt/trace/certificate separation",
+        "quarantine",
+        "working-memory continuity"
+      ],
+      "overlap_warning": [
+        "Temporal Capability Foundry proof/evaluation/promotion/activation/rollback overlaps CERT-RIVER lineage.",
+        "Foundry execution kernel overlaps RiverKernel/Untethered bounded execution concepts.",
+        "Do not rebuild proof/certificate semantics without comparing these sources first."
+      ]
+    },
+    {
+      "project": "Twis Holo Workshop",
+      "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
+      "head": "b1ef6e581014f1d811da5f37c735f9c05c2d8d62",
+      "authority_kind": "CURRENT_GITHUB_CODE_AND_ARCHITECTURE; LOCAL MACHINE REMAINS PRIVATE AUTHORITY",
+      "role": "Human-facing working room/front door; artifact-first local/private home base with bounded cloud field kit.",
+      "recovered_primitives": [
+        "FlashRiver intake",
+        "Artifact Compass UI",
+        "adapter law",
+        "local/private authority zoning",
+        "receipt-backed artifacts",
+        "Recover room",
+        "Modules boundary",
+        "small worker model",
+        "engine harness and architecture proof gates"
+      ]
+    },
+    {
+      "project": "Untethered AIOS",
+      "repo": "Karmicmurphy/Untethered-AIOS",
+      "head": "17a717e556a639d450551d7cf3b9a77d6a1b459e",
+      "authority_kind": "EXPERIMENTAL_DESCENDANT",
+      "role": "Experimental bounded operating layer for scheduling, capability enforcement, budgets, recovery, receipts, and composition around Workshop capabilities.",
+      "recovered_primitives": [
+        "kernel-owned budgets",
+        "cooperative checkpoints",
+        "finite recovery",
+        "capability registry",
+        "receipt/trace/certificate harness",
+        "direct-successor autopilot",
+        "no-broadening audit",
+        "better-question rewriter",
+        "deterministic RULE lane work"
+      ],
+      "boundary": "Does not replace authoritative Workshop."
+    },
+    {
+      "project": "Harness Card",
+      "repo": "Karmicmurphy/Harness-card",
+      "head": "fc0ee18205ad6da94e05e4c5b71b583f221c2669",
+      "authority_kind": "GLOBAL_OPERATING_HARNESS",
+      "role": "Rules for reliably entering projects: intent recovery, authority recovery, scope control, skill routing, proof, learning, closeout.",
+      "recovered_primitives": [
+        "Operating Contract",
+        "project authority records",
+        "skill routing",
+        "incident learning",
+        "Learning Compiler direction",
+        "five-year artifact salvage lineage"
+      ]
+    },
+    {
+      "project": "Digital Scrapyard / Digital Scrap Forge",
+      "repo": "Karmicmurphy/digital-scrapyard-autopilot",
+      "head": "40a04675b922f238cf4af8e56ab7f4d5c07cc719",
+      "authority_kind": "PRIVATE_PRODUCT_AND_CANONICAL_SALVAGE_SKILL_SOURCE",
+      "role": "Rights-first digital reclamation/software-factory business plus canonical salvage-suite skill source.",
+      "recovered_primitives": [
+        "Artifact Compass",
+        "Artifact Salvage",
+        "Deep-Sea Salvage",
+        "Rights Gate",
+        "Proof Gate",
+        "Thought Economy",
+        "Capability Downshift",
+        "Recombination Forge",
+        "Owner Interruption Minimizer",
+        "Project Context Harvester",
+        "Rabbit-Hole Governor"
+      ]
+    },
+    {
+      "project": "Temporal Capability Foundry",
+      "repo": "Karmicmurphy/temporal-capability-foundry",
+      "head": "d2decb9dcd039610b42af6599c4711f979dee8eb",
+      "authority_kind": "CURRENT_PRIVATE_FOUNDATION",
+      "role": "Framework-independent capability foundation: recover intent, search present/past, salvage, rights-check, compile, execute, evaluate, learn candidate, prove, promote, activate/rollback.",
+      "current_proven_state": [
+        "Temporal Compass planning and mechanism trace",
+        "intent compiler",
+        "job compiler",
+        "deny-by-default execution kernel",
+        "evaluation and learning candidates",
+        "semantic worker/model manifest boundary",
+        "promotion gate",
+        "activation and rollback",
+        "end-to-end lifecycle proof",
+        "45-record salvage estate",
+        "local loopback runtime transport",
+        "local model field-probe harness"
+      ],
+      "current_nonclaim": "REAL_LOCAL_MODEL_FIELD_PROOF remains NOT_RUN.",
+      "overlap_warning": [
+        "Proof/evidence/certification concepts overlap CERT-RIVER.",
+        "Execution/budget/recovery concepts overlap RiverKernel and Untethered AIOS.",
+        "Learning/promotion concepts overlap Harness Card Learning Compiler direction and Capability Downshift."
+      ]
+    },
+    {
+      "project": "Opportunity Compass",
+      "repo": "Karmicmurphy/opportunity-compass",
+      "head": "fb14305be527829cff5ffd44a719102ded33fa80",
+      "authority_kind": "EARLY_PRODUCT_PROTOTYPE",
+      "role": "Plain-English opportunity translator/bullshit filter; not part of core trust/runtime architecture."
+    }
+  ],
+  "github_inventory": [
+    {
+      "repo": "Karmicmurphy/WTF-SHED-HAPPENS",
+      "visibility": "public",
+      "default_branch": "main",
+      "head": "3f9bdfdb452700967eb4967dfec45f7cb2303b0b"
+    },
+    {
+      "repo": "Karmicmurphy/nemoclw_new_agent",
+      "visibility": "private",
+      "default_branch": "main",
+      "head": "fdb4d3be676502aab4bb7b53afb25172edc30d43"
+    },
+    {
+      "repo": "Karmicmurphy/desktop",
+      "visibility": "public",
+      "default_branch": "development",
+      "head": "de12a3d6ddb90571e5c7e989446cb77ba2832194"
+    },
+    {
+      "repo": "Karmicmurphy/digital-scrapyard-autopilot",
+      "visibility": "private",
+      "default_branch": "main",
+      "head": "40a04675b922f238cf4af8e56ab7f4d5c07cc719"
+    },
+    {
+      "repo": "Karmicmurphy/temporal-capability-foundry",
+      "visibility": "private",
+      "default_branch": "main",
+      "head": "d2decb9dcd039610b42af6599c4711f979dee8eb"
+    },
+    {
+      "repo": "Karmicmurphy/opportunity-compass",
+      "visibility": "public",
+      "default_branch": "main",
+      "head": "fb14305be527829cff5ffd44a719102ded33fa80"
+    },
+    {
+      "repo": "Karmicmurphy/twis-showcase",
+      "visibility": "public",
+      "default_branch": "main",
+      "head": "79907eb726c067f1108ecdf595c847c32d635364"
+    },
+    {
+      "repo": "Karmicmurphy/Untethered-AIOS",
+      "visibility": "public",
+      "default_branch": "main",
+      "head": "17a717e556a639d450551d7cf3b9a77d6a1b459e"
+    },
+    {
+      "repo": "Karmicmurphy/Harness-card",
+      "visibility": "public",
+      "default_branch": "main",
+      "head": "fc0ee18205ad6da94e05e4c5b71b583f221c2669"
+    },
+    {
+      "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
+      "visibility": "public",
+      "default_branch": "main",
+      "head": "b1ef6e581014f1d811da5f37c735f9c05c2d8d62"
+    },
+    {
+      "repo": "Karmicmurphy/clean-static-portfolio",
+      "visibility": "public",
+      "default_branch": "main",
+      "head": "1a806ee828f654812f237ab58560070ed48c4186"
+    },
+    {
+      "repo": "Karmicmurphy/Echos-forward",
+      "visibility": "public",
+      "default_branch": "main",
+      "head": "c915f88bffac6b1c3063a1122d7d02acc45b9f62"
+    },
+    {
+      "repo": "Karmicmurphy/coilside",
+      "visibility": "public",
+      "default_branch": "main",
+      "head": "ea18ab45c8b19e9d3a812988e5e93fd1c6476bbf"
+    },
+    {
+      "repo": "Karmicmurphy/WTF-Stupid-Simple-Terri-Tax",
+      "visibility": "private",
+      "default_branch": "main",
+      "head": "70fd3d5e495d8bfa25edd34db88e95cffeb09b98"
+    }
+  ],
+  "recovered_library_authorities": [
+    "MASTER_THREAD_SALVAGE_REPORT_V2.pdf",
+    "MASTER_THREAD_SALVAGE_REPORT_V2.docx",
+    "DIGITAL_SCRAPBOARD_MASTER_CONTEXT_SEED_2026-09-03.md",
+    "MASTER_HANDOFF_2026-09-03.md",
+    "Harness Card Deep Research Audit: What You Actually Built, What It Is Missing, and What I Think It Should Become",
+    "Five-Year Artifact Salvage lineage in Harness Card"
+  ],
+  "duplication_map": [
+    {
+      "concern": "proof/certification/receipts/quarantine",
+      "existing_sources": [
+        "CERT-RIVER lineage",
+        "Untethered receipt-trace-certificate skill",
+        "Foundry evaluation/promotion/activation receipts",
+        "Harness Proof Gate"
+      ],
+      "rule": "Reconcile before creating any new proof engine."
+    },
+    {
+      "concern": "policy/routing/authority",
+      "existing_sources": [
+        "PRISM-RIVER lineage",
+        "Harness Card routing/scope rules",
+        "Foundry policies",
+        "AIOS capability authority"
+      ],
+      "rule": "Do not create a second policy authority without explicit boundary."
+    },
+    {
+      "concern": "execution kernel/bounded workers/recovery",
+      "existing_sources": [
+        "RiverKernel lineage",
+        "Untethered AIOS kernel",
+        "Foundry Execution Kernel",
+        "Workshop Local API Worker Kit"
+      ],
+      "rule": "Compare contracts and reuse the smallest proven primitive."
+    },
+    {
+      "concern": "self-improvement/learning",
+      "existing_sources": [
+        "Harness Learning Compiler direction",
+        "Capability Downshift",
+        "Foundry learning candidates/promotion/activation",
+        "Untethered deterministic reflex/rule work"
+      ],
+      "rule": "No self-modifying production behavior; candidate -> proof -> promotion -> activation -> rollback."
+    },
+    {
+      "concern": "salvage/research",
+      "existing_sources": [
+        "Artifact Compass",
+        "Artifact Salvage",
+        "Deep-Sea Salvage",
+        "Temporal Compass",
+        "Workshop Artifact Compass UI"
+      ],
+      "rule": "One discovery lineage; adapters/views may differ, but do not invent another discovery framework."
+    }
+  ],
+  "mandatory_prebuild_check": [
+    "Search Library for exact and adjacent project/mechanism names.",
+    "Search/list GitHub account and inspect live authority repos; do not trust code-search failure as absence.",
+    "Read project lineage/authority docs and classify VERIFIED_CURRENT vs HISTORICAL.",
+    "Check duplication_map for existing mechanisms.",
+    "Only then use public web Artifact Compass/Salvage.",
+    "New build must state why existing mechanisms cannot satisfy the target."
+  ]
+}
