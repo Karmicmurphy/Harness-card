@@ -136,6 +136,27 @@ Use when:
 ### Capability Downshift
 Use after the same successful reasoning has been proven repeatedly and can safely become a checklist, script, validator, deterministic routine, or automatic trigger.
 
+
+### Capability Ownership / Invention Gate
+Use automatically before designing any new core mechanism, framework, router, proof engine, execution kernel, learning layer, salvage system, or software-builder primitive.
+
+Authority:
+- `state/CAPABILITY_MAP.json`
+- `workers/capability_invention.py`
+
+Required behavior:
+- translate the proposed mechanism into a plain-English capability query;
+- check the reconciled capability map before inventing;
+- if result is `OWNED`, reuse or wrap the existing owner;
+- if result is `OWNED_OVERLAP`, reconcile contracts and assign one authority per decision before building;
+- if result is `POSSIBLE_GAP`, recover more estate evidence before declaring a genuine missing capability;
+- never treat historical River lineage as current live repo authority;
+- never merge or delete whole projects merely because capabilities overlap.
+
+The default question is:
+
+> What do we already own that we do not realize we own?
+
 ## Professional-frame router
 
 Choose the most useful working frame automatically:
