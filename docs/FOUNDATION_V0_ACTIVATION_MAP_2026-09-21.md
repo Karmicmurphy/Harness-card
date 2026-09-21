@@ -1,6 +1,6 @@
 # Foundation V0 Activation Map — 2026-09-21
 
-Status: **FOUNDATION CORE V0 OPERATIONAL_IN_TEST — HUMAN REVIEW GATED**
+Status: **FOUNDATION CORE V0 OPERATIONAL_IN_TEST — ESTATE MAP/QUEUE + MINIMUM NECESSARY INTELLIGENCE PROVEN — HUMAN REVIEW GATED**
 
 Live repository/device truth outranks this map.
 
@@ -35,6 +35,8 @@ No merge, deploy, publish, activation, spending, deletion, permission expansion,
 - Foundation core composition: run `35627936077`
 - Strict Python-bytecode proof integrity: run `35627957323`
 - Human-operated exact-patch runner on real pinned AIOS: run `35628459336`
+- Foundation runner with Minimum Necessary Intelligence route = `WORKER`: run `35655678576`
+- Real Harness estate map -> deterministic source-yard queue: run `35655806912`
 
 Human-runner proof head:
 
@@ -127,6 +129,52 @@ A proposed improvement should reduce something measurable:
 
 More code, models, or agents is not itself improvement.
 
+## Estate-driven invention discovery
+
+The machine is not intended to wait for Randy to manually submit inventions.
+
+Canonical estate source-yard map:
+
+`state/ESTATE_SOURCE_YARDS_V1.json`
+
+Coverage claim:
+
+`EXHAUSTIVE_ACROSS_ACCESSIBLE_SOURCE_YARDS_PARTIAL_WITHIN_SOME_LARGE_YARDS`
+
+The real map is proven to compile into a deterministic work queue with no AI.
+
+Foundry components:
+- `src/foundry/estate_queue.py` — source-yard queue planner;
+- `src/foundry/intelligence_router.py` — Minimum Necessary Intelligence;
+- `tcf plan-estate-sweep <map.json>`;
+- `tcf route-intelligence <request.json>`.
+
+Intelligence ladder:
+
+```text
+IGNORE -> CACHE -> RULE -> SCRIPT -> WORKER -> TINY_MODEL -> CENTRAL_AI -> OWNER_GATE
+```
+
+The current exact-patch runner is integrated with this policy and proves `WORKER` is selected before any model.
+
+Important limitation:
+- map-to-queue is proven;
+- automatic full traversal is **not** yet proven;
+- source-specific recovery adapters/access are still incomplete;
+- local Windows remains an explicit high-value blocked yard.
+
+The intended discovery flow is:
+
+```text
+estate map
+-> deterministic source-yard queue
+-> recover/inventory accessible yard
+-> Artifact Compass / Salvage
+-> minimum necessary intelligence only for unresolved tasks
+-> candidate build/test/proof
+-> human review
+```
+
 ## Workshop
 
 Workshop is now a **front-end integration task**, not a blocker for the core engine.
@@ -156,11 +204,11 @@ Do not create another global ID.
 
 The core is **OPERATIONAL_IN_TEST**, not yet PROVEN_LIVE on Randy's Windows machine.
 
-The next strongest evidence is the first real local bounded job through the human-operated runner.
+The next strongest evidence is the first bounded estate sweep across accessible source yards plus the first real local bounded job through the human-operated runner.
 
-That local job should end at human review, not autonomous merge/deploy/activation.
+Estate processing starts deterministic and escalates intelligence only when cheaper proven routes cannot safely resolve the task.
 
-Workshop reconciliation can proceed in parallel.
+Local Windows and Workshop reconciliation can proceed in parallel.
 
 ## Later continuity work
 
