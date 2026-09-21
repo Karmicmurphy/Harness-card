@@ -94,7 +94,7 @@
     {
       "project": "Harness Card",
       "repo": "Karmicmurphy/Harness-card",
-      "head": "f466d7f494343d5c491bab90fdc274c2ebe8b347",
+      "head": null,
       "authority_kind": "GLOBAL_OPERATING_HARNESS",
       "role": "Rules for reliably entering projects: intent recovery, authority recovery, scope control, skill routing, proof, learning, closeout.",
       "recovered_primitives": [
@@ -104,7 +104,8 @@
         "incident learning",
         "Learning Compiler direction",
         "five-year artifact salvage lineage"
-      ]
+      ],
+      "head_resolution": "LIVE_LOOKUP_REQUIRED_SELF_REFERENTIAL_INDEX"
     },
     {
       "project": "Digital Scrapyard / Digital Scrap Forge",
@@ -214,7 +215,8 @@
       "repo": "Karmicmurphy/Harness-card",
       "visibility": "public",
       "default_branch": "main",
-      "head": "f466d7f494343d5c491bab90fdc274c2ebe8b347"
+      "head": null,
+      "head_resolution": "LIVE_LOOKUP_REQUIRED_SELF_REFERENTIAL_INDEX"
     },
     {
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
@@ -321,6 +323,7 @@
     "accessible_karmicmurphy_repo_count": 14,
     "missing_from_existing_inventory": [],
     "renamed_or_unresolved": [],
-    "note": "Accessible GitHub inventory currently matches the 14 repositories already recorded; heads were refreshed from live default-branch refs."
+    "note": "Accessible GitHub inventory currently matches the 14 repositories already recorded; heads were refreshed from live default-branch refs.",
+    "self_reference_rule": "Do not claim a durable exact Harness-card HEAD inside a Harness-card file; committing the file advances HEAD. Resolve Harness-card main live when exact current SHA matters."
   }
 }
