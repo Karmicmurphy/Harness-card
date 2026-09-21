@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-09-21",
+  "status": "EXECUTABLE_NOT_RECOVERED_BOUNDED_RECOVERY_COMPLETE",
+  "passes": [
+    {
+      "direction": "current canonical estate and account code search",
+      "result": "contract/method/intake/receipt surfaces recovered; no executable independent certifier"
+    },
+    {
+      "direction": "repository trees and relevant historical AIOS/Workshop branches",
+      "result": "RiverBlackboard, receipt schema, FlashRiver intake/review recovered; no independent certifier runtime"
+    }
+  ],
+  "recovered_non_certifier_primitives": [
+    "Harness River lineage contract",
+    "AIOS Receipt / Trace / Certificate skill",
+    "AIOS RiverBlackboard historical work-state coordinator",
+    "AIOS receipt schema",
+    "Workshop FlashRiver archive metadata/intake/review",
+    "Scrapyard Proof Gate method"
+  ],
+  "archive_gap": {
+    "source_zip": "FlashRiver_CERT-RIVER_phase12_certified_lineage_clean_working_memory(2).zip",
+    "sha256": "74d16ddf7769b03d816d32b6aa9bec5c7a8d74ea125d0d1a0600ee633194f2bb",
+    "current_access": "hash-pinned lineage evidence only; raw executable package not recovered in live GitHub estate"
+  },
+  "adaptive_pass_verdict": "STOP_SEARCH_AND_TEST",
+  "authorized_next_move": "smallest clean independent verifier matching recovered exact-claim certificate contract",
+  "non_authority": [
+    "does not prove historical certifier never existed",
+    "does not authorize another proof framework",
+    "does not authorize deploy/promotion/activation"
+  ]
+}
