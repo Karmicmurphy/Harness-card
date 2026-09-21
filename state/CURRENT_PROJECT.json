@@ -1,15 +1,43 @@
 {
-  "schema_version": "0.1.0",
-  "active_project": "TWIS LOOP DECK / PRO RIG UNIFIED WORKSTATION",
+  "schema_version": "0.2.0",
+  "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "authority": {
-    "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
-    "branch": "main",
-    "sha": "04a5b694d3ac6ddbebaf5b2ff9314a1c619b111e",
-    "deploy_target": "https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/pro-rig.html",
-    "device_or_physical_state": "User-reported current on Android: controls/runtime may operate, but the musical output still sounds unprofessional and does not meet the existing SONIC_ACCEPTANCE.md contract. Treat current sonic layer as FAILED. UI/transport work is not the active problem."
+    "governance": {
+      "repo": "Karmicmurphy/Harness-card",
+      "branch": "main"
+    },
+    "factory": {
+      "repo": "Karmicmurphy/temporal-capability-foundry",
+      "branch": "software-builder-v0",
+      "sha": "66180c44b4513b4e6531286df193918c9e976346"
+    },
+    "runtime": {
+      "repo": "Karmicmurphy/Untethered-AIOS",
+      "branch": "main",
+      "sha": "17a717e556a639d450551d7cf3b9a77d6a1b459e"
+    },
+    "salvage": {
+      "repo": "Karmicmurphy/digital-scrapyard-autopilot",
+      "branch": "main",
+      "sha": "028f1a9559a7f198d73e7042d18b9c8343f64729"
+    },
+    "cockpit": {
+      "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
+      "branch": "living-workshop-main-build",
+      "sha": "29deb23f917199b09b17d6b87a2f33c40657ea79",
+      "note": "GitHub Phase 1A proven in test; local Windows Workshop remains private authority pending reconciliation"
+    }
   },
-  "evidence_state": "FAILED_SONIC_ACCEPTANCE",
-  "lane": "CREATIVE OUTPUT QUALITY RECOVERY",
-  "last_verified_at": "2026-09-20T20:23:00-05:00",
-  "notes": "Harness routing is now authoritative for the next move. Freeze UI growth and stop patching random synth/content details. Follow SONIC_ACCEPTANCE.md plus Artifact Compass/Salvage. Next proof target is an engine-only 30-second audition that meets the sonic contract before reconnecting or changing the performance UI."
+  "evidence_state": "INTEGRATION_PROOF_NOT_END_TO_END_FUNCTIONAL",
+  "lane": "FOUNDATION V0 INTEGRATION / PROOF",
+  "last_verified_at": "2026-09-21T07:50:00-05:00",
+  "next_action": "Cog 1: deterministic/no-model real-repository Builder proof on pinned Untethered-AIOS fault; in parallel add model action-attempt/rejection evidence.",
+  "separate_projects": [
+    "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
+    "First3 Local / nemoclw_new_agent — proving-ground product; not Foundation authority",
+    "Coilside — HVAC field companion; separate product",
+    "WTF Stupid Simple Terri Tax — separate product",
+    "Digital Scrap Forge commerce/product branches — separate business lane unless an exact primitive is salvaged through Rights/Artifact rules"
+  ],
+  "bleed_control": "Only refs explicitly named by Foundation authority files may change Foundation V0. Other chats, Codex workspaces, repos, branches, PRs, archives, and projects are SALVAGE/QUARANTINE/SEPARATE until reconciled and promoted into authority."
 }
