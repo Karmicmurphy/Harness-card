@@ -34,6 +34,7 @@ First capability-first reconciliation artifacts:
 - `state/RIVER_LINEAGE_RECONCILIATION_V1.json` / `docs/RIVER_LINEAGE_RECONCILIATION_V1.md` — recovered CERT-RIVER / PRISM-RIVER / RiverKernel contract reconciliation.
 - `state/SYSTEM_BOUNDARY_MAP_V1.json` / `docs/SYSTEM_BOUNDARY_MAP_V1.md` — live cross-project ownership, handoff, receipt-semantics, missing-interface, and next-proof map.
 - `state/FRANKENSTEIN_WAREHOUSE_V0.json` / `docs/FIVE_PASS_FOUNDATION_SALVAGE_2026-09-21.md` — five-pass Artifact Compass/Salvage/Rights/Recombination result: deterministic-first foundation, external candidate registry, legal dispositions, and current build sequence.
+- `state/FOUNDATION_V0_ACTIVATION_MAP_2026-09-21.json` / `docs/FOUNDATION_V0_ACTIVATION_MAP_2026-09-21.md` — current cog-by-cog activation map, cross-repo correlation rule, missing connectors, and first functional-machine definition.
 
 Use these as an extension of the existing recovery chain, not as replacement authority. Reverify live project truth before making current-state claims.
 
@@ -46,7 +47,7 @@ Current V1 findings include:
 - CERT-RIVER / PRISM-RIVER / RiverKernel remain the major unresolved independent-certification lineage;
 - the Software Builder has moved past the old 10/12-step-budget hypothesis. Deterministic controls now own the failing test, declared target preload, post-edit retest, and change provenance; the live unresolved gate is one real schema-constrained narrow patch through the local model socket.
 
-Boundary reconciliation still identifies **Foundry -> AIOS Builder Wake Adapter V0** as the first missing cross-repo runtime interface, but the adapter remains deferred until the narrower Builder repair proof is green. The active Builder direction is **deterministic-first / Agentless-style**: localize and preload mechanically, ask the model only for a bounded patch, retest mechanically, and keep proof separate. Do not resurrect the 10->12 step-budget experiment; it was disproven and is historical only.
+Boundary reconciliation still identifies **Foundry -> AIOS Builder Wake Adapter V0** as the first missing cross-repo runtime interface. The activation gate is now a **deterministic/no-model real-repository Builder control proof**, not success from one particular local LLM. Patch-brains remain replaceable optional compute. Do not resurrect the 10->12 step-budget experiment; it was disproven and is historical only.
 
 The Digital Scrapyard now carries an active shared `skills/salvage-suite/ADAPTIVE_PASS_RULE.md`. Future research depth is evidence-adaptive: passes must earn passes, two directionally different low-yield passes trigger saturation, and bounded testing replaces searching when it will reduce more uncertainty.
 
