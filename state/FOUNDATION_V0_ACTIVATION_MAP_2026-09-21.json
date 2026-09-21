@@ -21,28 +21,34 @@
     {
       "id": 1,
       "name": "deterministic_real_repository_builder",
-      "state": "NEXT",
-      "blocking": true
+      "state": "PROVEN_IN_TEST",
+      "blocking": false,
+      "proof_run": 35611616345,
+      "proof_head": "eac8e8ab0b931b81af8c8147982974ce1a26e8b5"
     },
     {
       "id": "1B",
       "name": "patch_brain_diagnostics_and_bakeoff",
-      "state": "PARALLEL_AFTER_ACTION_TRACE",
-      "blocking": false
+      "state": "DIAGNOSTICS_IMPLEMENTED_MODEL_LANE_OPTIONAL",
+      "blocking": false,
+      "diagnostic_run": 35611616512
     },
     {
       "id": 2,
       "name": "foundry_aios_wake_adapter",
-      "state": "MISSING",
-      "blocking": true,
+      "state": "PROVEN_IN_TEST",
+      "blocking": false,
       "depends_on": [
         1
-      ]
+      ],
+      "proof_run": 35612271813,
+      "proof_head": "bcbf20d16493f60dbee1d25cfb4c6a4006bfd50f",
+      "aios_head": "8a954439af2b15b00f7c961d83552772b382fd1f"
     },
     {
       "id": 3,
       "name": "independent_proof_lane",
-      "state": "MISSING",
+      "state": "NEXT",
       "blocking": true,
       "depends_on": [
         1
@@ -96,14 +102,10 @@
     }
   ],
   "latest_builder_model_proof": {
-    "run_id": 35595297143,
-    "conclusion": "failure",
-    "failure_observed": true,
-    "target_preloaded": true,
-    "worker_authored_files_changed": [],
-    "tests_edited": false,
-    "terminal_reason": "step budget exhausted at 3",
-    "next_fix": "record each model action attempt and rejection/tool error before changing budget/model"
+    "run_id": 35611616512,
+    "conclusion": "IN_PROGRESS_OR_PENDING_LIVE_RECHECK",
+    "blocking": false,
+    "note": "Action-attempt diagnostics are implemented. Local model patch success is optional compute and no longer gates Foundation activation."
   },
   "do_not_build": [
     "new AI OS",
@@ -114,5 +116,19 @@
     "model-controlled deploy/publish/promotion",
     "all warehouse candidates as dependencies up front"
   ],
-  "first_move": "real-repository deterministic/no-model Builder proof against pinned Untethered-AIOS fault"
+  "first_move": "Cog 3: bounded CERT-RIVER executable recovery, then minimal independent verifier if recovery does not yield a current usable certifier",
+  "completed_proofs": {
+    "deterministic_builder": {
+      "run_id": 35611616345,
+      "conclusion": "success",
+      "status": "PROVEN_IN_TEST",
+      "pinned_source": "Karmicmurphy/Untethered-AIOS@17a717e556a639d450551d7cf3b9a77d6a1b459e"
+    },
+    "foundry_aios_wake": {
+      "run_id": 35612271813,
+      "conclusion": "success",
+      "status": "PROVEN_IN_TEST",
+      "pinned_aios": "Karmicmurphy/Untethered-AIOS@8a954439af2b15b00f7c961d83552772b382fd1f"
+    }
+  }
 }
