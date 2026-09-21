@@ -1,0 +1,162 @@
+{
+  "generated_at": "2026-09-21",
+  "status": "FRANKENSTEIN_WAREHOUSE_V0_CANDIDATE_REGISTRY",
+  "legal_rule": "Partial copying does not automatically escape source license obligations. Reuse exact code only after Rights Gate; otherwise store mechanism descriptions and clean-room reimplementation targets.",
+  "shelves": {
+    "REUSE": [
+      {
+        "source": "OpenAutoCoder/Agentless",
+        "license": "MIT",
+        "atom": "localize -> repair -> validate"
+      },
+      {
+        "source": "SWE-agent/mini-swe-agent",
+        "license": "MIT",
+        "atom": "minimal software-engineering loop"
+      },
+      {
+        "source": "SWE-bench/SWE-bench",
+        "license": "MIT",
+        "atom": "reproducible issue/patch evaluation"
+      },
+      {
+        "source": "stanfordnlp/dspy",
+        "license": "MIT",
+        "atom": "metric-driven LM program optimization"
+      },
+      {
+        "source": "ast-grep/ast-grep",
+        "license": "MIT",
+        "atom": "AST structural search/rewrite"
+      },
+      {
+        "source": "tree-sitter/tree-sitter",
+        "license": "MIT",
+        "atom": "incremental syntax trees"
+      },
+      {
+        "source": "spack/spack",
+        "license": "Apache-2.0 OR MIT",
+        "atom": "spec/concretization/version-variant reasoning"
+      },
+      {
+        "source": "nasa/fprime",
+        "license": "Apache-2.0",
+        "atom": "explicit components/interfaces/queues/generated glue/testing"
+      },
+      {
+        "source": "nasa/openmct",
+        "license": "Apache-2.0 with third-party notice review",
+        "atom": "plugin/provider/telemetry cockpit patterns"
+      },
+      {
+        "source": "nasa/cFE",
+        "license": "Apache-2.0 for inspected current release",
+        "atom": "component/software-bus patterns"
+      },
+      {
+        "source": "microsoft/BitNet",
+        "license": "MIT",
+        "atom": "CPU-efficient low-bit inference"
+      },
+      {
+        "source": "microsoft/bitnet-embedding-270m",
+        "license": "MIT",
+        "atom": "small CPU embedding"
+      },
+      {
+        "source": "ibm-granite/granite-4.0-h-350m",
+        "license": "Apache-2.0",
+        "atom": "tiny instruct/hybrid candidate"
+      },
+      {
+        "source": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+        "license": "Apache-2.0",
+        "atom": "tiny patch generator"
+      },
+      {
+        "source": "HuggingFaceTB/SmolLM2-360M-Instruct",
+        "license": "Apache-2.0",
+        "atom": "tiny general instruct baseline"
+      }
+    ],
+    "MANUAL_RIGHTS": [
+      {
+        "source": "LiquidAI/LFM2.5-230M and 350M",
+        "license": "LFM 1.0/custom",
+        "atom": "edge generative/tool/extraction"
+      },
+      {
+        "source": "LiquidAI/LFM2.5-Encoder-230M/350M",
+        "license": "LFM 1.0/custom",
+        "atom": "CPU classification/understanding"
+      },
+      {
+        "source": "LiquidAI/LFM2.5-Embedding-350M / ColBERT-350M",
+        "license": "LFM 1.0/custom",
+        "atom": "retrieval/artifact matching"
+      },
+      {
+        "source": "google/functiongemma-270m-it",
+        "license": "Gemma",
+        "atom": "tiny function calling"
+      },
+      {
+        "source": "nasa/ogma",
+        "license": "NASA-specific/custom review required",
+        "atom": "generated deterministic runtime monitors"
+      },
+      {
+        "source": "nasa/SCH",
+        "license": "NASA Open Source Agreement",
+        "atom": "deterministic time-slot scheduler"
+      }
+    ],
+    "REFERENCE_ONLY": [
+      {
+        "source": "Salesforce/xLAM-1b-fc-r",
+        "license": "CC-BY-NC-4.0",
+        "atom": "small function calling"
+      },
+      {
+        "source": "MIT CSAIL automatic patch-generation research",
+        "license": "paper/research-specific",
+        "atom": "generate-and-validate plus proof-strength warnings"
+      }
+    ]
+  },
+  "foundation_v0": {
+    "governor": "Karmicmurphy/Harness-card",
+    "factory": "Karmicmurphy/temporal-capability-foundry",
+    "runtime": "Karmicmurphy/Untethered-AIOS",
+    "salvage_methods": "Karmicmurphy/digital-scrapyard-autopilot",
+    "cockpit": "Karmicmurphy/Ollie_Twis_Holo_workshop",
+    "certifier": "independent proof lane; CERT-RIVER contract lineage, executable implementation not yet verified"
+  },
+  "default_intelligence_ladder": [
+    "RULE",
+    "SCRIPT",
+    "WORKER",
+    "TINY_MODEL",
+    "CENTRAL_AI",
+    "OWNER_GATE"
+  ],
+  "next_build_sequence": [
+    "Foundation cross-repo job/receipt contracts",
+    "Deterministic Agentless-style Builder V0",
+    "Tiny repair-brain bake-off",
+    "Foundry -> AIOS Wake Adapter V0",
+    "Independent Certifier V0",
+    "Workshop handoff after local authority reconciliation",
+    "Capability Downshift learning loop"
+  ],
+  "prohibitions": [
+    "new giant AI OS",
+    "new scheduler",
+    "new giant agent framework",
+    "single merged monorepo as a prerequisite",
+    "all-purpose LLM authority",
+    "autonomous deploy/spend/destructive authority",
+    "license laundering by copying only snippets"
+  ]
+}
