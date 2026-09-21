@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-09-20",
+  "status": "RECONCILED_WORKING_BOUNDARY_NOT_FINAL_ARCHITECTURE",
+  "authority_rule": "Live project authority outranks this map. Harness governs cross-project work. This file does not grant new runtime authority.",
+  "sources": {
+    "workshop": {"repo":"Karmicmurphy/Ollie_Twis_Holo_workshop","ref":"main","sha":"04a5b694d3ac6ddbebaf5b2ff9314a1c619b111e","paths":["docs/ADAPTER_BOUNDARY.md","docs/POWERHOSE_ENGINE_HARNESS.md","CURRENT_STATE.md"]},
+    "foundry_builder": {"repo":"Karmicmurphy/temporal-capability-foundry","ref":"software-builder-v0","branch_head":"8bf324d378e1af59fdc48608d40ba95ddb7d73f0","functional_code_head":"431651c4483c453c43984a6e02c6919c90be2d79","paths":["docs/SOFTWARE_BUILDER_V0.md","src/foundry/software_builder.py","contracts/software_builder_receipt.schema.json","state/SOFTWARE_BUILDER_V0_AUTHORITY.json"]},
+    "aios": {"repo":"Karmicmurphy/Untethered-AIOS","ref":"main","sha":"17a717e556a639d450551d7cf3b9a77d6a1b459e","paths":["src/untethered_aios/kernel.py","src/untethered_aios/capabilities.py","src/untethered_aios/audit.py"]},
+    "scrapyard": {"repo":"Karmicmurphy/digital-scrapyard-autopilot","ref":"main","sha":"40a04675b922f238cf4af8e56ab7f4d5c07cc719","paths":["skills/salvage-suite/SKILL_REGISTRY.md","skills/salvage-suite/skills/proof-gate/SKILL.md","skills/salvage-suite/skills/recombination-forge/SKILL.md"]},
+    "river": {"kind":"RECOVERED_ARCHIVED_PROOF_LINEAGE","paths":["docs/RIVER_LINEAGE_RECONCILIATION_V1.md","state/RIVER_LINEAGE_RECONCILIATION_V1.json"],"current_executable_certifier_verified":false}
+  },
+  "roles": {
+    "harness_card":{"owns":["cross-project recovery","scope","policy","proof requirements","decision continuity"],"does_not_own":["runtime execution","scheduler","coding","independent certification"]},
+    "workshop":{"owns":["human artifact/engine cockpit","selected handoff packets","artifact return","human review","Workshop receipts"],"does_not_own":["global governance","promotion","independent certification"]},
+    "foundry":{"owns":["typed capability lifecycle","Software Builder","evaluation","learning candidates","promotion","activation","rollback"],"does_not_own":["human cockpit","general scheduler authority","independent self-certification"]},
+    "aios":{"owns":["bounded process lifecycle","cooperative scheduling","explicit grants","path scopes","runtime audit receipts"],"does_not_own":["global governance","Builder semantics","promotion","independent certification"]},
+    "scrapyard":{"owns":["salvage methods","rights methods","recombination methods","Proof Gate method"],"does_not_own":["runtime scheduling","Builder execution","independent certifier runtime"]},
+    "river_lineage":{"owns":["independent claim-proof/certificate contract lineage","quarantine","no-broadening","dirty-key honesty"],"does_not_own":["verified current executable runtime"]}
+  },
+  "interfaces": [
+    {"from":"Harness","to":"all","state":"POLICY_NOT_RPC","action":"do_not_build_service_without_evidence"},
+    {"from":"Workshop","to":"Foundry","state":"SHARED_MACHINE_ENVELOPE_NOT_VERIFIED","blocker":"authoritative local Workshop may be newer than GitHub","action":"defer"},
+    {"from":"Scrapyard","to":"Harness/Foundry","state":"METHOD_AND_REGISTRY_REUSE_EXISTS","action":"do_not_duplicate_runtime_adapter"},
+    {"from":"Foundry","to":"AIOS","state":"MISSING","name":"Builder Wake Adapter V0","blocker":"real Builder Ollama proof not green","action":"first_interface_after_green_builder_proof"},
+    {"from":"AIOS","to":"Foundry","state":"MISSING_RETURN_SIDE","returns":["terminal state","result","capability audit receipts","denials/failures","tick-limit evidence"]},
+    {"from":"Foundry","to":"CERT-RIVER","state":"CONTRACT_RECONCILED_IMPLEMENTATION_BLOCKED","blocker":"exact archived executable certifier primitives not recovered as current code"},
+    {"from":"Foundry","to":"Workshop","state":"GENERIC_ARTIFACT_RECEIPT_RETURN_ONLY","action":"defer shared schema until local Workshop authority reconciled"}
+  ],
+  "receipt_semantics": {
+    "workshop":"human-facing artifact/action record",
+    "aios":"runtime/process/capability audit",
+    "foundry":"development/evaluation/promotion/activation evidence",
+    "cert_river_trace":"independent proof execution path",
+    "cert_river_certificate":"bounded independent decision on one exact claim"
+  },
+  "current_blocker": {
+    "target":"Software Builder real Ollama failure-repair-retest proof",
+    "run_id":35522934878,
+    "model":"qwen2.5-coder:1.5b-instruct",
+    "source_repo":"Karmicmurphy/Untethered-AIOS",
+    "source_sha":"17a717e556a639d450551d7cf3b9a77d6a1b459e",
+    "observed_failure":true,
+    "implementation_file_inspected":"src/untethered_aios/capabilities.py",
+    "implementation_file_changed":true,
+    "tests_edited":false,
+    "passing_retest_observed":false,
+    "max_steps":10,
+    "classification":"STEP_BUDGET_EXHAUSTED_AFTER_REPAIR_PATH_REACHED"
+  },
+  "immediate_bounded_experiment": {
+    "change":"proof harness max_steps 10 -> 12 only",
+    "preserve":["pinned AIOS commit","repair_limit=2","required initial failure gate","test immutability","same acceptance gate"],
+    "reason":"minimum post-edit useful sequence is retest plus final; two extra slots test the budget hypothesis without loosening proof gates",
+    "if_still_red":"instrument/recover action history before any further budget or Builder-policy change"
+  },
+  "next_interface_after_green_proof": {
+    "name":"Foundry -> AIOS Builder Wake Adapter V0",
+    "input":["Foundry job","candidate workspace","explicit grants/path scopes","tick/resource bound"],
+    "output":["AIOS terminal state","result","runtime audit receipts linked to Foundry evidence"],
+    "non_goals":["deploy","publish","permanent agent","new scheduler","certification"]
+  },
+  "sequence":["boundary map","12-step Builder proof experiment","green real failure-repair-retest proof","Foundry-to-AIOS wake adapter","independent certification recovery/adapter","Workshop cockpit integration after local-authority reconciliation"]
+}
