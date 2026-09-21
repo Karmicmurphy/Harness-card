@@ -75,8 +75,8 @@
     {
       "project": "Untethered AIOS",
       "repo": "Karmicmurphy/Untethered-AIOS",
-      "head": "17a717e556a639d450551d7cf3b9a77d6a1b459e",
-      "authority_kind": "EXPERIMENTAL_DESCENDANT",
+      "head": "8a954439af2b15b00f7c961d83552772b382fd1f",
+      "authority_kind": "BOUNDED_RUNTIME_PRIMITIVES_PROVEN_WITH_FOUNDRY_WAKE_ADAPTER",
       "role": "Experimental bounded operating layer for scheduling, capability enforcement, budgets, recovery, receipts, and composition around Workshop capabilities.",
       "recovered_primitives": [
         "kernel-owned budgets",
@@ -130,24 +130,20 @@
     {
       "project": "Temporal Capability Foundry",
       "repo": "Karmicmurphy/temporal-capability-foundry",
-      "head": "66180c44b4513b4e6531286df193918c9e976346",
+      "head": "cd4bae186250eaf5bb49d10c8257869921ad38ea",
       "authority_kind": "CURRENT_PRIVATE_FOUNDATION",
       "role": "Framework-independent capability foundation: recover intent, search present/past, salvage, rights-check, compile, execute, evaluate, learn candidate, prove, promote, activate/rollback.",
       "current_proven_state": [
-        "Temporal Compass planning and mechanism trace",
-        "intent compiler",
-        "job compiler",
-        "deny-by-default execution kernel",
-        "evaluation and learning candidates",
-        "semantic worker/model manifest boundary",
-        "promotion gate",
-        "activation and rollback",
-        "end-to-end lifecycle proof",
-        "45-record salvage estate",
-        "local loopback runtime transport",
-        "local model field-probe harness"
+        "typed intent/job/evidence lifecycle",
+        "deterministic real-repository Software Builder",
+        "Foundry -> AIOS bounded wake with foundry_job_id correlation",
+        "Independent Proof V0 exact claim/hash/fixture verifier",
+        "CERTIFIED / REJECTED / QUARANTINED verdict boundary",
+        "certificate-required promotion gate with exact job/claim binding",
+        "activation requires APPROVED assessment and remains non-automatic",
+        "evaluation/learning candidates and rollback"
       ],
-      "current_nonclaim": "Foundation core exists; real model patch lane remains blocked and deterministic real-repository Builder control is the next activation proof.",
+      "current_nonclaim": "Foundation is not yet end-to-end functional because local Workshop reconciliation and Workshop->Foundry handoff/result wiring remain open. Qwen patch-brain lane is optional and not green.",
       "overlap_warning": [
         "Proof/evidence/certification concepts overlap CERT-RIVER.",
         "Execution/budget/recovery concepts overlap RiverKernel and Untethered AIOS.",
@@ -185,7 +181,7 @@
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
       "visibility": "private",
       "default_branch": "main",
-      "head": "40a04675b922f238cf4af8e56ab7f4d5c07cc719"
+      "head": "028f1a9559a7f198d73e7042d18b9c8343f64729"
     },
     {
       "repo": "Karmicmurphy/temporal-capability-foundry",
@@ -209,7 +205,7 @@
       "repo": "Karmicmurphy/Untethered-AIOS",
       "visibility": "public",
       "default_branch": "main",
-      "head": "17a717e556a639d450551d7cf3b9a77d6a1b459e"
+      "head": "8a954439af2b15b00f7c961d83552772b382fd1f"
     },
     {
       "repo": "Karmicmurphy/Harness-card",
@@ -327,7 +323,7 @@
     "self_reference_rule": "Do not claim a durable exact Harness-card HEAD inside a Harness-card file; committing the file advances HEAD. Resolve Harness-card main live when exact current SHA matters."
   },
   "active_foundation_v0": {
-    "status": "CURRENT_ACTIVE_PROJECT",
+    "status": "CURRENT_ACTIVE_PROJECT_COGS_1_4_PROVEN_IN_TEST",
     "canonical_refs": [
       {
         "role": "governance",
@@ -338,13 +334,13 @@
         "role": "factory",
         "repo": "Karmicmurphy/temporal-capability-foundry",
         "ref": "software-builder-v0",
-        "sha": "66180c44b4513b4e6531286df193918c9e976346"
+        "sha": "cd4bae186250eaf5bb49d10c8257869921ad38ea"
       },
       {
         "role": "runtime",
         "repo": "Karmicmurphy/Untethered-AIOS",
         "ref": "main",
-        "sha": "17a717e556a639d450551d7cf3b9a77d6a1b459e"
+        "sha": "8a954439af2b15b00f7c961d83552772b382fd1f"
       },
       {
         "role": "salvage",
@@ -397,6 +393,7 @@
         "role": "business/product branches; salvage primitives only through explicit recovery",
         "foundation_authority": false
       }
-    ]
+    ],
+    "next": "Reconcile local Windows Workshop, then build thin Workshop -> Foundry handoff/result adapter."
   }
 }
