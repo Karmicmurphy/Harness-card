@@ -17,15 +17,15 @@
     "foundry_builder": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "ref": "software-builder-v0",
-      "branch_head": "5ee5d03c67989b08d9484bf3e52d99e2c31df850",
+      "branch_head": "cd4bae186250eaf5bb49d10c8257869921ad38ea",
       "paths": [
         "docs/SOFTWARE_BUILDER_V0.md",
         "src/foundry/software_builder.py",
         "contracts/software_builder_receipt.schema.json",
         "state/SOFTWARE_BUILDER_V0_AUTHORITY.json"
       ],
-      "functional_proof_head": "bcbf20d16493f60dbee1d25cfb4c6a4006bfd50f",
-      "note": "Builder deterministic real-repository proof and Foundry->AIOS wake proof are green; authority refresh follows."
+      "functional_proof_head": "c25eaac464968ae5d1654affc9e75318b03acff9",
+      "note": "Cogs 1-4 proven in test; authority refresh follows functional proof head."
     },
     "aios": {
       "repo": "Karmicmurphy/Untethered-AIOS",
@@ -54,7 +54,9 @@
         "docs/RIVER_LINEAGE_RECONCILIATION_V1.md",
         "state/RIVER_LINEAGE_RECONCILIATION_V1.json"
       ],
-      "current_executable_certifier_verified": false
+      "current_executable_certifier_verified": true,
+      "current_foundry_implementation": "src/foundry/independent_proof.py",
+      "current_proof_run": 35620771601
     }
   },
   "roles": {
@@ -189,15 +191,16 @@
     {
       "from": "Foundry",
       "to": "Independent proof / CERT-RIVER lineage",
-      "state": "CONTRACT_RECONCILED_EXECUTABLE_RUNTIME_UNVERIFIED",
-      "blocker": "bounded archived CERT-RIVER recovery checkpoint not yet completed",
-      "action": "recover exact usable primitives first; if bounded recovery fails, implement minimal independent proof lane without creating another framework"
+      "state": "PROVEN_IN_TEST",
+      "blocker": null,
+      "action": "keep exact-claim boundary; certifier remains unable to deploy/promote/activate",
+      "proof_run": 35620771601
     },
     {
       "from": "Foundry",
       "to": "Workshop",
-      "state": "GENERIC_ARTIFACT_RECEIPT_RETURN_ONLY",
-      "action": "defer shared schema until local Workshop authority reconciled"
+      "state": "DEFERRED_PENDING_LOCAL_WORKSHOP_RECONCILIATION",
+      "action": "after local/GitHub reconciliation, build thin job/result adapter using foundry_job_id"
     }
   ],
   "receipt_semantics": {
@@ -208,52 +211,43 @@
     "cert_river_certificate": "bounded independent decision on one exact claim"
   },
   "current_blocker": {
-    "target": "Cog 3 independent proof/certifier lane",
-    "reason": "Builder plumbing and Foundry->AIOS bounded wake are proven in test; current executable independent certifier is not verified.",
-    "recovery_first": "perform bounded CERT-RIVER executable recovery checkpoint",
-    "if_not_recovered": "implement the smallest independent verifier matching the recovered certificate contract",
+    "target": "Cog 5 Workshop local/GitHub reconciliation, then Cog 6 Workshop -> Foundry handoff/result adapter",
+    "reason": "Cogs 1-4 are proven in test; final cockpit wiring must not be built against potentially stale GitHub Workshop state.",
     "model_patch_lane": "optional/non-blocking"
   },
   "immediate_bounded_experiment": {
-    "independent_proof": [
-      "recover usable executable CERT-RIVER primitives within a bounded pass",
-      "if unrecovered, pin exact candidate/hash and exact acceptance fixture",
-      "rerun acceptance outside Builder",
-      "check forbidden-file/policy conditions",
-      "emit CERTIFIED / REJECTED / QUARANTINED for one exact claim",
-      "record proof debt",
-      "do not deploy or promote"
+    "workshop_reconciliation": [
+      "recover authoritative local Windows Workshop state",
+      "compare against living-workshop-main-build",
+      "record intentional local-only/private differences",
+      "select safe current code authority for adapter work"
+    ],
+    "then_workshop_foundry_adapter": [
+      "reuse Foundry job_id as correlation key",
+      "submit existing Foundry-compatible job envelope",
+      "return Builder/AIOS/certificate/proof-debt/status evidence",
+      "keep Workshop non-certifying and Randy irreversible-action gate intact"
     ]
   },
   "next_interface_after_green_proof": {
-    "name": "Foundry -> AIOS Builder Wake Adapter V0",
-    "input": [
-      "Foundry job",
-      "candidate workspace",
-      "explicit grants/path scopes",
-      "tick/resource bound"
-    ],
-    "output": [
-      "AIOS terminal state",
-      "result",
-      "runtime audit receipts linked to Foundry evidence"
-    ],
+    "name": "Workshop -> Foundry Handoff / Result Adapter V0",
+    "blocker": "authoritative local Windows Workshop not yet reconciled with GitHub Foundation branch",
     "non_goals": [
+      "certification",
       "deploy",
       "publish",
-      "permanent agent",
-      "new scheduler",
-      "certification"
+      "new job identity",
+      "new framework"
     ]
   },
   "sequence": [
-    "boundary map",
-    "deterministic/no-model real-repository Builder control [PROVEN_IN_TEST]",
-    "Foundry-to-AIOS wake adapter [PROVEN_IN_TEST]",
-    "independent proof/certifier lane [NEXT]",
-    "promotion certificate-consumption gate",
-    "Workshop cockpit integration after local-authority reconciliation",
-    "replaceable patch-brain diagnostics/bake-off as optional capability",
+    "deterministic Builder [PROVEN_IN_TEST]",
+    "Foundry-to-AIOS wake [PROVEN_IN_TEST]",
+    "independent proof V0 [PROVEN_IN_TEST]",
+    "certificate-required promotion gate [PROVEN_IN_TEST]",
+    "Workshop local/GitHub reconciliation [NEXT]",
+    "Workshop-to-Foundry handoff/result adapter",
+    "estate delta checker",
     "Capability Downshift from repeated proven traces"
   ]
 }
