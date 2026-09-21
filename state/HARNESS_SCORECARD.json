@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1.0",
-  "generated_at": "2026-09-21T14:31:23.949570+00:00",
+  "generated_at": "2026-09-21T15:46:27.728561+00:00",
   "active_project": "FOUNDATION V0 \u2014 HUMAN-OWNED SOFTWARE FACTORY",
-  "evidence_state": "BUILDER_AND_AIOS_WAKE_PROVEN_IN_TEST; INDEPENDENT_PROOF_NEXT",
+  "evidence_state": "COGS_1_2_3_4_PROVEN_IN_TEST; WORKSHOP_RECONCILIATION_AND_HANDOFF_NEXT",
   "incident_count": 0,
   "wins": 0,
   "losses": 0,
@@ -21,8 +21,8 @@
     "factory": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "branch": "software-builder-v0",
-      "sha": "5ee5d03c67989b08d9484bf3e52d99e2c31df850",
-      "functional_proof_head": "bcbf20d16493f60dbee1d25cfb4c6a4006bfd50f"
+      "sha": "cd4bae186250eaf5bb49d10c8257869921ad38ea",
+      "functional_proof_head": "c25eaac464968ae5d1654affc9e75318b03acff9"
     },
     "runtime": {
       "repo": "Karmicmurphy/Untethered-AIOS",
