@@ -1,0 +1,216 @@
+{
+  "generated_at": "2026-09-20",
+  "status": "RIVER_LINEAGE_RECONCILIATION_V1",
+  "scope": "Reconcile recovered CERT-RIVER / PRISM-RIVER / RiverKernel lineage against live Foundry, Untethered AIOS, Workshop and Harness mechanisms.",
+  "source_authority": {
+    "library_primary": {
+      "name": "FlashRiver_Phase12_Harness_Skills_Questions_Extraction.md",
+      "source_zip": "FlashRiver_CERT-RIVER_phase12_certified_lineage_clean_working_memory(2).zip",
+      "zip_sha256": "74d16ddf7769b03d816d32b6aa9bec5c7a8d74ea125d0d1a0600ee633194f2bb",
+      "files_found": 607,
+      "extracted_counts": {
+        "md": 110,
+        "json": 213,
+        "txt": 84,
+        "py": 35,
+        "html": 10,
+        "pdf": 21,
+        "zip": 7
+      },
+      "authority_note": "This extraction is historical archive evidence, not current runtime authority."
+    },
+    "current_live_refs": {
+      "foundry": "Karmicmurphy/temporal-capability-foundry@software-builder-v0",
+      "aios": "Karmicmurphy/Untethered-AIOS@17a717e556a639d450551d7cf3b9a77d6a1b459e",
+      "workshop": "Karmicmurphy/Ollie_Twis_Holo_workshop@04a5b694d3ac6ddbebaf5b2ff9314a1c619b111e",
+      "harness": "Karmicmurphy/Harness-card@main"
+    }
+  },
+  "recovered_primary_artifacts": [
+    {
+      "name": "PROJECT_STATE.md",
+      "sha256": "2a9a66199844bd296ce1070d8cbeedb1075dfd44cc53d0513db62835584d1e96",
+      "role": "working-memory authority"
+    },
+    {
+      "name": "RESTART_PACKET.md",
+      "sha256": "0b4dfc94d784aa5fa237de2e85c270834394e0380b55e7912429f0d2adc31953",
+      "role": "continuation packet"
+    },
+    {
+      "name": "MANIFEST.json",
+      "sha256": "a7bb4d4a907fe4b394d76718d4f9f2a37e452f443d2d58d9a1d813323f1c937a",
+      "role": "release/file manifest"
+    },
+    {
+      "name": "PHASE8_POLICY_GATE_SKETCH.md",
+      "sha256": "6c12fd5c14c6575924483159fb3067de9fc2ed004cf587648bd1bc5c2813e998",
+      "role": "no-certificate-no-use policy lineage"
+    },
+    {
+      "name": "PHASE9_LEGAL_EXECUTION_SURFACE_ROUTING_REVIEW.md",
+      "sha256": "c50d3662493b0ce5b89f472404a72e71277b5faf41a1345ca625224465368ad1",
+      "role": "execution-surface policy"
+    },
+    {
+      "name": "PHASE10A_PROOF_MODE_UI_BOUNDARY_MAP.md",
+      "sha256": "42400656ea387d964ea700319e871e4aed4f305875d2aae1aac3bd385fddc988",
+      "role": "proof/certificate UI honesty"
+    },
+    {
+      "name": "PHASE11B_TINY_MULTI_STEP_PIPELINE_PROOF_PLAN.md",
+      "sha256": "0b612fcbf12b6ad36427373002671f6f719eab342bda487c5a3e38d7d6651e56",
+      "role": "proof plan"
+    },
+    {
+      "name": "PHASE11E_PROOF_FAILURE_REPAIR_AUDIT.md",
+      "sha256": "710ef935d8267bf8b74525aa1068a477f938f4657ba87b81fa4753a65050ad37",
+      "role": "failure classification/minimal repair"
+    },
+    {
+      "name": "PHASE11F_COMPARATOR_REPAIR_AND_PIPELINE_PROOF_RERUN.md",
+      "sha256": "633b00531187f6935a7008563665361cb078b40aeefb8a449b7ef1a61de885dc",
+      "role": "exact repair + rerun"
+    },
+    {
+      "name": "PHASE12_CERTIFIED_LINEAGE_CONSOLIDATION_AUDIT.md",
+      "sha256": "4afb5286433d307be1804499c59f858a5c2d3cd80e7bf295043eac96828d78ef",
+      "role": "certificate boundary/no-broadening consolidation"
+    },
+    {
+      "name": "PHASE5_THREE_CONTRACT_KERNEL_ACCEPTANCE_AUDIT.md",
+      "sha256": "a54df871c31ee24b860a6bfaa5f1918b5cc313272b5cbd8cb42778e958cd4cd5",
+      "role": "kernel/contract separation"
+    }
+  ],
+  "river_primitives": [
+    "actual file-access proof before reasoning",
+    "scope fence / forbidden-scope confirmation",
+    "claim boundary: contract + provider + fixture + comparator + receipt strength + proof debt + certificate boundary",
+    "no-certificate-no-use policy",
+    "human decision gates",
+    "plan-only before proof",
+    "proof readiness audit",
+    "failure stop + quarantine",
+    "proof-failure classification",
+    "smallest lawful repair",
+    "exact comparator repair + proof rerun",
+    "dirty-key/cache honesty",
+    "no-broadening audit",
+    "kernel/contract separation",
+    "metadata/UI is not enforcement",
+    "legal execution-surface routing",
+    "working-memory continuity",
+    "receipt / trace / certificate separation"
+  ],
+  "reconciliation": [
+    {
+      "concern": "bounded execution",
+      "river": "RiverKernel generic proof runner / kernel-contract separation",
+      "foundry": "Execution Kernel + Software Builder deterministic tool authority",
+      "aios": "scheduler/process lifecycle + capability grants",
+      "decision": "DO_NOT_REBUILD_RIVERKERNEL_AS_NEW_CORE",
+      "disposition": "Foundry owns typed capability execution and coding-loop tools; AIOS offers reusable scheduler/grant primitives. RiverKernel remains lineage for proof-runner contract discipline unless an exact archived implementation primitive is recovered that improves these."
+    },
+    {
+      "concern": "development evaluation",
+      "river": "comparators, proof cases, failure classification, exact rerun",
+      "foundry": "deterministic evaluation + learning candidates + Software Builder test gates",
+      "decision": "OVERLAP_BUT_NOT_IDENTICAL",
+      "disposition": "Foundry evaluation is internal development feedback. Reuse River comparator/failure-taxonomy discipline where it strengthens tests, but do not call Foundry evaluation an independent certificate."
+    },
+    {
+      "concern": "promotion / use authority",
+      "river": "No-Certificate-No-Use; quarantine on missing/mismatched/weak proof",
+      "foundry": "promotion gate requires provenance, rights, regression, repeatability and approval; activation is separate and rollbackable",
+      "decision": "COMPLEMENTARY",
+      "disposition": "Foundry promotion decides whether a capability candidate may become active. River-style certificate should be one evidence input/gate for claims that require independent certification, not a replacement for promotion."
+    },
+    {
+      "concern": "audit receipts",
+      "river": "receipt, trace, certificate are distinct evidence classes",
+      "aios": "hash-addressed process/capability audit receipts",
+      "workshop": "append-only artifact receipt ledger",
+      "foundry": "execution/evaluation/promotion/activation receipts",
+      "decision": "KEEP_SEPARATE_SEMANTICS",
+      "disposition": "AIOS receipt = runtime audit event; Workshop receipt = artifact/action record; Foundry receipt = lifecycle evidence; CERT-RIVER certificate = bounded independent claim decision. Do not collapse them into one generic receipt object."
+    },
+    {
+      "concern": "policy/routing",
+      "river": "PRISM-RIVER routes work through allowed proof/policy paths",
+      "harness": "cross-project intent/current-truth/scope/skill routing",
+      "workshop": "MCP/security gates and execution-surface boundaries",
+      "decision": "HARNESS_GLOBAL_PRISM_PATTERN_LOCAL",
+      "disposition": "Harness stays global collaboration/governance authority. PRISM patterns can inform per-job proof/use routing without creating a second cross-project router."
+    },
+    {
+      "concern": "human UI",
+      "river": "proof-mode UI must display recorded facts and never imply enforcement/certification",
+      "workshop": "human cockpit, artifacts, modules, receipts, gated adapters",
+      "decision": "WORKSHOP_IS_SURFACE",
+      "disposition": "Workshop is the natural display surface for certificate/proof state. Import River UI honesty rules; do not embed certification authority in UI code."
+    },
+    {
+      "concern": "cache/reuse",
+      "river": "dirty-key basis required for lawful proof replay",
+      "foundry": "repeatability-backed promotion/cache candidates",
+      "decision": "RIVER_ADDS_MISSING_PRECISION",
+      "disposition": "When Foundry promotes cached proof/reuse, dirty-key inputs should eventually include provider/model, comparator, fixture, expected outputs, proof engine/dependency versions and boundary-affecting code."
+    }
+  ],
+  "independent_certifier_contract_v0_candidate": {
+    "input": [
+      "candidate claim",
+      "content-pinned implementation/provider",
+      "fixture/input boundary",
+      "acceptance comparator",
+      "builder/development receipt",
+      "declared proof debt"
+    ],
+    "process": [
+      "verify actual access/hashes",
+      "run from clean isolated state",
+      "execute exact acceptance proof",
+      "capture trace and receipts",
+      "classify any failure",
+      "quarantine on failure or ambiguity",
+      "perform no-broadening audit"
+    ],
+    "output": [
+      "CERTIFIED | REJECTED | QUARANTINED",
+      "exact certificate boundary",
+      "proof debt",
+      "trace/receipt references",
+      "dirty-key basis if replayable"
+    ],
+    "explicit_non_authority": [
+      "does not edit candidate code",
+      "does not deploy",
+      "does not promote or activate by itself",
+      "does not broaden claim beyond proof"
+    ],
+    "status": "CONTRACT_CANDIDATE_ONLY",
+    "implementation_rule": "Do not implement until exact archived CERT-RIVER code/package primitives are recovered or proven unavailable."
+  },
+  "unique_river_value": [
+    "independent claim certification rather than builder self-attestation",
+    "certificate-boundary discipline",
+    "proof debt as first-class state",
+    "quarantine semantics",
+    "dirty-key/cache proof honesty",
+    "no-broadening audit",
+    "receipt/trace/certificate separation"
+  ],
+  "current_gaps": [
+    "The exact 607-file Phase-12 ZIP is referenced and hash-pinned, but the Library search in this pass did not surface that ZIP itself as a directly readable file.",
+    "Individual primary Phase-5/8/9/10/11/12 files were not surfaced independently in Library search; their hashes/content roles are recovered through the Phase-12 extraction.",
+    "No single current canonical GitHub repo for CERT-RIVER/PRISM-RIVER/RiverKernel was verified.",
+    "Therefore River is RECOVERED_ARCHIVED_PROOF_LINEAGE, not VERIFIED_CURRENT runtime authority."
+  ],
+  "next_actions": [
+    "Search connected/local source yards later for the exact Phase-12 ZIP or extracted primary files before reimplementing certifier code.",
+    "Treat the independent certifier contract above as a design constraint, not implementation authority.",
+    "Add River dirty-key/no-broadening/quarantine semantics to future Builder-to-CERT proof planning.",
+    "Do not merge Foundry evaluation and CERT-RIVER certification into one authority."
+  ]
+}
