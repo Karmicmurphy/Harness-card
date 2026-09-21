@@ -33,6 +33,7 @@ First capability-first reconciliation artifacts:
 - `docs/ESTATE_CAPABILITY_MAP_V1.md` — human-readable reconciliation and first invention candidates.
 - `state/RIVER_LINEAGE_RECONCILIATION_V1.json` / `docs/RIVER_LINEAGE_RECONCILIATION_V1.md` — recovered CERT-RIVER / PRISM-RIVER / RiverKernel contract reconciliation.
 - `state/SYSTEM_BOUNDARY_MAP_V1.json` / `docs/SYSTEM_BOUNDARY_MAP_V1.md` — live cross-project ownership, handoff, receipt-semantics, missing-interface, and next-proof map.
+- `state/FRANKENSTEIN_WAREHOUSE_V0.json` / `docs/FIVE_PASS_FOUNDATION_SALVAGE_2026-09-21.md` — five-pass Artifact Compass/Salvage/Rights/Recombination result: deterministic-first foundation, external candidate registry, legal dispositions, and current build sequence.
 
 Use these as an extension of the existing recovery chain, not as replacement authority. Reverify live project truth before making current-state claims.
 
@@ -45,7 +46,7 @@ Current V1 findings include:
 - CERT-RIVER / PRISM-RIVER / RiverKernel remain the major unresolved independent-certification lineage;
 - the Software Builder Ollama proof now reaches the repair loop; the current live blocker is step-budget exhaustion before a passing retest, not lack of a callable coding engine.
 
-Boundary reconciliation now identifies the first genuine missing runtime interface as **Foundry -> AIOS Builder Wake Adapter V0**, but that adapter remains intentionally deferred until the real Builder Ollama failure->repair->retest proof is green. A bounded 10->12 proof-step experiment was committed on `temporal-capability-foundry@software-builder-v0` as `5be0fd74d2a7e4e3a2afff4f993a6329c346ab20`; it changes only the proof harness step budget and preserves the same pinned AIOS source, repair limit, failure gate, immutable tests, and acceptance gate. Until its workflow finishes successfully, the Builder remains **PARTIAL_PROOF / BLOCKED**.
+Boundary reconciliation still identifies **Foundry -> AIOS Builder Wake Adapter V0** as the first missing cross-repo runtime interface. The five-pass salvage pass adds one prerequisite correction: the Builder itself should be deterministic-first and Agentless-style (localize -> narrow patch proposal -> automatic retest) rather than a model-controlled tool loop. The adapter remains deferred until that narrower real repair proof is green. A bounded 10->12 proof-step experiment was committed on `temporal-capability-foundry@software-builder-v0` as `5be0fd74d2a7e4e3a2afff4f993a6329c346ab20`; it changes only the proof harness step budget and preserves the same pinned AIOS source, repair limit, failure gate, immutable tests, and acceptance gate. Until its workflow finishes successfully, the Builder remains **PARTIAL_PROOF / BLOCKED**.
 
 ## Current direction
 
