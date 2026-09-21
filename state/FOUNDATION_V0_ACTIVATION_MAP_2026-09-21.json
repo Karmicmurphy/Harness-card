@@ -1,0 +1,118 @@
+{
+  "generated_at": "2026-09-21",
+  "status": "FOUNDATION_V0_INTEGRATION_PROOF_NOT_END_TO_END_FUNCTIONAL",
+  "principle": "Activate deterministic plumbing first; intelligence is replaceable compute, not control-plane authority.",
+  "correlation": {
+    "canonical": "Foundry job_id",
+    "mappings": {
+      "workshop": "store foundry_job_id beside Workshop-local job/artifact/receipt IDs",
+      "aios": "ProcessRecord.metadata.foundry_job_id and audit receipt detail",
+      "foundry_evidence": "already keyed by job_id",
+      "independent_proof": "carry foundry_job_id in details plus exact target_id/hash"
+    }
+  },
+  "cogs": [
+    {
+      "id": 0,
+      "name": "truth_and_continuity",
+      "state": "MOSTLY_DONE",
+      "blocking": false
+    },
+    {
+      "id": 1,
+      "name": "deterministic_real_repository_builder",
+      "state": "NEXT",
+      "blocking": true
+    },
+    {
+      "id": "1B",
+      "name": "patch_brain_diagnostics_and_bakeoff",
+      "state": "PARALLEL_AFTER_ACTION_TRACE",
+      "blocking": false
+    },
+    {
+      "id": 2,
+      "name": "foundry_aios_wake_adapter",
+      "state": "MISSING",
+      "blocking": true,
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "independent_proof_lane",
+      "state": "MISSING",
+      "blocking": true,
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "name": "promotion_certificate_consumption_gate",
+      "state": "PARTIAL_VERIFY",
+      "blocking": true,
+      "depends_on": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "local_workshop_github_reconciliation",
+      "state": "OPEN",
+      "blocking": true
+    },
+    {
+      "id": 6,
+      "name": "workshop_foundry_handoff_and_return",
+      "state": "MISSING",
+      "blocking": true,
+      "depends_on": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "estate_delta_updater",
+      "state": "MISSING_NOT_FIRST_MACHINE_BLOCKER",
+      "blocking": false
+    },
+    {
+      "id": 8,
+      "name": "capability_downshift_learning_loop",
+      "state": "DEFER_UNTIL_FOUNDATION_WORKS",
+      "blocking": false,
+      "depends_on": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
+    }
+  ],
+  "latest_builder_model_proof": {
+    "run_id": 35595297143,
+    "conclusion": "failure",
+    "failure_observed": true,
+    "target_preloaded": true,
+    "worker_authored_files_changed": [],
+    "tests_edited": false,
+    "terminal_reason": "step budget exhausted at 3",
+    "next_fix": "record each model action attempt and rejection/tool error before changing budget/model"
+  },
+  "do_not_build": [
+    "new AI OS",
+    "new scheduler",
+    "new global job identity",
+    "new giant agent framework",
+    "new proof database unless evidence requires it",
+    "model-controlled deploy/publish/promotion",
+    "all warehouse candidates as dependencies up front"
+  ],
+  "first_move": "real-repository deterministic/no-model Builder proof against pinned Untethered-AIOS fault"
+}
