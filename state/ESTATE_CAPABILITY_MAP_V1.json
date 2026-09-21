@@ -8,7 +8,8 @@
     "harness_card": {
       "repo": "Karmicmurphy/Harness-card",
       "ref": "main",
-      "sha": "40d2161f47b6e935feea8edc5d37f35b1c7c6a60"
+      "sha": null,
+      "resolution": "LIVE_LOOKUP_REQUIRED: a file inside Harness-card cannot self-pin the repository HEAD without becoming stale when that same file is committed."
     },
     "foundry_builder": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
