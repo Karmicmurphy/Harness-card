@@ -142,11 +142,18 @@ That is the canonical salvage-method source. Foundry can index it; Workshop can 
 
 ### Independent certification — River lineage
 
-Recovered authority currently lives in Harness lineage/index material and Workshop FlashRiver extraction, not one verified canonical live repo.
+River is now explicitly reconciled in:
 
-Recovered concepts include CERT-RIVER, PRISM-RIVER, RiverKernel, quarantine, claim-boundary proof, no-certificate-no-use, proof failure/repair/rerun, and receipt/trace/certificate separation.
+- `state/RIVER_LINEAGE_RECONCILIATION_V1.json`
+- `docs/RIVER_LINEAGE_RECONCILIATION_V1.md`
 
-This is the biggest unresolved overlap. **Do not let Builder become its own final certifier simply because Foundry has evaluation receipts.**
+The recovered Phase-12 source package was a 607-file proof-system lineage with hash-pinned proof plans, policy gates, failure/repair audits, comparator reruns, certificate-boundary audits, Python/JSON implementation material, and working-memory authority files.
+
+Its unique surviving role is clear: **independent bounded claim certification** — certificate boundaries, proof debt, quarantine, dirty-key/cache honesty, no-broadening, and receipt/trace/certificate separation.
+
+Foundry evaluation remains development feedback. AIOS and Workshop receipts remain evidence. None of those should silently become the independent certificate.
+
+The exact current executable CERT-RIVER implementation is still not verified, so Builder-to-CERT implementation remains blocked on recovering those archived code primitives or proving they are unavailable.
 
 ### Real production proving ground — First3 Local
 
@@ -200,11 +207,10 @@ Most of this already exists. The current engineering gap is not “find an AI.�
 
 ## Immediate next reconciliation
 
-1. Recover exact CERT-RIVER / PRISM-RIVER / RiverKernel implementation artifacts from the archived/Library/Workshop lineage.
-2. Map their contracts against Foundry evaluation/proof, AIOS audit, and Workshop receipts.
-3. Refresh the stale Software Builder authority pointer after the next meaningful proof change rather than trusting the old blocker.
-4. Define a machine-maintainable estate delta update so future passes scan **what changed**, not the entire estate again.
-5. Then run a second invention pass across product/creative repos using this capability vocabulary.
+1. Recover the exact archived executable CERT-RIVER implementation primitives or prove they are unavailable; the contract reconciliation is now complete.
+2. Refresh the stale Software Builder authority pointer after the next meaningful proof change rather than trusting the old blocker.
+3. Define a machine-maintainable estate delta update so future passes scan **what changed**, not the entire estate again.
+4. Then run a second invention pass across product/creative repos using this capability vocabulary.
 
 ## Non-claims
 
