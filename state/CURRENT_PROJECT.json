@@ -9,12 +9,13 @@
     "factory": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "branch": "software-builder-v0",
-      "sha": "66180c44b4513b4e6531286df193918c9e976346"
+      "sha": "5ee5d03c67989b08d9484bf3e52d99e2c31df850",
+      "functional_proof_head": "bcbf20d16493f60dbee1d25cfb4c6a4006bfd50f"
     },
     "runtime": {
       "repo": "Karmicmurphy/Untethered-AIOS",
       "branch": "main",
-      "sha": "17a717e556a639d450551d7cf3b9a77d6a1b459e"
+      "sha": "8a954439af2b15b00f7c961d83552772b382fd1f"
     },
     "salvage": {
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
@@ -28,10 +29,10 @@
       "note": "GitHub Phase 1A proven in test; local Windows Workshop remains private authority pending reconciliation"
     }
   },
-  "evidence_state": "INTEGRATION_PROOF_NOT_END_TO_END_FUNCTIONAL",
+  "evidence_state": "BUILDER_AND_AIOS_WAKE_PROVEN_IN_TEST; INDEPENDENT_PROOF_NEXT",
   "lane": "FOUNDATION V0 INTEGRATION / PROOF",
-  "last_verified_at": "2026-09-21T07:50:00-05:00",
-  "next_action": "Cog 1: deterministic/no-model real-repository Builder proof on pinned Untethered-AIOS fault; in parallel add model action-attempt/rejection evidence.",
+  "last_verified_at": "2026-09-21",
+  "next_action": "Cog 3: bounded CERT-RIVER executable recovery; if no current usable certifier is recovered, build the smallest independent proof lane. Qwen patch-brain diagnostics remain optional and non-blocking.",
   "separate_projects": [
     "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
     "First3 Local / nemoclw_new_agent — proving-ground product; not Foundation authority",
