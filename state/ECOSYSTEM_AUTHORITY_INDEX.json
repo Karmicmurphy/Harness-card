@@ -130,20 +130,21 @@
     {
       "project": "Temporal Capability Foundry",
       "repo": "Karmicmurphy/temporal-capability-foundry",
-      "head": "cd4bae186250eaf5bb49d10c8257869921ad38ea",
-      "authority_kind": "CURRENT_PRIVATE_FOUNDATION",
+      "head": "32c8a292d9d753a79a163a470dd5873e98e87dcb",
+      "authority_kind": "CURRENT_PRIVATE_FOUNDATION_CORE_OPERATIONAL_IN_TEST",
       "role": "Framework-independent capability foundation: recover intent, search present/past, salvage, rights-check, compile, execute, evaluate, learn candidate, prove, promote, activate/rollback.",
       "current_proven_state": [
-        "typed intent/job/evidence lifecycle",
+        "typed job/evidence lifecycle",
         "deterministic real-repository Software Builder",
-        "Foundry -> AIOS bounded wake with foundry_job_id correlation",
+        "Foundry -> AIOS process/job correlation",
         "Independent Proof V0 exact claim/hash/fixture verifier",
-        "CERTIFIED / REJECTED / QUARANTINED verdict boundary",
-        "certificate-required promotion gate with exact job/claim binding",
-        "activation requires APPROVED assessment and remains non-automatic",
-        "evaluation/learning candidates and rollback"
+        "certificate-required promotion gate",
+        "human-operated exact-patch Foundation runner",
+        "normal jobs stop at CERTIFIED_AWAITING_HUMAN_REVIEW",
+        "capability improvement stops at AWAITING_HUMAN_APPROVAL",
+        "activation and rollback remain explicit"
       ],
-      "current_nonclaim": "Foundation is not yet end-to-end functional because local Workshop reconciliation and Workshop->Foundry handoff/result wiring remain open. Qwen patch-brain lane is optional and not green.",
+      "current_nonclaim": "Core is operational in test, not yet proven live on Randy's Windows machine. Workshop cockpit is not yet attached. AIOS does not mediate every Builder tool call.",
       "overlap_warning": [
         "Proof/evidence/certification concepts overlap CERT-RIVER.",
         "Execution/budget/recovery concepts overlap RiverKernel and Untethered AIOS.",
@@ -323,7 +324,7 @@
     "self_reference_rule": "Do not claim a durable exact Harness-card HEAD inside a Harness-card file; committing the file advances HEAD. Resolve Harness-card main live when exact current SHA matters."
   },
   "active_foundation_v0": {
-    "status": "CURRENT_ACTIVE_PROJECT_COGS_1_4_PROVEN_IN_TEST",
+    "status": "CURRENT_ACTIVE_PROJECT_CORE_OPERATIONAL_IN_TEST",
     "canonical_refs": [
       {
         "role": "governance",
@@ -334,7 +335,7 @@
         "role": "factory",
         "repo": "Karmicmurphy/temporal-capability-foundry",
         "ref": "software-builder-v0",
-        "sha": "cd4bae186250eaf5bb49d10c8257869921ad38ea"
+        "sha": "32c8a292d9d753a79a163a470dd5873e98e87dcb"
       },
       {
         "role": "runtime",
@@ -394,6 +395,6 @@
         "foundation_authority": false
       }
     ],
-    "next": "Reconcile local Windows Workshop, then build thin Workshop -> Foundry handoff/result adapter."
+    "next": "Run first real local bounded job; reconcile/attach Workshop in parallel; begin Capability Downshift only from repeated real proven jobs."
   }
 }
