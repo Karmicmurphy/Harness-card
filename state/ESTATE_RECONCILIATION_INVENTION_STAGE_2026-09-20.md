@@ -31,6 +31,7 @@ First capability-first reconciliation artifacts:
 
 - `state/ESTATE_CAPABILITY_MAP_V1.json` — machine-readable capability/authority/overlap/invention map.
 - `docs/ESTATE_CAPABILITY_MAP_V1.md` — human-readable reconciliation and first invention candidates.
+- `state/RIVER_LINEAGE_RECONCILIATION_V1.json` / `docs/RIVER_LINEAGE_RECONCILIATION_V1.md` — recovered CERT-RIVER / PRISM-RIVER / RiverKernel contract reconciliation.
 
 Use these as an extension of the existing recovery chain, not as replacement authority. Reverify live project truth before making current-state claims.
 
