@@ -14,14 +14,14 @@
     "foundry_builder": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "ref": "software-builder-v0",
-      "sha": "66180c44b4513b4e6531286df193918c9e976346",
-      "functional_proof_head": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354",
-      "note": "latest completed model-patch proof failed; authority refreshed afterward"
+      "sha": "5ee5d03c67989b08d9484bf3e52d99e2c31df850",
+      "functional_proof_head": "bcbf20d16493f60dbee1d25cfb4c6a4006bfd50f",
+      "note": "deterministic Builder and Foundry->AIOS wake are proven in test; model patch lane optional"
     },
     "aios": {
       "repo": "Karmicmurphy/Untethered-AIOS",
       "ref": "main",
-      "sha": "17a717e556a639d450551d7cf3b9a77d6a1b459e"
+      "sha": "8a954439af2b15b00f7c961d83552772b382fd1f"
     },
     "workshop": {
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
@@ -260,26 +260,25 @@
           ".github/workflows/software-builder-ollama-proof.yml"
         ]
       },
-      "implementation_state": "IMPLEMENTED_UNPROVEN",
-      "evidence_state": "DETERMINISTIC_CONTROLS_PROVEN_MODEL_PATCH_LANE_BLOCKED",
+      "implementation_state": "PROVEN_IN_TEST",
+      "evidence_state": "REAL_REPOSITORY_DETERMINISTIC_BUILDER_PROVEN_MODEL_PATCH_OPTIONAL",
       "mode": "deterministic-first repair pipeline with replaceable narrow model patch proposal",
       "cost": "current proof uses GitHub Actions + local Ollama model; no model API key",
       "current_engine": "Ollama + qwen2.5-coder:1.5b-instruct baseline; model remains replaceable",
       "latest_proof": {
-        "run": 35595297143,
-        "status": "BLOCKED",
-        "functional_proof_head": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354",
-        "authority_head": "66180c44b4513b4e6531286df193918c9e976346",
+        "run": 35611616345,
+        "status": "PROVEN_IN_TEST",
+        "proof_head": "eac8e8ab0b931b81af8c8147982974ce1a26e8b5",
         "pinned_source": "Karmicmurphy/Untethered-AIOS@17a717e556a639d450551d7cf3b9a77d6a1b459e",
         "failure_path_observed": true,
-        "declared_target_preloaded": true,
-        "files_changed": [],
+        "files_changed": [
+          "src/untethered_aios/capabilities.py"
+        ],
         "tests_edited": false,
-        "terminal_reason": "step budget exhausted at 3",
-        "next_model_fix": "instrument action attempts and rejection/tool-error reasons before changing model or budget",
-        "foundation_next_proof": "deterministic/no-model real-repository control on the same pinned fault"
+        "automatic_retest_passed": true,
+        "remaining_unproven_gates": []
       },
-      "reconciliation": "Do not let a replaceable local model block deterministic factory activation. Prove the real-repository Builder plumbing with a deterministic control; diagnose/bake-off patch-brains as a separate capability lane."
+      "reconciliation": "Deterministic real-repository Builder plumbing is proven. Local patch models are replaceable optional compute and do not gate Foundation integration."
     },
     {
       "id": "replaceable_engine_harness",
@@ -403,6 +402,26 @@
       "mode": "deterministic production pipeline",
       "cost": "low-cost existing Cloudflare/Stripe stack",
       "reconciliation": "Use as real proving ground after estate recovery/builder/certification boundaries are stable; do not absorb it into the recovery system."
+    },
+    {
+      "id": "foundry_aios_wake_adapter",
+      "function": "Wake one bounded AIOS worker for a Foundry job, enforce grants/path scopes/tick limits, and return correlated runtime evidence.",
+      "authority": {
+        "repo": "Karmicmurphy/temporal-capability-foundry",
+        "ref": "software-builder-v0",
+        "path": "src/foundry/aios_adapter.py"
+      },
+      "runtime_authority": {
+        "repo": "Karmicmurphy/Untethered-AIOS",
+        "ref": "main",
+        "sha": "8a954439af2b15b00f7c961d83552772b382fd1f"
+      },
+      "implementation_state": "PROVEN_IN_TEST",
+      "evidence_state": "CROSS_REPO_WAKE_PROOF_GREEN",
+      "proof_run": 35612271813,
+      "mode": "deterministic",
+      "cost": "free/local",
+      "reconciliation": "Runtime evidence only. Does not certify, promote, deploy or publish."
     }
   ],
   "overlap_clusters": [
@@ -488,19 +507,17 @@
         "Workshop Local Model Socket later"
       ],
       "result": "A replaceable no-model-API-key coding worker with deterministic tool boundaries and bounded proof receipts.",
-      "new_code_needed": "real-repository deterministic/no-model control proof; action-attempt model diagnostics; then smallest AIOS wake adapter",
+      "new_code_needed": "independent proof/certifier lane next; model patch-brain diagnostics may continue in parallel",
       "authority_posture": "candidate branch/workspace only",
-      "status": "DETERMINISTIC_CONTROLS_PROVEN; REAL_REPOSITORY_CONTROL_NEXT; MODEL_PATCH_LANE_BLOCKED"
+      "status": "BUILDER_AND_AIOS_WAKE_PROVEN_IN_TEST; MODEL_PATCH_OPTIONAL"
     }
   ],
   "immediate_gaps": [
-    "Real-repository deterministic/no-model Builder control proof is not yet green; this is the next foundation activation gate.",
-    "Qwen/Ollama patch lane run 35595297143 failed with no accepted worker-authored edit; action-attempt/rejection evidence is missing and must be added before another model tweak.",
-    "Foundry -> AIOS Builder Wake Adapter V0 does not exist yet.",
-    "Independent proof/certifier runtime is not yet verified; bounded CERT-RIVER recovery or minimal verifier remains required.",
-    "Authoritative local Windows Workshop has not been reconciled file-by-file with the GitHub living-workshop-main-build snapshot; GitHub Phase 1A itself is proven in test.",
-    "Workshop -> Foundry job/result adapter is not built yet; reuse Foundry job_id as cross-repo correlation key.",
+    "Independent proof/certifier runtime is not yet verified; Cog 3 is next.",
+    "Foundry promotion must be verified to require independent proof where declared; no certificate must mean no activation for certificate-required capabilities.",
+    "Authoritative local Windows Workshop has not been reconciled file-by-file with the GitHub living-workshop-main-build snapshot.",
+    "Workshop -> Foundry job/result adapter is not built yet.",
     "No machine-maintained estate delta updater yet.",
-    "Tiny-model and retrieval candidates remain warehouse candidates, not promoted dependencies."
+    "Qwen/local patch-model lane remains optional and may be benchmarked after action diagnostics; it is not a Foundation blocker."
   ]
 }
