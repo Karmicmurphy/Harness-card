@@ -13,8 +13,8 @@ This file does not replace live project authority. Repositories and device-local
 | Human authority | Randy | final irreversible/publish/deploy/spend decisions | ACTIVE |
 | Governance | Karmicmurphy/Harness-card | recover truth, scope work, set proof/approval boundaries | ACTIVE |
 | Cockpit | Karmicmurphy/Ollie_Twis_Holo_workshop | human job/artifact surface, receipts, returned results | GITHUB PHASE 1A PROVEN IN TEST; LOCAL WINDOWS STATE UNRECONCILED |
-| Factory | Karmicmurphy/temporal-capability-foundry | typed jobs, Builder, evidence, evaluation, promotion/rollback | CORE PROVEN; REAL MODEL PATCH LANE BLOCKED |
-| Runtime | Karmicmurphy/Untethered-AIOS | bounded processes, capability grants, path scopes, audit | UNIT-PROVEN PRIMITIVES; FOUNDRY ADAPTER MISSING |
+| Factory | Karmicmurphy/temporal-capability-foundry | typed jobs, Builder, evidence, evaluation, promotion/rollback | DETERMINISTIC REAL-REPOSITORY BUILDER PROVEN IN TEST; MODEL PATCH LANE OPTIONAL |
+| Runtime | Karmicmurphy/Untethered-AIOS | bounded processes, capability grants, path scopes, audit | FOUNDRY JOB CORRELATION / SCOPES / TICK-LIMIT WAKE PROVEN IN TEST |
 | Salvage | Karmicmurphy/digital-scrapyard-autopilot | Artifact Compass/Salvage/Rights/Recombination/Adaptive Pass | VERIFIED GREEN |
 | Independent inspection | CERT-RIVER contract lineage + minimal current certifier | rerun exact claim outside Builder, certify/reject/quarantine | CONTRACT RECOVERED; CURRENT EXECUTABLE LANE MISSING |
 
@@ -84,26 +84,22 @@ Local IDs remain local:
 
 ### Foundry -> Software Builder
 **Link type:** existing internal capability.
-**Current:** deterministic controls unit-green; real model patch lane red.
-**Immediate fixes:**
-1. record model action attempts and rejection/tool-error reasons in the receipt;
-2. add a deterministic/no-model real-repository repair engine/control;
-3. prove fail -> exact repair -> automatic retest -> honest `files_changed`;
-4. keep model patch proposal a replaceable optional socket.
+**Current:** **PROVEN_IN_TEST** for deterministic real-repository plumbing.
+**Proof:** run `35611616345`.
+**Verified:** real pinned repo baseline, injected failure, bounded worker edit, automatic passing retest, honest worker-authored `files_changed`, no test edits.
+**Model lane:** sanitized action-attempt diagnostics are implemented; local patch models remain replaceable optional compute.
 
 ### Foundry -> AIOS
-**Link type:** first missing runtime adapter.
-**Code adapter required:** YES.
-**Build only after:** deterministic real-repository Builder proof is green.
-**Input:** existing Foundry job ID, candidate workspace, worker entry, explicit capability grants/path scopes, max ticks/resource bounds.
-**AIOS mapping:** place Foundry job ID in ProcessRecord.metadata.
-**Output:** pid, terminal state/result, audit receipts, denials/failures/tick-limit evidence, all linked back to Foundry job ID.
-**Non-goals:** deploy, promotion, certification, permanent agents.
+**Link type:** bounded runtime adapter.
+**Current:** **PROVEN_IN_TEST**.
+**Proof:** run `35612271813` against AIOS `8a954439af2b15b00f7c961d83552772b382fd1f`.
+**Verified:** Foundry job correlation, allowed scoped call, out-of-scope denial, terminal result, correlated audit receipts, tick-limit evidence, terminal cancellation.
+**Non-goals preserved:** no deploy, promotion, certification, or permanent-agent authority.
 
 ### AIOS -> Foundry
 **Link type:** same adapter return side.
-**Code adapter required:** YES.
-**Fix:** convert runtime result/audit into Foundry evidence records without calling runtime success proof/certification.
+**Current:** **PROVEN_IN_TEST** for runtime result/audit correlation.
+**Rule:** runtime success remains evidence, not certification.
 
 ### Foundry -> Independent Proof
 **Link type:** exact claim/fixture/candidate handoff.
@@ -140,7 +136,7 @@ Remaining:
 - reconcile local Windows Workshop to GitHub before final cockpit wiring.
 
 ### Cog 1 — Deterministic real-repository Builder
-State: **NEXT**
+State: **PROVEN_IN_TEST** — run `35611616345`
 Acceptance:
 - pinned real repository starts green;
 - deliberate implementation fault makes target tests fail;
@@ -154,7 +150,7 @@ Acceptance:
 This proves factory plumbing without depending on a model.
 
 ### Cog 1B — Patch-brain diagnostics/bake-off
-State: **PARALLEL AFTER ACTION TRACE**
+State: **DIAGNOSTICS IMPLEMENTED / OPTIONAL PARALLEL LANE**
 Latest Qwen proof `35595297143`: red; failure observed, target preloaded, `files_changed=[]`, blocked after 3 model turns.
 
 Next:
@@ -175,8 +171,7 @@ Candidate order:
 Winner is per job class, not global.
 
 ### Cog 2 — Foundry -> AIOS Wake Adapter V0
-State: **MISSING**
-Build after Cog 1 green.
+State: **PROVEN_IN_TEST** — run `35612271813`.
 Acceptance:
 - exact Foundry job ID enters AIOS;
 - only declared grants/path scopes are available;
@@ -185,7 +180,7 @@ Acceptance:
 - AIOS returns result + audit evidence linked to job ID.
 
 ### Cog 3 — Independent Proof Lane V0
-State: **MISSING**
+State: **NEXT / MISSING**
 Acceptance:
 - executes outside Builder;
 - pins exact target/hash and acceptance fixture;
@@ -301,6 +296,8 @@ and every transition can answer:
 
 ## Current first move
 
-**Cog 1: prove the deterministic/no-model Builder on the same pinned Untethered-AIOS real-repository fault.**
+**Cog 3: perform one bounded recovery checkpoint for usable executable CERT-RIVER primitives.**
 
-In parallel, add action-attempt evidence to the model lane, but do not let model tuning block the deterministic foundation.
+If that bounded recovery does not yield a current usable independent certifier, implement the smallest verifier that pins the exact claim/candidate/hash/fixture, reruns acceptance outside Builder, checks forbidden-file/policy conditions, and emits only CERTIFIED / REJECTED / QUARANTINED with proof debt.
+
+The model patch-brain lane may continue in parallel but does not block Foundation integration.
