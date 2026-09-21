@@ -14,7 +14,9 @@
     "foundry_builder": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "ref": "software-builder-v0",
-      "sha": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354"
+      "sha": "7b235265ecd6e14ad1118e37c0c763553a4931e4",
+      "functional_proof_head": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354",
+      "note": "branch head includes authority-only refresh after functional proof head"
     },
     "aios": {
       "repo": "Karmicmurphy/Untethered-AIOS",
@@ -275,7 +277,9 @@
           "pre-existing dirty files no longer count as worker-authored changes",
           "normal Foundry unit CI is green"
         ],
-        "current_question": "Can one schema-constrained narrow patch proposal repair the injected AIOS path-containment fault and pass automatic retest?"
+        "current_question": "Can one schema-constrained narrow patch proposal repair the injected AIOS path-containment fault and pass automatic retest?",
+        "authority_head": "7b235265ecd6e14ad1118e37c0c763553a4931e4",
+        "functional_proof_head": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354"
       },
       "reconciliation": "The old 10/12-step-budget diagnosis is superseded. Current design removes mechanical control flow from the model and constrains the model to a narrow exact patch proposal or explicit block. Do not add more agent turns merely to force green."
     },
