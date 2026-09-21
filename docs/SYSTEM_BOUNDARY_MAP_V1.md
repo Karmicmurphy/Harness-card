@@ -133,8 +133,8 @@ AIOS should return:
 
 An AIOS receipt is runtime evidence, **not** a capability certificate.
 
-### Foundry -> CERT-RIVER
-**Current state:** contract reconciled, implementation blocked.
+### Foundry -> independent proof / CERT-RIVER lineage
+**Current state:** contract reconciled; executable current certifier not yet verified.
 
 Input candidate:
 - exact claim;
@@ -151,7 +151,9 @@ Output:
 - proof debt;
 - dirty-key basis when replay is lawful.
 
-**Blocker:** exact archived executable CERT-RIVER primitives are not yet recovered as current code. Do not reimplement before recovery proves them unavailable.
+**Recovery rule:** first perform a bounded recovery checkpoint for the archived CERT-RIVER implementation because recovered proven machinery outranks reinvention. If exact usable primitives are recovered, reuse them behind this contract.
+
+**Stop rule:** archive recovery may not become an indefinite blocker. If the bounded recovery checkpoint cannot recover a current executable certifier, build the smallest independent proof lane from the reconciled contract: pin candidate/hash, rerun acceptance outside Builder, verify forbidden-file/policy conditions, and issue a bounded certificate verdict. Do not broaden that lane into another framework.
 
 ### Foundry -> Workshop
 **Current state:** generic artifact/receipt return exists conceptually; no shared cross-repo schema verified.
