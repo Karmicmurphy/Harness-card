@@ -47,7 +47,7 @@ Current V1 findings include:
 - CERT-RIVER / PRISM-RIVER / RiverKernel remain the major unresolved independent-certification lineage;
 - the Software Builder has moved past the old 10/12-step-budget hypothesis. Deterministic controls now own the failing test, declared target preload, post-edit retest, and change provenance; the live unresolved gate is one real schema-constrained narrow patch through the local model socket.
 
-Boundary reconciliation still identifies **Foundry -> AIOS Builder Wake Adapter V0** as the first missing cross-repo runtime interface. The activation gate is now a **deterministic/no-model real-repository Builder control proof**, not success from one particular local LLM. Patch-brains remain replaceable optional compute. Do not resurrect the 10->12 step-budget experiment; it was disproven and is historical only.
+Foundation has advanced beyond the first runtime interface. The deterministic/no-model real-repository Builder proof is green (run `35611616345`), and **Foundry -> AIOS Builder Wake Adapter V0** is green (run `35612271813`). Patch-brains remain replaceable optional compute and do not gate Foundation integration. The current cross-project blocker is **Cog 3: independent proof/certification**.
 
 The Digital Scrapyard now carries an active shared `skills/salvage-suite/ADAPTIVE_PASS_RULE.md`. Future research depth is evidence-adaptive: passes must earn passes, two directionally different low-yield passes trigger saturation, and bounded testing replaces searching when it will reduce more uncertainty.
 
