@@ -33,3 +33,12 @@ This file stores durable, non-sensitive decisions that future agents should not 
 - **Applies to:** Foundation V0 / global harness recovery
 - **Authority/evidence:** `state/CURRENT_PROJECT.json`; `docs/FOUNDATION_V0_ACTIVATION_MAP_2026-09-21.md`; `state/FOUNDATION_V0_ACTIVATION_MAP_2026-09-21.json`; live repo/branch heads.
 - **Reopen condition:** Only when a candidate artifact/branch passes recovery, provenance/rights classification, and a bounded proof showing why it belongs in the Foundation authority chain.
+
+
+### 2026-09-21 — Foundation improvement is human-owned, not self-evolving
+- **Type:** TARGET / CONSTRAINT / AUTHORITY
+- **Decision or correction:** Foundation V0 may use successful traces to propose cheaper reusable capability through Capability Downshift, but it does not autonomously rewrite, promote, activate, deploy, publish, spend, delete, expand permissions, or change governance. Ordinary jobs end at certified human review. Reusable-capability proposals end at human approval, and activation remains a separate explicit action.
+- **Why it matters:** The intended system is a human-owned software factory that can become more efficient from proven experience, not a self-evolving AI. Keeping ordinary work separate from capability promotion prevents useful job execution from being confused with changes to the factory itself.
+- **Applies to:** Foundation V0 / global language when describing Foundation improvement
+- **Authority/evidence:** `temporal-capability-foundry/src/foundry/foundation_core.py`; human runner proof run `35628459336`; certificate-aware promotion proof run `35620968656`; `docs/FOUNDATION_CORE_V0.md`.
+- **Reopen condition:** Only if Randy explicitly changes the human-approval boundary and a separate safety/proof design is approved.
