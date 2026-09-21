@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-09-21",
-  "status": "FOUNDATION_V0_COGS_1_THROUGH_4_PROVEN_IN_TEST_WORKSHOP_RECONCILIATION_NEXT",
-  "principle": "Activate deterministic plumbing first; intelligence is replaceable compute, not control-plane authority.",
+  "status": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST_HUMAN_OWNED",
+  "principle": "Use the proven deterministic core for real work. Models are replaceable compute. Permanent capability improvement requires independent proof and human approval.",
   "correlation": {
     "canonical": "Foundry job_id",
     "mappings": {
@@ -70,14 +70,14 @@
     {
       "id": 5,
       "name": "local_workshop_github_reconciliation",
-      "state": "NEXT_OWNER_DEVICE_RECONCILIATION",
-      "blocking": true
+      "state": "OPEN_COCKPIT_INTEGRATION_NOT_CORE_BLOCKER",
+      "blocking": false
     },
     {
       "id": 6,
       "name": "workshop_foundry_handoff_and_return",
-      "state": "MISSING_AFTER_COG_5",
-      "blocking": true,
+      "state": "MISSING_COCKPIT_ADAPTER_NOT_CORE_BLOCKER",
+      "blocking": false,
       "depends_on": [
         2,
         3,
@@ -94,14 +94,13 @@
     {
       "id": 8,
       "name": "capability_downshift_learning_loop",
-      "state": "DEFER_UNTIL_FOUNDATION_WORKS",
+      "state": "READY_AFTER_REPEATED_REAL_PROVEN_JOBS",
       "blocking": false,
       "depends_on": [
         1,
         2,
         3,
-        4,
-        6
+        4
       ]
     }
   ],
@@ -120,7 +119,7 @@
     "model-controlled deploy/publish/promotion",
     "all warehouse candidates as dependencies up front"
   ],
-  "first_move": "Cog 5: reconcile the authoritative local Windows Workshop against GitHub living-workshop-main-build; then build Cog 6 Workshop -> Foundry handoff/result return",
+  "first_move": "Run the first real local bounded software job through the human-operated exact-patch runner for field evidence; reconcile/attach Workshop in parallel.",
   "completed_proofs": {
     "deterministic_builder": {
       "run_id": 35611616345,
@@ -146,6 +145,39 @@
       "conclusion": "success",
       "status": "PROVEN_IN_TEST",
       "proof_head": "c25eaac464968ae5d1654affc9e75318b03acff9"
+    },
+    "foundation_core_composition": {
+      "run_id": 35627936077,
+      "conclusion": "success",
+      "status": "PROVEN_IN_TEST",
+      "proof_head": "029b6f3cf6e0ae440885c190935a5b5fdc830175"
+    },
+    "human_operated_runner": {
+      "run_id": 35628459336,
+      "conclusion": "success",
+      "status": "PROVEN_IN_TEST",
+      "proof_head": "b84db3579ff7d62095c40b6c2a8830fec7557e11",
+      "terminal_state": "CERTIFIED_AWAITING_HUMAN_REVIEW"
+    },
+    "bytecode_integrity": {
+      "run_id": 35627957323,
+      "conclusion": "success",
+      "status": "PROVEN_IN_TEST",
+      "proof_head": "632520fb7cae7db7dfb7259cb8dfd0d0e3b48fc6"
     }
+  },
+  "core_operation": {
+    "state": "OPERATIONAL_IN_TEST",
+    "implementation": "temporal-capability-foundry/src/foundry/foundation_core.py",
+    "human_runner": "temporal-capability-foundry/scripts/run_foundation_exact_patch_job.py",
+    "example_spec": "temporal-capability-foundry/examples/foundation_exact_patch_job.example.json",
+    "core_proof_run": 35627936077,
+    "human_runner_proof_run": 35628459336,
+    "human_runner_proof_head": "b84db3579ff7d62095c40b6c2a8830fec7557e11",
+    "normal_job_terminal_state": "CERTIFIED_AWAITING_HUMAN_REVIEW",
+    "improvement_terminal_state": "AWAITING_HUMAN_APPROVAL",
+    "activation_performed_automatically": false,
+    "model_required": false,
+    "live_local_field_proof": false
   }
 }
