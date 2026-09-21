@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1.0",
-  "generated_at": "2026-09-20T09:51:15.994023+00:00",
+  "generated_at": "2026-09-21T10:48:29.887916+00:00",
   "active_project": "TWIS LOOP DECK / PRO RIG UNIFIED WORKSTATION",
-  "evidence_state": "PROVEN_LIVE_BROWSER_SONIC_REPAIR_AWAITING_HUMAN",
+  "evidence_state": "FAILED_SONIC_ACCEPTANCE",
   "incident_count": 0,
   "wins": 0,
   "losses": 0,
@@ -16,8 +16,8 @@
   "authority": {
     "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
     "branch": "main",
-    "sha": "6db6bb6848800639ce36e8ad38c1352c5c7e1cea",
+    "sha": "04a5b694d3ac6ddbebaf5b2ff9314a1c619b111e",
     "deploy_target": "https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/pro-rig.html",
-    "device_or_physical_state": "Sonic repair merged and deployed. PLAY SET now begins with kick+bass+pad only, using vendored CC0 909/Groovie samples for drum roles, with staged bar-by-bar arrangement. Main Workshop CI, Static Contract, unified browser proof, static build, and Pages deployment pass. Final human sonic acceptance remains open."
+    "device_or_physical_state": "User-reported current on Android: controls/runtime may operate, but the musical output still sounds unprofessional and does not meet the existing SONIC_ACCEPTANCE.md contract. Treat current sonic layer as FAILED. UI/transport work is not the active problem."
   }
 }
