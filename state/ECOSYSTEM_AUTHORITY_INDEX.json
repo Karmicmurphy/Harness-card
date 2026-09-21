@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19",
+  "generated_at": "2026-09-20",
   "status": "RECOVERY_INDEX",
   "purpose": "Prevent reinvention by recovering existing project authority, lineage, reusable primitives, and overlap before public research or new builds.",
   "global_rule": "RECOVER BEFORE REBUILD",
@@ -57,7 +57,7 @@
     {
       "project": "Twis Holo Workshop",
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
-      "head": "b1ef6e581014f1d811da5f37c735f9c05c2d8d62",
+      "head": "04a5b694d3ac6ddbebaf5b2ff9314a1c619b111e",
       "authority_kind": "CURRENT_GITHUB_CODE_AND_ARCHITECTURE; LOCAL MACHINE REMAINS PRIVATE AUTHORITY",
       "role": "Human-facing working room/front door; artifact-first local/private home base with bounded cloud field kit.",
       "recovered_primitives": [
@@ -94,7 +94,7 @@
     {
       "project": "Harness Card",
       "repo": "Karmicmurphy/Harness-card",
-      "head": "fc0ee18205ad6da94e05e4c5b71b583f221c2669",
+      "head": "f466d7f494343d5c491bab90fdc274c2ebe8b347",
       "authority_kind": "GLOBAL_OPERATING_HARNESS",
       "role": "Rules for reliably entering projects: intent recovery, authority recovery, scope control, skill routing, proof, learning, closeout.",
       "recovered_primitives": [
@@ -214,13 +214,13 @@
       "repo": "Karmicmurphy/Harness-card",
       "visibility": "public",
       "default_branch": "main",
-      "head": "fc0ee18205ad6da94e05e4c5b71b583f221c2669"
+      "head": "f466d7f494343d5c491bab90fdc274c2ebe8b347"
     },
     {
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
       "visibility": "public",
       "default_branch": "main",
-      "head": "b1ef6e581014f1d811da5f37c735f9c05c2d8d62"
+      "head": "04a5b694d3ac6ddbebaf5b2ff9314a1c619b111e"
     },
     {
       "repo": "Karmicmurphy/clean-static-portfolio",
@@ -315,5 +315,12 @@
     "Check duplication_map for existing mechanisms.",
     "Only then use public web Artifact Compass/Salvage.",
     "New build must state why existing mechanisms cannot satisfy the target."
-  ]
+  ],
+  "inventory_reconciliation": {
+    "verified_at": "2026-09-20",
+    "accessible_karmicmurphy_repo_count": 14,
+    "missing_from_existing_inventory": [],
+    "renamed_or_unresolved": [],
+    "note": "Accessible GitHub inventory currently matches the 14 repositories already recorded; heads were refreshed from live default-branch refs."
+  }
 }
