@@ -14,9 +14,9 @@
     "foundry_builder": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "ref": "software-builder-v0",
-      "sha": "cd4bae186250eaf5bb49d10c8257869921ad38ea",
-      "functional_proof_head": "c25eaac464968ae5d1654affc9e75318b03acff9",
-      "note": "Cogs 1-4 proven in test; model patch lane optional."
+      "sha": "32c8a292d9d753a79a163a470dd5873e98e87dcb",
+      "functional_proof_head": "b84db3579ff7d62095c40b6c2a8830fec7557e11",
+      "note": "Foundation Core V0 human-operated runner operational in test; normal work stops at human review."
     },
     "aios": {
       "repo": "Karmicmurphy/Untethered-AIOS",
@@ -260,8 +260,8 @@
           ".github/workflows/software-builder-ollama-proof.yml"
         ]
       },
-      "implementation_state": "PROVEN_IN_TEST",
-      "evidence_state": "BUILDER_AIOS_INDEPENDENT_PROOF_AND_CERT_REQUIRED_PROMOTION_PROVEN",
+      "implementation_state": "OPERATIONAL_IN_TEST",
+      "evidence_state": "DIRECT_FOUNDATION_CORE_RUNNER_PROVEN_IN_TEST",
       "mode": "deterministic-first repair pipeline with replaceable narrow model patch proposal",
       "cost": "current proof uses GitHub Actions + local Ollama model; no model API key",
       "current_engine": "Ollama + qwen2.5-coder:1.5b-instruct baseline; model remains replaceable",
@@ -278,7 +278,7 @@
         "automatic_retest_passed": true,
         "remaining_unproven_gates": []
       },
-      "reconciliation": "Deterministic Builder, Foundry->AIOS wake, Independent Proof V0, and certificate-required promotion gate are proven in test. Model patch brains remain optional compute."
+      "reconciliation": "Builder is part of a proven direct Foundation core path. Workshop is optional front-end integration; models remain replaceable optional compute."
     },
     {
       "id": "replaceable_engine_harness",
@@ -507,15 +507,16 @@
         "Workshop Local Model Socket later"
       ],
       "result": "A replaceable no-model-API-key coding worker with deterministic tool boundaries and bounded proof receipts.",
-      "new_code_needed": "Workshop reconciliation and thin Workshop->Foundry handoff/result adapter; optional patch-brain improvements later.",
+      "new_code_needed": "First local field job, Workshop front-end adapter, then broader patch mechanisms only when earned by proof.",
       "authority_posture": "candidate branch/workspace only",
-      "status": "FOUNDATION_SPINE_COGS_1_4_PROVEN_IN_TEST"
+      "status": "DIRECT_FOUNDATION_CORE_OPERATIONAL_IN_TEST"
     }
   ],
   "immediate_gaps": [
-    "Authoritative local Windows Workshop must be reconciled with GitHub living-workshop-main-build before final cockpit wiring.",
-    "Workshop -> Foundry handoff/result-return adapter is still missing; reuse Foundry job_id as correlation key.",
-    "Estate delta updater is still missing and should flag stale SHAs/status contradictions without auto-promotion.",
+    "First live/local field job on Randy's Windows machine has not yet been run through the human-operated exact-patch runner.",
+    "Authoritative local Windows Workshop remains unreconciled with GitHub living-workshop-main-build.",
+    "Workshop -> Foundation Core front-end adapter is not yet built.",
+    "Estate delta updater is still missing and should flag stale authority without auto-promotion.",
     "Qwen/local patch-brain success remains optional and non-blocking."
   ]
 }
