@@ -17,13 +17,15 @@
     "foundry_builder": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "ref": "software-builder-v0",
-      "branch_head": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354",
+      "branch_head": "7b235265ecd6e14ad1118e37c0c763553a4931e4",
       "paths": [
         "docs/SOFTWARE_BUILDER_V0.md",
         "src/foundry/software_builder.py",
         "contracts/software_builder_receipt.schema.json",
         "state/SOFTWARE_BUILDER_V0_AUTHORITY.json"
-      ]
+      ],
+      "functional_proof_head": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354",
+      "note": "authority refresh commit follows functional proof head; proof run remains tied to 6a7af480..."
     },
     "aios": {
       "repo": "Karmicmurphy/Untethered-AIOS",
