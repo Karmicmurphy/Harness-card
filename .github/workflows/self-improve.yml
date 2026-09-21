@@ -69,7 +69,12 @@ jobs:
             exit 0
           fi
           git commit -m "Harness learns from latest wins losses and weird"
-          git push
+          # Another trusted writer may have advanced main while this job was running.
+          # Rebase generated state onto the latest remote head instead of failing a
+          # harmless non-fast-forward push or overwriting newer authority.
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
 
       - name: Fail if the self-improvement run lost
         if: always()
