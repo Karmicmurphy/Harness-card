@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "estate-sweep:2026-09-21:test-drive-01",
+  "created_date": "2026-09-21",
+  "authority": {
+    "governance": "Karmicmurphy/Harness-card@main",
+    "factory": "Karmicmurphy/temporal-capability-foundry@software-builder-v0",
+    "runtime": "Karmicmurphy/Untethered-AIOS@main",
+    "salvage": "Karmicmurphy/digital-scrapyard-autopilot@main",
+    "workshop": "Karmicmurphy/Ollie_Twis_Holo_workshop@living-workshop-main-build"
+  },
+  "coverage_claim": "EXHAUSTIVE_ACROSS_ACCESSIBLE_SOURCE_YARDS_PARTIAL_WITHIN_SOME_LARGE_YARDS",
+  "truth": {
+    "estate_map": "INSPECTED",
+    "estate_queue": "TESTED",
+    "github_karmicmurphy": "INSPECTED",
+    "github_membabarry": "INSPECTED",
+    "chatgpt_library": "INSPECTED",
+    "google_drive": "INSPECTED",
+    "lovable": "INSPECTED",
+    "replit": "INSPECTED",
+    "local_windows": "BLOCKED",
+    "cloudflare": "BLOCKED",
+    "other_external": "UNVERIFIED"
+  },
+  "queue_observation": {
+    "first_priority": "local-windows",
+    "first_priority_state": "BLOCKED_OWNER_DEVICE",
+    "productive_incremental_yards": [
+      "chatgpt-library",
+      "github-karmicmurphy",
+      "github-membabarry",
+      "google-drive",
+      "replit"
+    ],
+    "automatic_estate_traversal_proven": false,
+    "note": "The deterministic queue is proven; this run used connected read-only recovery for accessible yards because source-specific automatic recovery adapters remain incomplete."
+  },
+  "intelligence_route": {
+    "route": "CENTRAL_AI",
+    "reason": "Deterministic inventory and scripts established current source truth, but comparing cross-project novelty, leverage, and overlap required semantic synthesis. No proven cheaper rule/script/worker currently performs that comparison.",
+    "authority": "specialist compute only; not authority"
+  },
+  "candidate": {
+    "candidate_id": "estate-candidate:verified-continuation-capsule-v0",
+    "working_name": "Verified Continuation Capsule",
+    "classification": "NOVEL_RECOMBINATION_CANDIDATE",
+    "status": "PLANNED",
+    "what_already_exists": [
+      "Workshop project capsule ZIP export with artifact revisions",
+      "Workshop hashed source intake/manifests/receipts",
+      "Harness project/estate authority records and current-truth recovery",
+      "Foundry Software Builder receipts and independent proof certificates",
+      "Artifact Compass selection/salvage primitives",
+      "Clean Slate strategic-forgetting primitive: compress signal and expire noise",
+      "Rights Gate / provenance handling from Digital Scrapboard"
+    ],
+    "new_connection": "Produce one minimal tamper-evident continuation packet that carries only current authoritative project truth, selected reusable artifacts, provenance/rights state, exact proof receipts/certificates, explicit stale/expired/quarantined material, unresolved blockers, and the next bounded action. A fresh worker/session must be able to verify the packet before using it.",
+    "problem": "Randy currently becomes the clipboard and project manager between sessions/runtimes because current truth, proof, project artifacts, stale branches, and handoff context live on separate surfaces.",
+    "why_existing_projects_do_not_already_solve_it": [
+      "Workshop capsules preserve project artifacts/revisions but do not carry the Foundation authority/proof chain.",
+      "Harness records authority/current truth but is not itself a portable verified handoff packet.",
+      "Foundry certifies bounded jobs but does not assemble cross-session continuation state.",
+      "Clean Slate compresses a messy session but does not verify project authority or carry machine proof."
+    ],
+    "reusable_sources": [
+      "Karmicmurphy/Ollie_Twis_Holo_workshop@living-workshop-main-build",
+      "Karmicmurphy/Harness-card@main",
+      "Karmicmurphy/temporal-capability-foundry@software-builder-v0",
+      "Karmicmurphy/digital-scrapyard-autopilot@main"
+    ],
+    "rights_provenance": "Internal first-party primitives are reusable inside Randy's estate. Any third-party artifact included later must retain its own provenance/rights state and remain quarantined when rights are unclear.",
+    "missing": [
+      "small deterministic capsule schema",
+      "deterministic assembler",
+      "deterministic verifier",
+      "one clean-session recovery acceptance fixture",
+      "later Workshop import/export adapter after local Windows reconciliation"
+    ],
+    "cheapest_proof": "Build a GitHub-only V0 capsule for one bounded project. In a clean isolated fixture, verify hashes/schema/authority pointers and require recovery of current revision, proof state, blocked gaps, expired/stale material, and one next action without reading old chats.",
+    "current_confidence": "HIGH_CANDIDATE_CONFIDENCE_MEDIUM_INVENTION_CONFIDENCE",
+    "promotion_authorized": false,
+    "activation_authorized": false
+  },
+  "compared_alternatives": [
+    {
+      "id": "estate-delta-checker",
+      "classification": "INCREMENTAL_IMPROVEMENT",
+      "reason_not_selected": "Extremely useful and cheaper, but mostly authority-drift housekeeping rather than the highest-leverage new connection."
+    },
+    {
+      "id": "estate-front-door",
+      "classification": "UNFINISHED_OLD_PROJECT",
+      "reason_not_selected": "Strong interface idea but depends more heavily on unreconciled local Workshop state and adds UI before continuity/proof transport is solved."
+    },
+    {
+      "id": "clean-slate-button",
+      "classification": "UNFINISHED_OLD_PRODUCT",
+      "reason_not_selected": "Strong product framing and cheap MVP, but it is already a defined old project and does not multiply the value of the estate as broadly."
+    },
+    {
+      "id": "digital-scrap-forge-outsider-proof",
+      "classification": "HIGH_VALUE_NON_BUILD_NEXT_STEP",
+      "reason_not_selected": "Commercially important, but the next proof requires owner/public/payment/customer gates rather than another internal build."
+    },
+    {
+      "id": "loop-deck-sonic-repair",
+      "classification": "SEPARATE_PROJECT_REPAIR",
+      "reason_not_selected": "High personal value and handled separately; not the estate-wide invention candidate."
+    }
+  ],
+  "factory_advance": {
+    "requested": true,
+    "route": "WORKER",
+    "status": "BLOCKED",
+    "blocker": "Current connected session exposes repository read/write and CI evidence but no command runner with the separate candidate and trusted AIOS Git checkouts required by scripts/run_foundation_exact_patch_job.py. Bypassing the Builder with direct code edits is not authorized.",
+    "next_safe_action": "Run the candidate's smallest deterministic assembler/verifier through Foundation exact-patch/bounded software job once a valid execution workspace is available. Stop at CERTIFIED_AWAITING_HUMAN_REVIEW."
+  },
+  "authority_changes_performed": false,
+  "deployment_performed": false,
+  "publishing_performed": false,
+  "spending_performed": false
+}
