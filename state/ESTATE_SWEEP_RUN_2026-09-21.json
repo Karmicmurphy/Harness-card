@@ -119,5 +119,53 @@
   "authority_changes_performed": false,
   "deployment_performed": false,
   "publishing_performed": false,
-  "spending_performed": false
+  "spending_performed": false,
+  "loop_deck_followup": {
+    "project_repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
+    "main_head": "04a5b694d3ac6ddbebaf5b2ff9314a1c619b111e",
+    "continuation_branch": "sonic-audition-gate-2026-09-20",
+    "branch_head": "6e5e35e4427f7a3da8f54503dc9e1c57cd91f031",
+    "branch_relation_to_main": {
+      "ahead_by": 3,
+      "behind_by": 0
+    },
+    "pull_request": {
+      "number": 19,
+      "state": "OPEN",
+      "draft": true,
+      "mergeable": true,
+      "merged": false
+    },
+    "evidence": {
+      "static_contract_run": {
+        "id": 35551345876,
+        "status": "TESTED",
+        "conclusion": "success"
+      },
+      "workshop_ci_run": {
+        "id": 35551345886,
+        "status": "TESTED",
+        "conclusion": "success"
+      },
+      "unified_browser_proof": "PROVEN_IN_TEST",
+      "desktop_audio_peak": 0.767983078956604,
+      "mobile_audio_peak": 0.6823129653930664,
+      "offline_audio_peak": 0.2817161977291107,
+      "role_map": [
+        "KICK",
+        "BASS",
+        "HATS",
+        "PERC",
+        "PAD",
+        "MELODY",
+        "FX",
+        "VOCAL"
+      ],
+      "sampled_roles": 4
+    },
+    "sonic_target": "UNVERIFIED",
+    "live_deployment": "UNVERIFIED",
+    "current_machine_action": "STOP_FOR_HUMAN_SONIC_ACCEPTANCE",
+    "reason": "Structural/browser/offline proof passed. Perceptual target cannot be certified by CI and production deployment is owner-controlled. No merge/deploy performed."
+  }
 }
