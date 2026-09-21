@@ -14,9 +14,9 @@
     "foundry_builder": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "ref": "software-builder-v0",
-      "sha": "32c8a292d9d753a79a163a470dd5873e98e87dcb",
-      "functional_proof_head": "b84db3579ff7d62095c40b6c2a8830fec7557e11",
-      "note": "Foundation Core V0 human-operated runner operational in test; normal work stops at human review."
+      "sha": "44dd53245a783264c0ae2d0ad38e5f4791bc8617",
+      "functional_proof_head": "1aca8d7b5bc52cc6d3d9564c90aa02e363a0521e",
+      "note": "Foundation Core operational in test; estate map-to-queue and Minimum Necessary Intelligence are proven; model patch lane optional."
     },
     "aios": {
       "repo": "Karmicmurphy/Untethered-AIOS",
@@ -422,6 +422,48 @@
       "mode": "deterministic",
       "cost": "free/local",
       "reconciliation": "Runtime evidence only. Does not certify, promote, deploy or publish."
+    },
+    {
+      "id": "estate_source_yard_queue",
+      "function": "Compile the recovered estate source-yard map into an explicit deterministic recovery queue while preserving blocked/unknown/local gaps.",
+      "authority": {
+        "harness_map": "state/ESTATE_SOURCE_YARDS_V1.json",
+        "foundry_planner": "src/foundry/estate_queue.py"
+      },
+      "implementation_state": "PROVEN_IN_TEST",
+      "evidence_state": "REAL_HARNESS_MAP_TO_QUEUE_PROVEN",
+      "proof_run": 35655806912,
+      "mode": "deterministic",
+      "cost": "free",
+      "reconciliation": "This is the machine bridge from Randy's estate map into work. It plans queue items only; source-specific adapters still execute recovery."
+    },
+    {
+      "id": "minimum_necessary_intelligence",
+      "function": "Choose the cheapest proven sufficient intelligence level per task and preserve owner authority for high-risk or unresolved work.",
+      "authority": {
+        "repo": "Karmicmurphy/temporal-capability-foundry",
+        "paths": [
+          "src/foundry/intelligence_router.py",
+          "tests/test_intelligence_router.py",
+          "scripts/run_foundation_exact_patch_job.py"
+        ]
+      },
+      "implementation_state": "PROVEN_IN_TEST",
+      "evidence_state": "REAL_FOUNDATION_RUNNER_ROUTE_WORKER_PROVEN",
+      "proof_run": 35655678576,
+      "ladder": [
+        "IGNORE",
+        "CACHE",
+        "RULE",
+        "SCRIPT",
+        "WORKER",
+        "TINY_MODEL",
+        "CENTRAL_AI",
+        "OWNER_GATE"
+      ],
+      "mode": "deterministic policy",
+      "cost": "free",
+      "reconciliation": "Router never executes a model or changes authority. Model routes require explicit reason/availability; current exact-patch runner selects WORKER."
     }
   ],
   "overlap_clusters": [
@@ -513,10 +555,10 @@
     }
   ],
   "immediate_gaps": [
-    "First live/local field job on Randy's Windows machine has not yet been run through the human-operated exact-patch runner.",
-    "Authoritative local Windows Workshop remains unreconciled with GitHub living-workshop-main-build.",
-    "Workshop -> Foundation Core front-end adapter is not yet built.",
-    "Estate delta updater is still missing and should flag stale authority without auto-promotion.",
+    "Source-specific estate recovery adapters/executors are not complete for every mapped source yard.",
+    "Local Windows machine remains a high-value owner-device source yard pending reconciliation.",
+    "Workshop -> Foundry cockpit adapter remains open but does not block estate-driven discovery.",
+    "Estate delta updater remains useful for stale-state detection.",
     "Qwen/local patch-brain success remains optional and non-blocking."
   ]
 }
