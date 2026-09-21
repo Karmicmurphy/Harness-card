@@ -183,9 +183,10 @@
     },
     {
       "from": "Foundry",
-      "to": "CERT-RIVER",
-      "state": "CONTRACT_RECONCILED_IMPLEMENTATION_BLOCKED",
-      "blocker": "exact archived executable certifier primitives not recovered as current code"
+      "to": "Independent proof / CERT-RIVER lineage",
+      "state": "CONTRACT_RECONCILED_EXECUTABLE_RUNTIME_UNVERIFIED",
+      "blocker": "bounded archived CERT-RIVER recovery checkpoint not yet completed",
+      "action": "recover exact usable primitives first; if bounded recovery fails, implement minimal independent proof lane without creating another framework"
     },
     {
       "from": "Foundry",
