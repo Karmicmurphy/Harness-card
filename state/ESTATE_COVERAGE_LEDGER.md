@@ -15,7 +15,7 @@ Legend:
 
 Status: FOUND / INSPECTED / PARTIAL-BY-FILE
 
-13 repositories were enumerated through the connected GitHub account:
+14 repositories are currently reconciled in the connected Karmicmurphy GitHub inventory:
 
 1. Karmicmurphy/WTF-SHED-HAPPENS
 2. Karmicmurphy/nemoclw_new_agent — private; currently First3 Local
@@ -30,6 +30,7 @@ Status: FOUND / INSPECTED / PARTIAL-BY-FILE
 11. Karmicmurphy/Echos-forward
 12. Karmicmurphy/coilside
 13. Karmicmurphy/WTF-Stupid-Simple-Terri-Tax — private
+14. Karmicmurphy/temporal-capability-foundry — private; current Foundation factory
 
 Important:
 - repository inventory is authoritative for what the connector exposed on this date;
@@ -282,6 +283,14 @@ Store only:
 - authority pointers;
 - operating rules;
 - sanitized evidence summaries.
+
+## Machine-readable companion
+
+The source-yard level coverage map is also represented at:
+
+`state/ESTATE_SOURCE_YARDS_V1.json`
+
+That JSON is now proven to compile into a deterministic Foundry estate work queue without AI. It does not claim every artifact/byte is indexed, and blocked/private/local yards remain explicit.
 
 # Current coverage verdict
 
