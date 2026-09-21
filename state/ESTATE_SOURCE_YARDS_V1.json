@@ -129,6 +129,12 @@
     "every_byte_inspected": false,
     "local_windows_reconciled": false,
     "automatic_estate_traversal_ready": false,
-    "next_missing_connection": "Feed this source-yard map into a deterministic estate work queue, then use Artifact Compass/Salvage per yard and Minimum Necessary Intelligence per task."
+    "next_missing_connection": "Execute the proven source-yard queue through source-specific recovery adapters, using deterministic inventory/classification first and Minimum Necessary Intelligence only for unresolved per-task ambiguity.",
+    "map_to_queue_proven": true,
+    "map_to_queue_proof_run": 35655806912,
+    "map_to_queue_proof_head": "1aca8d7b5bc52cc6d3d9564c90aa02e363a0521e",
+    "minimum_necessary_intelligence_router_proven": true,
+    "minimum_necessary_intelligence_runner_proof_run": 35655678576,
+    "source_specific_recovery_adapters_complete": false
   }
 }
