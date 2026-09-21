@@ -13,7 +13,7 @@
     "foundry_builder": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "ref": "software-builder-v0",
-      "sha": "431651c4483c453c43984a6e02c6919c90be2d79"
+      "sha": "8bf324d378e1af59fdc48608d40ba95ddb7d73f0"
     },
     "aios": {
       "repo": "Karmicmurphy/Untethered-AIOS",
@@ -267,13 +267,13 @@
         "observed_failure": true,
         "implementation_file_changed": "src/untethered_aios/capabilities.py",
         "tests_edited": false,
-        "remaining_gate": "step budget exhausted at 10 before passing retest"
+        "remaining_gate": "step budget exhausted at 10 before passing retest",
+        "branch_head_after_authority_refresh": "8bf324d378e1af59fdc48608d40ba95ddb7d73f0",
+        "functional_code_head": "431651c4483c453c43984a6e02c6919c90be2d79",
+        "authority_file": "state/SOFTWARE_BUILDER_V0_AUTHORITY.json",
+        "authority_refresh_commit": "8bf324d378e1af59fdc48608d40ba95ddb7d73f0"
       },
-      "stale_pointer": {
-        "path": "state/SOFTWARE_BUILDER_V0_AUTHORITY.json",
-        "issue": "Still claims no callable coding-engine runtime and pins old head 8a67aed...; superseded by live branch/CI evidence but preserved as historical receipt until explicitly refreshed."
-      },
-      "reconciliation": "Do not redesign. Current next proof question is model/loop efficiency and step budget, not runtime availability."
+      "reconciliation": "Do not redesign. Callable Ollama runtime is established; current next proof question is the smallest cause of step-budget exhaustion before passing retest. The project authority file has been refreshed to this state."
     },
     {
       "id": "replaceable_engine_harness",
