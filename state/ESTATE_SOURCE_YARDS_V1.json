@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-09-21",
+  "purpose": "Machine-readable source-yard map for Foundation estate traversal. It mirrors the coverage ledger at source-yard/project-family granularity; it is not a claim that every byte/file is indexed.",
+  "authority_rule": "Live source/repo/device truth outranks this map. Unknown or blocked sources remain explicit and are never rewritten as absent.",
+  "coverage_claim": "EXHAUSTIVE_ACROSS_ACCESSIBLE_SOURCE_YARDS_PARTIAL_WITHIN_SOME_LARGE_YARDS",
+  "source_yards": [
+    {
+      "id": "github-karmicmurphy",
+      "name": "GitHub — Karmicmurphy",
+      "state": "FOUND_INSPECTED_PARTIAL",
+      "access": "CONNECTED",
+      "inventory_count": 14,
+      "notes": "Accessible repository inventory is reconciled separately in ECOSYSTEM_AUTHORITY_INDEX.json; active repos must be reverified when processed."
+    },
+    {
+      "id": "github-membabarry",
+      "name": "GitHub — MembaBarry",
+      "state": "FOUND_INSPECTED_PARTIAL",
+      "access": "PUBLIC_WEB",
+      "inventory_count": 12,
+      "notes": "Historical/adjacent account recovered; do not merge with current Foundation authority."
+    },
+    {
+      "id": "chatgpt-library",
+      "name": "ChatGPT Library / conversation files",
+      "state": "FOUND_INSPECTED_PARTIAL",
+      "access": "CONNECTED_WHEN_AVAILABLE",
+      "notes": "Major handoffs, master salvage reports, context seeds, recovery packets and technical records recovered; listing/search may truncate."
+    },
+    {
+      "id": "model-context",
+      "name": "Model memory / prior project context",
+      "state": "FOUND_USED_HISTORICAL",
+      "access": "CONTEXTUAL",
+      "notes": "Supporting historical evidence only; current repo/device/deploy truth outranks memory."
+    },
+    {
+      "id": "google-drive",
+      "name": "Google Drive",
+      "state": "FOUND_INSPECTED_PARTIAL",
+      "access": "CONNECTED_WHEN_AVAILABLE",
+      "notes": "Substantial older project history recovered. Keep private/non-project material out of public Harness."
+    },
+    {
+      "id": "lovable",
+      "name": "Lovable",
+      "state": "FOUND_INSPECTED",
+      "access": "CONNECTED_WHEN_AVAILABLE",
+      "inventory_count": 9,
+      "notes": "Project lineage includes Artifact Vault, Artifact Compass, Exact Match, Ephemeral Verdict, Brain Dump Tunnel, Digital Salvage Forge, Coilside and Loop Deck."
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "state": "FOUND_INVENTORIED_PARTIAL",
+      "access": "CONNECTED_WHEN_AVAILABLE",
+      "inventory_count": 4,
+      "notes": "Editable apps inventoried; implementation depth remains partial."
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "state": "FOUND_INVENTORIED",
+      "access": "CONNECTED_WHEN_AVAILABLE",
+      "inventory_count": 1,
+      "notes": "stealthloc lineage surfaced; inactive."
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "state": "FOUND_INVENTORIED_NO_CURRENT_PROJECTS",
+      "access": "CONNECTED_WHEN_AVAILABLE",
+      "notes": "Team verified; empty current connector response does not prove no historical project existed."
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "state": "FOUND_INSPECTED_LOW_PROJECT_VALUE",
+      "access": "CONNECTED_WHEN_AVAILABLE",
+      "notes": "Private workspace inspected at project-inventory level; sensitive notes not imported."
+    },
+    {
+      "id": "todoist",
+      "name": "Todoist",
+      "state": "CHECKED_NO_PROJECT_HISTORY",
+      "access": "CONNECTED_WHEN_AVAILABLE",
+      "notes": "Only Inbox surfaced during coverage pass."
+    },
+    {
+      "id": "hugging-face",
+      "name": "Hugging Face",
+      "state": "CHECKED_NO_JOB_HISTORY",
+      "access": "CONNECTED_WHEN_AVAILABLE",
+      "notes": "No current jobs surfaced; does not imply models/assets were never used historically."
+    },
+    {
+      "id": "higgsfield",
+      "name": "Higgsfield",
+      "state": "CHECKED_NO_WEBSITE_PROJECT_HISTORY",
+      "access": "CONNECTED_WHEN_AVAILABLE",
+      "notes": "Website inventory empty; other media generations may exist outside that inventory."
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "state": "BLOCKED_INDIRECT_EVIDENCE_ONLY",
+      "access": "BLOCKED",
+      "notes": "Deployment/config evidence recovered indirectly from repos and URLs; direct account inventory not completed."
+    },
+    {
+      "id": "local-windows",
+      "name": "Local Windows machine / archives / repos",
+      "state": "BLOCKED_CURRENT_SESSION",
+      "access": "OWNER_DEVICE",
+      "notes": "Known high-value authority yard. Must be reconciled from Randy's machine; never treat inaccessible local files as absent."
+    },
+    {
+      "id": "other-external",
+      "name": "Other historical platforms/accounts",
+      "state": "UNKNOWN_OR_BLOCKED",
+      "access": "UNKNOWN",
+      "notes": "Older identities/systems may exist beyond connected services; keep explicit gap instead of silent absence."
+    }
+  ],
+  "readiness": {
+    "source_yard_map_ready": true,
+    "every_artifact_indexed": false,
+    "every_byte_inspected": false,
+    "local_windows_reconciled": false,
+    "automatic_estate_traversal_ready": false,
+    "next_missing_connection": "Feed this source-yard map into a deterministic estate work queue, then use Artifact Compass/Salvage per yard and Minimum Necessary Intelligence per task."
+  }
+}
