@@ -1,224 +1,176 @@
 # Foundation V0 Activation Map — 2026-09-21
 
-Status: **INTEGRATION / PROOF — COGS 1 THROUGH 4 PROVEN IN TEST; NOT YET END-TO-END FUNCTIONAL**
+Status: **FOUNDATION CORE V0 OPERATIONAL_IN_TEST — HUMAN REVIEW GATED**
 
-Live repo/device truth outranks this map.
+Live repository/device truth outranks this map.
 
-## Current chain
+## What is functional now
+
+The direct Foundation core can run one bounded software repair job without a model:
 
 ```text
-Randy
--> Workshop
--> Harness
--> Foundry
--> AIOS
--> Independent Proof
--> Foundry Promotion / Activation
--> Workshop
--> Randy
+human-specified exact patch job
+-> Foundry job identity
+-> AIOS process/job correlation
+-> Software Builder bounded edit + automatic retest
+-> Independent Proof V0
+-> CERTIFIED / REJECTED / QUARANTINED
+-> human review
 ```
 
-Digital Scrapyard remains the salvage / rights / research / recombination department beside this chain.
+Normal software jobs do **not** enter capability promotion automatically.
 
-## Canonical refs
+Successful normal jobs end at:
 
-- Governance: `Karmicmurphy/Harness-card@main`
-- Factory: `Karmicmurphy/temporal-capability-foundry@software-builder-v0`
-  - authority head: `cd4bae186250eaf5bb49d10c8257869921ad38ea`
-  - latest functional proof head: `c25eaac464968ae5d1654affc9e75318b03acff9`
-- Runtime: `Karmicmurphy/Untethered-AIOS@8a954439af2b15b00f7c961d83552772b382fd1f`
-- Salvage: `Karmicmurphy/digital-scrapyard-autopilot@028f1a9559a7f198d73e7042d18b9c8343f64729`
-- Cockpit GitHub candidate: `Karmicmurphy/Ollie_Twis_Holo_workshop@living-workshop-main-build`
-  - head: `29deb23f917199b09b17d6b87a2f33c40657ea79`
-  - local Windows Workshop remains private authority pending reconciliation.
+`CERTIFIED_AWAITING_HUMAN_REVIEW`
 
-## Identity rule
+No merge, deploy, publish, activation, spending, deletion, permission expansion, or model-weight change occurs automatically.
 
-Use **Foundry `job_id`** as the cross-repo correlation key.
+## Proven core evidence
 
-- Workshop keeps its own IDs and stores `foundry_job_id`.
-- AIOS keeps its PID and stores `ProcessRecord.metadata["foundry_job_id"]`.
-- AIOS audit evidence carries `foundry_job_id`.
-- Foundry evidence already keys by `job_id`.
-- Independent proof binds `foundry_job_id` + exact `claim_id` + exact candidate hash.
+- Deterministic Builder: run `35611616345`
+- Foundry -> AIOS wake: run `35612271813`
+- Independent Proof V0: run `35620771601`
+- Certificate-required promotion gate: run `35620968656`
+- Foundation core composition: run `35627936077`
+- Strict Python-bytecode proof integrity: run `35627957323`
+- Human-operated exact-patch runner on real pinned AIOS: run `35628459336`
 
-Do not create another global job ID.
+Human-runner proof head:
 
-## Proven cogs
+`b84db3579ff7d62095c40b6c2a8830fec7557e11`
 
-### Cog 1 — Deterministic real-repository Builder
-**PROVEN_IN_TEST**
+Current Foundry authority:
 
-Proof run: `35611616345`
+`Karmicmurphy/temporal-capability-foundry@software-builder-v0`
 
-Verified:
-- pinned real repo baseline green;
-- deliberate failure injected;
-- failing test observed;
-- declared repair target preloaded;
-- bounded worker edit through Builder tools;
-- automatic retest passed;
-- no test edits;
-- honest worker-authored `files_changed`;
-- no deploy/publish.
+Authority head at this update:
 
-### Cog 1B — Patch-brain diagnostics
-**DIAGNOSTICS IMPLEMENTED / OPTIONAL LANE**
+`32c8a292d9d753a79a163a470dd5873e98e87dcb`
 
-Qwen diagnostic run: `35611616512`
+## Human-operated runner
 
-Result: **failure / non-blocking**.
+Implementation:
 
-Sanitized action-attempt diagnostics exist. Local patch models remain replaceable compute and do not gate Foundation activation.
+`scripts/run_foundation_exact_patch_job.py`
 
-### Cog 2 — Foundry -> AIOS Wake Adapter V0
-**PROVEN_IN_TEST**
+Documentation:
 
-Proof run: `35612271813`
+`docs/FOUNDATION_CORE_V0.md`
 
-Pinned AIOS: `8a954439af2b15b00f7c961d83552772b382fd1f`
+Example:
 
-Verified:
-- Foundry job correlation into AIOS;
-- scoped capability allow;
-- out-of-scope denial;
-- correlated audit evidence;
-- terminal result;
-- tick-limit evidence;
-- tick-limited process cancellation;
-- no certification/promotion broadening.
+`examples/foundation_exact_patch_job.example.json`
 
-### Cog 3 — Independent Proof V0
-**PROVEN_IN_TEST**
+V0 intentionally supports:
+- existing candidate Git checkout;
+- separate trusted Untethered-AIOS checkout;
+- exact replacement patches;
+- Python standard-library unittest acceptance;
+- Builder workspace/command policy;
+- independent exact-claim certification;
+- human review stop.
 
-Proof run: `35620771601`
+This is deliberately narrow. New patch types or command families must earn support through proof.
 
-Proof head: `c9fdad6e41ed6ffad6f34ec1b7f079b0c9439cd9`
+## Proof-integrity rule
 
-Verifier: `independent-proof-v0.2`
+Builder test commands and Independent Proof acceptance commands use isolated `PYTHONPYCACHEPREFIX` directories.
 
-Verified:
-- exact candidate hash pinning;
-- changed-path boundary;
-- forbidden-path quarantine;
-- disallowed-command quarantine;
-- proof-execution mutation quarantine;
-- normal untracked runtime artifacts do not falsely trigger quarantine;
-- exact passing candidate -> `CERTIFIED`;
-- exact failing candidate -> `REJECTED`;
-- integrity/policy violation -> `QUARANTINED`;
-- certifier cannot edit/deploy/promote/activate/broaden claim.
+Reason: CPython can otherwise reuse stale timestamp/size-valid bytecode after a same-size source repair.
 
-### Cog 4 — Promotion certificate-consumption gate
-**PROVEN_IN_TEST**
+Independent Proof excludes only derived Python bytecode (`__pycache__`, `.pyc`, `.pyo`) from changed-path authority and still records those paths in evidence.
 
-Test run: `35620968656`
+Other unexpected files still count.
 
-Proof head: `c25eaac464968ae5d1654affc9e75318b03acff9`
+## Known proof debt
 
-When policy requires independent certification:
-- missing certificate -> promotion BLOCKED;
-- `REJECTED` -> BLOCKED;
-- `QUARANTINED` -> BLOCKED;
-- `CERTIFIED` must match expected `foundry_job_id`;
-- `CERTIFIED` must match expected `claim_id`;
-- activation still requires an APPROVED promotion assessment;
-- `auto_activate=false` remains enforced.
+AIOS currently provides process lifecycle and `foundry_job_id` correlation around the Builder job.
 
-## Remaining cogs
+Builder's own proven workspace/command policy still mediates Builder file/test operations; every Builder tool call is **not** currently routed through AIOS CapabilityGrant.
 
-### Cog 5 — Workshop local/GitHub reconciliation
-**NEXT / OWNER-DEVICE DEPENDENT**
+Do not claim otherwise.
 
-Need:
-- compare authoritative local Windows Workshop with `living-workshop-main-build`;
-- identify newer/local-only files;
-- record intentional differences;
-- keep secrets, private DBs, personal archives, credentials, and raw private data out of GitHub;
-- establish which code snapshot is safe to wire.
+Per-tool AIOS mediation may be considered later only if its extra security/recovery value earns the complexity.
 
-Do not assume GitHub is newer than the local Workshop.
+## Human-owned improvement mode
 
-### Cog 6 — Workshop -> Foundry handoff / result return
-**MISSING AFTER COG 5**
+Foundation improvement is **not self-evolving AI**.
 
-Reuse existing contracts. Do not create a second job architecture.
+After repeated real proven jobs:
 
-Minimum submission:
-- goal;
-- project/artifact reference;
-- constraints;
-- risk / approval posture;
-- acceptance tests.
+```text
+successful traces
+-> repeated pattern
+-> candidate RULE / SCRIPT / WORKER / tiny model
+-> regression evidence
+-> Independent Proof
+-> certificate-aware promotion assessment
+-> AWAITING_HUMAN_APPROVAL
+-> Randy decides
+-> separate explicit activation
+```
 
-Foundry returns / correlates:
-- `job_id`;
-- Builder receipt;
-- AIOS runtime evidence;
-- independent certificate;
-- proof debt;
-- promotion/activation state;
-- changed files / result artifact.
+The core itself forces human approval to remain absent during automated assessment.
 
-Workshop stores `foundry_job_id` beside its local records and displays proven/unproven state without self-certifying.
+It cannot approve Randy's decision for him.
 
-### Cog 7 — Estate delta checker
-**MISSING / NOT FIRST-MACHINE BLOCKER**
+A proposed improvement should reduce something measurable:
+- model calls;
+- latency;
+- CPU/RAM;
+- cost;
+- owner intervention;
+- ambiguity;
+- failure rate;
+- proof debt.
 
-Purpose:
-- compare recorded repo/branch heads with live heads;
-- flag stale SHAs/status contradictions;
+More code, models, or agents is not itself improvement.
+
+## Workshop
+
+Workshop is now a **front-end integration task**, not a blocker for the core engine.
+
+GitHub Foundation branch:
+
+`Karmicmurphy/Ollie_Twis_Holo_workshop@living-workshop-main-build`
+
+GitHub Phase 1A is proven in test.
+
+Randy's local Windows Workshop may be newer and remains private/local authority until reconciled.
+
+Remaining Workshop work:
+1. reconcile local Windows Workshop with the GitHub Foundation branch;
+2. build thin Workshop -> Foundry job submission;
+3. store `foundry_job_id` beside Workshop-local IDs;
+4. display Builder evidence, AIOS runtime evidence, independent certificate, proof debt, and human-required action;
+5. never let Workshop self-certify or auto-activate.
+
+## Cross-repo identity
+
+Use Foundry `job_id` as the machine-wide correlation key for Foundry-governed work.
+
+Do not create another global ID.
+
+## Next field boundary
+
+The core is **OPERATIONAL_IN_TEST**, not yet PROVEN_LIVE on Randy's Windows machine.
+
+The next strongest evidence is the first real local bounded job through the human-operated runner.
+
+That local job should end at human review, not autonomous merge/deploy/activation.
+
+Workshop reconciliation can proceed in parallel.
+
+## Later continuity work
+
+Estate delta checker remains useful but non-blocking:
+- compare recorded authority heads to live heads;
+- flag stale pointers/status contradictions;
 - never auto-promote.
 
-### Cog 8 — Capability Downshift
-**DEFER UNTIL COGS 5–6 COMPLETE**
+## Do not reopen
 
-Allowed path:
+Do not redo Builder, AIOS wake, Independent Proof, or certificate promotion architecture unless new evidence invalidates their current proofs.
 
-```text
-successful trace
--> repeated pattern
--> candidate rule/script/worker/tiny model
--> regression test
--> independent proof
--> promotion
--> human-controlled activation
-```
-
-Improvement must reduce measurable burden such as model calls, latency, cost, CPU/RAM, owner intervention, ambiguity, failure rate, or proof debt.
-
-More agents/models/code is not automatically improvement.
-
-## First functional-machine definition
-
-Foundation V0 becomes end-to-end functional when one real bounded software job can travel:
-
-```text
-Workshop intake
--> Foundry job_id
--> AIOS bounded wake
--> Builder
--> automatic test evidence
--> Independent Proof
--> certificate-aware promotion
--> Workshop result surface
--> Randy irreversible-action gate
-```
-
-and every transition can answer:
-- exact job?
-- exact artifact/hash?
-- exact permissions?
-- exact changed files?
-- exact tests?
-- exact independent proof?
-- exact remaining debt?
-- exact human-required action?
-
-## Current next move
-
-**Cog 5 first: reconcile the authoritative local Windows Workshop with the GitHub Foundation branch.**
-
-Then immediately build **Cog 6: the smallest Workshop -> Foundry job/result adapter**.
-
-Do not reopen Cogs 1–4 unless new evidence breaks their proofs.
+Build/use the smallest complete machine first.
