@@ -206,29 +206,23 @@ Verified sequence on Foundry branch `software-builder-v0`:
 
 The active experiment replaces loose model action JSON with a schema-constrained **narrow repair action** while retaining the same failing fixture, immutable tests, bounded workspace, and automatic retest.
 
-Therefore the current blocker is **prove one narrow patch proposal through the real local-model socket with honest provenance**, not action-budget size.
+Therefore the current model-patch blocker is **why three schema-constrained repair turns produced no accepted worker edit**. That is now a patch-brain/socket problem, not a reason to block deterministic factory plumbing.
 
 ## 7. Immediate bounded move
 
-Finish exactly one real proof of the deterministic-first repair shape:
+Split the proof into two independent questions:
 
-```text
-worker observes failing test
--> worker preloads declared target
--> model may propose only a bounded exact replacement or explicit block
--> worker applies through bounded tool
--> worker automatically retests
--> receipt claims only worker-authored changes
-```
+1. **Foundation plumbing control:** prove the same pinned real-repository failure -> repair -> automatic retest loop with a deterministic/no-model repair engine.
+2. **Patch-brain lane:** instrument each model action attempt/rejection, then decide whether to repair the socket or run the tiny-model bake-off.
 
-Do not add more model turns merely to obtain green. If this exact shape fails, classify the output-contract/model failure and use the adaptive research-versus-experiment rule to decide whether to repair the socket or run the tiny-model bake-off.
+Do not let a flaky replaceable model become the gate for scheduler/permission integration. The model is compute, not the control plane.
 
 The Digital Scrapyard adaptive pass rule is now the discovery-depth authority:
 `skills/salvage-suite/ADAPTIVE_PASS_RULE.md`.
 
 ## 8. First interface to build after green proof
 
-If the narrow real repair proof becomes green, the first bounded interface candidate is:
+If the deterministic real-repository Builder control becomes green, the first bounded interface candidate is:
 
 **Foundry -> AIOS Builder Wake Adapter V0**
 
@@ -261,10 +255,10 @@ The immediate sequence is:
 
 ```text
 boundary map
--> deterministic-first narrow Builder proof
--> tiny repair-brain bake-off only if evidence requires it
+-> deterministic/no-model real-repository Builder control
 -> Foundry-to-AIOS wake adapter
 -> independent proof/certifier lane
 -> Workshop cockpit integration after local authority reconciliation
+-> patch-brain bake-off as a replaceable capability lane
 -> Capability Downshift only from repeated proven traces
 ```
