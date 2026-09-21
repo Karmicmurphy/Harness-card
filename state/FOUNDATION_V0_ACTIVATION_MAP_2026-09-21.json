@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-09-21",
-  "status": "FOUNDATION_V0_INTEGRATION_PROOF_NOT_END_TO_END_FUNCTIONAL",
+  "status": "FOUNDATION_V0_COGS_1_THROUGH_4_PROVEN_IN_TEST_WORKSHOP_RECONCILIATION_NEXT",
   "principle": "Activate deterministic plumbing first; intelligence is replaceable compute, not control-plane authority.",
   "correlation": {
     "canonical": "Foundry job_id",
@@ -48,31 +48,35 @@
     {
       "id": 3,
       "name": "independent_proof_lane",
-      "state": "NEXT",
-      "blocking": true,
+      "state": "PROVEN_IN_TEST",
+      "blocking": false,
       "depends_on": [
         1
-      ]
+      ],
+      "proof_run": 35620771601,
+      "proof_head": "c9fdad6e41ed6ffad6f34ec1b7f079b0c9439cd9"
     },
     {
       "id": 4,
       "name": "promotion_certificate_consumption_gate",
-      "state": "PARTIAL_VERIFY",
-      "blocking": true,
+      "state": "PROVEN_IN_TEST",
+      "blocking": false,
       "depends_on": [
         3
-      ]
+      ],
+      "test_run": 35620968656,
+      "proof_head": "c25eaac464968ae5d1654affc9e75318b03acff9"
     },
     {
       "id": 5,
       "name": "local_workshop_github_reconciliation",
-      "state": "OPEN",
+      "state": "NEXT_OWNER_DEVICE_RECONCILIATION",
       "blocking": true
     },
     {
       "id": 6,
       "name": "workshop_foundry_handoff_and_return",
-      "state": "MISSING",
+      "state": "MISSING_AFTER_COG_5",
       "blocking": true,
       "depends_on": [
         2,
@@ -103,9 +107,9 @@
   ],
   "latest_builder_model_proof": {
     "run_id": 35611616512,
-    "conclusion": "IN_PROGRESS_OR_PENDING_LIVE_RECHECK",
+    "conclusion": "failure",
     "blocking": false,
-    "note": "Action-attempt diagnostics are implemented. Local model patch success is optional compute and no longer gates Foundation activation."
+    "note": "Sanitized action-attempt diagnostics are implemented. Qwen patch success is optional compute and does not gate Foundation integration."
   },
   "do_not_build": [
     "new AI OS",
@@ -116,7 +120,7 @@
     "model-controlled deploy/publish/promotion",
     "all warehouse candidates as dependencies up front"
   ],
-  "first_move": "Cog 3: bounded CERT-RIVER executable recovery, then minimal independent verifier if recovery does not yield a current usable certifier",
+  "first_move": "Cog 5: reconcile the authoritative local Windows Workshop against GitHub living-workshop-main-build; then build Cog 6 Workshop -> Foundry handoff/result return",
   "completed_proofs": {
     "deterministic_builder": {
       "run_id": 35611616345,
@@ -129,6 +133,19 @@
       "conclusion": "success",
       "status": "PROVEN_IN_TEST",
       "pinned_aios": "Karmicmurphy/Untethered-AIOS@8a954439af2b15b00f7c961d83552772b382fd1f"
+    },
+    "independent_proof": {
+      "run_id": 35620771601,
+      "conclusion": "success",
+      "status": "PROVEN_IN_TEST",
+      "proof_head": "c9fdad6e41ed6ffad6f34ec1b7f079b0c9439cd9",
+      "verifier_version": "independent-proof-v0.2"
+    },
+    "promotion_certificate_gate": {
+      "run_id": 35620968656,
+      "conclusion": "success",
+      "status": "PROVEN_IN_TEST",
+      "proof_head": "c25eaac464968ae5d1654affc9e75318b03acff9"
     }
   }
 }
