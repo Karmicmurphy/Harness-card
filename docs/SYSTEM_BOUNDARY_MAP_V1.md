@@ -190,40 +190,43 @@ Do not collapse these into one generic receipt type.
 
 ## 6. Current blocker before interface work
 
-The real Software Builder proof on Foundry branch `software-builder-v0` reached the bounded repair path against pinned Untethered-AIOS.
+The original 10-step and 12-step hypotheses are superseded by later evidence.
 
-Observed in GitHub Actions run `35522934878`:
-- Foundry unit tests: green;
-- Ollama installed and reachable;
-- model: `qwen2.5-coder:1.5b-instruct`;
-- pinned AIOS baseline was green before fault injection;
-- worker-owned initial failing test gate observed the injected path-containment failure;
-- the Builder inspected `src/untethered_aios/capabilities.py`;
-- the Builder changed that implementation file;
-- tests were not edited;
-- no passing retest was observed before `max_steps=10` was exhausted.
+Verified sequence on Foundry branch `software-builder-v0`:
+- real Ollama/Qwen connectivity works;
+- the pinned Untethered-AIOS baseline is green before deliberate fault injection;
+- the worker owns the initial failing test gate;
+- the worker now owns automatic post-edit retesting;
+- declared repair targets are preloaded deterministically before a model repair turn;
+- the normal Foundry unit suite is green for those deterministic controls;
+- a later proof exposed malformed/truncated free-form JSON from the coding model, not a missing scheduler or a reason to widen model authority;
+- receipt provenance also required correction so pre-existing dirty workspace files are not falsely attributed as worker-authored edits.
 
-Therefore the current blocker is **loop-step efficiency / proof budget**, not missing model connectivity and not a reason to redesign the Builder.
+The active experiment replaces loose model action JSON with a schema-constrained **narrow repair action** while retaining the same failing fixture, immutable tests, bounded workspace, and automatic retest.
+
+Therefore the current blocker is **prove one narrow patch proposal through the real local-model socket with honest provenance**, not action-budget size.
 
 ## 7. Immediate bounded move
 
-Run one minimal experiment before touching Builder architecture:
+Finish exactly one real proof of the deterministic-first repair shape:
 
-1. change only the proof harness `max_steps` from **10 to 12**;
-2. keep the same pinned AIOS commit;
-3. keep `repair_limit=2`;
-4. keep the same required initial failing test;
-5. keep tests immutable;
-6. keep the same acceptance gate;
-7. rerun the real Ollama proof.
+```text
+worker observes failing test
+-> worker preloads declared target
+-> model may propose only a bounded exact replacement or explicit block
+-> worker applies through bounded tool
+-> worker automatically retests
+-> receipt claims only worker-authored changes
+```
 
-Why 12: after an implementation edit, the minimum remaining useful actions are **retest + final**. Two extra action slots test the step-budget hypothesis without loosening any proof or repair gate.
+Do not add more model turns merely to obtain green. If this exact shape fails, classify the output-contract/model failure and use the adaptive research-versus-experiment rule to decide whether to repair the socket or run the tiny-model bake-off.
 
-If 12 still fails, do **not** blindly raise it again. Instrument/recover the action history and fix the smallest repeated-action cause before another policy change.
+The Digital Scrapyard adaptive pass rule is now the discovery-depth authority:
+`skills/salvage-suite/ADAPTIVE_PASS_RULE.md`.
 
 ## 8. First interface to build after green proof
 
-If the 12-step proof becomes green, the first bounded interface candidate is:
+If the narrow real repair proof becomes green, the first bounded interface candidate is:
 
 **Foundry -> AIOS Builder Wake Adapter V0**
 
@@ -256,9 +259,10 @@ The immediate sequence is:
 
 ```text
 boundary map
--> 12-step Builder proof experiment
--> green real failure/repair/retest evidence
+-> deterministic-first narrow Builder proof
+-> tiny repair-brain bake-off only if evidence requires it
 -> Foundry-to-AIOS wake adapter
--> independent certification recovery/adapter
+-> independent proof/certifier lane
 -> Workshop cockpit integration after local authority reconciliation
+-> Capability Downshift only from repeated proven traces
 ```
