@@ -44,9 +44,11 @@ Current V1 findings include:
 - AIOS already contains reusable scheduler/process/capability-grant/audit primitives;
 - Digital Scrapyard already contains the canonical salvage/rights/recombination method suite;
 - CERT-RIVER / PRISM-RIVER / RiverKernel remain the major unresolved independent-certification lineage;
-- the Software Builder Ollama proof now reaches the repair loop; the current live blocker is step-budget exhaustion before a passing retest, not lack of a callable coding engine.
+- the Software Builder has moved past the old 10/12-step-budget hypothesis. Deterministic controls now own the failing test, declared target preload, post-edit retest, and change provenance; the live unresolved gate is one real schema-constrained narrow patch through the local model socket.
 
-Boundary reconciliation still identifies **Foundry -> AIOS Builder Wake Adapter V0** as the first missing cross-repo runtime interface. The five-pass salvage pass adds one prerequisite correction: the Builder itself should be deterministic-first and Agentless-style (localize -> narrow patch proposal -> automatic retest) rather than a model-controlled tool loop. The adapter remains deferred until that narrower real repair proof is green. A bounded 10->12 proof-step experiment was committed on `temporal-capability-foundry@software-builder-v0` as `5be0fd74d2a7e4e3a2afff4f993a6329c346ab20`; it changes only the proof harness step budget and preserves the same pinned AIOS source, repair limit, failure gate, immutable tests, and acceptance gate. Until its workflow finishes successfully, the Builder remains **PARTIAL_PROOF / BLOCKED**.
+Boundary reconciliation still identifies **Foundry -> AIOS Builder Wake Adapter V0** as the first missing cross-repo runtime interface, but the adapter remains deferred until the narrower Builder repair proof is green. The active Builder direction is **deterministic-first / Agentless-style**: localize and preload mechanically, ask the model only for a bounded patch, retest mechanically, and keep proof separate. Do not resurrect the 10->12 step-budget experiment; it was disproven and is historical only.
+
+The Digital Scrapyard now carries an active shared `skills/salvage-suite/ADAPTIVE_PASS_RULE.md`. Future research depth is evidence-adaptive: passes must earn passes, two directionally different low-yield passes trigger saturation, and bounded testing replaces searching when it will reduce more uncertainty.
 
 ## Current direction
 
