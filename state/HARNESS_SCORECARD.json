@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1.0",
-  "generated_at": "2026-09-21T14:20:00.063786+00:00",
+  "generated_at": "2026-09-21T14:31:23.949570+00:00",
   "active_project": "FOUNDATION V0 \u2014 HUMAN-OWNED SOFTWARE FACTORY",
-  "evidence_state": "INTEGRATION_PROOF_NOT_END_TO_END_FUNCTIONAL",
+  "evidence_state": "BUILDER_AND_AIOS_WAKE_PROVEN_IN_TEST; INDEPENDENT_PROOF_NEXT",
   "incident_count": 0,
   "wins": 0,
   "losses": 0,
@@ -21,12 +21,13 @@
     "factory": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "branch": "software-builder-v0",
-      "sha": "66180c44b4513b4e6531286df193918c9e976346"
+      "sha": "5ee5d03c67989b08d9484bf3e52d99e2c31df850",
+      "functional_proof_head": "bcbf20d16493f60dbee1d25cfb4c6a4006bfd50f"
     },
     "runtime": {
       "repo": "Karmicmurphy/Untethered-AIOS",
       "branch": "main",
-      "sha": "17a717e556a639d450551d7cf3b9a77d6a1b459e"
+      "sha": "8a954439af2b15b00f7c961d83552772b382fd1f"
     },
     "salvage": {
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
