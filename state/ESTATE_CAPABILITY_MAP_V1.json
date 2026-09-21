@@ -14,9 +14,9 @@
     "foundry_builder": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "ref": "software-builder-v0",
-      "sha": "5ee5d03c67989b08d9484bf3e52d99e2c31df850",
-      "functional_proof_head": "bcbf20d16493f60dbee1d25cfb4c6a4006bfd50f",
-      "note": "deterministic Builder and Foundry->AIOS wake are proven in test; model patch lane optional"
+      "sha": "cd4bae186250eaf5bb49d10c8257869921ad38ea",
+      "functional_proof_head": "c25eaac464968ae5d1654affc9e75318b03acff9",
+      "note": "Cogs 1-4 proven in test; model patch lane optional."
     },
     "aios": {
       "repo": "Karmicmurphy/Untethered-AIOS",
@@ -261,7 +261,7 @@
         ]
       },
       "implementation_state": "PROVEN_IN_TEST",
-      "evidence_state": "REAL_REPOSITORY_DETERMINISTIC_BUILDER_PROVEN_MODEL_PATCH_OPTIONAL",
+      "evidence_state": "BUILDER_AIOS_INDEPENDENT_PROOF_AND_CERT_REQUIRED_PROMOTION_PROVEN",
       "mode": "deterministic-first repair pipeline with replaceable narrow model patch proposal",
       "cost": "current proof uses GitHub Actions + local Ollama model; no model API key",
       "current_engine": "Ollama + qwen2.5-coder:1.5b-instruct baseline; model remains replaceable",
@@ -278,7 +278,7 @@
         "automatic_retest_passed": true,
         "remaining_unproven_gates": []
       },
-      "reconciliation": "Deterministic real-repository Builder plumbing is proven. Local patch models are replaceable optional compute and do not gate Foundation integration."
+      "reconciliation": "Deterministic Builder, Foundry->AIOS wake, Independent Proof V0, and certificate-required promotion gate are proven in test. Model patch brains remain optional compute."
     },
     {
       "id": "replaceable_engine_harness",
@@ -492,9 +492,9 @@
         "Scrapyard Proof Gate"
       ],
       "result": "Builder builds and tests; a clean independent lane re-runs acceptance proof and issues/quarantines a certificate decision.",
-      "new_code_needed": "Small independent proof lane that pins candidate/hash, reruns acceptance outside Builder, checks forbidden-file/policy conditions, and emits CERTIFIED/REJECTED/QUARANTINED. Reuse archived CERT-RIVER primitives if recovered; do not let recovery block the boundary itself.",
+      "new_code_needed": "No new certifier framework. Keep minimal verifier stable; future work is Workshop reconciliation/handoff.",
       "authority_posture": "no deploy authority",
-      "status": "DESIGN_RECONCILED; MINIMAL_INDEPENDENT_PROOF_LANE_NEEDED_AFTER_BUILDER; ARCHIVED_CERT_RIVER_RECOVERY_STILL_OPEN"
+      "status": "PROVEN_IN_TEST_MINIMAL_INDEPENDENT_PROOF_V0"
     },
     {
       "id": "free_local_software_worker",
@@ -507,17 +507,15 @@
         "Workshop Local Model Socket later"
       ],
       "result": "A replaceable no-model-API-key coding worker with deterministic tool boundaries and bounded proof receipts.",
-      "new_code_needed": "independent proof/certifier lane next; model patch-brain diagnostics may continue in parallel",
+      "new_code_needed": "Workshop reconciliation and thin Workshop->Foundry handoff/result adapter; optional patch-brain improvements later.",
       "authority_posture": "candidate branch/workspace only",
-      "status": "BUILDER_AND_AIOS_WAKE_PROVEN_IN_TEST; MODEL_PATCH_OPTIONAL"
+      "status": "FOUNDATION_SPINE_COGS_1_4_PROVEN_IN_TEST"
     }
   ],
   "immediate_gaps": [
-    "Independent proof/certifier runtime is not yet verified; Cog 3 is next.",
-    "Foundry promotion must be verified to require independent proof where declared; no certificate must mean no activation for certificate-required capabilities.",
-    "Authoritative local Windows Workshop has not been reconciled file-by-file with the GitHub living-workshop-main-build snapshot.",
-    "Workshop -> Foundry job/result adapter is not built yet.",
-    "No machine-maintained estate delta updater yet.",
-    "Qwen/local patch-model lane remains optional and may be benchmarked after action diagnostics; it is not a Foundation blocker."
+    "Authoritative local Windows Workshop must be reconciled with GitHub living-workshop-main-build before final cockpit wiring.",
+    "Workshop -> Foundry handoff/result-return adapter is still missing; reuse Foundry job_id as correlation key.",
+    "Estate delta updater is still missing and should flag stale SHAs/status contradictions without auto-promotion.",
+    "Qwen/local patch-brain success remains optional and non-blocking."
   ]
 }
