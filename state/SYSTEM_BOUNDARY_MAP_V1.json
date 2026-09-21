@@ -168,7 +168,7 @@
       "to": "AIOS",
       "state": "MISSING",
       "name": "Builder Wake Adapter V0",
-      "blocker": "real Builder Ollama proof not green",
+      "blocker": "deterministic real-repository Builder control not green yet",
       "action": "first_interface_after_green_builder_proof"
     },
     {
@@ -205,43 +205,40 @@
     "cert_river_certificate": "bounded independent decision on one exact claim"
   },
   "current_blocker": {
-    "target": "Software Builder real deterministic-first narrow repair proof",
-    "run_id": 35595297143,
-    "status": "IN_PROGRESS",
-    "model": "qwen2.5-coder:1.5b-instruct baseline",
-    "source_repo": "Karmicmurphy/Untethered-AIOS",
-    "source_sha": "17a717e556a639d450551d7cf3b9a77d6a1b459e",
-    "proven_controls": [
-      "worker-owned initial failing test",
-      "declared repair-target preload",
-      "worker-owned automatic post-edit retest",
-      "unit test suite green",
-      "pre-existing dirty files excluded from worker-authored files_changed provenance"
-    ],
-    "current_question": "Can schema-constrained narrow replace_exact output produce a valid repair that passes automatic retest?",
-    "superseded_diagnoses": [
-      "10-step budget is the blocker",
-      "12-step budget is sufficient",
-      "model should choose mechanical retest/final actions"
-    ]
+    "target": "Foundation activation needs a green deterministic real-repository Builder control; the replaceable model patch lane is separately blocked.",
+    "model_patch_run_id": 35595297143,
+    "model_patch_conclusion": "failure",
+    "model_patch_evidence": {
+      "failure_observed": true,
+      "declared_target_preloaded": true,
+      "worker_authored_files_changed": [],
+      "tests_edited": false,
+      "terminal_reason": "step budget exhausted at 3"
+    },
+    "next_model_fix": "record each model action attempt and rejection/tool-error reason before another model/budget change",
+    "foundation_next_proof": "use a deterministic/no-model repair engine against the same pinned Untethered-AIOS injected fault to prove real-repository Builder plumbing"
   },
   "immediate_bounded_experiment": {
-    "shape": [
+    "foundation_control": [
       "worker observes failing test",
       "worker preloads declared repair target",
-      "model returns only bounded replace_exact or explicit block",
+      "deterministic/no-model engine proposes known exact repair",
       "worker applies edit through bounded tool",
       "worker automatically reruns target test",
       "receipt attributes only worker-authored changes"
     ],
+    "model_lane": [
+      "instrument action attempts/rejections",
+      "rerun once",
+      "use Adaptive Pass Rule to choose socket repair vs tiny-model bake-off"
+    ],
     "preserve": [
       "pinned AIOS fixture",
-      "repair_limit=2",
+      "repair_limit",
       "immutable tests",
       "same acceptance semantics",
       "no deploy/publish authority"
-    ],
-    "if_red": "classify exact socket/model/output failure; use Adaptive Pass Rule to decide socket repair versus tiny-model bake-off; do not add agent turns by default"
+    ]
   },
   "next_interface_after_green_proof": {
     "name": "Foundry -> AIOS Builder Wake Adapter V0",
@@ -266,11 +263,11 @@
   },
   "sequence": [
     "boundary map",
-    "deterministic-first narrow Builder proof",
-    "tiny repair-brain bake-off only if evidence requires it",
+    "deterministic/no-model real-repository Builder control",
     "Foundry-to-AIOS wake adapter",
     "independent proof/certifier lane",
     "Workshop cockpit integration after local-authority reconciliation",
+    "replaceable patch-brain diagnostics/bake-off",
     "Capability Downshift from repeated proven traces"
   ]
 }
