@@ -361,15 +361,15 @@
       "id": "independent_certification_lineage",
       "function": "Prove claims independently, separate assertion/evidence/proof/certificate/receipt, quarantine failures and gate use.",
       "authority": {
-        "kind": "RECOVERED_LINEAGE",
+        "kind": "RECOVERED_ARCHIVED_PROOF_LINEAGE",
         "sources": [
-          "Harness state/ECOSYSTEM_AUTHORITY_INDEX.json",
-          "Harness docs/ECOSYSTEM_RECOVERY_MASTER_CONTEXT_2026-09-19.md",
-          "Workshop docs/FLASHRIVER_PHASE12_HARNESS_SKILLS_QUESTIONS_EXTRACTION.md"
+          "state/RIVER_LINEAGE_RECONCILIATION_V1.json",
+          "docs/RIVER_LINEAGE_RECONCILIATION_V1.md",
+          "Library: FlashRiver_Phase12_Harness_Skills_Questions_Extraction.md"
         ]
       },
-      "implementation_state": "HISTORICAL",
-      "evidence_state": "ARCHIVED_PROOF_PACKAGE_NOT_YET_RECONCILED_TO_ONE_LIVE_REPO",
+      "implementation_state": "RECOVERED_ARCHIVED_PROOF_LINEAGE",
+      "evidence_state": "HASH_PINNED_ARCHIVE_EXTRACTION; CURRENT_EXECUTABLE_CERTIFIER_NOT_VERIFIED",
       "mode": "deterministic/proof-oriented",
       "cost": "unknown/minimal by design",
       "recovered_names": [
@@ -378,7 +378,7 @@
         "RiverKernel",
         "FlashRiver"
       ],
-      "reconciliation": "This is the major unresolved lineage. Do not let Foundry certify itself by default. Next reconciliation must map CERT/River primitives against live Foundry/AIOS/Workshop mechanisms."
+      "reconciliation": "River unique value is independent bounded claim certification: certificate boundaries, proof debt, quarantine, dirty-key honesty, no-broadening, and receipt/trace/certificate separation. Foundry evaluation remains development feedback; AIOS/Workshop receipts remain evidence, not certificates."
     },
     {
       "id": "first3_release_proof_chain",
@@ -467,9 +467,9 @@
         "Scrapyard Proof Gate"
       ],
       "result": "Builder builds and tests; a clean independent lane re-runs acceptance proof and issues/quarantines a certificate decision.",
-      "new_code_needed": "only after CERT-RIVER live/archived primitive reconciliation",
+      "new_code_needed": "Small Builder-to-CERT adapter only after exact archived CERT-RIVER implementation primitives are recovered or proven unavailable.",
       "authority_posture": "no deploy authority",
-      "status": "CANDIDATE_BLOCKED_ON_LINEAGE_RECONCILIATION"
+      "status": "DESIGN_RECONCILED_IMPLEMENTATION_BLOCKED_ON_ARCHIVED_CODE_RECOVERY"
     },
     {
       "id": "free_local_software_worker",
@@ -488,7 +488,7 @@
     }
   ],
   "immediate_gaps": [
-    "CERT-RIVER/PRISM-RIVER/RiverKernel archived primitive-to-live-code reconciliation remains incomplete.",
+    "River certification contract is now reconciled, but exact archived executable CERT-RIVER implementation primitives are not yet directly recovered/verified.",
     "Software Builder real Ollama proof reaches repair but exhausts 10-step budget before passing retest.",
     "Software Builder authority JSON is stale relative to live branch/CI.",
     "No machine-maintained estate delta updater yet; V1 map is manually reconciled from live evidence.",
