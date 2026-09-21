@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20",
+  "generated_at": "2026-09-21",
   "status": "ESTATE_CAPABILITY_MAP_V1",
   "scope": "Core cross-project mechanisms recovered from live GitHub authority plus existing CERT-RIVER/PRISM-RIVER lineage index. This is a reconciliation map, not final architecture authority.",
   "governing_state": "state/ESTATE_RECONCILIATION_INVENTION_STAGE_2026-09-20.md",
@@ -14,7 +14,7 @@
     "foundry_builder": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "ref": "software-builder-v0",
-      "sha": "8bf324d378e1af59fdc48608d40ba95ddb7d73f0"
+      "sha": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354"
     },
     "aios": {
       "repo": "Karmicmurphy/Untethered-AIOS",
@@ -23,13 +23,14 @@
     },
     "workshop": {
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
-      "ref": "main",
-      "sha": "04a5b694d3ac6ddbebaf5b2ff9314a1c619b111e"
+      "ref": "living-workshop-main-build",
+      "sha": "29deb23f917199b09b17d6b87a2f33c40657ea79",
+      "note": "GitHub candidate only; authoritative local Windows Workshop remains unreconciled"
     },
     "scrapyard": {
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
       "ref": "main",
-      "sha": "40a04675b922f238cf4af8e56ab7f4d5c07cc719"
+      "sha": "028f1a9559a7f198d73e7042d18b9c8343f64729"
     },
     "first3_local": {
       "repo": "Karmicmurphy/nemoclw_new_agent",
@@ -112,7 +113,7 @@
         "Artifact Salvage",
         "Temporal Compass"
       ],
-      "reconciliation": "One discovery lineage with multiple surfaces: Scrapyard skill = method, Workshop = human-facing local surface, Foundry = evidence/provenance trace."
+      "reconciliation": "One discovery lineage with multiple surfaces. Scrapyard skill = canonical method and Adaptive Pass Rule; Workshop = human-facing surface; Foundry = evidence/provenance trace. Search depth is evidence-adaptive, not a fixed pass count."
     },
     {
       "id": "artifact_import_and_capsule",
@@ -126,7 +127,7 @@
         ]
       },
       "implementation_state": "VERIFIED_CURRENT",
-      "evidence_state": "WORKING_REPO_CLAIM_REQUIRES_LIVE_LOCAL_REVERIFY",
+      "evidence_state": "GITHUB_PHASE1A_PROVEN_IN_TEST; LOCAL_AUTHORITY_RECONCILIATION_OPEN",
       "mode": "deterministic",
       "cost": "free/local",
       "inputs": "human-selected folder/ZIP",
@@ -148,7 +149,7 @@
         ]
       },
       "implementation_state": "VERIFIED_CURRENT",
-      "evidence_state": "WORKING_REPO_CLAIM_REQUIRES_LIVE_LOCAL_REVERIFY",
+      "evidence_state": "GITHUB_PHASE1A_PROVEN_IN_TEST; LOCAL_AUTHORITY_RECONCILIATION_OPEN",
       "mode": "deterministic",
       "cost": "free/local",
       "overlaps": [
@@ -258,23 +259,25 @@
         ]
       },
       "implementation_state": "IMPLEMENTED_UNPROVEN",
-      "evidence_state": "PARTIAL_PROOF",
-      "mode": "AI-assisted decisions; deterministic tool authority",
+      "evidence_state": "DETERMINISTIC_CONTROLS_PROVEN_REAL_MODEL_REPAIR_IN_PROOF",
+      "mode": "deterministic-first repair pipeline with replaceable narrow model patch proposal",
       "cost": "current proof uses GitHub Actions + local Ollama model; no model API key",
-      "current_engine": "Ollama + qwen2.5-coder:1.5b-instruct",
+      "current_engine": "Ollama + qwen2.5-coder:1.5b-instruct baseline; model remains replaceable",
       "latest_proof": {
-        "run": 35522934878,
-        "status": "BLOCKED",
-        "observed_failure": true,
-        "implementation_file_changed": "src/untethered_aios/capabilities.py",
-        "tests_edited": false,
-        "remaining_gate": "step budget exhausted at 10 before passing retest",
-        "branch_head_after_authority_refresh": "8bf324d378e1af59fdc48608d40ba95ddb7d73f0",
-        "functional_code_head": "431651c4483c453c43984a6e02c6919c90be2d79",
-        "authority_file": "state/SOFTWARE_BUILDER_V0_AUTHORITY.json",
-        "authority_refresh_commit": "8bf324d378e1af59fdc48608d40ba95ddb7d73f0"
+        "run": 35595297143,
+        "status": "IN_PROGRESS",
+        "branch_head": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354",
+        "pinned_source": "Karmicmurphy/Untethered-AIOS@17a717e556a639d450551d7cf3b9a77d6a1b459e",
+        "verified_before_current_run": [
+          "initial failing test is worker-owned",
+          "declared repair target preload is unit-proven",
+          "automatic post-edit retest is unit-proven",
+          "pre-existing dirty files no longer count as worker-authored changes",
+          "normal Foundry unit CI is green"
+        ],
+        "current_question": "Can one schema-constrained narrow patch proposal repair the injected AIOS path-containment fault and pass automatic retest?"
       },
-      "reconciliation": "Do not redesign. Callable Ollama runtime is established; current next proof question is the smallest cause of step-budget exhaustion before passing retest. The project authority file has been refreshed to this state."
+      "reconciliation": "The old 10/12-step-budget diagnosis is superseded. Current design removes mechanical control flow from the model and constrains the model to a narrow exact patch proposal or explicit block. Do not add more agent turns merely to force green."
     },
     {
       "id": "replaceable_engine_harness",
@@ -468,31 +471,32 @@
         "Scrapyard Proof Gate"
       ],
       "result": "Builder builds and tests; a clean independent lane re-runs acceptance proof and issues/quarantines a certificate decision.",
-      "new_code_needed": "Small Builder-to-CERT adapter only after exact archived CERT-RIVER implementation primitives are recovered or proven unavailable.",
+      "new_code_needed": "Small independent proof lane that pins candidate/hash, reruns acceptance outside Builder, checks forbidden-file/policy conditions, and emits CERTIFIED/REJECTED/QUARANTINED. Reuse archived CERT-RIVER primitives if recovered; do not let recovery block the boundary itself.",
       "authority_posture": "no deploy authority",
-      "status": "DESIGN_RECONCILED_IMPLEMENTATION_BLOCKED_ON_ARCHIVED_CODE_RECOVERY"
+      "status": "DESIGN_RECONCILED; MINIMAL_INDEPENDENT_PROOF_LANE_NEEDED_AFTER_BUILDER; ARCHIVED_CERT_RIVER_RECOVERY_STILL_OPEN"
     },
     {
       "id": "free_local_software_worker",
       "name": "Free-First Software Worker",
       "composition": [
-        "Foundry Software Builder",
-        "Ollama/qwen2.5-coder:1.5b-instruct",
-        "GitHub Actions runner",
-        "AIOS scoped grants",
+        "Foundry deterministic-first Software Builder",
+        "replaceable narrow local patch-model socket",
+        "worker-owned failing test and automatic retest",
+        "AIOS scoped grants after Builder proof",
         "Workshop Local Model Socket later"
       ],
       "result": "A replaceable no-model-API-key coding worker with deterministic tool boundaries and bounded proof receipts.",
-      "new_code_needed": "tune current loop/step efficiency; later smallest AIOS wake adapter",
+      "new_code_needed": "finish real narrow patch proof; then benchmark tiny repair brains only if evidence requires it; later smallest AIOS wake adapter",
       "authority_posture": "candidate branch/workspace only",
-      "status": "IMPLEMENTED_UNPROVEN"
+      "status": "IMPLEMENTED_UNPROVEN_REAL_PATCH_PROOF_IN_PROGRESS"
     }
   ],
   "immediate_gaps": [
-    "River certification contract is now reconciled, but exact archived executable CERT-RIVER implementation primitives are not yet directly recovered/verified.",
-    "Software Builder real Ollama proof reaches repair but exhausts 10-step budget before passing retest.",
-    "Software Builder authority JSON is stale relative to live branch/CI.",
-    "No machine-maintained estate delta updater yet; V1 map is manually reconciled from live evidence.",
-    "Workshop working claims need re-verification against the authoritative local private Workshop when local device access becomes available."
+    "Software Builder real narrow local-model repair proof is still open; current run 35595297143 tests schema-constrained patch output with honest file-change provenance.",
+    "Foundry -> AIOS Builder Wake Adapter V0 does not exist yet; build only after Builder earns a green real repair proof.",
+    "Independent proof/certifier runtime is not yet verified; CERT-RIVER contract lineage is reconciled but archived executable primitives remain unrecovered.",
+    "Authoritative local Windows Workshop has not been reconciled file-by-file with the GitHub living-workshop-main-build snapshot; GitHub Phase 1A itself is proven in test.",
+    "No machine-maintained estate delta updater yet; V1 estate map still requires explicit reconciliation.",
+    "Tiny-model and retrieval candidates are warehouse candidates, not promoted dependencies; model bake-offs and Rights Gate remain evidence-triggered."
   ]
 }
