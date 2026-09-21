@@ -25,3 +25,11 @@ This file stores durable, non-sensitive decisions that future agents should not 
 - **Applies to:** global harness / all projects
 - **Authority/evidence:** `docs/ECOSYSTEM_RECOVERY_MASTER_CONTEXT_2026-09-19.md`; `state/ECOSYSTEM_AUTHORITY_INDEX.json`; `docs/FIVE_YEAR_ARTIFACT_SALVAGE_MASTER_CONTEXT.md`; Master Thread Salvage V2 Library package.
 - **Reopen condition:** Only if a newer verified authority index replaces this recovery rule with an equal-or-stronger automatic recovery mechanism.
+
+### 2026-09-21 — Foundation project-bleed containment
+- **Type:** SCOPE / AUTHORITY / CONSTRAINT
+- **Decision or correction:** Foundation V0 may be changed only from repo/branch authorities explicitly named in the current Foundation authority/activation files. Any other chat, Codex workspace, branch, PR, archive, repo, or product is treated as SALVAGE, QUARANTINE, or SEPARATE PROJECT until live evidence is reconciled and the primitive is explicitly promoted into Foundation authority.
+- **Why it matters:** Work from Loop Deck / Pro Rig, First3 Local, Digital Scrap Forge, Coilside, older AIOS successor branches, Codex scratch work, and other projects has bled across chats and created false current state. Randy must not be required to remember which conversation or workspace a mechanism came from.
+- **Applies to:** Foundation V0 / global harness recovery
+- **Authority/evidence:** `state/CURRENT_PROJECT.json`; `docs/FOUNDATION_V0_ACTIVATION_MAP_2026-09-21.md`; `state/FOUNDATION_V0_ACTIVATION_MAP_2026-09-21.json`; live repo/branch heads.
+- **Reopen condition:** Only when a candidate artifact/branch passes recovery, provenance/rights classification, and a bounded proof showing why it belongs in the Foundation authority chain.
