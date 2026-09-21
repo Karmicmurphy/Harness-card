@@ -14,9 +14,9 @@
     "foundry_builder": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "ref": "software-builder-v0",
-      "sha": "7b235265ecd6e14ad1118e37c0c763553a4931e4",
+      "sha": "66180c44b4513b4e6531286df193918c9e976346",
       "functional_proof_head": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354",
-      "note": "branch head includes authority-only refresh after functional proof head"
+      "note": "latest completed model-patch proof failed; authority refreshed afterward"
     },
     "aios": {
       "repo": "Karmicmurphy/Untethered-AIOS",
@@ -261,27 +261,25 @@
         ]
       },
       "implementation_state": "IMPLEMENTED_UNPROVEN",
-      "evidence_state": "DETERMINISTIC_CONTROLS_PROVEN_REAL_MODEL_REPAIR_IN_PROOF",
+      "evidence_state": "DETERMINISTIC_CONTROLS_PROVEN_MODEL_PATCH_LANE_BLOCKED",
       "mode": "deterministic-first repair pipeline with replaceable narrow model patch proposal",
       "cost": "current proof uses GitHub Actions + local Ollama model; no model API key",
       "current_engine": "Ollama + qwen2.5-coder:1.5b-instruct baseline; model remains replaceable",
       "latest_proof": {
         "run": 35595297143,
-        "status": "IN_PROGRESS",
-        "branch_head": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354",
+        "status": "BLOCKED",
+        "functional_proof_head": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354",
+        "authority_head": "66180c44b4513b4e6531286df193918c9e976346",
         "pinned_source": "Karmicmurphy/Untethered-AIOS@17a717e556a639d450551d7cf3b9a77d6a1b459e",
-        "verified_before_current_run": [
-          "initial failing test is worker-owned",
-          "declared repair target preload is unit-proven",
-          "automatic post-edit retest is unit-proven",
-          "pre-existing dirty files no longer count as worker-authored changes",
-          "normal Foundry unit CI is green"
-        ],
-        "current_question": "Can one schema-constrained narrow patch proposal repair the injected AIOS path-containment fault and pass automatic retest?",
-        "authority_head": "7b235265ecd6e14ad1118e37c0c763553a4931e4",
-        "functional_proof_head": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354"
+        "failure_path_observed": true,
+        "declared_target_preloaded": true,
+        "files_changed": [],
+        "tests_edited": false,
+        "terminal_reason": "step budget exhausted at 3",
+        "next_model_fix": "instrument action attempts and rejection/tool-error reasons before changing model or budget",
+        "foundation_next_proof": "deterministic/no-model real-repository control on the same pinned fault"
       },
-      "reconciliation": "The old 10/12-step-budget diagnosis is superseded. Current design removes mechanical control flow from the model and constrains the model to a narrow exact patch proposal or explicit block. Do not add more agent turns merely to force green."
+      "reconciliation": "Do not let a replaceable local model block deterministic factory activation. Prove the real-repository Builder plumbing with a deterministic control; diagnose/bake-off patch-brains as a separate capability lane."
     },
     {
       "id": "replaceable_engine_harness",
@@ -490,17 +488,19 @@
         "Workshop Local Model Socket later"
       ],
       "result": "A replaceable no-model-API-key coding worker with deterministic tool boundaries and bounded proof receipts.",
-      "new_code_needed": "finish real narrow patch proof; then benchmark tiny repair brains only if evidence requires it; later smallest AIOS wake adapter",
+      "new_code_needed": "real-repository deterministic/no-model control proof; action-attempt model diagnostics; then smallest AIOS wake adapter",
       "authority_posture": "candidate branch/workspace only",
-      "status": "IMPLEMENTED_UNPROVEN_REAL_PATCH_PROOF_IN_PROGRESS"
+      "status": "DETERMINISTIC_CONTROLS_PROVEN; REAL_REPOSITORY_CONTROL_NEXT; MODEL_PATCH_LANE_BLOCKED"
     }
   ],
   "immediate_gaps": [
-    "Software Builder real narrow local-model repair proof is still open; current run 35595297143 tests schema-constrained patch output with honest file-change provenance.",
-    "Foundry -> AIOS Builder Wake Adapter V0 does not exist yet; build only after Builder earns a green real repair proof.",
-    "Independent proof/certifier runtime is not yet verified; CERT-RIVER contract lineage is reconciled but archived executable primitives remain unrecovered.",
+    "Real-repository deterministic/no-model Builder control proof is not yet green; this is the next foundation activation gate.",
+    "Qwen/Ollama patch lane run 35595297143 failed with no accepted worker-authored edit; action-attempt/rejection evidence is missing and must be added before another model tweak.",
+    "Foundry -> AIOS Builder Wake Adapter V0 does not exist yet.",
+    "Independent proof/certifier runtime is not yet verified; bounded CERT-RIVER recovery or minimal verifier remains required.",
     "Authoritative local Windows Workshop has not been reconciled file-by-file with the GitHub living-workshop-main-build snapshot; GitHub Phase 1A itself is proven in test.",
-    "No machine-maintained estate delta updater yet; V1 estate map still requires explicit reconciliation.",
-    "Tiny-model and retrieval candidates are warehouse candidates, not promoted dependencies; model bake-offs and Rights Gate remain evidence-triggered."
+    "Workshop -> Foundry job/result adapter is not built yet; reuse Foundry job_id as cross-repo correlation key.",
+    "No machine-maintained estate delta updater yet.",
+    "Tiny-model and retrieval candidates remain warehouse candidates, not promoted dependencies."
   ]
 }
