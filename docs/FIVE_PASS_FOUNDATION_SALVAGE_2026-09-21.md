@@ -7,6 +7,8 @@ Status: **WORKING FOUNDATION SALVAGE DECISION — IMPLEMENTATION CANDIDATES, NOT
 
 Finish a functional, bounded, provable software factory from the estate that already exists. Do not build another monolithic AI system.
 
+**Future discovery depth is no longer fixed at five passes.** The five-pass count in this document describes this one completed salvage cycle. Subsequent Artifact Compass/Salvage work is governed by `Karmicmurphy/digital-scrapyard-autopilot/skills/salvage-suite/ADAPTIVE_PASS_RULE.md`: passes must earn passes, two directionally different low-yield passes trigger saturation, and testing replaces searching when a bounded experiment will reduce more uncertainty.
+
 The target machine is allowed to improve itself only through the existing human-owned lifecycle:
 
 ```text
