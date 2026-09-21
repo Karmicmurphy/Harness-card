@@ -17,20 +17,20 @@
     "foundry_builder": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "ref": "software-builder-v0",
-      "branch_head": "7b235265ecd6e14ad1118e37c0c763553a4931e4",
+      "branch_head": "5ee5d03c67989b08d9484bf3e52d99e2c31df850",
       "paths": [
         "docs/SOFTWARE_BUILDER_V0.md",
         "src/foundry/software_builder.py",
         "contracts/software_builder_receipt.schema.json",
         "state/SOFTWARE_BUILDER_V0_AUTHORITY.json"
       ],
-      "functional_proof_head": "6a7af4802eb682f92e6ce8b42d6fe5554d2b8354",
-      "note": "authority refresh commit follows functional proof head; proof run remains tied to 6a7af480..."
+      "functional_proof_head": "bcbf20d16493f60dbee1d25cfb4c6a4006bfd50f",
+      "note": "Builder deterministic real-repository proof and Foundry->AIOS wake proof are green; authority refresh follows."
     },
     "aios": {
       "repo": "Karmicmurphy/Untethered-AIOS",
       "ref": "main",
-      "sha": "17a717e556a639d450551d7cf3b9a77d6a1b459e",
+      "sha": "8a954439af2b15b00f7c961d83552772b382fd1f",
       "paths": [
         "src/untethered_aios/kernel.py",
         "src/untethered_aios/capabilities.py",
@@ -166,22 +166,25 @@
     {
       "from": "Foundry",
       "to": "AIOS",
-      "state": "MISSING",
+      "state": "PROVEN_IN_TEST",
       "name": "Builder Wake Adapter V0",
-      "blocker": "deterministic real-repository Builder control not green yet",
-      "action": "first_interface_after_green_builder_proof"
+      "blocker": null,
+      "action": "keep bounded adapter stable; do not broaden into certification",
+      "proof_run": 35612271813
     },
     {
       "from": "AIOS",
       "to": "Foundry",
-      "state": "MISSING_RETURN_SIDE",
+      "state": "PROVEN_IN_TEST",
       "returns": [
         "terminal state",
         "result",
         "capability audit receipts",
         "denials/failures",
         "tick-limit evidence"
-      ]
+      ],
+      "action": "runtime result/audit return proven with foundry_job_id correlation",
+      "proof_run": 35612271813
     },
     {
       "from": "Foundry",
@@ -205,39 +208,21 @@
     "cert_river_certificate": "bounded independent decision on one exact claim"
   },
   "current_blocker": {
-    "target": "Foundation activation needs a green deterministic real-repository Builder control; the replaceable model patch lane is separately blocked.",
-    "model_patch_run_id": 35595297143,
-    "model_patch_conclusion": "failure",
-    "model_patch_evidence": {
-      "failure_observed": true,
-      "declared_target_preloaded": true,
-      "worker_authored_files_changed": [],
-      "tests_edited": false,
-      "terminal_reason": "step budget exhausted at 3"
-    },
-    "next_model_fix": "record each model action attempt and rejection/tool-error reason before another model/budget change",
-    "foundation_next_proof": "use a deterministic/no-model repair engine against the same pinned Untethered-AIOS injected fault to prove real-repository Builder plumbing"
+    "target": "Cog 3 independent proof/certifier lane",
+    "reason": "Builder plumbing and Foundry->AIOS bounded wake are proven in test; current executable independent certifier is not verified.",
+    "recovery_first": "perform bounded CERT-RIVER executable recovery checkpoint",
+    "if_not_recovered": "implement the smallest independent verifier matching the recovered certificate contract",
+    "model_patch_lane": "optional/non-blocking"
   },
   "immediate_bounded_experiment": {
-    "foundation_control": [
-      "worker observes failing test",
-      "worker preloads declared repair target",
-      "deterministic/no-model engine proposes known exact repair",
-      "worker applies edit through bounded tool",
-      "worker automatically reruns target test",
-      "receipt attributes only worker-authored changes"
-    ],
-    "model_lane": [
-      "instrument action attempts/rejections",
-      "rerun once",
-      "use Adaptive Pass Rule to choose socket repair vs tiny-model bake-off"
-    ],
-    "preserve": [
-      "pinned AIOS fixture",
-      "repair_limit",
-      "immutable tests",
-      "same acceptance semantics",
-      "no deploy/publish authority"
+    "independent_proof": [
+      "recover usable executable CERT-RIVER primitives within a bounded pass",
+      "if unrecovered, pin exact candidate/hash and exact acceptance fixture",
+      "rerun acceptance outside Builder",
+      "check forbidden-file/policy conditions",
+      "emit CERTIFIED / REJECTED / QUARANTINED for one exact claim",
+      "record proof debt",
+      "do not deploy or promote"
     ]
   },
   "next_interface_after_green_proof": {
@@ -263,11 +248,12 @@
   },
   "sequence": [
     "boundary map",
-    "deterministic/no-model real-repository Builder control",
-    "Foundry-to-AIOS wake adapter",
-    "independent proof/certifier lane",
+    "deterministic/no-model real-repository Builder control [PROVEN_IN_TEST]",
+    "Foundry-to-AIOS wake adapter [PROVEN_IN_TEST]",
+    "independent proof/certifier lane [NEXT]",
+    "promotion certificate-consumption gate",
     "Workshop cockpit integration after local-authority reconciliation",
-    "replaceable patch-brain diagnostics/bake-off",
+    "replaceable patch-brain diagnostics/bake-off as optional capability",
     "Capability Downshift from repeated proven traces"
   ]
 }
