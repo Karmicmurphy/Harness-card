@@ -190,35 +190,32 @@ Do not collapse these into one generic receipt type.
 7. Workshop must not bypass explicit human approval for publish/deploy/destructive/spend actions.
 8. No new scheduler, proof database, agent framework, AI OS, or promotion engine is justified by this reconciliation.
 
-## 6. Current blocker before interface work
+## 6. Current blocker
 
-The original 10-step and 12-step hypotheses are superseded by later evidence.
+Cog 1B and Cog 2 are now proven in test.
 
-Verified sequence on Foundry branch `software-builder-v0`:
-- real Ollama/Qwen connectivity works;
-- the pinned Untethered-AIOS baseline is green before deliberate fault injection;
-- the worker owns the initial failing test gate;
-- the worker now owns automatic post-edit retesting;
-- declared repair targets are preloaded deterministically before a model repair turn;
-- the normal Foundry unit suite is green for those deterministic controls;
-- a later proof exposed malformed/truncated free-form JSON from the coding model, not a missing scheduler or a reason to widen model authority;
-- receipt provenance also required correction so pre-existing dirty workspace files are not falsely attributed as worker-authored edits.
+Verified:
+- deterministic real-repository Builder proof: run `35611616345`;
+- Foundry -> AIOS Wake Adapter proof: run `35612271813`;
+- AIOS correlation/scopes/tick-limit support: `8a954439af2b15b00f7c961d83552772b382fd1f`;
+- model action-attempt diagnostics are implemented, but the local model lane is optional compute and not a Foundation blocker.
 
-The active experiment replaces loose model action JSON with a schema-constrained **narrow repair action** while retaining the same failing fixture, immutable tests, bounded workspace, and automatic retest.
-
-Therefore the current model-patch blocker is **why three schema-constrained repair turns produced no accepted worker edit**. That is now a patch-brain/socket problem, not a reason to block deterministic factory plumbing.
+The current blocker is **Cog 3: independent proof/certification**.
 
 ## 7. Immediate bounded move
 
-Split the proof into two independent questions:
+Perform one bounded recovery checkpoint for usable executable CERT-RIVER primitives.
 
-1. **Foundation plumbing control:** prove the same pinned real-repository failure -> repair -> automatic retest loop with a deterministic/no-model repair engine.
-2. **Patch-brain lane:** instrument each model action attempt/rejection, then decide whether to repair the socket or run the tiny-model bake-off.
+If a current usable certifier is recovered, adapt it behind the recovered exact-claim certificate boundary.
 
-Do not let a flaky replaceable model become the gate for scheduler/permission integration. The model is compute, not the control plane.
-
-The Digital Scrapyard adaptive pass rule is now the discovery-depth authority:
-`skills/salvage-suite/ADAPTIVE_PASS_RULE.md`.
+If the bounded recovery does not produce one, implement the smallest independent proof lane that:
+- runs outside Builder;
+- receives `foundry_job_id`, exact claim, candidate/hash, fixture, acceptance command, forbidden-file policy;
+- reruns acceptance independently;
+- checks deterministic policy/property conditions;
+- outputs exactly CERTIFIED / REJECTED / QUARANTINED;
+- records proof debt and evidence references;
+- cannot deploy, promote, or broaden one claim into whole-tool certification.
 
 ## 8. First interface to build after green proof
 
