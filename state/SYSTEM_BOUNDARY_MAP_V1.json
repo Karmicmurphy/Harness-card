@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-09-21",
-  "status": "RECONCILED_WORKING_BOUNDARY_NOT_FINAL_ARCHITECTURE",
+  "status": "RECONCILED_WORKING_BOUNDARY_FOUNDATION_CORE_OPERATIONAL_IN_TEST",
   "authority_rule": "Live project authority outranks this map. Harness governs cross-project work. This file does not grant new runtime authority.",
   "sources": {
     "workshop": {
@@ -17,15 +17,15 @@
     "foundry_builder": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "ref": "software-builder-v0",
-      "branch_head": "cd4bae186250eaf5bb49d10c8257869921ad38ea",
+      "branch_head": "32c8a292d9d753a79a163a470dd5873e98e87dcb",
       "paths": [
         "docs/SOFTWARE_BUILDER_V0.md",
         "src/foundry/software_builder.py",
         "contracts/software_builder_receipt.schema.json",
         "state/SOFTWARE_BUILDER_V0_AUTHORITY.json"
       ],
-      "functional_proof_head": "c25eaac464968ae5d1654affc9e75318b03acff9",
-      "note": "Cogs 1-4 proven in test; authority refresh follows functional proof head."
+      "functional_proof_head": "b84db3579ff7d62095c40b6c2a8830fec7557e11",
+      "note": "Direct human-operated Foundation Core V0 is operational in test and stops at human review; Workshop is a front-end integration task."
     },
     "aios": {
       "repo": "Karmicmurphy/Untethered-AIOS",
@@ -211,43 +211,41 @@
     "cert_river_certificate": "bounded independent decision on one exact claim"
   },
   "current_blocker": {
-    "target": "Cog 5 Workshop local/GitHub reconciliation, then Cog 6 Workshop -> Foundry handoff/result adapter",
-    "reason": "Cogs 1-4 are proven in test; final cockpit wiring must not be built against potentially stale GitHub Workshop state.",
+    "target": "Local field use and Workshop cockpit integration",
+    "reason": "The direct Foundation core is operational in test. It has not yet been proven live on Randy's Windows machine, and Workshop is not yet attached.",
     "model_patch_lane": "optional/non-blocking"
   },
   "immediate_bounded_experiment": {
-    "workshop_reconciliation": [
-      "recover authoritative local Windows Workshop state",
-      "compare against living-workshop-main-build",
-      "record intentional local-only/private differences",
-      "select safe current code authority for adapter work"
+    "local_field_use": [
+      "run one real bounded local software job through the human-operated exact-patch runner",
+      "capture the returned Foundation receipt",
+      "confirm CERTIFIED_AWAITING_HUMAN_REVIEW or fail closed",
+      "do not auto-merge/deploy/activate"
     ],
-    "then_workshop_foundry_adapter": [
-      "reuse Foundry job_id as correlation key",
-      "submit existing Foundry-compatible job envelope",
-      "return Builder/AIOS/certificate/proof-debt/status evidence",
-      "keep Workshop non-certifying and Randy irreversible-action gate intact"
+    "workshop_parallel": [
+      "reconcile local Windows Workshop with living-workshop-main-build",
+      "attach thin Workshop -> Foundry submission/result display to the proven core"
     ]
   },
   "next_interface_after_green_proof": {
-    "name": "Workshop -> Foundry Handoff / Result Adapter V0",
-    "blocker": "authoritative local Windows Workshop not yet reconciled with GitHub Foundation branch",
+    "name": "Workshop -> Foundation Core front-end adapter",
+    "blocker": "local Workshop authority still unreconciled",
     "non_goals": [
-      "certification",
-      "deploy",
-      "publish",
+      "new runtime",
+      "new certifier",
       "new job identity",
-      "new framework"
+      "autonomous activation",
+      "deploy",
+      "publish"
     ]
   },
   "sequence": [
-    "deterministic Builder [PROVEN_IN_TEST]",
-    "Foundry-to-AIOS wake [PROVEN_IN_TEST]",
-    "independent proof V0 [PROVEN_IN_TEST]",
-    "certificate-required promotion gate [PROVEN_IN_TEST]",
-    "Workshop local/GitHub reconciliation [NEXT]",
-    "Workshop-to-Foundry handoff/result adapter",
-    "estate delta checker",
-    "Capability Downshift from repeated proven traces"
+    "Foundation direct core [OPERATIONAL_IN_TEST]",
+    "first local field job [NEXT FIELD EVIDENCE]",
+    "Workshop local/GitHub reconciliation [PARALLEL]",
+    "Workshop-to-Foundation front-end adapter",
+    "repeated real proven jobs",
+    "human-owned Capability Downshift proposals",
+    "estate delta checker"
   ]
 }
