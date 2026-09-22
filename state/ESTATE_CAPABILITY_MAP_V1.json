@@ -32,7 +32,7 @@
     "scrapyard": {
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
       "ref": "main",
-      "sha": "028f1a9559a7f198d73e7042d18b9c8343f64729"
+      "sha": "c5d06aabf54d9187a8478047eda5393d8be68673"
     },
     "first3_local": {
       "repo": "Karmicmurphy/nemoclw_new_agent",
@@ -339,8 +339,8 @@
           "skills/salvage-suite/skills/"
         ]
       },
-      "implementation_state": "VERIFIED_CURRENT",
-      "evidence_state": "METHOD/SKILL_AUTHORITY",
+      "implementation_state": "PROVEN_IN_TEST_WITH_DETERMINISTIC_COLLISION_ENGINE",
+      "evidence_state": "METHOD/SKILL_AUTHORITY_PLUS_MISSING_GEAR_COLLISION_PROOF",
       "mode": "AI-assisted method with deterministic gates where possible",
       "cost": "free-first",
       "exact_skills_recovered": [
@@ -360,7 +360,10 @@
         "rights-gate",
         "thought-economy"
       ],
-      "reconciliation": "Canonical salvage-method source. Foundry may index/reference it; do not duplicate the skill suite."
+      "reconciliation": "Canonical salvage-method source plus deterministic Missing Gear Collision Engine. Collision ranking is discovery evidence only; every top lead still requires source/provenance inspection and bounded falsification.",
+      "reusable_subparts": [
+        "Missing Gear Collision Engine"
+      ]
     },
     {
       "id": "independent_certification_lineage",
