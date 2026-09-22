@@ -20,7 +20,7 @@
     "salvage": {
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
       "branch": "main",
-      "sha": "a140191d884545bef423c13a58d2b50ca8ab503b"
+      "sha": "c5d06aabf54d9187a8478047eda5393d8be68673"
     },
     "cockpit": {
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
@@ -29,10 +29,10 @@
       "note": "GitHub Phase 1A proven in test; local Windows Workshop remains private authority pending reconciliation"
     }
   },
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; VERIFIED_CONTINUATION_CAPSULE_V0_PROVEN_IN_TEST; FRIDAY_GATEWAY_V0_PROVEN_IN_TEST; HUMAN_REVIEW_GATED",
-  "lane": "VERIFIED CONTINUITY + FRIDAY GATEWAY V0 / FOUNDATION CERTIFICATION / HUMAN REVIEW",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_COLLISION_V0_PROVEN_IN_TEST_ON_REAL_ESTATE_MAP; VERIFIED_CONTINUATION_CAPSULE_V0_PRESERVED_ON_SHELF; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
+  "lane": "ESTATE DISCOVERY / MISSING GEAR COLLISION / HUMAN REVIEW",
   "last_verified_at": "2026-09-22",
-  "next_action": "Connect a PersonalJarvis client to the proven friday-foundry MCP stdio gateway and run one owner-device field trial: verify a continuation capsule, recover current truth, queue one bounded work order, and return its receipt. Local Windows/phone execution remains BLOCKED_OWNER_DEVICE. Do not merge PR #22, deploy, activate, or broaden FRIDAY authority without Randy review.",
+  "next_action": "Run the deterministic Missing Gear Collision Engine against the current estate capability map and recovered warehouse manifests, surface the strongest cross-domain collisions, then falsify the top lead with the smallest bounded proof. PersonalJarvis / FRIDAY is SHELVED and is not an active dependency.",
   "separate_projects": [
     "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
     "First3 Local / nemoclw_new_agent — proving-ground product; not Foundation authority",
@@ -49,7 +49,8 @@
       "pull_request": 22,
       "evidence_state": "PROVEN_IN_TEST_182_OF_182",
       "exact_patch_certificate": "NOT_RUN",
-      "activation": "NOT_AUTHORIZED"
+      "activation": "PRESERVED_SHELF_NOT_ACTIVE",
+      "note": "Useful continuity work is preserved but is not the current direction."
     },
     "friday_gateway_v0": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
@@ -64,9 +65,28 @@
       "authority": "OPERATOR_SURFACE_ONLY",
       "execution": "QUEUE_ONLY",
       "approval": "REQUEST_ONLY",
-      "owner_device_field_trial": "NOT_RUN_BLOCKED_OWNER_DEVICE",
+      "owner_device_field_trial": "NOT_PLANNED",
       "exact_patch_certificate": "NOT_RUN",
-      "activation": "NOT_AUTHORIZED"
+      "activation": "SHELVED_BY_OWNER",
+      "pull_request_state": "CLOSED_UNMERGED",
+      "note": "Owner explicitly rejected this as the current direction on 2026-09-22. Preserve for salvage only."
+    },
+    "missing_gear_collision_v0": {
+      "repo": "Karmicmurphy/digital-scrapyard-autopilot",
+      "branch": "main",
+      "sha": "c5d06aabf54d9187a8478047eda5393d8be68673",
+      "pull_requests": [
+        21,
+        22
+      ],
+      "evidence_state": "PROVEN_IN_TEST_ON_REAL_ESTATE_MAP",
+      "proof_runs": [
+        35700359307,
+        35700359308
+      ],
+      "intelligence": "NONE_REQUIRED_FOR_COLLISION_RANKING",
+      "activation": "MERGED_TOOLING",
+      "next": "FALSIFY_TOP_COLLISION"
     }
   }
 }
