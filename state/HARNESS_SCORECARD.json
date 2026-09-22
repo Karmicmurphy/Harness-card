@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1.0",
-  "generated_at": "2026-09-22T02:18:27.764940+00:00",
+  "generated_at": "2026-09-22T07:38:36.266866+00:00",
   "active_project": "FOUNDATION V0 \u2014 HUMAN-OWNED SOFTWARE FACTORY",
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; VERIFIED_CONTINUATION_CAPSULE_V0_PROVEN_IN_TEST; FRIDAY_GATEWAY_V0_PROVEN_IN_TEST; HUMAN_REVIEW_GATED",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_COLLISION_V0_PROVEN_IN_TEST_ON_REAL_ESTATE_MAP; VERIFIED_CONTINUATION_CAPSULE_V0_PRESERVED_ON_SHELF; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
   "incident_count": 0,
   "wins": 0,
   "losses": 0,
@@ -32,7 +32,7 @@
     "salvage": {
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
       "branch": "main",
-      "sha": "a140191d884545bef423c13a58d2b50ca8ab503b"
+      "sha": "c5d06aabf54d9187a8478047eda5393d8be68673"
     },
     "cockpit": {
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
