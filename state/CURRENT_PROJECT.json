@@ -29,10 +29,10 @@
       "note": "GitHub Phase 1A proven in test; local Windows Workshop remains private authority pending reconciliation"
     }
   },
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; VERIFIED_CONTINUATION_CAPSULE_V0_PROVEN_IN_TEST; FRIDAY_GATEWAY_V0_PROVEN_IN_TEST; HUMAN_REVIEW_GATED",
-  "lane": "VERIFIED CONTINUITY + FRIDAY GATEWAY V0 / FOUNDATION CERTIFICATION / HUMAN REVIEW",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; AUTOMATIC_ESTATE_LIBRARIAN_NOT_YET_PROVEN; HUMAN_REVIEW_GATED",
+  "lane": "ESTATE LIBRARIAN V0 / PLANNING RECONCILIATION / AUTHORITY REPAIR",
   "last_verified_at": "2026-09-22",
-  "next_action": "Connect a PersonalJarvis client to the proven friday-foundry MCP stdio gateway and run one owner-device field trial: verify a continuation capsule, recover current truth, queue one bounded work order, and return its receipt. Local Windows/phone execution remains BLOCKED_OWNER_DEVICE. Do not merge PR #22, deploy, activate, or broaden FRIDAY authority without Randy review.",
+  "next_action": "Repair the Harness authority spine and false-green learning worker, then build and prove a standalone deterministic Estate Librarian V0 that compiles current authority, relevant evidence, known failures, blocked sources, and one next bounded action without requiring Jarvis or FRIDAY.",
   "separate_projects": [
     "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
     "First3 Local / nemoclw_new_agent — proving-ground product; not Foundation authority",
@@ -66,7 +66,9 @@
       "approval": "REQUEST_ONLY",
       "owner_device_field_trial": "NOT_RUN_BLOCKED_OWNER_DEVICE",
       "exact_patch_certificate": "NOT_RUN",
-      "activation": "NOT_AUTHORIZED"
+      "activation": "NOT_AUTHORIZED",
+      "role": "OPTIONAL_FUTURE_OPERATOR_SURFACE",
+      "relationship": "NOT_THE_LIBRARIAN; NOT_AUTHORITY; NOT_A_FOUNDATION_DEPENDENCY"
     }
   }
 }

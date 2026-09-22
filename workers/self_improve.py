@@ -23,9 +23,9 @@ WEIRD = STATE / "WEIRD_LEDGER.md"
 CURRENT = STATE / "CURRENT_PROJECT.json"
 RECEIPT = STATE / "RELEASE_RECEIPT.md"
 
-FIELD_RE = re.compile(r"^- \\*\\*(.+?):\\*\\*\\s*(.*)$")
-INCIDENT_RE = re.compile(r"^### INCIDENT\\s*$", re.M)
-WEIRD_RE = re.compile(r"^### WEIRD\\s*$", re.M)
+FIELD_RE = re.compile(r"^- \*\*(.+?):\*\*\s*(.*)$")
+INCIDENT_RE = re.compile(r"^### INCIDENT\s*$", re.M)
+WEIRD_RE = re.compile(r"^### WEIRD\s*$", re.M)
 
 def parse_blocks(text, marker_re, skip_title):
     starts = [m.start() for m in marker_re.finditer(text)]
@@ -69,8 +69,13 @@ def rule_from(i):
     return {"source":i["title"],"root_cause":i.get("ROOT CAUSE","UNKNOWN"),"rule":p,"proof":i.get("REAL-WORLD PROOF","UNKNOWN")}
 
 def receipt_verdict(text):
-    m=re.search(r"^## VERDICT\\s*\\n([^\\n]+)",text,re.M)
-    return m.group(1).strip() if m else "UNKNOWN"
+    m=re.search(r"^## VERDICT\s*\n([^\n]+)",text,re.M)
+    if not m:
+        return "UNSET"
+    value=m.group(1).strip()
+    if "<" in value or value.startswith("DONE / BLOCKED"):
+        return "UNSET"
+    return value
 
 def main():
     incidents=parse_blocks(INCIDENTS.read_text(encoding="utf-8"),INCIDENT_RE,"Short memorable name.")
@@ -85,7 +90,7 @@ def main():
 
     seen=set(); unique=[]
     for r in rules:
-        k=re.sub(r"\\s+"," ",r["rule"].lower()).strip(" .")
+        k=re.sub(r"\s+"," ",r["rule"].lower()).strip(" .")
         if k not in seen:
             seen.add(k); unique.append(r)
 

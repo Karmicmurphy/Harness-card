@@ -68,8 +68,10 @@ Harness Card should not become:
 
 ## Status
 
-Version: **0.1.0**
+Version: **0.2.0**
 
-State: **FOUNDATION / IMPLEMENTED_UNPROVEN**
+State: **PLANNING / RECONCILIATION — BOUNDED IMPLEMENTATION ALLOWED**
+
+Foundation core mechanisms are **PROVEN_IN_TEST**. Automatic estate recovery, the standalone librarian, owner-device integration, and the complete machine are **NOT PROVEN_LIVE**.
 
 The harness becomes PROVEN only after it successfully resumes and completes real work across at least two separate projects without requiring Randy to manually restate process rules.
