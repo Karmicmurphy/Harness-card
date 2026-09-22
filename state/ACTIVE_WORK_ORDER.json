@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "source_project_state_path": "state/CURRENT_PROJECT.json",
+  "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
+  "lane": "VERIFIED CONTINUITY + FRIDAY GATEWAY V0 / FOUNDATION CERTIFICATION / HUMAN REVIEW",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; VERIFIED_CONTINUATION_CAPSULE_V0_PROVEN_IN_TEST; FRIDAY_GATEWAY_V0_PROVEN_IN_TEST; HUMAN_REVIEW_GATED",
+  "next_action": "Connect a PersonalJarvis client to the proven friday-foundry MCP stdio gateway and run one owner-device field trial: verify a continuation capsule, recover current truth, queue one bounded work order, and return its receipt. Local Windows/phone execution remains BLOCKED_OWNER_DEVICE. Do not merge PR #22, deploy, activate, or broaden FRIDAY authority without Randy review.",
+  "status": "BLOCKED",
+  "blockers": [
+    "OWNER_DEVICE_REQUIRED"
+  ],
+  "stop_condition": "Stop when the PersonalJarvis -> FRIDAY owner-device field trial returns a durable receipt, or when a named device/runtime blocker is proven.",
+  "updated_at": "2026-09-22"
+}

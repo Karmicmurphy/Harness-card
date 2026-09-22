@@ -24,6 +24,18 @@ Harness Card does not own project code. It points to the authoritative project l
 - If authority is ambiguous, run context harvesting before building.
 
 
+### FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY
+- **Purpose:** Recover current truth, salvage before rebuild, route the smallest necessary capability, build bounded candidates, prove them independently, and return human-owned receipts/approval requests.
+- **Authority repo/path/device:** Governance `Karmicmurphy/Harness-card@main`; factory `Karmicmurphy/temporal-capability-foundry@software-builder-v0`; runtime `Karmicmurphy/Untethered-AIOS@main`; salvage `Karmicmurphy/digital-scrapyard-autopilot@main`; cockpit `Karmicmurphy/Ollie_Twis_Holo_workshop@living-workshop-main-build`.
+- **Default branch:** See `state/CURRENT_PROJECT.json`; that file is the current machine-readable authority.
+- **Live/deploy target:** Owner-device field trial is not yet proven; no Foundation activation is authorized.
+- **Current evidence state:** PROVEN_IN_TEST / BLOCKED_OWNER_DEVICE for the first real PersonalJarvis -> FRIDAY field trial.
+- **Current work order:** `state/ACTIVE_WORK_ORDER.json` and `state/ACTIVE_WORK_ORDER.md`, both required to agree with `state/CURRENT_PROJECT.json`.
+- **Last verified:** 2026-09-22.
+- **Do not restart / locked exclusions:** Do not rebuild proven Builder/AIOS/Independent Proof/certificate primitives without invalidating evidence. Do not merge PR #22, deploy, publish, spend, delete, expand permissions, or activate Foundation capability without the governing human review.
+- **Notes:** TWIS Loop Deck / Pro Rig, First3 Local, Coilside, Terri Tax, and commerce/product lanes remain separate unless an exact primitive is explicitly reconciled and promoted.
+
+
 ### TWIS LOOP DECK
 - **Purpose:** Phone-first local looper/groovebox with a simple one-screen performance shell over the existing V2 audio engine.
 - **Authority repo/path/device:** `Karmicmurphy/Ollie_Twis_Holo_workshop` · `app/loop-deck.html`

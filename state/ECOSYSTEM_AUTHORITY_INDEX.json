@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21",
+  "generated_at": "2026-09-22",
   "status": "RECOVERY_INDEX",
   "purpose": "Prevent reinvention by recovering existing project authority, lineage, reusable primitives, and overlap before public research or new builds.",
   "global_rule": "RECOVER BEFORE REBUILD",
@@ -335,7 +335,7 @@
         "role": "factory",
         "repo": "Karmicmurphy/temporal-capability-foundry",
         "ref": "software-builder-v0",
-        "sha": "32c8a292d9d753a79a163a470dd5873e98e87dcb"
+        "sha": "44dd53245a783264c0ae2d0ad38e5f4791bc8617"
       },
       {
         "role": "runtime",
@@ -347,7 +347,7 @@
         "role": "salvage",
         "repo": "Karmicmurphy/digital-scrapyard-autopilot",
         "ref": "main",
-        "sha": "028f1a9559a7f198d73e7042d18b9c8343f64729"
+        "sha": "a140191d884545bef423c13a58d2b50ca8ab503b"
       },
       {
         "role": "cockpit",
@@ -395,6 +395,6 @@
         "foundation_authority": false
       }
     ],
-    "next": "Run first real local bounded job; reconcile/attach Workshop in parallel; begin Capability Downshift only from repeated real proven jobs."
+    "next": "Connect a PersonalJarvis client to the proven friday-foundry MCP stdio gateway and run one owner-device field trial: verify a continuation capsule, recover current truth, queue one bounded work order, and return its receipt. Local Windows/phone execution remains BLOCKED_OWNER_DEVICE. Do not merge PR #22, deploy, activate, or broaden FRIDAY authority without Randy review."
   }
 }
