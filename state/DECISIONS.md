@@ -42,3 +42,12 @@ This file stores durable, non-sensitive decisions that future agents should not 
 - **Applies to:** Foundation V0 / global language when describing Foundation improvement
 - **Authority/evidence:** `temporal-capability-foundry/src/foundry/foundation_core.py`; human runner proof run `35628459336`; certificate-aware promotion proof run `35620968656`; `docs/FOUNDATION_CORE_V0.md`.
 - **Reopen condition:** Only if Randy explicitly changes the human-approval boundary and a separate safety/proof design is approved.
+
+
+### 2026-09-22 — PersonalJarvis / FRIDAY shelved; discovery lane takes priority
+- **Type:** TARGET / SCOPE / STATE
+- **Decision or correction:** PersonalJarvis and FRIDAY are not the current goal and must not be presented as the next step. Their unmerged candidate work is preserved only as salvage/reference. The active lane is deterministic estate discovery: collide recovered mechanisms, surface non-obvious cross-domain fits, then falsify the strongest lead cheaply.
+- **Why it matters:** Repeatedly steering the project toward assistant integration was not aligned with the owner's actual goal and consumed attention without answering the deeper discovery question.
+- **Applies to:** Foundation V0 / Digital Scrapyard / global harness routing
+- **Authority/evidence:** Owner correction on 2026-09-22; Foundry PR #22 closed unmerged; Digital Scrapyard Missing Gear Collision Engine merged at `c5d06aabf54d9187a8478047eda5393d8be68673`; proof runs `35700359307` and `35700359308`.
+- **Reopen condition:** Only on a new explicit owner decision to make PersonalJarvis / FRIDAY active again.

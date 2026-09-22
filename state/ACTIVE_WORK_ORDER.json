@@ -2,13 +2,11 @@
   "schema_version": "1.0.0",
   "source_project_state_path": "state/CURRENT_PROJECT.json",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
-  "lane": "VERIFIED CONTINUITY + FRIDAY GATEWAY V0 / FOUNDATION CERTIFICATION / HUMAN REVIEW",
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; VERIFIED_CONTINUATION_CAPSULE_V0_PROVEN_IN_TEST; FRIDAY_GATEWAY_V0_PROVEN_IN_TEST; HUMAN_REVIEW_GATED",
-  "next_action": "Connect a PersonalJarvis client to the proven friday-foundry MCP stdio gateway and run one owner-device field trial: verify a continuation capsule, recover current truth, queue one bounded work order, and return its receipt. Local Windows/phone execution remains BLOCKED_OWNER_DEVICE. Do not merge PR #22, deploy, activate, or broaden FRIDAY authority without Randy review.",
-  "status": "BLOCKED",
-  "blockers": [
-    "OWNER_DEVICE_REQUIRED"
-  ],
-  "stop_condition": "Stop when the PersonalJarvis -> FRIDAY owner-device field trial returns a durable receipt, or when a named device/runtime blocker is proven.",
+  "lane": "ESTATE DISCOVERY / MISSING GEAR COLLISION / HUMAN REVIEW",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_COLLISION_V0_PROVEN_IN_TEST_ON_REAL_ESTATE_MAP; VERIFIED_CONTINUATION_CAPSULE_V0_PRESERVED_ON_SHELF; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
+  "next_action": "Run the deterministic Missing Gear Collision Engine against the current estate capability map and recovered warehouse manifests, surface the strongest cross-domain collisions, then falsify the top lead with the smallest bounded proof. PersonalJarvis / FRIDAY is SHELVED and is not an active dependency.",
+  "status": "ACTIVE",
+  "blockers": [],
+  "stop_condition": "Stop when the strongest surfaced collision has either passed one bounded falsification/prototype proof or has been rejected with a named reason and the next collision is identified.",
   "updated_at": "2026-09-22"
 }
