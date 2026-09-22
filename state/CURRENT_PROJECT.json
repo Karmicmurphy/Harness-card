@@ -20,7 +20,7 @@
     "salvage": {
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
       "branch": "main",
-      "sha": "028f1a9559a7f198d73e7042d18b9c8343f64729"
+      "sha": "a140191d884545bef423c13a58d2b50ca8ab503b"
     },
     "cockpit": {
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
@@ -29,10 +29,10 @@
       "note": "GitHub Phase 1A proven in test; local Windows Workshop remains private authority pending reconciliation"
     }
   },
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; VERIFIED_CONTINUATION_CAPSULE_V0_PROVEN_IN_TEST; HUMAN_REVIEW_GATED",
-  "lane": "VERIFIED CONTINUATION CAPSULE V0 / FOUNDATION CERTIFICATION / HUMAN REVIEW",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; VERIFIED_CONTINUATION_CAPSULE_V0_PROVEN_IN_TEST; FRIDAY_GATEWAY_V0_PROVEN_IN_TEST; HUMAN_REVIEW_GATED",
+  "lane": "VERIFIED CONTINUITY + FRIDAY GATEWAY V0 / FOUNDATION CERTIFICATION / HUMAN REVIEW",
   "last_verified_at": "2026-09-22",
-  "next_action": "Candidate V0 is implemented at temporal-capability-foundry branch verified-continuation-capsule-v0, commit d008bf9ba5c00f9ead4aadbd4c0049112eab7331, draft PR #22. GitHub Actions run 35674995465 passed all 176 tests. Next machine gate is Foundation exact-patch/independent certification when a valid separate AIOS checkout is available; stop for Randy review before merge or activation.",
+  "next_action": "Connect a PersonalJarvis client to the proven friday-foundry MCP stdio gateway and run one owner-device field trial: verify a continuation capsule, recover current truth, queue one bounded work order, and return its receipt. Local Windows/phone execution remains BLOCKED_OWNER_DEVICE. Do not merge PR #22, deploy, activate, or broaden FRIDAY authority without Randy review.",
   "separate_projects": [
     "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
     "First3 Local / nemoclw_new_agent — proving-ground product; not Foundation authority",
@@ -45,9 +45,26 @@
     "verified_continuation_capsule_v0": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "branch": "verified-continuation-capsule-v0",
-      "sha": "d008bf9ba5c00f9ead4aadbd4c0049112eab7331",
+      "sha": "e184d6cb9fbabbedc42b54ab3e95b6d325c4d83b",
+      "pull_request": 22,
+      "evidence_state": "PROVEN_IN_TEST_182_OF_182",
+      "exact_patch_certificate": "NOT_RUN",
+      "activation": "NOT_AUTHORIZED"
+    },
+    "friday_gateway_v0": {
+      "repo": "Karmicmurphy/temporal-capability-foundry",
+      "branch": "verified-continuation-capsule-v0",
+      "sha": "e184d6cb9fbabbedc42b54ab3e95b6d325c4d83b",
       "pull_request": 22,
       "evidence_state": "PROVEN_IN_TEST",
+      "github_actions_runs": [
+        35678709874,
+        35678810155
+      ],
+      "authority": "OPERATOR_SURFACE_ONLY",
+      "execution": "QUEUE_ONLY",
+      "approval": "REQUEST_ONLY",
+      "owner_device_field_trial": "NOT_RUN_BLOCKED_OWNER_DEVICE",
       "exact_patch_certificate": "NOT_RUN",
       "activation": "NOT_AUTHORIZED"
     }

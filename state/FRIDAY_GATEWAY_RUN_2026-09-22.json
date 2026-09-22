@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "friday-gateway:2026-09-22:v0",
+  "date": "2026-09-22",
+  "user_goal": "Make FRIDAY the independent human control surface for the existing machine so ChatGPT is not the only door.",
+  "adaptive_pass_rule": {
+    "fixed_pass_count": false,
+    "rule": "Passes must earn passes.",
+    "stop_reason": "Internal estate recovery, external mechanism search, and a hostile counter-search converged. Another research pass was lower value than a bounded implementation test.",
+    "directions": [
+      "PersonalJarvis capability routing, isolated worker/critic, action gateway, private evidence learning, and headless control surfaces",
+      "MCP vendor-neutral tools/resources transport and scoped gateway security",
+      "local voice and browser clients including OpenVoiceOS, Home Assistant Assist/Wyoming, and Open WebUI",
+      "counter-search for upstream CI/release instability and privileged UI security failures"
+    ]
+  },
+  "architecture": {
+    "name": "FRIDAY Foundry Gateway V0",
+    "authority": "Randy + Harness",
+    "operator_surface": "FRIDAY",
+    "execution_and_proof": "Foundry + AIOS",
+    "replaceable_clients": [
+      "PersonalJarvis",
+      "ChatGPT/Codex",
+      "CLI",
+      "future phone/browser/voice client"
+    ],
+    "rule": "FRIDAY may recover, route, queue, learn from evidence, propose drafts, and request approval. It may not grant itself authority, execute live actions, approve, merge, deploy, publish, spend, delete, or activate."
+  },
+  "salvage": {
+    "warehouse_repo": "Karmicmurphy/digital-scrapyard-autopilot",
+    "warehouse_commit": "a140191d884545bef423c13a58d2b50ca8ab503b",
+    "warehouse_path": "warehouse/intake/personal-jarvis-2026-09-21/",
+    "upstream": "PersonalJarvis/PersonalJarvis@888df0cabbc94a56fba62f5fa812aeb4da08702d",
+    "rights": "Apache-2.0; upstream NOTICE preserved in warehouse; no upstream source, branding, models, voice assets, or UI copied into FRIDAY candidate",
+    "retained_patterns": [
+      "capability routing",
+      "pure dispatch",
+      "one action gateway",
+      "bounded isolated work",
+      "evidence-backed private learning",
+      "draft-only procedures",
+      "atomic state writes",
+      "per-agent limits"
+    ],
+    "rejected_or_deferred": [
+      "wholesale PersonalJarvis fork: too large and current upstream CI/release evidence is not clean enough",
+      "Open WebUI as privileged control plane: rejected due recent tool/MCP access-control advisories",
+      "Letta self-editing memory: deferred because evidence-backed learning plus verified capsules already cover the need with a safer authority boundary",
+      "always-on local voice: deferred until the text/MCP owner-device field path is proven"
+    ]
+  },
+  "candidate": {
+    "repo": "Karmicmurphy/temporal-capability-foundry",
+    "branch": "verified-continuation-capsule-v0",
+    "commit": "e184d6cb9fbabbedc42b54ab3e95b6d325c4d83b",
+    "pull_request": 22,
+    "pull_request_state": "OPEN_DRAFT_MERGEABLE",
+    "components": [
+      "Verified Continuation Capsule V0",
+      "FRIDAY MCP stdio Gateway V0"
+    ],
+    "tools": [
+      "friday_status",
+      "friday_recover",
+      "friday_submit_work_order",
+      "friday_request_approval"
+    ],
+    "local_tests": {
+      "passed": 17,
+      "failed": 0
+    },
+    "github_actions": [
+      {
+        "run_id": 35678709874,
+        "conclusion": "success",
+        "tests_passed": 182,
+        "tests_failed": 0,
+        "python": "3.12.14"
+      },
+      {
+        "run_id": 35678810155,
+        "conclusion": "success",
+        "scope": "final receipt-only head"
+      }
+    ],
+    "evidence_state": "PROVEN_IN_TEST",
+    "exact_patch_certificate": "NOT_RUN",
+    "live_owner_device_field_trial": "NOT_RUN",
+    "merge": false,
+    "deployment": false,
+    "activation": false
+  },
+  "next_bounded_action": {
+    "action": "Connect PersonalJarvis to friday-foundry over pinned stdio MCP on Randy's device, then perform one verified recover -> bounded work order -> receipt loop.",
+    "acceptance": "The client launches the gateway, rejects tampered truth, recovers the pinned capsule, queues exactly one non-live work order, and shows its persisted receipt without ChatGPT acting as clipboard.",
+    "stop_condition": "Stop for Randy review before merge, deployment, activation, authority broadening, or live external action.",
+    "blocker": "BLOCKED_OWNER_DEVICE: this session has GitHub and CI access but not Randy's Windows/phone execution environment."
+  }
+}
