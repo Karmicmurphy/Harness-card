@@ -7,10 +7,7 @@ on:
       - main
       - authority-spine-guard-v0
     paths:
-      - "state/CURRENT_PROJECT.json"
-      - "state/ACTIVE_WORK_ORDER.json"
-      - "state/ACTIVE_WORK_ORDER.md"
-      - "state/ECOSYSTEM_AUTHORITY_INDEX.json"
+      - "state/**"
       - "projects/PROJECT_INDEX.md"
       - "scripts/check_authority_spine.py"
       - "tests/test_authority_spine.py"
