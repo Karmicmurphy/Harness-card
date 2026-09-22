@@ -1,6 +1,6 @@
 {
   "name": "Harness Card",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "purpose": "Canonical AI operating harness for intent recovery, continuity, skill routing, bounded execution, proof, learning, and closeout across projects.",
   "manual_triggers": [
     "Use Harness Card",
@@ -37,5 +37,13 @@
     "repository_expected_public": true,
     "allow_secrets": false,
     "allow_sensitive_personal_data": false
-  }
+  },
+  "canonical_state_precedence": [
+    "state/CURRENT_PROJECT.json selects the active project and lane",
+    "state/ACTIVE_WORK_ORDER.md must name the same project",
+    "projects/PROJECT_INDEX.md is a derived human-readable view",
+    "live repo/device/deploy evidence outranks every stored pointer"
+  ],
+  "authority_validator": "workers/validate_authority_spine.py",
+  "learning_promotion": "Generated learning is candidate evidence only and may not write authoritative main state without review."
 }

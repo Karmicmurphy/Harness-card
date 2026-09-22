@@ -1,56 +1,51 @@
 # Active Work Order
 
+## PROJECT
+FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY
+
 ## TARGET
-Produce one convincing 30-second TWIS sonic reference from the engine/content layer alone before any further UI growth.
+Repair the authority spine and prove the smallest standalone Estate Librarian that lets a fresh AI/session recover current truth without Randy naming repositories, chats, buried mechanisms, Jarvis, or FRIDAY.
 
 ## VERIFIED CURRENT
-- Project authority: `Karmicmurphy/Ollie_Twis_Holo_workshop` / `main` / `04a5b694d3ac6ddbebaf5b2ff9314a1c619b111e`.
-- Live target: `https://karmicmurphy.github.io/Ollie_Twis_Holo_workshop/pro-rig.html`.
-- User-reported target-device result: current musical output still sounds unprofessional.
-- Existing contract: `docs/SONIC_ACCEPTANCE.md`.
-- Existing salvage records: `docs/TWIS_PRO_RIG_ARTIFACT_COMPASS_SALVAGE_2026-09-18.md`, `docs/TWIS_PRO_RIG_V4_FIVE_PASS_SALVAGE_2026-09-18.md`, `docs/TWIS_SONIC_SALVAGE_2026-09-19.md`.
-- Harness Incident Ledger already says controls-working is not sonic proof and explicitly blocks more UI/synth-feature growth until the sonic target/source strategy is proven.
+- Governance authority: `Karmicmurphy/Harness-card@main`.
+- Factory authority: `Karmicmurphy/temporal-capability-foundry@software-builder-v0`.
+- Runtime authority: `Karmicmurphy/Untethered-AIOS@main`.
+- Warehouse authority: `Karmicmurphy/digital-scrapyard-autopilot@main`.
+- Workshop Foundation authority: `Karmicmurphy/Ollie_Twis_Holo_workshop@living-workshop-main-build`.
+- Estate source-yard map and Minimum Necessary Intelligence router are PROVEN_IN_TEST.
+- Source-specific automatic estate traversal is not proven.
+- Jarvis is warehouse salvage only.
+- FRIDAY is an optional candidate operator surface only.
+- Local Windows/Codex-only material remains BLOCKED_OWNER_DEVICE.
 
 ## PROFESSIONAL FRAME
-Producer / arranger / mix engineer first. Software UI engineer second.
+Information architecture, deterministic retrieval, provenance, contradiction resolution, and proof engineering.
 
 ## LANE
-CREATIVE OUTPUT QUALITY RECOVERY -> ARTIFACT COMPASS + SALVAGE -> PROVE
-
-## HUMAN PATH
-User receives one 30-second audition -> presses play -> hears immediate professional identity -> groove develops -> phrase evolves -> build creates tension -> drop pays off -> user can judge the sound without touching the workstation UI.
+PLANNING / RECONCILIATION — BOUNDED IMPLEMENTATION ALLOWED
 
 ## ONE MOVE
-Build and evaluate one engine-only 30-second reference against `SONIC_ACCEPTANCE.md`.
-
-Required musical content:
-- curated sampled kick/percussion;
-- deliberate kick/bass relationship;
-- phrase-aware bass;
-- harmonically voiced pad/chord movement;
-- melody with rests and variation;
-- atmosphere with motion;
-- phrase-boundary transition FX;
-- scene-aware mix dynamics;
-- conservative master chain.
+1. Make every Harness bootstrap pointer agree on the active project and lane.
+2. Repair the false-green learning parser and run its real regression test.
+3. Build Estate Librarian V0 by composing existing authority, estate queue, context harvesting, proof, and continuation primitives.
+4. Prove a clean worker can recover current authority, relevant failures, explicit blocked gaps, and exactly one next action without Jarvis or FRIDAY.
 
 ## DO NOT
-- Add buttons.
-- Add another mode.
-- Add another framework.
-- Change transport architecture.
-- Call browser tests sonic proof.
-- Randomize musical content on PLAY.
-- Automatically start anything the user did not explicitly request.
-- Reconnect or expand full UI until the 30-second audition passes the sonic contract.
+- Do not make Jarvis part of the runtime chain.
+- Do not make FRIDAY the librarian or authority.
+- Do not add a new AI OS, agent swarm, memory platform, or second warehouse.
+- Do not auto-promote learned rules.
+- Do not claim inaccessible local material is absent.
+- Do not resume phone, voice, avatar, or UI work before librarian proof.
+- Do not merge unrelated Loop Deck work into Foundation authority.
 
 ## PROOF
-1. Mechanical: render completes, no clipping, stable peak/RMS, intended sections exist.
-2. Structural: 0-4 identity, 4-12 groove, 12-20 development, 20-26 tension, 26-30 payoff.
-3. Perceptual: user listens on target Android and says the musical result is acceptable.
-4. Only after #3 may the engine be wired back into the performance surface.
+- Authority-spine validator passes.
+- Incident/learning parser reports the real non-zero ledger and learned-rule counts.
+- Librarian fixture automatically selects relevant source yards and preserves blocked ones.
+- Clean-session recovery fixture returns current authority, proof state, known failure, and one bounded next action.
+- No Jarvis or FRIDAY dependency appears in the librarian implementation.
 
 ## STOP
-Stop this work order at either:
-- DONE: 30-second audition passes the user's sonic acceptance; or
-- FAILED: audition does not pass and the failing musical layer is named for the next bounded repair.
+- DONE: all proof items pass and durable authority records point to the proven librarian state; or
+- BLOCKED: a named connector/device boundary prevents the next proof and is recorded without being rewritten as absence.

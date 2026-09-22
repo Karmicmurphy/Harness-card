@@ -1,3 +1,10 @@
+> **SUPERSEDED CURRENT-LANE WARNING — 2026-09-22**
+>
+> The older Cog 3 startup instruction below is historical. Cogs 3 and 4 are already PROVEN_IN_TEST.
+> Current authority is `state/CURRENT_PROJECT.json`; current work is authority-spine repair plus standalone Estate Librarian V0.
+> Jarvis is warehouse salvage only. FRIDAY is an optional unactivated operator-surface candidate, not the librarian or a Foundation dependency.
+> Do not resume from the old Cog 3 instruction.
+
 # Foundation V0 — Current Work/Build Prompt
 
 Use Harness Card. BUILD / RECONCILIATION MODE.
