@@ -4,40 +4,42 @@ Project: `FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY`
 State source: `state/CURRENT_PROJECT.json`
 
 ## TARGET
-Run the first real owner-device continuity field trial through PersonalJarvis -> FRIDAY -> Verified Continuation Capsule -> Foundation queue, and return a durable receipt.
+Use Randy's recovered estate as material for **discovery**, not another assistant integration. Mechanically surface non-obvious cross-domain combinations, then try to kill the strongest lead cheaply.
 
 ## VERIFIED CURRENT
-- Foundation core is operational in test.
-- Verified Continuation Capsule V0 is proven in test.
-- FRIDAY Gateway V0 is proven in test and remains queue-only / request-only.
-- Candidate implementation remains on `Karmicmurphy/temporal-capability-foundry@verified-continuation-capsule-v0` PR #22.
-- Owner-device execution is not yet proven.
-- TWIS Loop Deck / Pro Rig is a separate creative project and is not the active Foundation work order.
+- Foundation core remains operational in test; it is infrastructure, not the goal.
+- The authority-spine guard is merged and prevents the main continuity files from silently disagreeing.
+- PersonalJarvis / FRIDAY is **SHELVED BY OWNER**. The unmerged candidate remains preserved only as salvage.
+- The deterministic Missing Gear Collision Engine is merged in `Karmicmurphy/digital-scrapyard-autopilot@c5d06aabf54d9187a8478047eda5393d8be68673`.
+- It requires no model, API key, embeddings, vector database, or paid service for collision ranking.
+- Real-estate-map proof runs `35700359307` and `35700359308` passed.
+- The first real estate-map run surfaced actual cross-project collisions rather than a demo-only result.
 
 ## LANE
-VERIFIED CONTINUITY + FRIDAY GATEWAY V0 / FOUNDATION CERTIFICATION / HUMAN REVIEW
+ESTATE DISCOVERY / MISSING GEAR COLLISION / HUMAN REVIEW
 
 ## ONE MOVE
-On Randy's owner device, connect PersonalJarvis to the `friday-foundry` MCP stdio gateway, recover one valid continuation capsule, queue one harmless bounded work order, read the durable receipt back, then stop.
+Take the highest-quality collision surfaced from the real estate map, inspect the exact source mechanisms and provenance, then run the smallest falsification/prototype that can prove the combination useful or kill it.
+
+## DO NOT
+- Route back into Jarvis / FRIDAY because it is available.
+- Add another assistant, orchestration framework, model router, or UI unless the collision itself requires it.
+- Treat a collision score as proof of novelty or usefulness.
+- Force unrelated scrap into a fake idea.
+- Pay for intelligence when deterministic code can answer the question.
 
 ## PROOF
-1. PersonalJarvis can see the FRIDAY MCP tools.
-2. `friday_recover` accepts and verifies a valid capsule.
-3. Recovered project/revision/evidence/blockers/next-action match the capsule.
-4. One READ, RESEARCH, or BUILD_CANDIDATE work order is queued.
-5. The queued work order and receipt survive a gateway restart using the durable state directory.
-6. `friday_status` reports `execution_performed: false`.
-7. No merge, deploy, publish, spend, delete, permission change, or activation occurs.
-
-## BLOCKER
-`OWNER_DEVICE_REQUIRED`
-
-This chat can inspect, prepare, test repository-side components, and repair stale authority. It cannot truthfully mark the field trial passed without the owner-device run.
+A lead advances only if:
+1. both source mechanisms are real and recoverable;
+2. rights/provenance are clear enough for the proposed reuse mode;
+3. the connection is more than shared jargon;
+4. one bounded prototype or falsification test produces a measurable useful effect;
+5. the result is recorded as KEEP, KILL, or SALVAGE-ONLY.
 
 ## STOP
-Stop at either:
-- DONE: the owner-device field trial produces the durable receipt and all proof checks above pass; or
-- BLOCKED: a concrete owner-device/runtime failure is captured with enough evidence for the next bounded repair.
+Stop this work order when the top collision is either:
+- **KEEP:** bounded proof shows a useful new capability worth building further; or
+- **KILL:** the combination fails for a named reason and the next ranked collision is identified.
 
 ## CURRENT NEXT ACTION
-Connect a PersonalJarvis client to the proven friday-foundry MCP stdio gateway and run one owner-device field trial: verify a continuation capsule, recover current truth, queue one bounded work order, and return its receipt. Local Windows/phone execution remains BLOCKED_OWNER_DEVICE. Do not merge PR #22, deploy, activate, or broaden FRIDAY authority without Randy review.
+Run the deterministic Missing Gear Collision Engine against the current estate capability map and recovered warehouse manifests, surface the strongest cross-domain collisions, then falsify the top lead with the smallest bounded proof. PersonalJarvis / FRIDAY is SHELVED and is not an active dependency.
