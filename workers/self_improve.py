@@ -70,7 +70,12 @@ def rule_from(i):
 
 def receipt_verdict(text):
     m=re.search(r"^## VERDICT\s*\n([^\n]+)",text,re.M)
-    return m.group(1).strip() if m else "UNKNOWN"
+    if not m:
+        return "UNSET"
+    value=m.group(1).strip()
+    if "<" in value or value.startswith("DONE / BLOCKED"):
+        return "UNSET"
+    return value
 
 def main():
     incidents=parse_blocks(INCIDENTS.read_text(encoding="utf-8"),INCIDENT_RE,"Short memorable name.")
