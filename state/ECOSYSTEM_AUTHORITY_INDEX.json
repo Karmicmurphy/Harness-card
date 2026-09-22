@@ -110,7 +110,7 @@
     {
       "project": "Digital Scrapyard / Digital Scrap Forge",
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
-      "head": "028f1a9559a7f198d73e7042d18b9c8343f64729",
+      "head": "c5d06aabf54d9187a8478047eda5393d8be68673",
       "authority_kind": "PRIVATE_PRODUCT_AND_CANONICAL_SALVAGE_SKILL_SOURCE",
       "role": "Rights-first digital reclamation/software-factory business plus canonical salvage-suite skill source.",
       "recovered_primitives": [
@@ -124,7 +124,8 @@
         "Recombination Forge",
         "Owner Interruption Minimizer",
         "Project Context Harvester",
-        "Rabbit-Hole Governor"
+        "Rabbit-Hole Governor",
+        "Missing Gear Collision Engine"
       ]
     },
     {
@@ -182,7 +183,7 @@
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
       "visibility": "private",
       "default_branch": "main",
-      "head": "028f1a9559a7f198d73e7042d18b9c8343f64729"
+      "head": "c5d06aabf54d9187a8478047eda5393d8be68673"
     },
     {
       "repo": "Karmicmurphy/temporal-capability-foundry",
@@ -324,7 +325,7 @@
     "self_reference_rule": "Do not claim a durable exact Harness-card HEAD inside a Harness-card file; committing the file advances HEAD. Resolve Harness-card main live when exact current SHA matters."
   },
   "active_foundation_v0": {
-    "status": "CURRENT_ACTIVE_PROJECT_CORE_OPERATIONAL_IN_TEST",
+    "status": "CURRENT_ACTIVE_PROJECT_CORE_OPERATIONAL_IN_TEST_DISCOVERY_LANE",
     "canonical_refs": [
       {
         "role": "governance",
@@ -347,7 +348,7 @@
         "role": "salvage",
         "repo": "Karmicmurphy/digital-scrapyard-autopilot",
         "ref": "main",
-        "sha": "a140191d884545bef423c13a58d2b50ca8ab503b"
+        "sha": "c5d06aabf54d9187a8478047eda5393d8be68673"
       },
       {
         "role": "cockpit",
@@ -395,6 +396,6 @@
         "foundation_authority": false
       }
     ],
-    "next": "Connect a PersonalJarvis client to the proven friday-foundry MCP stdio gateway and run one owner-device field trial: verify a continuation capsule, recover current truth, queue one bounded work order, and return its receipt. Local Windows/phone execution remains BLOCKED_OWNER_DEVICE. Do not merge PR #22, deploy, activate, or broaden FRIDAY authority without Randy review."
+    "next": "Run the deterministic Missing Gear Collision Engine against the current estate capability map and recovered warehouse manifests, surface the strongest cross-domain collisions, then falsify the top lead with the smallest bounded proof. PersonalJarvis / FRIDAY is SHELVED and is not an active dependency."
   }
 }
