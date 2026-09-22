@@ -51,3 +51,12 @@ This file stores durable, non-sensitive decisions that future agents should not 
 - **Applies to:** Foundation V0 / Digital Scrapyard / global harness routing
 - **Authority/evidence:** Owner correction on 2026-09-22; Foundry PR #22 closed unmerged; Digital Scrapyard Missing Gear Collision Engine merged at `c5d06aabf54d9187a8478047eda5393d8be68673`; proof runs `35700359307` and `35700359308`.
 - **Reopen condition:** Only on a new explicit owner decision to make PersonalJarvis / FRIDAY active again.
+
+
+### 2026-09-22 — Missing Gear novelty gate exposed atomization gap
+- **Type:** EVIDENCE / TARGET / CONSTRAINT
+- **Decision or correction:** Known overlaps, existing lanes, status labels, mode, evidence state, cost, priority, and rights metadata are context only and cannot earn Missing Gear novelty points. After enforcing that rule and typing the PersonalJarvis warehouse intake, the combined estate+warehouse run loaded 36 artifacts, produced 7 scored collisions, and produced zero cross-domain survivors; all seven were within the single richly typed PersonalJarvis source.
+- **Why it matters:** The collision engine is no longer mainly fooled by labels. The limiting factor is now representation quality: most source yards are mapped at project/capability level rather than decomposed into provenance-backed typed mechanisms, inputs, outputs, and interfaces.
+- **Applies to:** Estate discovery / Digital Scrapyard / Foundation discovery lane
+- **Authority/evidence:** Digital Scrapyard main `75d83feeb566d19e58b00d43404a640c67930787`; PR #23; proof runs `35730332924` and `35730333270`.
+- **Reopen condition:** Revisit only if a later multi-source typed-atom run shows that metadata suppression removed genuinely useful discovery evidence or a stronger typed representation replaces this rule.

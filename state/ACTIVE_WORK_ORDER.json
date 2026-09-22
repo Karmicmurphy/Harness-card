@@ -3,10 +3,12 @@
   "source_project_state_path": "state/CURRENT_PROJECT.json",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "lane": "ESTATE DISCOVERY / MISSING GEAR COLLISION / HUMAN REVIEW",
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_COLLISION_V0_PROVEN_IN_TEST_ON_REAL_ESTATE_MAP; VERIFIED_CONTINUATION_CAPSULE_V0_PRESERVED_ON_SHELF; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
-  "next_action": "Run the deterministic Missing Gear Collision Engine against the current estate capability map and recovered warehouse manifests, surface the strongest cross-domain collisions, then falsify the top lead with the smallest bounded proof. PersonalJarvis / FRIDAY is SHELVED and is not an active dependency.",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_NOVELTY_GATE_V1_PROVEN_IN_TEST; ESTATE_PLUS_TYPED_WAREHOUSE_RUN_36_ARTIFACTS_7_COLLISIONS; NO_CROSS_DOMAIN_CANDIDATE_SURVIVED; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
+  "next_action": "Atomize the live estate into typed primitive records (real mechanisms, inputs, outputs, interfaces, provenance) across multiple source yards, starting with AIOS, Workshop, Foundry, and Harness; then rerun the novelty-gated Missing Gear collision engine. Do not treat labels/status/known overlaps as discovery evidence and do not build another orchestration framework.",
   "status": "ACTIVE",
-  "blockers": [],
-  "stop_condition": "Stop when the strongest surfaced collision has either passed one bounded falsification/prototype proof or has been rejected with a named reason and the next collision is identified.",
+  "blockers": [
+    "ESTATE_ATOMIZATION_INCOMPLETE"
+  ],
+  "stop_condition": "Stop when at least two independent source yards have provenance-backed typed primitives and the novelty-gated rerun either surfaces a real cross-domain candidate for falsification or proves the current typed estate has none.",
   "updated_at": "2026-09-22"
 }
