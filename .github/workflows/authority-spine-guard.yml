@@ -1,0 +1,38 @@
+name: Authority Spine Guard
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - authority-spine-guard-v0
+    paths:
+      - "state/CURRENT_PROJECT.json"
+      - "state/ACTIVE_WORK_ORDER.json"
+      - "state/ACTIVE_WORK_ORDER.md"
+      - "state/ECOSYSTEM_AUTHORITY_INDEX.json"
+      - "projects/PROJECT_INDEX.md"
+      - "scripts/check_authority_spine.py"
+      - "tests/test_authority_spine.py"
+      - ".github/workflows/authority-spine-guard.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  authority-spine:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check authority spine
+        run: python scripts/check_authority_spine.py
+
+      - name: Regression tests
+        run: python -m unittest tests.test_authority_spine -v
