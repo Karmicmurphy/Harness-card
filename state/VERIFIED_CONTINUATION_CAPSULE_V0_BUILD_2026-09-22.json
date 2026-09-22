@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "verified-continuation-capsule-v0-build:2026-09-22",
+  "project": "Verified Continuation Capsule V0",
+  "working_name": "Clipboard Killer",
+  "candidate": {
+    "repo": "Karmicmurphy/temporal-capability-foundry",
+    "base_branch": "software-builder-v0",
+    "base_sha": "44dd53245a783264c0ae2d0ad38e5f4791bc8617",
+    "branch": "verified-continuation-capsule-v0",
+    "sha": "d008bf9ba5c00f9ead4aadbd4c0049112eab7331",
+    "pull_request": 22,
+    "pull_request_state": "OPEN_DRAFT_MERGEABLE"
+  },
+  "delivered": [
+    "deterministic capsule assembler",
+    "fail-closed capsule verifier",
+    "machine-readable JSON Schema",
+    "embedded artifact hashing and size binding",
+    "authority and proof receipt cross-link validation",
+    "explicit stale, expired, and quarantined reference-only handling",
+    "blocked-gap recovery",
+    "exactly one next bounded action",
+    "clean-session recovery acceptance fixture",
+    "command-line assemble and verify interface"
+  ],
+  "evidence": {
+    "local_targeted_tests": {
+      "command": "PYTHONPATH=src python -m unittest -v tests.test_continuation_capsule",
+      "passed": 11,
+      "failed": 0
+    },
+    "github_actions": {
+      "workflow": "test",
+      "run_id": 35674995465,
+      "conclusion": "success",
+      "tests_passed": 176,
+      "tests_failed": 0,
+      "python": "3.12"
+    },
+    "evidence_state": "PROVEN_IN_TEST"
+  },
+  "authority": {
+    "merged": false,
+    "deployed": false,
+    "published": false,
+    "activated": false,
+    "automatic_promotion": false,
+    "human_review_required": true
+  },
+  "remaining_unproven_gates": [
+    "Foundation exact-patch / independent-proof certificate was not executed",
+    "real cross-session field use outside the isolated acceptance fixture",
+    "Randy review before merge or activation"
+  ],
+  "closure": "DONE_FOR_BOUNDED_BUILD; CANDIDATE_PROVEN_IN_TEST; HELD_AT_HUMAN_REVIEW_GATE"
+}

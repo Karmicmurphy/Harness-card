@@ -45,7 +45,7 @@
     "candidate_id": "estate-candidate:verified-continuation-capsule-v0",
     "working_name": "Verified Continuation Capsule",
     "classification": "NOVEL_RECOMBINATION_CANDIDATE",
-    "status": "PLANNED",
+    "status": "PROVEN_IN_TEST_AWAITING_FOUNDATION_CERTIFICATE_AND_HUMAN_REVIEW",
     "what_already_exists": [
       "Workshop project capsule ZIP export with artifact revisions",
       "Workshop hashed source intake/manifests/receipts",
@@ -71,16 +71,48 @@
     ],
     "rights_provenance": "Internal first-party primitives are reusable inside Randy's estate. Any third-party artifact included later must retain its own provenance/rights state and remain quarantined when rights are unclear.",
     "missing": [
-      "small deterministic capsule schema",
-      "deterministic assembler",
-      "deterministic verifier",
-      "one clean-session recovery acceptance fixture",
-      "later Workshop import/export adapter after local Windows reconciliation"
+      "Foundation exact-patch / independent-proof certificate",
+      "Randy review before merge, activation, or integration",
+      "live cross-session recovery field trial beyond the isolated clean-session fixture"
     ],
     "cheapest_proof": "Build a GitHub-only V0 capsule for one bounded project. In a clean isolated fixture, verify hashes/schema/authority pointers and require recovery of current revision, proof state, blocked gaps, expired/stale material, and one next action without reading old chats.",
     "current_confidence": "HIGH_CANDIDATE_CONFIDENCE_MEDIUM_INVENTION_CONFIDENCE",
     "promotion_authorized": false,
-    "activation_authorized": false
+    "activation_authorized": false,
+    "cheapest_proof_result": {
+      "status": "PROVEN_IN_TEST",
+      "candidate_repo": "Karmicmurphy/temporal-capability-foundry",
+      "branch": "verified-continuation-capsule-v0",
+      "commit": "d008bf9ba5c00f9ead4aadbd4c0049112eab7331",
+      "pull_request": 22,
+      "pull_request_state": "OPEN_DRAFT_MERGEABLE",
+      "local_targeted_tests": {
+        "passed": 11,
+        "failed": 0
+      },
+      "github_actions": {
+        "workflow": "test",
+        "run_id": 35674995465,
+        "conclusion": "success",
+        "tests_passed": 176,
+        "tests_failed": 0,
+        "python": "3.12"
+      },
+      "proven_recovery_fields": [
+        "current revision",
+        "proof state",
+        "blocked gaps",
+        "stale/non-current material",
+        "exactly one next action"
+      ],
+      "tamper_checks": [
+        "payload hash",
+        "capsule id binding",
+        "embedded artifact hash and size",
+        "unsafe paths",
+        "authority/proof artifact cross-links"
+      ]
+    }
   },
   "compared_alternatives": [
     {
@@ -111,12 +143,14 @@
   ],
   "factory_advance": {
     "requested": true,
-    "route": "WORKER",
-    "status": "BLOCKED",
-    "blocker": "Current connected session exposes repository read/write and CI evidence but no command runner with the separate candidate and trusted AIOS Git checkouts required by scripts/run_foundation_exact_patch_job.py. Bypassing the Builder with direct code edits is not authorized.",
-    "next_safe_action": "Run the candidate's smallest deterministic assembler/verifier through Foundation exact-patch/bounded software job once a valid execution workspace is available. Stop at CERTIFIED_AWAITING_HUMAN_REVIEW."
+    "route": "CHAT_SOFTWARE_HARNESS_TO_GITHUB_ACTIONS",
+    "status": "PROVEN_IN_TEST_AWAITING_FOUNDATION_CERTIFICATE_AND_HUMAN_REVIEW",
+    "blocker": null,
+    "exact_patch_runner_executed": false,
+    "reason": "The candidate was built on a bounded branch and independently passed the full GitHub repository test suite. This session still lacked a callable Foundation exact-patch workspace with a separately checked-out trusted AIOS runtime, so no Foundation certificate is claimed.",
+    "next_safe_action": "Run the exact candidate through Foundation independent certification when that execution workspace is available; otherwise hold draft PR #22 for Randy review. Do not merge or activate automatically."
   },
-  "authority_changes_performed": false,
+  "authority_changes_performed": true,
   "deployment_performed": false,
   "publishing_performed": false,
   "spending_performed": false,

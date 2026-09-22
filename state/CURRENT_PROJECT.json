@@ -29,10 +29,10 @@
       "note": "GitHub Phase 1A proven in test; local Windows Workshop remains private authority pending reconciliation"
     }
   },
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; HUMAN_REVIEW_GATED",
-  "lane": "FOUNDATION V0 ESTATE SWEEP / FIELD USE / HUMAN-GATED IMPROVEMENT",
-  "last_verified_at": "2026-09-21",
-  "next_action": "Begin the first bounded estate sweep from state/ESTATE_SOURCE_YARDS_V1.json. Execute accessible source yards through deterministic inventory/classification first; use Artifact Compass/Salvage and Minimum Necessary Intelligence per unresolved task. Keep local Windows and other blocked yards explicit until lawful/local access is available. Workshop remains a front-end integration task, not the source of invention discovery.",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; VERIFIED_CONTINUATION_CAPSULE_V0_PROVEN_IN_TEST; HUMAN_REVIEW_GATED",
+  "lane": "VERIFIED CONTINUATION CAPSULE V0 / FOUNDATION CERTIFICATION / HUMAN REVIEW",
+  "last_verified_at": "2026-09-22",
+  "next_action": "Candidate V0 is implemented at temporal-capability-foundry branch verified-continuation-capsule-v0, commit d008bf9ba5c00f9ead4aadbd4c0049112eab7331, draft PR #22. GitHub Actions run 35674995465 passed all 176 tests. Next machine gate is Foundation exact-patch/independent certification when a valid separate AIOS checkout is available; stop for Randy review before merge or activation.",
   "separate_projects": [
     "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
     "First3 Local / nemoclw_new_agent — proving-ground product; not Foundation authority",
@@ -40,5 +40,16 @@
     "WTF Stupid Simple Terri Tax — separate product",
     "Digital Scrap Forge commerce/product branches — separate business lane unless an exact primitive is salvaged through Rights/Artifact rules"
   ],
-  "bleed_control": "Only refs explicitly named by Foundation authority files may change Foundation V0. Other chats, Codex workspaces, repos, branches, PRs, archives, and projects are SALVAGE/QUARANTINE/SEPARATE until reconciled and promoted into authority."
+  "bleed_control": "Only refs explicitly named by Foundation authority files may change Foundation V0. Other chats, Codex workspaces, repos, branches, PRs, archives, and projects are SALVAGE/QUARANTINE/SEPARATE until reconciled and promoted into authority.",
+  "candidates": {
+    "verified_continuation_capsule_v0": {
+      "repo": "Karmicmurphy/temporal-capability-foundry",
+      "branch": "verified-continuation-capsule-v0",
+      "sha": "d008bf9ba5c00f9ead4aadbd4c0049112eab7331",
+      "pull_request": 22,
+      "evidence_state": "PROVEN_IN_TEST",
+      "exact_patch_certificate": "NOT_RUN",
+      "activation": "NOT_AUTHORIZED"
+    }
+  }
 }
