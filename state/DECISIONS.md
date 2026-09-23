@@ -69,3 +69,12 @@ This file stores durable, non-sensitive decisions that future agents should not 
 - **Applies to:** Foundation V0 / Estate Discovery / Missing Gear
 - **Authority/evidence:** `Karmicmurphy/digital-scrapyard-autopilot@ad67954ceae627c7e1436295b6d72d1d37e69e2b`; PR #25; proof run `35793574471`; `warehouse/estate/ESTATE_WIDE_UNLOAD_V1.json`.
 - **Reopen condition:** Local Windows becomes accessible; deeper Replit/Cloudflare/Library/Drive material is explicitly selected and likely high-yield; or the owner explicitly asks to resume discovery on a named source or mechanism.
+
+
+### 2026-09-23 — Targeted estate V2 continuation completed
+- **Type:** EVIDENCE / STATE / STOP
+- **Decision or correction:** After the owner explicitly reopened discovery, a targeted high-yield Library continuation was performed instead of blind broad atomization. Digital Scrapyard PR #26 merged Estate-Wide Unload V2 with 109 typed estate atoms. Combined with 18 typed PersonalJarvis primitives, proof run `35805251181` evaluated 127 artifacts, produced 9 scored collisions, and produced zero defensible cross-domain survivors after generic-type and known-lineage false positives were removed.
+- **Why it matters:** The accessible cloud/library estate was pushed materially deeper without producing a defensible Missing Gear lead. Continuing the same recovery mode now has diminishing value. Local Windows is the highest-value unresolved source yard.
+- **Applies to:** Foundation V0 / Estate Discovery / Missing Gear
+- **Authority/evidence:** `Karmicmurphy/digital-scrapyard-autopilot@a059a27ef2bd662827a51da44dd8efb8863d634c`; PR #26; proof run `35805251181`; `warehouse/estate/ESTATE_WIDE_UNLOAD_V2.json`.
+- **Reopen condition:** A Windows delta/manifest or direct local project bytes become available; Replit/Cloudflare access materially improves; or the owner explicitly selects another named source or mechanism.
