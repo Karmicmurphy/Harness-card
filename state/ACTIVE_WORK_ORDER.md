@@ -5,51 +5,69 @@ State source: `state/CURRENT_PROJECT.json`
 
 ## STATUS
 
-**DONE — STOP CONDITION SATISFIED**
+**DONE — TARGETED V2 CONTINUATION COMPLETE**
 
-This is a deliberate stopping point, not abandonment.
+The owner explicitly reopened discovery after the earlier stop point. That targeted continuation is now complete and stopped cleanly.
+
+## WHAT WAS ADDED
+
+Digital Scrapyard PR #26 merged **Estate-Wide Unload V2** at `a059a27ef2bd662827a51da44dd8efb8863d634c`.
+
+The targeted pass recovered high-yield mechanisms from connected Library evidence, including:
+
+- Artifact Continuity Layer objects and receipts;
+- Dark Helix / WCHO Source Packet and supersession behavior;
+- Dark Helix Signal Desk;
+- Brain Dump execution tunnel;
+- AXIS3 deterministic interpretation/scoring pipeline;
+- Decodeo lifecycle dataset;
+- Pattern Engine tag → lane → historical pattern → score pipeline;
+- CTOS reduction / validation / residue flow;
+- Spatial Cognitive Territory controlled-emergence model;
+- Workshop two-hull and Project Capsule lineage;
+- Digital Scrapboard Transferability Proof / ForgeMark / AI resilience lineage.
 
 ## WHAT WAS PROVEN
 
-- Missing Gear novelty scoring no longer rewards known overlaps, status labels, or already-declared artifact pairs.
-- Estate-Wide Unload V1 is merged in `Karmicmurphy/digital-scrapyard-autopilot@ad67954ceae627c7e1436295b6d72d1d37e69e2b`.
-- The unload contains **90 provenance-backed typed estate atoms** across multiple source yards.
-- The existing PersonalJarvis intake contributes **18 discovery-eligible typed primitives**.
-- Combined proof run `35793574471` evaluated **108 artifacts**, produced **9 scored collisions**, and produced **0 defensible cross-domain survivors**.
-- That satisfies this work order's declared stop condition.
+- Typed estate atoms: **109**
+- Typed PersonalJarvis primitives: **18**
+- Combined artifacts evaluated: **127**
+- Scored collisions: **9**
+- Defensible cross-domain survivors: **0**
+- Proof workflow run: `35805251181`
+- Metadata-only leakage gate: **PASS**
 
-## WHAT THIS MEANS
+One intermediate run produced three nominal cross-domain hits. They were manually inspected:
+- generic `risk` type collision;
+- generic `tags` type collision;
+- known Workshop ↔ Dark Helix handoff lineage.
 
-The machine did not find a defensible Missing Gear candidate from the currently typed accessible estate.
+Those were namespaced or explicitly suppressed. The rerun returned zero defensible cross-domain survivors.
 
-That is a valid result.
+## WHY STOP HERE
 
-Do not respond by building another framework or by endlessly atomizing low-yield sources.
+The accessible cloud/library estate has now been pushed further without producing a real cross-domain Missing Gear lead.
 
-## KNOWN OPEN YARDS
+Continuing the same kind of cloud/library digging would be diminishing-return behavior.
 
-- Local Windows / local-only archives — high value, inaccessible in this session.
-- Direct Cloudflare account inventory — blocked; indirect repo evidence only.
-- Replit — inventory exists, but deeper extraction is partial after timeout.
-- Library / Drive — large and only targeted project-relevant recovery has been done.
-- Some low-depth GitHub repos remain cataloged rather than deeply atomized.
+The highest-value remaining unknown is **local Windows**.
 
-## RESTART CONDITION
+## KNOWN HIGH-VALUE WINDOWS TARGETS
 
-Resume this lane only when one of these is true:
+Historical evidence points to local material such as:
 
-1. a high-value blocked/partial source yard becomes accessible;
-2. Randy explicitly selects a named source, mechanism, project, or collision to pursue;
-3. new evidence invalidates the current zero-cross-domain result.
+- WCHO / Dark Helix project;
+- `ollie_twis_engine` scratch/local engine;
+- `DARK_HELIX_CREATOR_OS_LOCAL.zip`;
+- local `wtf-pattern-engine`;
+- other local-only archives and repos that a Windows manifest may reveal.
 
-## DO NOT RESTART WITH
+## OTHER OPEN YARDS
 
-- Jarvis / FRIDAY;
-- another orchestration framework;
-- another generic assistant;
-- more metadata-only inventory;
-- broad web research without a named gap.
+- Direct Cloudflare account inventory — blocked.
+- Replit deep extraction — timed out repeatedly.
+- Large Library / Drive tails — not worth blind continuation without a named target.
 
 ## CURRENT NEXT ACTION
 
-STOP POINT REACHED. Do not continue broad atomization by default. Resume estate discovery only when a high-value blocked/partial source yard becomes accessible (especially local Windows, deeper Replit, Cloudflare, or a specifically chosen Library/Drive lineage) or when the owner explicitly selects a source/lead to pursue.
+STOP POINT REACHED AFTER TARGETED V2 CONTINUATION. Do not continue cloud/library digging by default. The next highest-value recovery source is local Windows bytes/manifest from the known WCHO, ollie_twis_engine, DARK_HELIX, Pattern Engine, and other local project paths; otherwise wait for an explicit owner-selected source.

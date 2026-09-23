@@ -20,7 +20,7 @@
     "salvage": {
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
       "branch": "main",
-      "sha": "ad67954ceae627c7e1436295b6d72d1d37e69e2b"
+      "sha": "a059a27ef2bd662827a51da44dd8efb8863d634c"
     },
     "cockpit": {
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
@@ -29,10 +29,10 @@
       "note": "GitHub Phase 1A proven in test; local Windows Workshop remains private authority pending reconciliation"
     }
   },
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_NOVELTY_GATE_V1_PROVEN_IN_TEST; ESTATE_WIDE_UNLOAD_V1_90_TYPED_ATOMS; COMBINED_MISSING_GEAR_RUN_108_ARTIFACTS_9_COLLISIONS_0_CROSS_DOMAIN_SURVIVORS; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
-  "lane": "ESTATE DISCOVERY / MISSING GEAR COLLISION / STOP POINT",
-  "last_verified_at": "2026-09-22",
-  "next_action": "STOP POINT REACHED. Do not continue broad atomization by default. Resume estate discovery only when a high-value blocked/partial source yard becomes accessible (especially local Windows, deeper Replit, Cloudflare, or a specifically chosen Library/Drive lineage) or when the owner explicitly selects a source/lead to pursue.",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_NOVELTY_GATE_V1_PROVEN_IN_TEST; ESTATE_WIDE_UNLOAD_V2_109_TYPED_ESTATE_ATOMS; COMBINED_MISSING_GEAR_V2_RUN_127_ARTIFACTS_9_COLLISIONS_0_CROSS_DOMAIN_SURVIVORS; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
+  "lane": "ESTATE DISCOVERY / TARGETED V2 CONTINUATION / STOP POINT",
+  "last_verified_at": "2026-09-23",
+  "next_action": "STOP POINT REACHED AFTER TARGETED V2 CONTINUATION. Do not continue cloud/library digging by default. The next highest-value recovery source is local Windows bytes/manifest from the known WCHO, ollie_twis_engine, DARK_HELIX, Pattern Engine, and other local project paths; otherwise wait for an explicit owner-selected source.",
   "separate_projects": [
     "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
     "First3 Local / nemoclw_new_agent — proving-ground product; not Foundation authority",
@@ -123,6 +123,31 @@
       },
       "status": "STOP_POINT_REACHED",
       "next": "WAIT_FOR_HIGH_VALUE_NEW_SOURCE_OR_EXPLICIT_OWNER_TARGET"
+    },
+    "missing_gear_collision_v3": {
+      "repo": "Karmicmurphy/digital-scrapyard-autopilot",
+      "branch": "main",
+      "sha": "a059a27ef2bd662827a51da44dd8efb8863d634c",
+      "pull_request": 26,
+      "evidence_state": "PROVEN_IN_TEST_TARGETED_LIBRARY_CONTINUATION",
+      "proof_run": 35805251181,
+      "unload": {
+        "typed_estate_atoms": 109,
+        "typed_personal_jarvis_primitives": 18,
+        "combined_artifacts": 127,
+        "scored_collisions": 9,
+        "cross_domain_survivors": 0,
+        "interpretation": "Targeted high-yield Library recovery added historical Brain Dump, Dark Helix, AXIS3, Pattern Engine, CTOS, Artifact Continuity, Workshop, and Digital Scrapboard mechanisms. Three nominal cross-domain hits were inspected and rejected as generic-type or known-lineage false positives, then the namespaced rerun returned zero defensible cross-domain survivors."
+      },
+      "high_value_windows_targets": [
+        "WCHO / Dark Helix local project",
+        "ollie_twis_engine scratch/local engine",
+        "DARK_HELIX_CREATOR_OS_LOCAL.zip",
+        "wtf-pattern-engine local project",
+        "other local-only archives revealed by Windows manifest"
+      ],
+      "status": "STOP_POINT_REACHED",
+      "next": "WAIT_FOR_WINDOWS_DELTA_OR_EXPLICIT_OWNER_TARGET"
     }
   }
 }
