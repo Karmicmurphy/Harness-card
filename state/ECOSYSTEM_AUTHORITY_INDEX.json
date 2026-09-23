@@ -402,6 +402,6 @@
         "foundation_authority": false
       }
     ],
-    "next": "Targeted V2 continuation is complete. Wait for a Windows delta/manifest or explicit owner-selected source before resuming discovery."
+    "next": "STOP POINT REACHED AFTER TARGETED V2 CONTINUATION. Do not continue cloud/library digging by default. The next highest-value recovery source is local Windows bytes/manifest from the known WCHO, ollie_twis_engine, DARK_HELIX, Pattern Engine, and other local project paths; otherwise wait for an explicit owner-selected source."
   }
 }
