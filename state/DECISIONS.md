@@ -60,3 +60,12 @@ This file stores durable, non-sensitive decisions that future agents should not 
 - **Applies to:** Estate discovery / Digital Scrapyard / Foundation discovery lane
 - **Authority/evidence:** Digital Scrapyard main `75d83feeb566d19e58b00d43404a640c67930787`; PR #23; proof runs `35730332924` and `35730333270`.
 - **Reopen condition:** Revisit only if a later multi-source typed-atom run shows that metadata suppression removed genuinely useful discovery evidence or a stronger typed representation replaces this rule.
+
+
+### 2026-09-22 — Estate-wide discovery stop point reached
+- **Type:** EVIDENCE / STATE / STOP
+- **Decision or correction:** The estate-discovery work order reached its declared stop condition. Digital Scrapyard PR #25 merged Estate-Wide Unload V1 with 90 typed estate atoms, known-pair suppression, and typed ambiguous-I/O cleanup. Combined with 18 typed PersonalJarvis primitives, proof run `35793574471` evaluated 108 artifacts, returned 9 scored collisions, and returned zero defensible cross-domain survivors.
+- **Why it matters:** Continuing broad atomization now has diminishing evidence value and risks turning recovery into another endless framework/research loop. The next pass must be earned by a high-value newly accessible source yard or a specific owner-selected lead.
+- **Applies to:** Foundation V0 / Estate Discovery / Missing Gear
+- **Authority/evidence:** `Karmicmurphy/digital-scrapyard-autopilot@ad67954ceae627c7e1436295b6d72d1d37e69e2b`; PR #25; proof run `35793574471`; `warehouse/estate/ESTATE_WIDE_UNLOAD_V1.json`.
+- **Reopen condition:** Local Windows becomes accessible; deeper Replit/Cloudflare/Library/Drive material is explicitly selected and likely high-yield; or the owner explicitly asks to resume discovery on a named source or mechanism.
