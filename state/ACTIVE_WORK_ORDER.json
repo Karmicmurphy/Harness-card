@@ -2,13 +2,15 @@
   "schema_version": "1.0.0",
   "source_project_state_path": "state/CURRENT_PROJECT.json",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
-  "lane": "ESTATE DISCOVERY / MISSING GEAR COLLISION / HUMAN REVIEW",
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_NOVELTY_GATE_V1_PROVEN_IN_TEST; ESTATE_PLUS_TYPED_WAREHOUSE_RUN_36_ARTIFACTS_7_COLLISIONS; NO_CROSS_DOMAIN_CANDIDATE_SURVIVED; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
-  "next_action": "Atomize the live estate into typed primitive records (real mechanisms, inputs, outputs, interfaces, provenance) across multiple source yards, starting with AIOS, Workshop, Foundry, and Harness; then rerun the novelty-gated Missing Gear collision engine. Do not treat labels/status/known overlaps as discovery evidence and do not build another orchestration framework.",
-  "status": "ACTIVE",
+  "lane": "ESTATE DISCOVERY / MISSING GEAR COLLISION / STOP POINT",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_NOVELTY_GATE_V1_PROVEN_IN_TEST; ESTATE_WIDE_UNLOAD_V1_90_TYPED_ATOMS; COMBINED_MISSING_GEAR_RUN_108_ARTIFACTS_9_COLLISIONS_0_CROSS_DOMAIN_SURVIVORS; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
+  "next_action": "STOP POINT REACHED. Do not continue broad atomization by default. Resume estate discovery only when a high-value blocked/partial source yard becomes accessible (especially local Windows, deeper Replit, Cloudflare, or a specifically chosen Library/Drive lineage) or when the owner explicitly selects a source/lead to pursue.",
+  "status": "DONE",
   "blockers": [
-    "ESTATE_ATOMIZATION_INCOMPLETE"
+    "LOCAL_WINDOWS_NOT_RECONCILED",
+    "DIRECT_CLOUDFLARE_ACCOUNT_INVENTORY_BLOCKED",
+    "REPLIT_DEEP_EXTRACTION_PARTIAL"
   ],
-  "stop_condition": "Stop when at least two independent source yards have provenance-backed typed primitives and the novelty-gated rerun either surfaces a real cross-domain candidate for falsification or proves the current typed estate has none.",
+  "stop_condition": "SATISFIED: multiple independent source yards now have provenance-backed typed primitives, and the hardened multi-source Missing Gear rerun produced zero defensible cross-domain survivors.",
   "updated_at": "2026-09-22"
 }
