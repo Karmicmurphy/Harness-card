@@ -3,42 +3,53 @@
 Project: `FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY`
 State source: `state/CURRENT_PROJECT.json`
 
-## TARGET
-Stop the discovery system from congratulating itself for rediscovering labels, then give it enough real mechanism-level inventory to find genuinely non-obvious cross-domain fits.
+## STATUS
 
-## VERIFIED CURRENT
-- Foundation core remains operational in test; it is infrastructure, not the goal.
-- PersonalJarvis / FRIDAY remains **SHELVED BY OWNER**.
-- Missing Gear Novelty Gate V1 is merged in `Karmicmurphy/digital-scrapyard-autopilot@75d83feeb566d19e58b00d43404a640c67930787`.
-- PR #23 passed both repository verification and the real estate+warehouse proof.
-- Known overlaps, existing lanes, mode, implementation/evidence state, cost, priority, and rights metadata cannot earn novelty points.
-- A candidate must now have a previously undeclared output->input bridge, reusable mechanism match, or typed interface match.
-- Combined proof loaded **36 artifacts** and returned only **7 scored collisions**.
-- **Zero cross-domain candidates survived.** All seven were inside the now-typed PersonalJarvis salvage source.
-- That means the scoring noise is substantially reduced; the current bottleneck is that most of the rest of the estate is still described at project/capability-summary level rather than as typed atoms.
+**DONE — STOP CONDITION SATISFIED**
 
-## LANE
-ESTATE DISCOVERY / MISSING GEAR COLLISION / HUMAN REVIEW
+This is a deliberate stopping point, not abandonment.
 
-## ONE MOVE
-Atomize live authority sources into provenance-backed primitive records: real mechanisms, inputs, outputs, and interfaces. Start with AIOS, Workshop, Foundry, and Harness. Then rerun the novelty-gated collision engine across those atoms plus the warehouse.
+## WHAT WAS PROVEN
 
-## DO NOT
-- Reintroduce known overlaps as mechanisms.
-- Let status/mode/cost/evidence labels score as discovery.
-- Build another assistant, orchestration framework, or UI to solve this.
-- Call a same-source assembly a breakthrough just because it scores.
-- Infer source mechanisms that cannot be tied back to real code/docs.
+- Missing Gear novelty scoring no longer rewards known overlaps, status labels, or already-declared artifact pairs.
+- Estate-Wide Unload V1 is merged in `Karmicmurphy/digital-scrapyard-autopilot@ad67954ceae627c7e1436295b6d72d1d37e69e2b`.
+- The unload contains **90 provenance-backed typed estate atoms** across multiple source yards.
+- The existing PersonalJarvis intake contributes **18 discovery-eligible typed primitives**.
+- Combined proof run `35793574471` evaluated **108 artifacts**, produced **9 scored collisions**, and produced **0 defensible cross-domain survivors**.
+- That satisfies this work order's declared stop condition.
 
-## PROOF
-1. Typed atoms point to real source files/revisions.
-2. At least two independent source yards contribute typed primitives.
-3. Metadata-only and known-overlap pairs remain score zero.
-4. The rerun records cross-domain survivors separately from same-source assemblies.
-5. Any surviving lead is inspected and classified KEEP / KILL / SALVAGE-ONLY before more building.
+## WHAT THIS MEANS
 
-## BLOCKER
-`ESTATE_ATOMIZATION_INCOMPLETE`
+The machine did not find a defensible Missing Gear candidate from the currently typed accessible estate.
+
+That is a valid result.
+
+Do not respond by building another framework or by endlessly atomizing low-yield sources.
+
+## KNOWN OPEN YARDS
+
+- Local Windows / local-only archives — high value, inaccessible in this session.
+- Direct Cloudflare account inventory — blocked; indirect repo evidence only.
+- Replit — inventory exists, but deeper extraction is partial after timeout.
+- Library / Drive — large and only targeted project-relevant recovery has been done.
+- Some low-depth GitHub repos remain cataloged rather than deeply atomized.
+
+## RESTART CONDITION
+
+Resume this lane only when one of these is true:
+
+1. a high-value blocked/partial source yard becomes accessible;
+2. Randy explicitly selects a named source, mechanism, project, or collision to pursue;
+3. new evidence invalidates the current zero-cross-domain result.
+
+## DO NOT RESTART WITH
+
+- Jarvis / FRIDAY;
+- another orchestration framework;
+- another generic assistant;
+- more metadata-only inventory;
+- broad web research without a named gap.
 
 ## CURRENT NEXT ACTION
-Atomize the live estate into typed primitive records (real mechanisms, inputs, outputs, interfaces, provenance) across multiple source yards, starting with AIOS, Workshop, Foundry, and Harness; then rerun the novelty-gated Missing Gear collision engine. Do not treat labels/status/known overlaps as discovery evidence and do not build another orchestration framework.
+
+STOP POINT REACHED. Do not continue broad atomization by default. Resume estate discovery only when a high-value blocked/partial source yard becomes accessible (especially local Windows, deeper Replit, Cloudflare, or a specifically chosen Library/Drive lineage) or when the owner explicitly selects a source/lead to pursue.
