@@ -29,11 +29,11 @@ Harness Card does not own project code. It points to the authoritative project l
 - **Authority repo/path/device:** Governance `Karmicmurphy/Harness-card@main`; factory `Karmicmurphy/temporal-capability-foundry@software-builder-v0`; runtime `Karmicmurphy/Untethered-AIOS@main`; salvage `Karmicmurphy/digital-scrapyard-autopilot@main`; cockpit `Karmicmurphy/Ollie_Twis_Holo_workshop@living-workshop-main-build`.
 - **Default branch:** See `state/CURRENT_PROJECT.json`; that file is the current machine-readable authority.
 - **Live/deploy target:** No live product/deploy target is governing this lane. Current work is deterministic discovery over the recovered estate.
-- **Current evidence state:** PROVEN_IN_TEST core; Missing Gear Novelty Gate V1 PROVEN_IN_TEST on combined estate+typed-warehouse input. The latest 36-artifact run produced 7 scored collisions and zero cross-domain survivors, so estate atomization is the current bottleneck. PersonalJarvis / FRIDAY is SHELVED_BY_OWNER.
+- **Current evidence state:** PROVEN_IN_TEST core; Estate-Wide Unload V1 is merged in Digital Scrapyard. The hardened combined run used 90 typed estate atoms + 18 typed PersonalJarvis primitives = 108 artifacts, produced 9 scored collisions, and produced **0 defensible cross-domain survivors**. The work-order stop condition is satisfied. PersonalJarvis / FRIDAY remains SHELVED_BY_OWNER.
 - **Current work order:** `state/ACTIVE_WORK_ORDER.json` and `state/ACTIVE_WORK_ORDER.md`, both required to agree with `state/CURRENT_PROJECT.json`.
 - **Last verified:** 2026-09-22.
 - **Do not restart / locked exclusions:** Do not route back into PersonalJarvis / FRIDAY without a new explicit owner decision. Do not rebuild proven Builder/AIOS/Independent Proof primitives without invalidating evidence. Do not treat collision ranking as proof of novelty.
-- **Notes:** Current lane is estate discovery. Known overlaps/status metadata are barred from novelty scoring. Next is provenance-backed atomization of AIOS, Workshop, Foundry, and Harness so the collision engine has real multi-source mechanisms/interfaces to compare. TWIS Loop Deck / Pro Rig, First3 Local, Coilside, Terri Tax, and commerce/product lanes remain separate unless an exact primitive is explicitly reconciled and promoted.
+- **Notes:** Estate discovery has reached a clean stopping point. Known pairs, known overlaps, and metadata are barred from novelty scoring. Do not keep atomizing blindly; resume only for a newly accessible high-value source yard or an explicit owner-selected source/lead. TWIS Loop Deck / Pro Rig, First3 Local, Coilside, Terri Tax, and commerce/product lanes remain separate unless an exact primitive is explicitly reconciled and promoted.
 
 
 ### TWIS LOOP DECK

@@ -20,7 +20,7 @@
     "salvage": {
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
       "branch": "main",
-      "sha": "75d83feeb566d19e58b00d43404a640c67930787"
+      "sha": "ad67954ceae627c7e1436295b6d72d1d37e69e2b"
     },
     "cockpit": {
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
@@ -29,10 +29,10 @@
       "note": "GitHub Phase 1A proven in test; local Windows Workshop remains private authority pending reconciliation"
     }
   },
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_NOVELTY_GATE_V1_PROVEN_IN_TEST; ESTATE_PLUS_TYPED_WAREHOUSE_RUN_36_ARTIFACTS_7_COLLISIONS; NO_CROSS_DOMAIN_CANDIDATE_SURVIVED; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
-  "lane": "ESTATE DISCOVERY / MISSING GEAR COLLISION / HUMAN REVIEW",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_NOVELTY_GATE_V1_PROVEN_IN_TEST; ESTATE_WIDE_UNLOAD_V1_90_TYPED_ATOMS; COMBINED_MISSING_GEAR_RUN_108_ARTIFACTS_9_COLLISIONS_0_CROSS_DOMAIN_SURVIVORS; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
+  "lane": "ESTATE DISCOVERY / MISSING GEAR COLLISION / STOP POINT",
   "last_verified_at": "2026-09-22",
-  "next_action": "Atomize the live estate into typed primitive records (real mechanisms, inputs, outputs, interfaces, provenance) across multiple source yards, starting with AIOS, Workshop, Foundry, and Harness; then rerun the novelty-gated Missing Gear collision engine. Do not treat labels/status/known overlaps as discovery evidence and do not build another orchestration framework.",
+  "next_action": "STOP POINT REACHED. Do not continue broad atomization by default. Resume estate discovery only when a high-value blocked/partial source yard becomes accessible (especially local Windows, deeper Replit, Cloudflare, or a specifically chosen Library/Drive lineage) or when the owner explicitly selects a source/lead to pursue.",
   "separate_projects": [
     "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
     "First3 Local / nemoclw_new_agent — proving-ground product; not Foundation authority",
@@ -105,6 +105,24 @@
         "interpretation": "Known-overlap/status noise was removed. Surviving candidates were all within the typed PersonalJarvis salvage source, showing that the remaining bottleneck is uneven atomization across the estate."
       },
       "next": "TYPE_MULTIPLE_SOURCE_YARDS_THEN_RERUN"
+    },
+    "missing_gear_collision_v2": {
+      "repo": "Karmicmurphy/digital-scrapyard-autopilot",
+      "branch": "main",
+      "sha": "ad67954ceae627c7e1436295b6d72d1d37e69e2b",
+      "pull_request": 25,
+      "evidence_state": "PROVEN_IN_TEST_MULTI_SOURCE_ESTATE_UNLOAD",
+      "proof_run": 35793574471,
+      "unload": {
+        "typed_estate_atoms": 90,
+        "typed_personal_jarvis_primitives": 18,
+        "combined_artifacts": 108,
+        "scored_collisions": 9,
+        "cross_domain_survivors": 0,
+        "interpretation": "The stop condition was satisfied: multiple independent source yards were atomized and the hardened novelty gate produced no defensible cross-domain candidate."
+      },
+      "status": "STOP_POINT_REACHED",
+      "next": "WAIT_FOR_HIGH_VALUE_NEW_SOURCE_OR_EXPLICIT_OWNER_TARGET"
     }
   }
 }
