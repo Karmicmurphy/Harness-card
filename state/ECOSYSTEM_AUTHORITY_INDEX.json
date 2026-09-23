@@ -110,7 +110,7 @@
     {
       "project": "Digital Scrapyard / Digital Scrap Forge",
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
-      "head": "75d83feeb566d19e58b00d43404a640c67930787",
+      "head": "ad67954ceae627c7e1436295b6d72d1d37e69e2b",
       "authority_kind": "PRIVATE_PRODUCT_AND_CANONICAL_SALVAGE_SKILL_SOURCE",
       "role": "Rights-first digital reclamation/software-factory business plus canonical salvage-suite skill source.",
       "recovered_primitives": [
@@ -126,7 +126,9 @@
         "Project Context Harvester",
         "Rabbit-Hole Governor",
         "Missing Gear Collision Engine",
-        "Missing Gear Novelty Gate"
+        "Missing Gear Novelty Gate",
+        "Estate-Wide Unload V1",
+        "Known Pair Suppression"
       ]
     },
     {
@@ -184,7 +186,7 @@
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
       "visibility": "private",
       "default_branch": "main",
-      "head": "75d83feeb566d19e58b00d43404a640c67930787"
+      "head": "ad67954ceae627c7e1436295b6d72d1d37e69e2b"
     },
     {
       "repo": "Karmicmurphy/temporal-capability-foundry",
@@ -326,7 +328,7 @@
     "self_reference_rule": "Do not claim a durable exact Harness-card HEAD inside a Harness-card file; committing the file advances HEAD. Resolve Harness-card main live when exact current SHA matters."
   },
   "active_foundation_v0": {
-    "status": "CURRENT_ACTIVE_PROJECT_DISCOVERY_LANE_ATOMIZATION_REQUIRED",
+    "status": "CURRENT_ACTIVE_PROJECT_DISCOVERY_STOP_POINT_REACHED",
     "canonical_refs": [
       {
         "role": "governance",
@@ -349,7 +351,7 @@
         "role": "salvage",
         "repo": "Karmicmurphy/digital-scrapyard-autopilot",
         "ref": "main",
-        "sha": "75d83feeb566d19e58b00d43404a640c67930787"
+        "sha": "ad67954ceae627c7e1436295b6d72d1d37e69e2b"
       },
       {
         "role": "cockpit",
@@ -397,6 +399,6 @@
         "foundation_authority": false
       }
     ],
-    "next": "Atomize the live estate into typed primitive records (real mechanisms, inputs, outputs, interfaces, provenance) across multiple source yards, starting with AIOS, Workshop, Foundry, and Harness; then rerun the novelty-gated Missing Gear collision engine. Do not treat labels/status/known overlaps as discovery evidence and do not build another orchestration framework."
+    "next": "STOP POINT REACHED. Do not continue broad atomization by default. Resume estate discovery only when a high-value blocked/partial source yard becomes accessible (especially local Windows, deeper Replit, Cloudflare, or a specifically chosen Library/Drive lineage) or when the owner explicitly selects a source/lead to pursue."
   }
 }
