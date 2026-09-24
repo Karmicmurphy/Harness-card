@@ -11,6 +11,11 @@ on:
       - "projects/PROJECT_INDEX.md"
       - "scripts/check_authority_spine.py"
       - "tests/test_authority_spine.py"
+      - "tests/test_self_improve.py"
+      - "tests/test_skill_registry.py"
+      - "workers/self_improve.py"
+      - "config/skill_registry.json"
+      - "scripts/resolve_skill.py"
       - ".github/workflows/authority-spine-guard.yml"
 
 permissions:
@@ -32,4 +37,7 @@ jobs:
         run: python scripts/check_authority_spine.py
 
       - name: Regression tests
-        run: python -m unittest tests.test_authority_spine -v
+        run: |
+          python -m unittest tests.test_authority_spine -v
+          python tests/test_self_improve.py
+          python -m unittest tests.test_skill_registry -v
