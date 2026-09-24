@@ -11,6 +11,11 @@ The user should not need to name internal skills. Route automatically from situa
 5. Require proof before promotion.
 6. Close explicitly.
 
+
+## Executable skill resolution
+
+Before applying a named skill, resolve it through `config/skill_registry.json` (or `python scripts/resolve_skill.py <skill>`). The resolver establishes one canonical repo/path/ref and whether the skill is procedural, conditional, executable, or only mapped. Do not silently substitute a stale duplicate from another repo.
+
 ## Skill triggers
 
 ### Environment Preflight
