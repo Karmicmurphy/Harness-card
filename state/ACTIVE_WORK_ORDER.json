@@ -2,15 +2,15 @@
   "schema_version": "1.0.0",
   "source_project_state_path": "state/CURRENT_PROJECT.json",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
-  "lane": "ESTATE DISCOVERY / TARGETED V2 CONTINUATION / STOP POINT",
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_NOVELTY_GATE_V1_PROVEN_IN_TEST; ESTATE_WIDE_UNLOAD_V2_109_TYPED_ESTATE_ATOMS; COMBINED_MISSING_GEAR_V2_RUN_127_ARTIFACTS_9_COLLISIONS_0_CROSS_DOMAIN_SURVIVORS; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
-  "next_action": "STOP POINT REACHED AFTER TARGETED V2 CONTINUATION. Do not continue cloud/library digging by default. The next highest-value recovery source is local Windows bytes/manifest from the known WCHO, ollie_twis_engine, DARK_HELIX, Pattern Engine, and other local project paths; otherwise wait for an explicit owner-selected source.",
-  "status": "DONE",
+  "lane": "ARRIVAL / INTEGRATION REPAIR / LIVE VERTICAL-SLICE PROOF",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; HUMAN_SIGNAL_ARRIVAL_V0_PROVEN_IN_TEST_AND_MERGED; WORKSHOP_FOUNDRY_LOOPBACK_BRIDGE_V0_PROVEN_IN_TEST_AND_MERGED; LOCAL_SOURCE_YARD_INVENTORY_V1_PROVEN_IN_TEST; LIVE_WINDOWS_VERTICAL_SLICE_NOT_YET_PROVEN",
+  "next_action": "Run the first live Windows vertical slice: Workshop -> Foundry human-signal round trip using the merged branches; then extend one shared correlation identity into bounded Foundry job -> AIOS -> Independent Proof -> Workshop result. Also run the read-only local source-yard inventory against a bounded Windows target before any whole-drive sweep.",
+  "status": "ACTIVE",
   "blockers": [
-    "LOCAL_WINDOWS_NOT_RECONCILED",
-    "DIRECT_CLOUDFLARE_ACCOUNT_INVENTORY_BLOCKED",
-    "REPLIT_DEEP_EXTRACTION_PARTIAL"
+    "LOCAL_WINDOWS_FIELD_TRIAL_NOT_RUN",
+    "FULL_JOB_CORRELATION_NOT_YET_WIRED",
+    "OPEN_DOOR_UI_NOT_YET_EXPOSED"
   ],
-  "stop_condition": "SATISFIED AGAIN AFTER TARGETED V2 CONTINUATION: 109 typed estate atoms plus 18 typed PersonalJarvis primitives produced 127 evaluated artifacts, 9 scored collisions, and zero defensible cross-domain survivors after false-positive cleanup.",
-  "updated_at": "2026-09-23"
+  "stop_condition": "One owner natural-language input traverses Workshop -> Foundry -> bounded Foundry job -> AIOS -> Independent Proof -> Workshop under one visible correlation identity, and the read-only Windows inventory produces a real local manifest without executing or importing source files.",
+  "updated_at": "2026-09-24"
 }

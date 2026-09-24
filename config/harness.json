@@ -1,6 +1,6 @@
 {
   "name": "Harness Card",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "purpose": "Canonical AI operating harness for intent recovery, continuity, skill routing, bounded execution, proof, learning, and closeout across projects.",
   "manual_triggers": [
     "Use Harness Card",
@@ -15,7 +15,8 @@
     "state/CURRENT_PROJECT.json",
     "state/ACTIVE_WORK_ORDER.md",
     "projects/PROJECT_INDEX.md",
-    "skills/SKILL_SOURCES.md"
+    "skills/SKILL_SOURCES.md",
+    "config/skill_registry.json"
   ],
   "evidence_states": [
     "CLAIMED",
@@ -37,5 +38,10 @@
     "repository_expected_public": true,
     "allow_secrets": false,
     "allow_sensitive_personal_data": false
+  },
+  "skill_resolution": {
+    "registry": "config/skill_registry.json",
+    "resolver": "scripts/resolve_skill.py",
+    "rule": "Every routed skill must resolve to one canonical repo/path/ref before use."
   }
 }

@@ -9,8 +9,8 @@
     "factory": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "branch": "software-builder-v0",
-      "sha": "44dd53245a783264c0ae2d0ad38e5f4791bc8617",
-      "functional_proof_head": "1aca8d7b5bc52cc6d3d9564c90aa02e363a0521e"
+      "sha": "3bb8e0d073f4bdda2af414340633a95b0e182887",
+      "functional_proof_head": "d4e6b25bb6b1395ad043a7b2f90b926f01cce489"
     },
     "runtime": {
       "repo": "Karmicmurphy/Untethered-AIOS",
@@ -25,14 +25,14 @@
     "cockpit": {
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
       "branch": "living-workshop-main-build",
-      "sha": "29deb23f917199b09b17d6b87a2f33c40657ea79",
-      "note": "GitHub Phase 1A proven in test; local Windows Workshop remains private authority pending reconciliation"
+      "sha": "f083c699d0dbf1837a8f207a53bcb243abc06be2",
+      "note": "GitHub branch includes Phase 1A plus loopback Foundry human-signal bridge and read-only source-yard inventory, proven in CI; live Windows field proof remains pending."
     }
   },
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_NOVELTY_GATE_V1_PROVEN_IN_TEST; ESTATE_WIDE_UNLOAD_V2_109_TYPED_ESTATE_ATOMS; COMBINED_MISSING_GEAR_V2_RUN_127_ARTIFACTS_9_COLLISIONS_0_CROSS_DOMAIN_SURVIVORS; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
-  "lane": "ESTATE DISCOVERY / TARGETED V2 CONTINUATION / STOP POINT",
-  "last_verified_at": "2026-09-23",
-  "next_action": "STOP POINT REACHED AFTER TARGETED V2 CONTINUATION. Do not continue cloud/library digging by default. The next highest-value recovery source is local Windows bytes/manifest from the known WCHO, ollie_twis_engine, DARK_HELIX, Pattern Engine, and other local project paths; otherwise wait for an explicit owner-selected source.",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; HUMAN_SIGNAL_ARRIVAL_V0_PROVEN_IN_TEST_AND_MERGED; WORKSHOP_FOUNDRY_LOOPBACK_BRIDGE_V0_PROVEN_IN_TEST_AND_MERGED; LOCAL_SOURCE_YARD_INVENTORY_V1_PROVEN_IN_TEST; LIVE_WINDOWS_VERTICAL_SLICE_NOT_YET_PROVEN",
+  "lane": "ARRIVAL / INTEGRATION REPAIR / LIVE VERTICAL-SLICE PROOF",
+  "last_verified_at": "2026-09-24",
+  "next_action": "Run the first live Windows vertical slice: Workshop -> Foundry human-signal round trip using the merged branches; then extend one shared correlation identity into bounded Foundry job -> AIOS -> Independent Proof -> Workshop result. Also run the read-only local source-yard inventory against a bounded Windows target before any whole-drive sweep.",
   "separate_projects": [
     "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
     "First3 Local / nemoclw_new_agent — proving-ground product; not Foundation authority",
