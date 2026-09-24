@@ -1,18 +1,63 @@
 {
-  "schema_version": "1.1.0",
-  "generated_at": "2026-09-24T10:07:33.939333+00:00",
+  "schema_version": "1.2.0",
+  "generated_at": "2026-09-24T18:58:07.480419+00:00",
   "active_project": "FOUNDATION V0 \u2014 HUMAN-OWNED SOFTWARE FACTORY",
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; ESTATE_MAP_TO_QUEUE_PROVEN; MINIMUM_NECESSARY_INTELLIGENCE_PROVEN; MISSING_GEAR_NOVELTY_GATE_V1_PROVEN_IN_TEST; ESTATE_WIDE_UNLOAD_V2_109_TYPED_ESTATE_ATOMS; COMBINED_MISSING_GEAR_V2_RUN_127_ARTIFACTS_9_COLLISIONS_0_CROSS_DOMAIN_SURVIVORS; FRIDAY_GATEWAY_V0_SHELVED_BY_OWNER",
-  "incident_count": 0,
-  "wins": 0,
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; HUMAN_SIGNAL_ARRIVAL_V0_PROVEN_IN_TEST_AND_MERGED; WORKSHOP_FOUNDRY_LOOPBACK_BRIDGE_V0_PROVEN_IN_TEST_AND_MERGED; LOCAL_SOURCE_YARD_INVENTORY_V1_PROVEN_IN_TEST; LIVE_WINDOWS_VERTICAL_SLICE_NOT_YET_PROVEN",
+  "incident_count": 12,
+  "wins": 6,
   "losses": 0,
-  "blocked": 0,
+  "blocked": 6,
   "open": 0,
-  "user_facing_failure_cycles_observed": 0,
-  "learned_rule_count": 0,
-  "weird_salvage_count": 0,
-  "top_failure_layers": [],
-  "release_receipt_verdict": "UNKNOWN",
+  "user_facing_failure_cycles_observed": 6,
+  "learned_rule_count": 12,
+  "weird_salvage_count": 2,
+  "top_failure_layers": [
+    [
+      "CONTRACT",
+      10
+    ],
+    [
+      "APPLICATION",
+      9
+    ],
+    [
+      "TEST-CI",
+      6
+    ],
+    [
+      "DEPLOY",
+      2
+    ],
+    [
+      "AUTHORITY",
+      2
+    ],
+    [
+      "MOBILE AUDIO",
+      2
+    ],
+    [
+      "CREATIVE",
+      2
+    ],
+    [
+      "EDGE",
+      1
+    ],
+    [
+      "LEARNING",
+      1
+    ],
+    [
+      "HARNESS",
+      1
+    ],
+    [
+      "ARCHITECTURE",
+      1
+    ]
+  ],
+  "release_receipt_verdict": "DONE / BLOCKED BY <X> / FAILED FOR <Y> / RETIRED",
   "authority": {
     "governance": {
       "repo": "Karmicmurphy/Harness-card",
@@ -21,8 +66,8 @@
     "factory": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "branch": "software-builder-v0",
-      "sha": "44dd53245a783264c0ae2d0ad38e5f4791bc8617",
-      "functional_proof_head": "1aca8d7b5bc52cc6d3d9564c90aa02e363a0521e"
+      "sha": "3bb8e0d073f4bdda2af414340633a95b0e182887",
+      "functional_proof_head": "d4e6b25bb6b1395ad043a7b2f90b926f01cce489"
     },
     "runtime": {
       "repo": "Karmicmurphy/Untethered-AIOS",
@@ -37,8 +82,8 @@
     "cockpit": {
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
       "branch": "living-workshop-main-build",
-      "sha": "29deb23f917199b09b17d6b87a2f33c40657ea79",
-      "note": "GitHub Phase 1A proven in test; local Windows Workshop remains private authority pending reconciliation"
+      "sha": "f083c699d0dbf1837a8f207a53bcb243abc06be2",
+      "note": "GitHub branch includes Phase 1A plus loopback Foundry human-signal bridge and read-only source-yard inventory, proven in CI; live Windows field proof remains pending."
     }
   }
 }
