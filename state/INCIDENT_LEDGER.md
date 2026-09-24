@@ -191,14 +191,14 @@ Harness scorecard stale during first Chat Software Harness field trial
 - **CURRENT AUTHORITY:** `Karmicmurphy/Harness-card` / `main`; first formal Chat Software Harness field trial.
 - **LAYER:** AUTHORITY / LEARNING / HARNESS
 - **FALSE LEADS:** Missing incidents, missing project state, user failure to request a refresh.
-- **ROOT CAUSE:** UNKNOWN; either the self-improvement generator has not rerun after current changes or its parser/generation path is not ingesting the current ledger/state correctly.
-- **FIX:** Treat the scorecard as stale derived data until its generation path is rerun and verified against CURRENT_PROJECT + INCIDENT_LEDGER.
+- **ROOT CAUSE:** The self-improvement worker used double-escaped Markdown regexes, so it parsed zero incidents from a populated ledger; the workflow validated headings rather than semantic counts, allowing the empty result to be recorded as a WIN.
+- **FIX:** Correct the ledger parser, fail closed when populated ledgers recover zero records, run the real self-improvement regression in CI, require nonzero semantic counts, and regenerate derived state from current authority.
 - **REGRESSION / PREVENTION:** A field-trial closeout must compare generated scorecard authority/counts against canonical state before trusting the scorecard.
-- **REAL-WORLD PROOF:** PENDING scorecard regeneration/verification.
-- **PREVENTION ARTIFACT:** First field-trial log plus this incident.
+- **REAL-WORLD PROOF:** PROVEN_ON_MAIN 2026-09-24: repaired self-improvement run regenerated 12 incidents, 12 learned rules, 6 user-facing failure cycles, and current Foundry/Workshop authority in `state/HARNESS_SCORECARD.json`.
+- **PREVENTION ARTIFACT:** Corrected parser, fail-closed semantic validation, `tests/test_self_improve.py` in the PR guard, and regenerated scorecard/rules on main.
 - **BONUS SALVAGE:** The mismatch itself is a useful Fresh-Brain/Doctor check: derived state must reconcile with canonical state.
-- **VERDICT:** BLOCKED
-- **STOP:** Close when generated scorecard reflects the current project and recorded incidents.
+- **VERDICT:** DONE
+- **STOP:** The generated scorecard now reconciles with the populated Incident Ledger and current authority; future mismatches are guarded by CI.
 
 
 ### INCIDENT
