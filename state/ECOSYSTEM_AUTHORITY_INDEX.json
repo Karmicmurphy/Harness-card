@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23",
+  "generated_at": "2026-09-24",
   "status": "RECOVERY_INDEX",
   "purpose": "Prevent reinvention by recovering existing project authority, lineage, reusable primitives, and overlap before public research or new builds.",
   "global_rule": "RECOVER BEFORE REBUILD",
@@ -57,9 +57,9 @@
     {
       "project": "Twis Holo Workshop",
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
-      "head": "29deb23f917199b09b17d6b87a2f33c40657ea79",
-      "authority_kind": "GITHUB_LIVING_WORKSHOP_PHASE1A_PROVEN_IN_TEST; LOCAL_MACHINE_REMAINS_PRIVATE_AUTHORITY",
-      "role": "Human-facing working room/front door; artifact-first local/private home base with bounded cloud field kit.",
+      "head": "f083c699d0dbf1837a8f207a53bcb243abc06be2",
+      "authority_kind": "GITHUB_LIVING_WORKSHOP_PHASE1A_PLUS_ARRIVAL_BRIDGE_AND_LOCAL_INVENTORY_PROVEN_IN_TEST; LOCAL_MACHINE_REMAINS_PRIVATE_AUTHORITY",
+      "role": "Human-facing working room/front door; now includes a loopback Foundry arrival bridge and read-only local source-yard inventory, still requiring live Windows field proof.",
       "recovered_primitives": [
         "FlashRiver intake",
         "Artifact Compass UI",
@@ -137,7 +137,7 @@
     {
       "project": "Temporal Capability Foundry",
       "repo": "Karmicmurphy/temporal-capability-foundry",
-      "head": "32c8a292d9d753a79a163a470dd5873e98e87dcb",
+      "head": "3bb8e0d073f4bdda2af414340633a95b0e182887",
       "authority_kind": "CURRENT_PRIVATE_FOUNDATION_CORE_OPERATIONAL_IN_TEST",
       "role": "Framework-independent capability foundation: recover intent, search present/past, salvage, rights-check, compile, execute, evaluate, learn candidate, prove, promote, activate/rollback.",
       "current_proven_state": [
@@ -149,9 +149,11 @@
         "human-operated exact-patch Foundation runner",
         "normal jobs stop at CERTIFIED_AWAITING_HUMAN_REVIEW",
         "capability improvement stops at AWAITING_HUMAN_APPROVAL",
-        "activation and rollback remain explicit"
+        "activation and rollback remain explicit",
+        "human-signal arrival contract preserving raw language before taxonomy",
+        "loopback Foundry arrival service for human-signal and minimum-intelligence routing"
       ],
-      "current_nonclaim": "Core is operational in test, not yet proven live on Randy's Windows machine. Workshop cockpit is not yet attached. AIOS does not mediate every Builder tool call.",
+      "current_nonclaim": "Core and human-signal arrival are proven in test. Workshop arrival transport is attached in test, but a full Workshop -> Foundry job -> AIOS -> Independent Proof -> Workshop live Windows round trip is not yet proven. AIOS does not mediate every Builder tool call.",
       "overlap_warning": [
         "Proof/evidence/certification concepts overlap CERT-RIVER.",
         "Execution/budget/recovery concepts overlap RiverKernel and Untethered AIOS.",
@@ -331,7 +333,7 @@
     "self_reference_rule": "Do not claim a durable exact Harness-card HEAD inside a Harness-card file; committing the file advances HEAD. Resolve Harness-card main live when exact current SHA matters."
   },
   "active_foundation_v0": {
-    "status": "CURRENT_ACTIVE_PROJECT_TARGETED_DISCOVERY_V2_STOP_POINT_REACHED",
+    "status": "CURRENT_ACTIVE_PROJECT_ARRIVAL_INTEGRATION_LIVE_PROOF",
     "canonical_refs": [
       {
         "role": "governance",
@@ -342,7 +344,7 @@
         "role": "factory",
         "repo": "Karmicmurphy/temporal-capability-foundry",
         "ref": "software-builder-v0",
-        "sha": "44dd53245a783264c0ae2d0ad38e5f4791bc8617"
+        "sha": "3bb8e0d073f4bdda2af414340633a95b0e182887"
       },
       {
         "role": "runtime",
@@ -360,7 +362,7 @@
         "role": "cockpit",
         "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
         "ref": "living-workshop-main-build",
-        "sha": "29deb23f917199b09b17d6b87a2f33c40657ea79"
+        "sha": "f083c699d0dbf1837a8f207a53bcb243abc06be2"
       }
     ],
     "bleed_control": "Anything outside canonical_refs is not current Foundation authority until reconciled and explicitly promoted.",
@@ -402,6 +404,6 @@
         "foundation_authority": false
       }
     ],
-    "next": "STOP POINT REACHED AFTER TARGETED V2 CONTINUATION. Do not continue cloud/library digging by default. The next highest-value recovery source is local Windows bytes/manifest from the known WCHO, ollie_twis_engine, DARK_HELIX, Pattern Engine, and other local project paths; otherwise wait for an explicit owner-selected source."
+    "next": "Run the first live Windows vertical slice: Workshop -> Foundry human-signal round trip using the merged branches; then extend one shared correlation identity into bounded Foundry job -> AIOS -> Independent Proof -> Workshop result. Also run the read-only local source-yard inventory against a bounded Windows target before any whole-drive sweep."
   }
 }
