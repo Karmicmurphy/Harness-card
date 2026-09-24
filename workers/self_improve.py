@@ -96,7 +96,13 @@ def rule_from(i):
 
 def receipt_verdict(text):
     m = re.search(r"^## VERDICT\s*\n([^\n]+)", text, re.M)
-    return m.group(1).strip() if m else "UNKNOWN"
+    if not m:
+        return "UNKNOWN"
+    value = m.group(1).strip()
+    template_markers = ("DONE / BLOCKED", "<X>", "<Y>")
+    if any(marker in value for marker in template_markers):
+        return "UNSET"
+    return value
 
 
 def main():
