@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Executable canonical skill resolution for Harness Card. A route must resolve to one canonical source before use.",
+  "sources": {
+    "harness_local": {
+      "repo": "Karmicmurphy/Harness-card",
+      "ref": "main"
+    },
+    "salvage_suite": {
+      "repo": "Karmicmurphy/digital-scrapyard-autopilot",
+      "ref": "main",
+      "authority_sha": "a059a27ef2bd662827a51da44dd8efb8863d634c",
+      "root": "skills/salvage-suite/skills"
+    }
+  },
+  "skills": {
+    "chat-software-harness": {
+      "source": "harness_local",
+      "path": "skills/chat-software-harness/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "business-operator-harness": {
+      "source": "harness_local",
+      "path": "skills/business-operator-harness/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "intent-recovery-compass": {
+      "source": "salvage_suite",
+      "path": "intent-recovery-compass/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "rabbit-hole-governor": {
+      "source": "salvage_suite",
+      "path": "rabbit-hole-governor/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "project-context-harvester": {
+      "source": "salvage_suite",
+      "path": "project-context-harvester/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "project-closeout-gate": {
+      "source": "salvage_suite",
+      "path": "project-closeout-gate/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "artifact-compass": {
+      "source": "salvage_suite",
+      "path": "artifact-compass/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "artifact-salvage": {
+      "source": "salvage_suite",
+      "path": "artifact-salvage/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "deep-sea-salvage": {
+      "source": "salvage_suite",
+      "path": "deep-sea-salvage/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "rights-gate": {
+      "source": "salvage_suite",
+      "path": "rights-gate/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "cost-complexity-challenge": {
+      "source": "salvage_suite",
+      "path": "cost-complexity-challenge/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "recombination-forge": {
+      "source": "salvage_suite",
+      "path": "recombination-forge/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "thought-economy": {
+      "source": "salvage_suite",
+      "path": "thought-economy/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "proof-gate": {
+      "source": "salvage_suite",
+      "path": "proof-gate/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "owner-interruption-minimizer": {
+      "source": "salvage_suite",
+      "path": "owner-interruption-minimizer/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "capability-downshift": {
+      "source": "salvage_suite",
+      "path": "capability-downshift/SKILL.md",
+      "kind": "PROCEDURAL"
+    },
+    "market-want-board": {
+      "source": "salvage_suite",
+      "path": "market-want-board/SKILL.md",
+      "kind": "PROCEDURAL_CONDITIONAL"
+    },
+    "scrap-built-tiny-house-salvage": {
+      "source": "salvage_suite",
+      "path": "scrap-built-tiny-house-salvage/SKILL.md",
+      "kind": "PROCEDURAL_CONDITIONAL"
+    },
+    "scam-eyes": {
+      "source": "salvage_suite",
+      "path": "scam-eyes/SKILL.md",
+      "kind": "PROCEDURAL_CONDITIONAL"
+    }
+  }
+}
