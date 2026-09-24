@@ -50,9 +50,9 @@
 - **Evidence:** PENDING.
 
 ### LR-010 — Harness scorecard stale during first Chat Software Harness field trial
-- **Root cause learned:** UNKNOWN; either the self-improvement generator has not rerun after current changes or its parser/generation path is not ingesting the current ledger/state correctly.
+- **Root cause learned:** The self-improvement worker used double-escaped Markdown regexes, so it parsed zero incidents from a populated ledger; the workflow validated headings rather than semantic counts, allowing the empty result to be recorded as a WIN.
 - **Rule:** A field-trial closeout must compare generated scorecard authority/counts against canonical state before trusting the scorecard.
-- **Evidence:** PENDING scorecard regeneration/verification.
+- **Evidence:** PROVEN_ON_MAIN 2026-09-24: repaired self-improvement run regenerated 12 incidents, 12 learned rules, 6 user-facing failure cycles, and current Foundry/Workshop authority in `state/HARNESS_SCORECARD.json`.
 
 ### LR-011 — Split Pro Rig / Loop Deck engine architecture
 - **Root cause learned:** The product evolved as two independently functioning prototypes instead of one shared musical core.

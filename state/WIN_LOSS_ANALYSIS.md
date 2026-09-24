@@ -3,10 +3,10 @@
 > AUTO-GENERATED. Do not hand-edit.
 
 - Incidents: **12**
-- Wins: **6**
+- Wins: **7**
 - Losses: **0**
-- Blocked/open: **6**
-- User-facing failure cycles: **6**
+- Blocked/open: **5**
+- User-facing failure cycles: **7**
 - Weird salvage items: **2**
 
 ## 1. Loop Deck looked done but phone showed old UI
@@ -92,11 +92,11 @@
 
 ## 10. Harness scorecard stale during first Chat Software Harness field trial
 
-- **Outcome:** BLOCKED
+- **Outcome:** DONE
 - **What went wrong:** `state/HARNESS_SCORECARD.json` still reported TWIS LOOP DECK at old SHA `134540fc0abf6d64a82111eb5564dd604b57b2b3`, zero incidents, zero wins, and zero losses while the Incident Ledger and current authority already contained active TWIS Pro Rig V4 work and multiple incidents.
-- **Why it failed:** UNKNOWN; either the self-improvement generator has not rerun after current changes or its parser/generation path is not ingesting the current ledger/state correctly.
-- **What changed:** Treat the scorecard as stale derived data until its generation path is rerun and verified against CURRENT_PROJECT + INCIDENT_LEDGER.
-- **Why the corrected path won:** PENDING scorecard regeneration/verification.
+- **Why it failed:** The self-improvement worker used double-escaped Markdown regexes, so it parsed zero incidents from a populated ledger; the workflow validated headings rather than semantic counts, allowing the empty result to be recorded as a WIN.
+- **What changed:** Correct the ledger parser, fail closed when populated ledgers recover zero records, run the real self-improvement regression in CI, require nonzero semantic counts, and regenerate derived state from current authority.
+- **Why the corrected path won:** PROVEN_ON_MAIN 2026-09-24: repaired self-improvement run regenerated 12 incidents, 12 learned rules, 6 user-facing failure cycles, and current Foundry/Workshop authority in `state/HARNESS_SCORECARD.json`.
 - **Permanent lesson:** A field-trial closeout must compare generated scorecard authority/counts against canonical state before trusting the scorecard.
 
 ## 11. Split Pro Rig / Loop Deck engine architecture
