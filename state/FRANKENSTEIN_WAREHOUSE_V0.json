@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21",
+  "generated_at": "2026-09-23",
   "status": "FRANKENSTEIN_WAREHOUSE_V0_CANDIDATE_REGISTRY",
   "legal_rule": "Partial copying does not automatically escape source license obligations. Reuse exact code only after Rights Gate; otherwise store mechanism descriptions and clean-room reimplementation targets.",
   "shelves": {
@@ -110,6 +110,21 @@
         "source": "nasa/SCH",
         "license": "NASA Open Source Agreement",
         "atom": "deterministic time-slot scheduler"
+      },
+      {
+        "source": "Raka-Saka/nagare-dsp",
+        "license": "AGPL-3.0",
+        "atom": "phone-capable classical DSP chain: psychoacoustic virtual bass + ISO-226 loudness compensation + compressor/brickwall limiter + transient/restoration mechanisms; code reuse requires AGPL obligations review"
+      },
+      {
+        "source": "alienware377/RootlessViPER4Android",
+        "license": "GPL-3.0",
+        "atom": "dual-band psychoacoustic bass exciter + auto-loudness compander + speaker optimization + limiter-last DSP-chain pattern; code reuse requires GPL obligations review"
+      },
+      {
+        "source": "Turbofan3360/OpenEQ",
+        "license": "GPL-3.0",
+        "atom": "minimal privacy-first Android EQ that interrogates/adapts to device-supported equalizer capability instead of pretending every device exposes the same bands"
       }
     ],
     "REFERENCE_ONLY": [
@@ -122,6 +137,38 @@
         "source": "MIT CSAIL automatic patch-generation research",
         "license": "paper/research-specific",
         "atom": "generate-and-validate plus proof-strength warnings"
+      },
+      {
+        "source": "Android android.media.audiofx.DynamicsProcessing",
+        "license": "platform API / documentation; implementation rights separate",
+        "atom": "native Android session-bound PreEQ -> multiband compressor -> PostEQ -> limiter topology with realtime control; strong clean-room platform primitive"
+      },
+      {
+        "source": "Bai & Lin, JAES 2006 phase-vocoder virtual bass",
+        "license": "paper/research-specific; algorithm/patent review required before productization",
+        "atom": "missing-fundamental bass synthesis for tiny loudspeakers by generating audible harmonics instead of wasting excursion on inaudible deep bass"
+      },
+      {
+        "source": "Fletcher-Munson / ISO 226 equal-loudness lineage",
+        "license": "standard/research lineage; implementation and standards-text rights separate",
+        "atom": "volume-dependent loudness compensation: bass/treble correction should change with playback level rather than remain a fixed EQ curve"
+      },
+      {
+        "source": "rudrakshchatterjee3-creator/Jadoo-DSP",
+        "license": "Proprietary",
+        "atom": "reference pattern only: one shared Android DynamicsProcessing topology rebuilt atomically with an explicit headroom budget and safety limiter; do not copy code"
+      },
+      {
+        "source": "EasyEyes loudspeaker calibration research (2025/2026)",
+        "license": "research/open-source project terms require exact component review",
+        "atom": "phone-assisted loudspeaker calibration using known phone-microphone profiles and inverse-response correction; useful measurement/calibration mechanism"
+      }
+    ],
+    "RECOMBINATION_CANDIDATES": [
+      {
+        "source": "TWIS phone-speaker salvage stack candidate",
+        "license": "clean-room composition required; component rights tracked above",
+        "atom": "detect output -> characterize supported Android DSP -> optional short speaker/mic calibration -> volume-aware equal-loudness curve -> psychoacoustic virtual bass above speaker rolloff -> multiband dynamics -> explicit headroom budget -> final limiter -> per-output auto profile; target is zero-root, zero-account, one-tap use"
       }
     ]
   },
