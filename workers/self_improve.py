@@ -23,9 +23,10 @@ WEIRD = STATE / "WEIRD_LEDGER.md"
 CURRENT = STATE / "CURRENT_PROJECT.json"
 RECEIPT = STATE / "RELEASE_RECEIPT.md"
 
-FIELD_RE = re.compile(r"^- \\*\\*(.+?):\\*\\*\\s*(.*)$")
-INCIDENT_RE = re.compile(r"^### INCIDENT\\s*$", re.M)
-WEIRD_RE = re.compile(r"^### WEIRD\\s*$", re.M)
+FIELD_RE = re.compile(r"^- \*\*(.+?):\*\*\s*(.*)$")
+INCIDENT_RE = re.compile(r"^### INCIDENT\s*$", re.M)
+WEIRD_RE = re.compile(r"^### WEIRD\s*$", re.M)
+
 
 def parse_blocks(text, marker_re, skip_title):
     starts = [m.start() for m in marker_re.finditer(text)]
@@ -48,101 +49,201 @@ def parse_blocks(text, marker_re, skip_title):
             rows.append({"title": title, **fields})
     return rows
 
+
 def verdict_kind(v):
     u = (v or "").upper()
-    if u.startswith("DONE"): return "win"
-    if u.startswith("BLOCKED"): return "blocked"
-    if u.startswith("FAILED"): return "loss"
-    if u.startswith("RETIRED"): return "retired"
+    if u.startswith("DONE"):
+        return "win"
+    if u.startswith("BLOCKED"):
+        return "blocked"
+    if u.startswith("FAILED"):
+        return "loss"
+    if u.startswith("RETIRED"):
+        return "retired"
     return "open"
+
 
 def is_user_facing(i):
     text = " ".join(str(v) for v in i.values()).lower()
-    return any(x in text for x in ("user opened","user observed","user reported","user-facing","phone showed","android"))
+    return any(
+        x in text
+        for x in (
+            "user opened",
+            "user observed",
+            "user reported",
+            "user-facing",
+            "phone showed",
+            "android",
+        )
+    )
+
 
 def layers(i):
-    return [x.strip() for x in i.get("LAYER","").split("/") if x.strip()]
+    return [x.strip() for x in i.get("LAYER", "").split("/") if x.strip()]
+
 
 def rule_from(i):
-    p=i.get("REGRESSION / PREVENTION","").strip()
-    if not p: return None
-    return {"source":i["title"],"root_cause":i.get("ROOT CAUSE","UNKNOWN"),"rule":p,"proof":i.get("REAL-WORLD PROOF","UNKNOWN")}
+    p = i.get("REGRESSION / PREVENTION", "").strip()
+    if not p:
+        return None
+    return {
+        "source": i["title"],
+        "root_cause": i.get("ROOT CAUSE", "UNKNOWN"),
+        "rule": p,
+        "proof": i.get("REAL-WORLD PROOF", "UNKNOWN"),
+    }
+
 
 def receipt_verdict(text):
-    m=re.search(r"^## VERDICT\\s*\\n([^\\n]+)",text,re.M)
+    m = re.search(r"^## VERDICT\s*\n([^\n]+)", text, re.M)
     return m.group(1).strip() if m else "UNKNOWN"
 
+
 def main():
-    incidents=parse_blocks(INCIDENTS.read_text(encoding="utf-8"),INCIDENT_RE,"Short memorable name.")
-    weird=parse_blocks(WEIRD.read_text(encoding="utf-8"),WEIRD_RE,"Short memorable name.")
-    current=json.loads(CURRENT.read_text(encoding="utf-8"))
-    receipt=RECEIPT.read_text(encoding="utf-8")
+    incidents = parse_blocks(
+        INCIDENTS.read_text(encoding="utf-8"),
+        INCIDENT_RE,
+        "Short memorable name.",
+    )
+    weird = parse_blocks(
+        WEIRD.read_text(encoding="utf-8"),
+        WEIRD_RE,
+        "Short memorable name.",
+    )
+    current = json.loads(CURRENT.read_text(encoding="utf-8"))
+    receipt = RECEIPT.read_text(encoding="utf-8")
 
-    kinds=Counter(verdict_kind(i.get("VERDICT","")) for i in incidents)
-    layer_counts=Counter(x for i in incidents for x in layers(i))
-    user_cycles=sum(1 for i in incidents if is_user_facing(i))
-    rules=[r for r in (rule_from(i) for i in incidents) if r]
+    # Fail closed when source ledgers visibly contain real entries but parsing returns none.
+    # A learning system that silently learns zero from a populated ledger is itself a failure.
+    incident_markers = len(INCIDENT_RE.findall(INCIDENTS.read_text(encoding="utf-8")))
+    weird_markers = len(WEIRD_RE.findall(WEIRD.read_text(encoding="utf-8")))
+    if incident_markers > 1 and not incidents:
+        raise RuntimeError("incident ledger contains entries but parser recovered zero incidents")
+    if weird_markers > 1 and not weird:
+        raise RuntimeError("weird ledger contains entries but parser recovered zero weird items")
 
-    seen=set(); unique=[]
+    kinds = Counter(verdict_kind(i.get("VERDICT", "")) for i in incidents)
+    layer_counts = Counter(x for i in incidents for x in layers(i))
+    user_cycles = sum(1 for i in incidents if is_user_facing(i))
+    rules = [r for r in (rule_from(i) for i in incidents) if r]
+
+    seen = set()
+    unique = []
     for r in rules:
-        k=re.sub(r"\\s+"," ",r["rule"].lower()).strip(" .")
+        k = re.sub(r"\s+", " ", r["rule"].lower()).strip(" .")
         if k not in seen:
-            seen.add(k); unique.append(r)
+            seen.add(k)
+            unique.append(r)
 
-    score={
-      "schema_version":"1.1.0",
-      "generated_at":datetime.now(timezone.utc).isoformat(),
-      "active_project":current.get("active_project"),
-      "evidence_state":current.get("evidence_state"),
-      "incident_count":len(incidents),
-      "wins":kinds["win"],"losses":kinds["loss"],"blocked":kinds["blocked"],"open":kinds["open"],
-      "user_facing_failure_cycles_observed":user_cycles,
-      "learned_rule_count":len(unique),
-      "weird_salvage_count":len(weird),
-      "top_failure_layers":layer_counts.most_common(),
-      "release_receipt_verdict":receipt_verdict(receipt),
-      "authority":current.get("authority",{})
+    score = {
+        "schema_version": "1.2.0",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "active_project": current.get("active_project"),
+        "evidence_state": current.get("evidence_state"),
+        "incident_count": len(incidents),
+        "wins": kinds["win"],
+        "losses": kinds["loss"],
+        "blocked": kinds["blocked"],
+        "open": kinds["open"],
+        "user_facing_failure_cycles_observed": user_cycles,
+        "learned_rule_count": len(unique),
+        "weird_salvage_count": len(weird),
+        "top_failure_layers": layer_counts.most_common(),
+        "release_receipt_verdict": receipt_verdict(receipt),
+        "authority": current.get("authority", {}),
     }
-    (STATE/"HARNESS_SCORECARD.json").write_text(json.dumps(score,indent=2)+"\n",encoding="utf-8")
+    (STATE / "HARNESS_SCORECARD.json").write_text(
+        json.dumps(score, indent=2) + "\n", encoding="utf-8"
+    )
 
-    analysis=["# Win / Loss Analysis","","> AUTO-GENERATED. Do not hand-edit.","",
-      f"- Incidents: **{len(incidents)}**",f"- Wins: **{kinds['win']}**",f"- Losses: **{kinds['loss']}**",
-      f"- Blocked/open: **{kinds['blocked']+kinds['open']}**",f"- User-facing failure cycles: **{user_cycles}**",
-      f"- Weird salvage items: **{len(weird)}**",""]
-    for n,i in enumerate(incidents,1):
-        analysis += [f"## {n}. {i['title']}","",f"- **Outcome:** {i.get('VERDICT','UNKNOWN')}",
-          f"- **What went wrong:** {i.get('SYMPTOM','UNKNOWN')}",
-          f"- **Why it failed:** {i.get('ROOT CAUSE','UNKNOWN')}",
-          f"- **What changed:** {i.get('FIX','UNKNOWN')}",
-          f"- **Why the corrected path won:** {i.get('REAL-WORLD PROOF','UNKNOWN')}",
-          f"- **Permanent lesson:** {i.get('REGRESSION / PREVENTION','UNKNOWN')}",""]
-    (STATE/"WIN_LOSS_ANALYSIS.md").write_text("\n".join(analysis),encoding="utf-8")
+    analysis = [
+        "# Win / Loss Analysis",
+        "",
+        "> AUTO-GENERATED. Do not hand-edit.",
+        "",
+        f"- Incidents: **{len(incidents)}**",
+        f"- Wins: **{kinds['win']}**",
+        f"- Losses: **{kinds['loss']}**",
+        f"- Blocked/open: **{kinds['blocked'] + kinds['open']}**",
+        f"- User-facing failure cycles: **{user_cycles}**",
+        f"- Weird salvage items: **{len(weird)}**",
+        "",
+    ]
+    for n, i in enumerate(incidents, 1):
+        analysis += [
+            f"## {n}. {i['title']}",
+            "",
+            f"- **Outcome:** {i.get('VERDICT', 'UNKNOWN')}",
+            f"- **What went wrong:** {i.get('SYMPTOM', 'UNKNOWN')}",
+            f"- **Why it failed:** {i.get('ROOT CAUSE', 'UNKNOWN')}",
+            f"- **What changed:** {i.get('FIX', 'UNKNOWN')}",
+            f"- **Why the corrected path won:** {i.get('REAL-WORLD PROOF', 'UNKNOWN')}",
+            f"- **Permanent lesson:** {i.get('REGRESSION / PREVENTION', 'UNKNOWN')}",
+            "",
+        ]
+    (STATE / "WIN_LOSS_ANALYSIS.md").write_text(
+        "\n".join(analysis), encoding="utf-8"
+    )
 
-    generated=["# Auto-Generated Learned Rules","","> MACHINE-WRITTEN from the Incident Ledger.","","## Active learned rules",""]
-    for n,r in enumerate(unique,1):
-        generated += [f"### LR-{n:03d} — {r['source']}",f"- **Root cause learned:** {r['root_cause']}",
-          f"- **Rule:** {r['rule']}",f"- **Evidence:** {r['proof']}",""]
-    if not unique: generated.append("- No learned rules yet.")
-    repeated=[(k,v) for k,v in layer_counts.items() if v>=2]
+    generated = [
+        "# Auto-Generated Learned Rules",
+        "",
+        "> MACHINE-WRITTEN from the Incident Ledger.",
+        "",
+        "## Active learned rules",
+        "",
+    ]
+    for n, r in enumerate(unique, 1):
+        generated += [
+            f"### LR-{n:03d} — {r['source']}",
+            f"- **Root cause learned:** {r['root_cause']}",
+            f"- **Rule:** {r['rule']}",
+            f"- **Evidence:** {r['proof']}",
+            "",
+        ]
+    if not unique:
+        generated.append("- No learned rules yet.")
+    repeated = [(k, v) for k, v in layer_counts.items() if v >= 2]
     if repeated:
-        generated += ["","## Repeated-layer escalations",""]
-        for k,v in repeated:
-            generated.append(f"- **{k} repeated {v} times:** inspect sibling failure modes before another release touching this layer.")
-    generated += ["","## Non-negotiable promotion rule","",
-      "Generated rules may strengthen proof and quality requirements. They may not remove privacy/safety boundaries, erase incident history, silently change the user's locked outcome, or promote proxy evidence to PROVEN_LIVE.",""]
-    (STATE/"AUTOGENERATED_RULES.md").write_text("\n".join(generated),encoding="utf-8")
+        generated += ["", "## Repeated-layer escalations", ""]
+        for k, v in repeated:
+            generated.append(
+                f"- **{k} repeated {v} times:** inspect sibling failure modes before another release touching this layer."
+            )
+    generated += [
+        "",
+        "## Non-negotiable promotion rule",
+        "",
+        "Generated rules may strengthen proof and quality requirements. They may not remove privacy/safety boundaries, erase incident history, silently change the user's locked outcome, or promote proxy evidence to PROVEN_LIVE.",
+        "",
+    ]
+    (STATE / "AUTOGENERATED_RULES.md").write_text(
+        "\n".join(generated), encoding="utf-8"
+    )
 
-    salvage=["# Weird Salvage Index","","> AUTO-GENERATED from WEIRD_LEDGER.md. Weird is preserved, not normalized away.",""]
-    if not weird: salvage.append("- No weird salvage captured yet.")
-    for n,w in enumerate(weird,1):
-        salvage += [f"## WS-{n:03d} — {w['title']}","",
-          f"- **Observed weird:** {w.get('OBSERVED','UNKNOWN')}",
-          f"- **Why it was weird:** {w.get('WHY WEIRD','UNKNOWN')}",
-          f"- **Potential value:** {w.get('POTENTIAL SALVAGE','UNKNOWN')}",
-          f"- **Origin:** {w.get('ORIGIN','UNKNOWN')}",
-          f"- **Do not lose:** {w.get('PRESERVE','YES')}",
-          ""]
-    (STATE/"WEIRD_SALVAGE_INDEX.md").write_text("\n".join(salvage),encoding="utf-8")
+    salvage = [
+        "# Weird Salvage Index",
+        "",
+        "> AUTO-GENERATED from WEIRD_LEDGER.md. Weird is preserved, not normalized away.",
+        "",
+    ]
+    if not weird:
+        salvage.append("- No weird salvage captured yet.")
+    for n, w in enumerate(weird, 1):
+        salvage += [
+            f"## WS-{n:03d} — {w['title']}",
+            "",
+            f"- **Observed weird:** {w.get('OBSERVED', 'UNKNOWN')}",
+            f"- **Why it was weird:** {w.get('WHY WEIRD', 'UNKNOWN')}",
+            f"- **Potential value:** {w.get('POTENTIAL SALVAGE', 'UNKNOWN')}",
+            f"- **Origin:** {w.get('ORIGIN', 'UNKNOWN')}",
+            f"- **Do not lose:** {w.get('PRESERVE', 'YES')}",
+            "",
+        ]
+    (STATE / "WEIRD_SALVAGE_INDEX.md").write_text(
+        "\n".join(salvage), encoding="utf-8"
+    )
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     main()
