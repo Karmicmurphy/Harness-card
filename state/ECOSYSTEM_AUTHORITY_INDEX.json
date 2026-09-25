@@ -344,7 +344,7 @@
         "role": "factory",
         "repo": "Karmicmurphy/temporal-capability-foundry",
         "ref": "software-builder-v0",
-        "sha": "bfb1b27baadcf0bd14399835306f3caea0b5d605"
+        "sha": "cf51b485a5c2f342b4415d0690c3239efa3e3759"
       },
       {
         "role": "runtime",
