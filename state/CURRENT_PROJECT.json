@@ -9,7 +9,7 @@
     "factory": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "branch": "software-builder-v0",
-      "sha": "bfb1b27baadcf0bd14399835306f3caea0b5d605",
+      "sha": "cf51b485a5c2f342b4415d0690c3239efa3e3759",
       "functional_proof_head": "d4e6b25bb6b1395ad043a7b2f90b926f01cce489"
     },
     "runtime": {
