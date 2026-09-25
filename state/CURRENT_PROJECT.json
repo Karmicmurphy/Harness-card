@@ -9,7 +9,7 @@
     "factory": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "branch": "software-builder-v0",
-      "sha": "3bb8e0d073f4bdda2af414340633a95b0e182887",
+      "sha": "bfb1b27baadcf0bd14399835306f3caea0b5d605",
       "functional_proof_head": "d4e6b25bb6b1395ad043a7b2f90b926f01cce489"
     },
     "runtime": {
@@ -25,14 +25,14 @@
     "cockpit": {
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
       "branch": "living-workshop-main-build",
-      "sha": "f083c699d0dbf1837a8f207a53bcb243abc06be2",
-      "note": "GitHub branch includes Phase 1A plus loopback Foundry human-signal bridge and read-only source-yard inventory, proven in CI; live Windows field proof remains pending."
+      "sha": "1785ed1405e769a17ec22066dc1e27a40dbf153b",
+      "note": "Open Door -> Foundry compile-job is merged and proven in CI; live Foundation proof remains pending on any verified host."
     }
   },
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; HUMAN_SIGNAL_ARRIVAL_V0_PROVEN_IN_TEST_AND_MERGED; WORKSHOP_FOUNDRY_LOOPBACK_BRIDGE_V0_PROVEN_IN_TEST_AND_MERGED; LOCAL_SOURCE_YARD_INVENTORY_V1_PROVEN_IN_TEST; LIVE_WINDOWS_VERTICAL_SLICE_NOT_YET_PROVEN",
+  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; OPEN_DOOR_COMPILE_JOB_V1_PROVEN_IN_TEST_AND_MERGED; UNIFIED_JOB_CORRELATION_THROUGH_AIOS_BUILDER_PROOF_PROVEN_IN_TEST_AND_MERGED; LOCAL_SOURCE_YARD_INVENTORY_V1_PROVEN_IN_TEST; LIVE_HOST_VERTICAL_SLICE_NOT_YET_PROVEN",
   "lane": "ARRIVAL / INTEGRATION REPAIR / LIVE VERTICAL-SLICE PROOF",
   "last_verified_at": "2026-09-24",
-  "next_action": "Run the first live Windows vertical slice: Workshop -> Foundry human-signal round trip using the merged branches; then extend one shared correlation identity into bounded Foundry job -> AIOS -> Independent Proof -> Workshop result. Also run the read-only local source-yard inventory against a bounded Windows target before any whole-drive sweep.",
+  "next_action": "Run the first live Foundation vertical slice on any verified host: Workshop -> Foundry compile-job -> AIOS -> Builder -> Independent Proof -> Workshop result under one job_id. Separately run the read-only local source-yard inventory against an explicitly chosen accessible filesystem target before any broad sweep.",
   "separate_projects": [
     "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
     "First3 Local / nemoclw_new_agent — proving-ground product; not Foundation authority",
@@ -139,15 +139,15 @@
         "cross_domain_survivors": 0,
         "interpretation": "Targeted high-yield Library recovery added historical Brain Dump, Dark Helix, AXIS3, Pattern Engine, CTOS, Artifact Continuity, Workshop, and Digital Scrapboard mechanisms. Three nominal cross-domain hits were inspected and rejected as generic-type or known-lineage false positives, then the namespaced rerun returned zero defensible cross-domain survivors."
       },
-      "high_value_windows_targets": [
+      "status": "STOP_POINT_REACHED",
+      "next": "WAIT_FOR_LOCAL_SOURCE_DELTA_OR_EXPLICIT_OWNER_TARGET",
+      "high_value_local_targets": [
         "WCHO / Dark Helix local project",
         "ollie_twis_engine scratch/local engine",
         "DARK_HELIX_CREATOR_OS_LOCAL.zip",
         "wtf-pattern-engine local project",
-        "other local-only archives revealed by Windows manifest"
-      ],
-      "status": "STOP_POINT_REACHED",
-      "next": "WAIT_FOR_WINDOWS_DELTA_OR_EXPLICIT_OWNER_TARGET"
+        "other local-only archives revealed by local source manifest"
+      ]
     }
   }
 }
