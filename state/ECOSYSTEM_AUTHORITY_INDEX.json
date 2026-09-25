@@ -59,7 +59,7 @@
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
       "head": "f083c699d0dbf1837a8f207a53bcb243abc06be2",
       "authority_kind": "GITHUB_LIVING_WORKSHOP_PHASE1A_PLUS_ARRIVAL_BRIDGE_AND_LOCAL_INVENTORY_PROVEN_IN_TEST; LOCAL_MACHINE_REMAINS_PRIVATE_AUTHORITY",
-      "role": "Human-facing working room/front door; now includes a loopback Foundry arrival bridge and read-only local source-yard inventory, still requiring live Windows field proof.",
+      "role": "Human-facing working room/front door; includes the loopback Foundry compile-job bridge and read-only local source-yard inventory, with live host field proof still pending.",
       "recovered_primitives": [
         "FlashRiver intake",
         "Artifact Compass UI",
@@ -153,7 +153,7 @@
         "human-signal arrival contract preserving raw language before taxonomy",
         "loopback Foundry arrival service for human-signal and minimum-intelligence routing"
       ],
-      "current_nonclaim": "Core and human-signal arrival are proven in test. Workshop arrival transport is attached in test, but a full Workshop -> Foundry job -> AIOS -> Independent Proof -> Workshop live Windows round trip is not yet proven. AIOS does not mediate every Builder tool call.",
+      "current_nonclaim": "Core, Open Door compile-job routing, and unified job correlation through AIOS/Builder/Independent Proof are proven in test. A full Workshop -> Foundry job -> AIOS -> Independent Proof -> Workshop live host round trip is not yet proven. AIOS does not mediate every Builder tool call.",
       "overlap_warning": [
         "Proof/evidence/certification concepts overlap CERT-RIVER.",
         "Execution/budget/recovery concepts overlap RiverKernel and Untethered AIOS.",
@@ -344,7 +344,7 @@
         "role": "factory",
         "repo": "Karmicmurphy/temporal-capability-foundry",
         "ref": "software-builder-v0",
-        "sha": "3bb8e0d073f4bdda2af414340633a95b0e182887"
+        "sha": "bfb1b27baadcf0bd14399835306f3caea0b5d605"
       },
       {
         "role": "runtime",
@@ -362,7 +362,7 @@
         "role": "cockpit",
         "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
         "ref": "living-workshop-main-build",
-        "sha": "f083c699d0dbf1837a8f207a53bcb243abc06be2"
+        "sha": "1785ed1405e769a17ec22066dc1e27a40dbf153b"
       }
     ],
     "bleed_control": "Anything outside canonical_refs is not current Foundation authority until reconciled and explicitly promoted.",
@@ -404,6 +404,6 @@
         "foundation_authority": false
       }
     ],
-    "next": "Run the first live Windows vertical slice: Workshop -> Foundry human-signal round trip using the merged branches; then extend one shared correlation identity into bounded Foundry job -> AIOS -> Independent Proof -> Workshop result. Also run the read-only local source-yard inventory against a bounded Windows target before any whole-drive sweep."
+    "next": "Run the first live Foundation vertical slice on any verified host: Workshop -> Foundry compile-job -> AIOS -> Builder -> Independent Proof -> Workshop result under one job_id. Separately run the read-only local source-yard inventory against an explicitly chosen accessible filesystem target before any broad sweep."
   }
 }
