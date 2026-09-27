@@ -10,6 +10,10 @@ on:
       - "state/**"
       - "projects/PROJECT_INDEX.md"
       - "scripts/check_authority_spine.py"
+      - "scripts/foundation_state.py"
+      - "tests/test_foundation_state.py"
+      - "docs/FOUNDATION_V0_CURRENT_WORK_PROMPT.md"
+      - "config/harness.json"
       - "tests/test_authority_spine.py"
       - "tests/test_self_improve.py"
       - "tests/test_skill_registry.py"
@@ -39,5 +43,6 @@ jobs:
       - name: Regression tests
         run: |
           python -m unittest tests.test_authority_spine -v
+          python -m unittest tests.test_foundation_state -v
           python tests/test_self_improve.py
           python -m unittest tests.test_skill_registry -v

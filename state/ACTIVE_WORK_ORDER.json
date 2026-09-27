@@ -1,15 +1,17 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "source_project_state_path": "state/CURRENT_PROJECT.json",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
-  "lane": "ARRIVAL / INTEGRATION REPAIR / LIVE VERTICAL-SLICE PROOF",
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; OPEN_DOOR_COMPILE_JOB_V1_PROVEN_IN_TEST_AND_MERGED; UNIFIED_JOB_CORRELATION_THROUGH_AIOS_BUILDER_PROOF_PROVEN_IN_TEST_AND_MERGED; LOCAL_SOURCE_YARD_INVENTORY_V1_PROVEN_IN_TEST; LIVE_HOST_VERTICAL_SLICE_NOT_YET_PROVEN",
-  "next_action": "Run the first live Foundation vertical slice on any verified host: Workshop -> Foundry compile-job -> AIOS -> Builder -> Independent Proof -> Workshop result under one job_id. Separately run the read-only local source-yard inventory against an explicitly chosen accessible filesystem target before any broad sweep.",
+  "lane": "INTEGRATION REPAIR / PHONE RESULT RETURN",
+  "evidence_state": "PARTIALLY_PROVEN",
+  "next_action": "Connect the existing Pages Workshop to the already-pinned bounded GitHub job and return its correlated receipt. First prove authenticated dispatch and result retrieval for the approved aios-path-containment fixture; arbitrary natural-language coding remains a later, separately reviewed gate.",
   "status": "ACTIVE",
   "blockers": [
-    "LIVE_HOST_FIELD_TRIAL_NOT_RUN",
-    "CAPABILITY_COVERAGE_PARTIAL"
+    "PAGES_DISPATCH_AND_RECEIPT_ROUTES_NOT_IMPLEMENTED_IN_OBSERVED_BRANCH",
+    "AUTHENTICATED_PAGES_DEPLOYMENT_NOT_VERIFIED",
+    "ARBITRARY_NATURAL_LANGUAGE_TO_CERTIFIED_RESULT_NOT_PROVEN"
   ],
-  "stop_condition": "One owner natural-language input traverses Workshop -> Foundry -> bounded Foundry job -> AIOS -> Independent Proof -> Workshop under one visible job_id on a verified live host, and the read-only local source inventory produces a real manifest without executing or importing source files.",
-  "updated_at": "2026-09-24"
+  "stop_condition": "An authenticated owner action in the existing Pages Workshop invokes only the approved bounded fixture at the pinned Foundry SHA and returns its exact correlated receipt to the phone. Reload/status recovery and denial paths pass. Record deployment, workflow_run_id, job_id, proof verdict and human-review state. This proves the bounded fixture round trip only.",
+  "gate_id": "PAGES_BOUNDED_JOB_ROUND_TRIP",
+  "updated_at": "2026-09-27"
 }

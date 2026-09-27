@@ -235,3 +235,20 @@ Advanced mode opened a hidden non-existent page
 - **BONUS SALVAGE:** Existing advanced Loop Deck page required no rewrite.
 - **VERDICT:** DONE
 - **STOP:** Deployed proof passed.
+
+### INCIDENT
+Foundation restart files disagreed and sent work back to completed stages
+
+- **SYMPTOM:** Current JSON, ecosystem factory pin, Markdown work order and build prompt described different stages; sessions repeatedly rediscovered or restarted work.
+- **EXPECTED:** One restart point names approved components, actual proof limits and one next gate.
+- **CURRENT AUTHORITY:** Harness main a15b9f8d377e0d616ffafc078cfc4213f714b309.
+- **LAYER:** AUTHORITY / CONTRACT
+- **FALSE LEADS:** Missing operating system, missing proof engine, mandatory Windows host, need for another Worker.
+- **ROOT CAUSE:** Independent editable status copies; Markdown guard verified only headings; no branch observation job; unrelated inventory and runtime finish lines were coupled.
+- **FIX:** Generate continuity views from CURRENT_PROJECT, validate full projections and evidence enum, observe remote refs without promotion, separate parked work from the single Pages round-trip gate.
+- **REGRESSION / PREVENTION:** Stale work-order prose and build prompts fail the same guard as stale JSON. Access failures remain UNKNOWN. Branch advancement never silently replaces approved pins.
+- **REAL-WORLD PROOF:** Local regression and guard proof only; corrected instructions not yet field-proven in a later session. Whole phone path remains unproven.
+- **PREVENTION ARTIFACT:** scripts/foundation_state.py, tests/test_foundation_state.py, strengthened guard and read-only observation workflow.
+- **BONUS SALVAGE:** Existing pinned GitHub dispatcher and certified fixture receipt recovered; no replacement engine needed.
+- **VERDICT:** BLOCKED
+- **STOP:** Close incident after the merged continuation is used successfully to resume without stale-stage restart; do not equate that with phone-path completion.

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "work_id": "foundation-cohesion-repair-2026-09-27",
+  "repo": "Karmicmurphy/Harness-card",
+  "branch": "fix/cohesive-foundation-resume",
+  "baseline_sha": "a15b9f8d377e0d616ffafc078cfc4213f714b309",
+  "scope": "CONTINUITY_AND_AUTHORITY_REPAIR_ONLY",
+  "evidence_state": "PROVEN_IN_TEST",
+  "tests": {
+    "unit_regressions": 22,
+    "unit_failures": 0,
+    "self_improvement_isolated_copy": "PASS",
+    "authority_guard_before": "FAILED_FACTORY_SHA_MISMATCH",
+    "authority_guard_after": "PASS",
+    "diff_check": "PASS"
+  },
+  "live_observation": {
+    "read_only": true,
+    "governance": "OBSERVED_GOVERNANCE",
+    "runtime": "MATCH",
+    "cockpit": "RECONCILIATION_REQUIRED",
+    "factory_shell": "UNKNOWN_HTTP_404",
+    "salvage_shell": "UNKNOWN_HTTP_404",
+    "factory_and_salvage_authenticated_connector": "REFS_VERIFIED_MATCH",
+    "pages": "302_CLOUDFLARE_ACCESS"
+  },
+  "existing_remote_fixture_proof": {
+    "run_id": 36248023448,
+    "job_id": "job:phone-36248023448-aios-path-containment",
+    "scope": "EXACT_PATCH_FIXTURE_ONLY",
+    "verdict": "CERTIFIED",
+    "activation_performed": false
+  },
+  "deployment_performed": false,
+  "whole_machine_live": false,
+  "next_gate": "PAGES_BOUNDED_JOB_ROUND_TRIP",
+  "limitations": [
+    "Pages dispatch/receipt routes still missing",
+    "Authenticated production app and device path unverified",
+    "No access to original local Spatial working tree",
+    "Continuation change awaits merge and subsequent-session field proof"
+  ],
+  "report": "docs/FOUNDATION_COHESION_REPAIR_2026-09-27.md"
+}

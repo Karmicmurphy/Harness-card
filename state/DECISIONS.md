@@ -78,3 +78,11 @@ This file stores durable, non-sensitive decisions that future agents should not 
 - **Applies to:** Foundation V0 / Estate Discovery / Missing Gear
 - **Authority/evidence:** `Karmicmurphy/digital-scrapyard-autopilot@a059a27ef2bd662827a51da44dd8efb8863d634c`; PR #26; proof run `35805251181`; `warehouse/estate/ESTATE_WIDE_UNLOAD_V2.json`.
 - **Reopen condition:** A Windows delta/manifest or direct local project bytes become available; Replit/Cloudflare access materially improves; or the owner explicitly selects another named source or mechanism.
+
+### 2026-09-27 — One generated Foundation continuation
+- **Type:** STATE / SCOPE / PREVENTION
+- **Decision or correction:** CURRENT_PROJECT.json owns the active work contract. Work-order JSON/Markdown, the current build prompt, and ecosystem canonical-ref fields are derived by `scripts/foundation_state.py sync` and checked in CI. Observed refs never promote themselves.
+- **Why it matters:** Independent hand-edited resume files disagreed and repeatedly restarted old work. Local inventory was also coupled to remote integration.
+- **Applies to:** Foundation continuity. Spatial, music, local recovery and general coding remain distinct scoped work.
+- **Authority/evidence:** Reproduced guard failure at Harness a15b9f8; verified Foundry bounded fixture run 36248023448; `docs/FOUNDATION_COHESION_REPAIR_2026-09-27.md`.
+- **Reopen condition:** A proven requirement that cannot fit this existing single-current-project contract.

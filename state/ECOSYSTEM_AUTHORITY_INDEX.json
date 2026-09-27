@@ -333,7 +333,7 @@
     "self_reference_rule": "Do not claim a durable exact Harness-card HEAD inside a Harness-card file; committing the file advances HEAD. Resolve Harness-card main live when exact current SHA matters."
   },
   "active_foundation_v0": {
-    "status": "CURRENT_ACTIVE_PROJECT_ARRIVAL_INTEGRATION_LIVE_PROOF",
+    "status": "ACTIVE",
     "canonical_refs": [
       {
         "role": "governance",
@@ -344,7 +344,7 @@
         "role": "factory",
         "repo": "Karmicmurphy/temporal-capability-foundry",
         "ref": "software-builder-v0",
-        "sha": "cf51b485a5c2f342b4415d0690c3239efa3e3759"
+        "sha": "e0e14e689b1d3a3bda1356276975b4b34f1b615e"
       },
       {
         "role": "runtime",
@@ -404,6 +404,6 @@
         "foundation_authority": false
       }
     ],
-    "next": "Run the first live Foundation vertical slice on any verified host: Workshop -> Foundry compile-job -> AIOS -> Builder -> Independent Proof -> Workshop result under one job_id. Separately run the read-only local source-yard inventory against an explicitly chosen accessible filesystem target before any broad sweep."
+    "next": "Connect the existing Pages Workshop to the already-pinned bounded GitHub job and return its correlated receipt. First prove authenticated dispatch and result retrieval for the approved aios-path-containment fixture; arbitrary natural-language coding remains a later, separately reviewed gate."
   }
 }

@@ -1,0 +1,36 @@
+name: Observe Foundation drift
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 12 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate canonical continuity
+        run: python scripts/check_authority_spine.py
+      - name: Observe refs without promotion
+        env:
+          # Existing optional read-only cross-repo credential; otherwise private
+          # components correctly remain UNKNOWN with the repo-scoped token.
+          GH_TOKEN: ${{ secrets.FOUNDATION_READ_TOKEN || github.token }}
+        run: python scripts/foundation_state.py observe > foundation-observation.json
+      - name: Preserve observation even on drift or unavailable access
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: foundation-observation
+          path: foundation-observation.json
+          if-no-files-found: warn

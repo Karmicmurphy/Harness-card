@@ -6,6 +6,22 @@ It is **not** a project repo and it does not own project code. It owns the rules
 
 ## Manual trigger
 
+Resume Foundation from [the current work order](state/ACTIVE_WORK_ORDER.md).
+It and the build prompt are generated from `state/CURRENT_PROJECT.json`.
+
+```sh
+python scripts/check_authority_spine.py
+python scripts/foundation_state.py status
+```
+
+After deliberately editing current state, run `python scripts/foundation_state.py sync`
+and the guard. `python scripts/foundation_state.py observe` reads remote branch heads
+and approved commits without promoting them. Drift or unavailable access returns a
+nonzero exit code. The observation workflow preserves this report daily after merge;
+it never edits state. A repo-scoped token may not read private component repositories;
+those remain UNKNOWN, never green by default. No new credential is required for local
+continuity checks.
+
 Say: **Use Harness Card.**
 
 For interactive software work, say: **Chat build mode.**
