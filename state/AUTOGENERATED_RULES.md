@@ -64,14 +64,19 @@
 - **Rule:** Unified browser proof explicitly requires ADVANCED to reveal eight loop rows, record controls, and import control.
 - **Evidence:** PROVEN_LIVE_BROWSER on deployed main; advanced workstation opened correctly in automation run `c000d5c8-bdaa-4e03-b68d-078c05d062a9`.
 
+### LR-013 — Foundation restart files disagreed and sent work back to completed stages
+- **Root cause learned:** Independent editable status copies; Markdown guard verified only headings; no branch observation job; unrelated inventory and runtime finish lines were coupled.
+- **Rule:** Stale work-order prose and build prompts fail the same guard as stale JSON. Access failures remain UNKNOWN. Branch advancement never silently replaces approved pins.
+- **Evidence:** Local regression and guard proof only; corrected instructions not yet field-proven in a later session. Whole phone path remains unproven.
+
 
 ## Repeated-layer escalations
 
 - **APPLICATION repeated 9 times:** inspect sibling failure modes before another release touching this layer.
 - **DEPLOY repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 - **TEST-CI repeated 6 times:** inspect sibling failure modes before another release touching this layer.
-- **CONTRACT repeated 10 times:** inspect sibling failure modes before another release touching this layer.
-- **AUTHORITY repeated 2 times:** inspect sibling failure modes before another release touching this layer.
+- **CONTRACT repeated 11 times:** inspect sibling failure modes before another release touching this layer.
+- **AUTHORITY repeated 3 times:** inspect sibling failure modes before another release touching this layer.
 - **MOBILE AUDIO repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 - **CREATIVE repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 

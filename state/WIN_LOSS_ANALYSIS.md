@@ -2,10 +2,10 @@
 
 > AUTO-GENERATED. Do not hand-edit.
 
-- Incidents: **12**
+- Incidents: **13**
 - Wins: **7**
 - Losses: **0**
-- Blocked/open: **5**
+- Blocked/open: **6**
 - User-facing failure cycles: **7**
 - Weird salvage items: **2**
 
@@ -116,3 +116,12 @@
 - **What changed:** Route ADVANCED to `data-page="loop"` and its matching tab.
 - **Why the corrected path won:** PROVEN_LIVE_BROWSER on deployed main; advanced workstation opened correctly in automation run `c000d5c8-bdaa-4e03-b68d-078c05d062a9`.
 - **Permanent lesson:** Unified browser proof explicitly requires ADVANCED to reveal eight loop rows, record controls, and import control.
+
+## 13. Foundation restart files disagreed and sent work back to completed stages
+
+- **Outcome:** BLOCKED
+- **What went wrong:** Current JSON, ecosystem factory pin, Markdown work order and build prompt described different stages; sessions repeatedly rediscovered or restarted work.
+- **Why it failed:** Independent editable status copies; Markdown guard verified only headings; no branch observation job; unrelated inventory and runtime finish lines were coupled.
+- **What changed:** Generate continuity views from CURRENT_PROJECT, validate full projections and evidence enum, observe remote refs without promotion, separate parked work from the single Pages round-trip gate.
+- **Why the corrected path won:** Local regression and guard proof only; corrected instructions not yet field-proven in a later session. Whole phone path remains unproven.
+- **Permanent lesson:** Stale work-order prose and build prompts fail the same guard as stale JSON. Access failures remain UNKNOWN. Branch advancement never silently replaces approved pins.
