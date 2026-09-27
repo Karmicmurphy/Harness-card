@@ -24,8 +24,12 @@ class AuthoritySpineTests(unittest.TestCase):
             root = Path(tmp)
             (root / "state").mkdir()
             (root / "projects").mkdir()
+            (root / "config").mkdir()
+            (root / "docs").mkdir()
 
             for rel in [
+                "config/harness.json",
+                "docs/FOUNDATION_V0_CURRENT_WORK_PROMPT.md",
                 "state/CURRENT_PROJECT.json",
                 "state/ACTIVE_WORK_ORDER.json",
                 "state/ACTIVE_WORK_ORDER.md",
@@ -52,8 +56,12 @@ class AuthoritySpineTests(unittest.TestCase):
             root = Path(tmp)
             (root / "state").mkdir()
             (root / "projects").mkdir()
+            (root / "config").mkdir()
+            (root / "docs").mkdir()
 
             for rel in [
+                "config/harness.json",
+                "docs/FOUNDATION_V0_CURRENT_WORK_PROMPT.md",
                 "state/CURRENT_PROJECT.json",
                 "state/ACTIVE_WORK_ORDER.json",
                 "state/ACTIVE_WORK_ORDER.md",

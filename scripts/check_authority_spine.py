@@ -10,7 +10,11 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import sys
 from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from foundation_state import projection_errors
 
 
 ROLE_KEYS = {
@@ -45,6 +49,9 @@ def validate(root: Path) -> list[str]:
     current = load_json(state / "CURRENT_PROJECT.json")
     active = load_json(state / "ACTIVE_WORK_ORDER.json")
     ecosystem = load_json(state / "ECOSYSTEM_AUTHORITY_INDEX.json")
+
+    # Check full generated instructions, not just two Markdown headings.
+    errors.extend(projection_errors(root, current))
 
     if active.get("source_project_state_path") != "state/CURRENT_PROJECT.json":
         errors.append("ACTIVE_WORK_ORDER.json must point to state/CURRENT_PROJECT.json")
@@ -105,7 +112,10 @@ def validate(root: Path) -> list[str]:
 
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
-    errors = validate(root)
+    try:
+        errors = validate(root)
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        errors = [f"Authority input missing or malformed: {exc}"]
     if errors:
         print("AUTHORITY_SPINE: FAILED")
         for error in errors:

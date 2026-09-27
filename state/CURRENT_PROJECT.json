@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.3.0",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "authority": {
     "governance": {
@@ -29,16 +29,17 @@
       "note": "Open Door -> Foundry compile-job is merged and proven in CI; live Foundation proof remains pending on any verified host."
     }
   },
-  "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; OPEN_DOOR_COMPILE_JOB_V1_PROVEN_IN_TEST_AND_MERGED; UNIFIED_JOB_CORRELATION_THROUGH_AIOS_BUILDER_PROOF_PROVEN_IN_TEST_AND_MERGED; LOCAL_SOURCE_YARD_INVENTORY_V1_PROVEN_IN_TEST; LIVE_HOST_VERTICAL_SLICE_NOT_YET_PROVEN",
-  "lane": "ARRIVAL / INTEGRATION REPAIR / LIVE VERTICAL-SLICE PROOF",
+  "evidence_state": "PARTIALLY_PROVEN",
+  "lane": "INTEGRATION REPAIR / PHONE RESULT RETURN",
   "last_verified_at": "2026-09-27",
-  "next_action": "Run the first live Foundation vertical slice on any verified host: Workshop -> Foundry compile-job -> AIOS -> Builder -> Independent Proof -> Workshop result under one job_id. Separately run the read-only local source-yard inventory against an explicitly chosen accessible filesystem target before any broad sweep.",
+  "next_action": "Connect the existing Pages Workshop to the already-pinned bounded GitHub job and return its correlated receipt. First prove authenticated dispatch and result retrieval for the approved aios-path-containment fixture; arbitrary natural-language coding remains a later, separately reviewed gate.",
   "separate_projects": [
     "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
     "First3 Local / nemoclw_new_agent — proving-ground product; not Foundation authority",
     "Coilside — HVAC field companion; separate product",
     "WTF Stupid Simple Terri Tax — separate product",
-    "Digital Scrap Forge commerce/product branches — separate business lane unless an exact primitive is salvaged through Rights/Artifact rules"
+    "Digital Scrap Forge commerce/product branches — separate business lane unless an exact primitive is salvaged through Rights/Artifact rules",
+    "Spatial Cognitive Territory — separate local-first map product; preservation/repository repair is not a Foundation runtime dependency"
   ],
   "bleed_control": "Only refs explicitly named by Foundation authority files may change Foundation V0. Other chats, Codex workspaces, repos, branches, PRs, archives, and projects are SALVAGE/QUARANTINE/SEPARATE until reconciled and promoted into authority.",
   "candidates": {
@@ -149,5 +150,41 @@
         "other local-only archives revealed by local source manifest"
       ]
     }
+  },
+  "evidence_detail": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; OPEN_DOOR_COMPILE_JOB_V1_PROVEN_IN_TEST_AND_MERGED; UNIFIED_JOB_CORRELATION_THROUGH_AIOS_BUILDER_PROOF_PROVEN_IN_TEST_AND_MERGED; LOCAL_SOURCE_YARD_INVENTORY_V1_PROVEN_IN_TEST; LIVE_HOST_VERTICAL_SLICE_NOT_YET_PROVEN",
+  "work_order": {
+    "gate_id": "PAGES_BOUNDED_JOB_ROUND_TRIP",
+    "status": "ACTIVE",
+    "human_path": "Owner opens Workshop on Android -> authenticates -> starts the approved bounded job -> sees progress -> receives the same job_id and Independent Proof receipt -> reviews; no automatic activation.",
+    "blockers": [
+      "PAGES_DISPATCH_AND_RECEIPT_ROUTES_NOT_IMPLEMENTED_IN_OBSERVED_BRANCH",
+      "AUTHENTICATED_PAGES_DEPLOYMENT_NOT_VERIFIED",
+      "ARBITRARY_NATURAL_LANGUAGE_TO_CERTIFIED_RESULT_NOT_PROVEN"
+    ],
+    "stop_condition": "An authenticated owner action in the existing Pages Workshop invokes only the approved bounded fixture at the pinned Foundry SHA and returns its exact correlated receipt to the phone. Reload/status recovery and denial paths pass. Record deployment, workflow_run_id, job_id, proof verdict and human-review state. This proves the bounded fixture round trip only.",
+    "verified_facts": [
+      "2026-09-27: Foundry software-builder-v0 equals the approved e0e14e689b1d3a3bda1356276975b4b34f1b615e; AIOS and Salvage refs also match.",
+      "Foundry main contains .github/workflows/foundation-bounded-job.yml pinned to approved e0e14e6. The default-branch dispatcher was merged in PR #30; no branch migration is needed.",
+      "GitHub run 36248023448 job 108420731824 emitted CERTIFIED_AWAITING_HUMAN_REVIEW, job:phone-36248023448-aios-path-containment, CERTIFIED and activation_performed=false. Scope: EXACT_PATCH_FIXTURE_ONLY; this was a pull-request run, not a phone-arrival test.",
+      "Workshop observed head 9822e988dd125f55b13be3891eb0a39975a26191 is ahead of approved 1785ed1405e769a17ec22066dc1e27a40dbf153b. Keep the approved pin until its delta is reviewed; advancement alone is not promotion.",
+      "Observed Workshop branch has only functions/api/ai/chat.js under Pages functions. Its loopback Foundry bridge must stay loopback-only.",
+      "2026-09-27 external HTTP check: existing Pages URL redirects to Cloudflare Access (302). This proves the login boundary responds, not the deployed app or job flow.",
+      "Foundry PR #31 is an open coding-engine candidate, with successful PR test run 36305666502. It is not merged authority and does not establish phone-path proof."
+    ],
+    "parked": [
+      "Local/private source-yard inventory and Windows diagnostics; use only when a job needs local material. Historical Windows field proof remains NOT_RUN.",
+      "Spatial map fixes, nested-repository preservation and recovery; separate product with its own no-backend constraints.",
+      "Music/Pro Rig, commerce, broad salvage, model relays, quantum/free-compute broker and autonomous self-improvement.",
+      "Standalone Workshop Worker, D1, another queue and additional orchestration frameworks; no new infrastructure is required to reconcile state.",
+      "Arbitrary natural-language coding: review existing Foundry PR #31 after the bounded round trip; do not reinvent its candidate."
+    ],
+    "constraints": [
+      "Use existing Cloudflare Pages/Pages Functions and GitHub dispatcher. Preserve private/local authority and loopback security.",
+      "One job_id across execution and proof; GitHub workflow_run_id is transport identity.",
+      "Keep observed branch heads separate from approved authority. No automatic SHA advancement, merge, publish, activation or spending.",
+      "Models may propose; Foundry validates; Independent Proof verifies; the owner retains approval.",
+      "Do not claim the machine works end to end from CI success or this state-repair change.",
+      "No private transcript, local archives, credentials, runtime databases or account secrets in public source."
+    ]
   }
 }
