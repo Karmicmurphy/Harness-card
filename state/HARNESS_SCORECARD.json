@@ -1,6 +1,6 @@
 {
   "schema_version": "1.2.0",
-  "generated_at": "2026-09-26T09:56:04.343360+00:00",
+  "generated_at": "2026-09-27T08:12:17.095399+00:00",
   "active_project": "FOUNDATION V0 \u2014 HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; OPEN_DOOR_COMPILE_JOB_V1_PROVEN_IN_TEST_AND_MERGED; UNIFIED_JOB_CORRELATION_THROUGH_AIOS_BUILDER_PROOF_PROVEN_IN_TEST_AND_MERGED; LOCAL_SOURCE_YARD_INVENTORY_V1_PROVEN_IN_TEST; LIVE_HOST_VERTICAL_SLICE_NOT_YET_PROVEN",
   "incident_count": 12,
@@ -66,7 +66,7 @@
     "factory": {
       "repo": "Karmicmurphy/temporal-capability-foundry",
       "branch": "software-builder-v0",
-      "sha": "cf51b485a5c2f342b4415d0690c3239efa3e3759",
+      "sha": "e0e14e689b1d3a3bda1356276975b4b34f1b615e",
       "functional_proof_head": "d4e6b25bb6b1395ad043a7b2f90b926f01cce489"
     },
     "runtime": {
