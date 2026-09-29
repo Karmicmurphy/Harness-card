@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import re
 import sys
 from typing import Any
 
@@ -43,6 +44,12 @@ def _canonical_refs(current: dict[str, Any]) -> dict[str, dict[str, Any]]:
     return refs
 
 
+def _project_section(project_index: str, heading: str) -> str:
+    """Return one project section without trusting later headings."""
+    tail = project_index.split(heading, 1)[1]
+    return tail.split("\n### ", 1)[0]
+
+
 def validate(root: Path) -> list[str]:
     errors: list[str] = []
     state = root / "state"
@@ -73,6 +80,22 @@ def validate(root: Path) -> list[str]:
         errors.append(
             f"PROJECT_INDEX.md is missing active project heading: {required_heading}"
         )
+    else:
+        section = _project_section(project_index, required_heading)
+        if "**Authority refs:** See `state/CURRENT_PROJECT.json`" not in section:
+            errors.append(
+                "PROJECT_INDEX active project must delegate exact authority refs to CURRENT_PROJECT.json"
+            )
+        if re.search(r"\b[0-9a-f]{40}\b", section):
+            errors.append(
+                "PROJECT_INDEX active project must not hard-code immutable component SHAs"
+            )
+        gate = current.get("work_order", {}).get("gate_id")
+        if gate and f"`{gate}`" not in section:
+            errors.append("PROJECT_INDEX active project does not name CURRENT_PROJECT gate_id")
+        evidence = current.get("evidence_state")
+        if evidence and evidence not in section:
+            errors.append("PROJECT_INDEX active project does not name CURRENT_PROJECT evidence_state")
 
     active_md = (state / "ACTIVE_WORK_ORDER.md").read_text(encoding="utf-8")
     if f"Project: `{current['active_project']}`" not in active_md:
