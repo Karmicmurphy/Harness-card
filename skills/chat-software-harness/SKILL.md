@@ -1,7 +1,7 @@
 # Chat Software Harness
 
 name: chat-software-harness
-version: 1.0.0
+version: 1.1.0
 status: PARTIALLY_PROVEN
 canonical_repo: Karmicmurphy/Harness-card
 canonical_path: skills/chat-software-harness/SKILL.md
@@ -55,6 +55,16 @@ The agent must:
 8. prove the actual user path;
 9. repair failures and retest while progress remains possible;
 10. write back durable state so the next chat can resume without reconstruction.
+
+## Context discipline
+
+Keep the root skill small enough to route work without forcing unrelated instructions into every task.
+
+- Read only the authority and reference material needed for the current failing layer.
+- Do not load every project document before a localized change.
+- Use progressive disclosure: root skill -> relevant reference -> exact evidence.
+- Re-evaluate old instructions when newer model/tool behavior makes them redundant or over-constraining.
+- Define the completion condition before implementation so a capable model does not stop at the first plausible patch.
 
 ## Operating loop
 
@@ -124,6 +134,10 @@ Do not restart the whole project unless evidence shows the architecture itself i
 
 Do not silently switch to a new framework, agent, repo, or branch.
 
+For provider/deploy/preview/runtime-binding failures, load `references/provider-deploy-debugging.md` and follow its truth ladder before asking the owner for another manual action.
+
+After the first user-visible failure in one layer, inspect sibling failure modes in that layer before the next release attempt.
+
 ### 6. PROOF GATE
 
 Never promote implementation directly to DONE.
@@ -137,6 +151,8 @@ For user-facing software, apply the Harness Card UI/app hard gate:
 `source changed -> tests pass -> deploy succeeds -> live target loads -> intended screen wins after startup settles -> primary user action works -> user-visible result is recognizable -> PROVEN_LIVE`
 
 When target-device proof is unavailable, say exactly which gate remains unproven.
+
+"Patched", "CI green", "deployed", and "fixed" are not interchangeable. Use "fixed" only when the failing user path has reached the required proof level.
 
 ### 7. STATE WRITEBACK
 
@@ -192,6 +208,8 @@ The external agent is a worker, not project authority. Its output returns to Cha
 - Do not create new architecture to solve a localized bug.
 - Do not confuse token/compute expenditure with engineering quality.
 - Prefer one verified move over a large speculative batch.
+- Treat owner interruption as an engineering cost: use repository, CI, logs, provider tooling, files, and current evidence before assigning manual diagnostics.
+- A red workflow run with zero jobs is configuration/workflow validation evidence first, not application failure evidence.
 
 ## Human interaction rule
 
@@ -212,7 +230,7 @@ When the user says **"Chat build mode"**, perform:
 2. resolve the active project;
 3. verify live repo/ref;
 4. recover the current unproven gate;
-5. select only needed skills;
+5. select only needed skills/references;
 6. execute the smallest useful move in Chat;
 7. prove it;
 8. write back state;
@@ -221,7 +239,6 @@ When the user says **"Chat build mode"**, perform:
 ## Success condition
 
 This skill is PROVEN when interactive Chat successfully resumes and completes software work on at least two distinct projects, including live authority recovery and proof, without requiring Randy to manually restate the operating process or move the task into Codex merely because code is involved.
-
 
 ## First field trial
 
@@ -238,3 +255,11 @@ Open proof:
 - second distinct project required by the skill's global success condition.
 
 Field-trial detail: `state/CHAT_SOFTWARE_HARNESS_FIRST_FIELD_TRIAL_2026-09-18.md`.
+
+## Second field trial — Foundation phone path
+
+Project: FOUNDATION V0 / Workshop Pages bounded job return
+Date: 2026-10-01
+Result: ACTIVE / REPO-SIDE PROVEN_IN_TEST / LIVE PROVIDER GATE OPEN
+
+The field trial exposed configuration-authority drift, stale contract assumptions, unrelated zero-job workflow noise, premature proof language, and owner-interruption waste. Durable learning is recorded in `state/FOUNDATION_PHONE_PATH_INCIDENT_2026-10-01.md` and `references/provider-deploy-debugging.md`.
