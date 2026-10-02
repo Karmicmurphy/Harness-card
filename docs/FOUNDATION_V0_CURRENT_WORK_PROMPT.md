@@ -22,7 +22,7 @@ Lane: INTEGRATION REPAIR / PHONE RESULT RETURN
 
 `PAGES_BOUNDED_JOB_ROUND_TRIP`
 
-Finish the explicitly authorized fixture-only Preview preparation recorded in state/receipts/PAGES_FIXTURE_PROMOTION_2026-10-02.json. Foundry PRs #32/#33 are merged at reviewed trees. Renew existing Cloudflare authentication without broader permissions, inspect existing Preview settings/rollback metadata and auto-deployment rules, then complete Workshop candidate CI and Preview-only deployment/binding verification at the exact approved source. Live fixture dispatch still requires separate explicit approval; arbitrary natural-language coding remains parked.
+Resume from state/receipts/PAGES_PREVIEW_PREPARATION_2026-10-02.json. Exact Workshop successor passed candidate CI and deployed to Preview only at 48d4cbf1-3e74-4c99-a26b-af97cc986f14 with reviewed source/pins. Restore only Preview's two missing existing secret bindings, FOUNDATION_GITHUB_TOKEN and FOUNDATION_OWNER_SUB, without broader permissions or Production changes. Then freshly deploy the same reviewed source and verify actual owner authentication/runtime bindings. Scripted GET was rejected at the edge (403/1010), not answered by the Function, and browser inspection is unavailable. Live fixture dispatch still requires separate explicit approval after readiness; do not rerun FRIDAY recovery or READ.
 
 ## Human path
 
@@ -42,6 +42,11 @@ Branch advancement is observation, not automatic promotion.
 
 ## Known evidence
 
+- 2026-10-02 Preview preparation: Workshop CI run 37034675230 passed at exact approved 256452bfc522af32260a6d78591acecf56379d52, tree 6528b275da5b398968aee3f1ed0f3fd09f9473ce: 62 Python tests, 15 phone tests, smoke/API/Worker contract, static build and Pages Function compilation. The unchanged inherited Worker deploy workflow failed with zero jobs; it is not this Preview deployment gate.
+- 2026-10-02 Preview preparation: Renewed the existing Cloudflare connection with a subset of previous scopes. Captured rollback metadata. Temporarily excluded only the reviewed branch from automatic Preview deployment for CI, then restored original Preview rules. Production settings/config fingerprint and canonical deployment were unchanged.
+- 2026-10-02 Preview preparation: Clean exact source deployed only to Preview as 48d4cbf1-3e74-4c99-a26b-af97cc986f14; provider metadata confirms source, Functions, FOUNDATION_PHONE_ENABLED=true, approved runner SOURCE_SHA 5b23c55e6c0c7d945adf15af882ed59244399f35 and dispatcher merge SHA 3787d3a468abea49d194a051364ce41f300f35d0. The original older Preview is retained. Metadata is not Function runtime/Android proof.
+- 2026-10-02 Preview preparation: Preview lacks FOUNDATION_GITHUB_TOKEN and FOUNDATION_OWNER_SUB. Only encrypted names exist in Production and no task-local config/env values were found. No token substitution, guessed owner identity, secret export or Production change occurred.
+- 2026-10-02 Preview preparation: Read-only HTTP probes were denied by the edge with 403/1010 browser-signature rejection before the Function. The supported browser helper still fails to initialize (kernel assets OS error 3). No protection was bypassed, live dispatch authorized/performed, or recovery state changed. Earlier facts below describe their recorded pre-preparation phases, not this later deployment.
 - 2026-10-02: Owner approved only runner 5b23c55e6c0c7d945adf15af882ed59244399f35, dispatcher 6c14e3d7751d084d17a69c430a3873317cef4f02, and Workshop successor 256452bfc522af32260a6d78591acecf56379d52 through candidate CI, reviewed Foundry merges, Harness record and Preview-only preparation; live dispatch is not authorized.
 - 2026-10-02: Foundry PR #32 merged into software-builder-v0 at 319c4945c6b9bb180385cdf0935633e2f1915d61; tree 23854d0d60e09f765dd2f0f999ff68bd6f3585d3 exactly retains reviewed runner content. Runner execution must still check out approved SOURCE_SHA 5b23c55e6c0c7d945adf15af882ed59244399f35, not a moving branch.
 - 2026-10-02: Foundry PR #33 merged into main at 3787d3a468abea49d194a051364ce41f300f35d0; tree 80ff8ce81b5dd402ade34511ba624847d02dad60 exactly retains reviewed dispatcher content. Main-only dispatch policy, admission-rejection receipts and attempt-specific artifacts are included. Candidate unit and bounded-job checks passed at both approved heads.
@@ -58,9 +63,8 @@ Branch advancement is observation, not automatic promotion.
 
 ## Remaining gaps
 
-- EXISTING_CLOUDFLARE_AUTHENTICATION_EXPIRED_REFRESH_FAILED
-- WORKSHOP_CANDIDATE_REMOTE_CI_NOT_RUN_PENDING_PREVIEW_AUTO_DEPLOY_INSPECTION
-- EXACT_APPROVED_PREVIEW_DEPLOYMENT_AND_RUNTIME_BINDINGS_NOT_VERIFIED
+- PREVIEW_FOUNDATION_GITHUB_TOKEN_AND_FOUNDATION_OWNER_SUB_ABSENT
+- ACTUAL_FUNCTION_RUNTIME_BINDING_AND_OWNER_AUTH_PROOF_NOT_OBTAINED_EDGE_403_1010_BROWSER_HELPER_UNAVAILABLE
 - LIVE_FIXTURE_DISPATCH_REQUIRES_SEPARATE_EXPLICIT_APPROVAL
 
 ## Stop condition

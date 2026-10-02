@@ -404,6 +404,6 @@
         "foundation_authority": false
       }
     ],
-    "next": "Finish the explicitly authorized fixture-only Preview preparation recorded in state/receipts/PAGES_FIXTURE_PROMOTION_2026-10-02.json. Foundry PRs #32/#33 are merged at reviewed trees. Renew existing Cloudflare authentication without broader permissions, inspect existing Preview settings/rollback metadata and auto-deployment rules, then complete Workshop candidate CI and Preview-only deployment/binding verification at the exact approved source. Live fixture dispatch still requires separate explicit approval; arbitrary natural-language coding remains parked."
+    "next": "Resume from state/receipts/PAGES_PREVIEW_PREPARATION_2026-10-02.json. Exact Workshop successor passed candidate CI and deployed to Preview only at 48d4cbf1-3e74-4c99-a26b-af97cc986f14 with reviewed source/pins. Restore only Preview's two missing existing secret bindings, FOUNDATION_GITHUB_TOKEN and FOUNDATION_OWNER_SUB, without broader permissions or Production changes. Then freshly deploy the same reviewed source and verify actual owner authentication/runtime bindings. Scripted GET was rejected at the edge (403/1010), not answered by the Function, and browser inspection is unavailable. Live fixture dispatch still requires separate explicit approval after readiness; do not rerun FRIDAY recovery or READ."
   }
 }
