@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "work_id": "pages-preview-preparation-2026-10-02",
+  "scope": "EXACT_FIXTURE_ONLY_PREVIEW_PREPARATION",
+  "evidence_state": "PARTIALLY_PROVEN",
+  "authorization_receipt": "state/receipts/PAGES_FIXTURE_PROMOTION_2026-10-02.json",
+  "harness_baseline_sha": "649b5e608ce2d9fbcb0ceae792ccd9a37f30496f",
+  "source": {
+    "repository": "Karmicmurphy/Ollie_Twis_Holo_workshop",
+    "branch": "codex/pages-bounded-reviewed-promotion",
+    "commit": "256452bfc522af32260a6d78591acecf56379d52",
+    "tree": "6528b275da5b398968aee3f1ed0f3fd09f9473ce",
+    "dirty": false
+  },
+  "candidate_ci": {
+    "run_id": 37034675230,
+    "conclusion": "success",
+    "python_tests": 62,
+    "phone_tests": 15,
+    "smoke": "PASS",
+    "local_api_e2e": "PASS",
+    "worker_contract": "PASS",
+    "static_build": "PASS",
+    "pages_function_compile": "PASS"
+  },
+  "unrelated_inherited_workflow": {
+    "path": ".github/workflows/cloudflare-worker.yml",
+    "run_id": 37034673528,
+    "conclusion": "failure",
+    "job_count": 0,
+    "unchanged_from_approved_base": true,
+    "not_preview_deployment_gate": true,
+    "code_change_performed": false
+  },
+  "dependency_audit": {
+    "runtime_dependencies": "ZERO_KNOWN_VULNERABILITIES_AUDIT_OMIT_DEV",
+    "local_tooling": "3_AUDIT_PACKAGE_WARNINGS_UNDICI_MINIFLARE_WRANGLER",
+    "approved_lockfile_changed": false
+  },
+  "preview": {
+    "project": "ollie-twis-holo-workshop",
+    "deployment_id": "48d4cbf1-3e74-4c99-a26b-af97cc986f14",
+    "environment": "preview",
+    "url": "https://48d4cbf1.ollie-twis-holo-workshop.pages.dev",
+    "alias": "https://codex-pages-bounded-reviewed.ollie-twis-holo-workshop.pages.dev",
+    "deployment_status": "success",
+    "uses_functions": true,
+    "deployment_metadata_source_verified": true,
+    "deployment_metadata_bindings": {
+      "FOUNDATION_PHONE_ENABLED": "true",
+      "FOUNDATION_SOURCE_SHA": "5b23c55e6c0c7d945adf15af882ed59244399f35",
+      "FOUNDATION_DISPATCH_SHA": "3787d3a468abea49d194a051364ce41f300f35d0"
+    },
+    "missing_secret_bindings": [
+      "FOUNDATION_GITHUB_TOKEN",
+      "FOUNDATION_OWNER_SUB"
+    ],
+    "existing_access_domain_and_audience": "SECRET_BINDING_NAMES_PRESENT_VALUES_NOT_EXPORTABLE_NOT_RUNTIME_PROVEN",
+    "runtime_function_binding_proof": "NOT_OBTAINED",
+    "http_read_only_probe": {
+      "http_status": 403,
+      "edge_error": 1010,
+      "reason": "browser_signature_banned",
+      "function_reached": false
+    },
+    "browser_inspection": "BLOCKED_KERNEL_ASSETS_OS_ERROR_3",
+    "candidate_only_ci_deploy_hold": "APPLIED_VERIFIED_AND_RESTORED",
+    "original_other_preview_rules_preserved": true,
+    "old_preview_retained": {
+      "deployment_id": "e7f59f40-70ee-4bab-a5d2-ee5590587bae",
+      "sha": "84fb1a21380b2c430f2dced1c799ade4df0cff6a",
+      "branch": "codex/pages-bounded-job-return"
+    },
+    "secrets_exported": false
+  },
+  "preservation": {
+    "production_config_fingerprint_unchanged": true,
+    "production_canonical_deployment_id_unchanged": "86a0c9c5-4d28-4d5d-9132-3e7bec3003e1",
+    "production_branch_controls_unchanged": true,
+    "production_mutations": false,
+    "workshop_main_publication": false,
+    "broader_authority_pins_changed": false,
+    "friday_recovery_changed": false,
+    "permission_broadening": false,
+    "spending_authorized": false,
+    "review_manifest_rewritten": false
+  },
+  "live_fixture_dispatch_authorized": false,
+  "live_fixture_dispatch_performed": false,
+  "activation_performed": false,
+  "owner_action_required": "Restore only Preview's FOUNDATION_GITHUB_TOKEN and FOUNDATION_OWNER_SUB using the existing reviewed, narrowly scoped credential and exact owner subject. Do not paste secret values into Chat or change Production/permissions.",
+  "next_gate": "Verify owner authentication and bindings in a fresh reviewed Preview deployment; only after readiness request a separate one-fixture Android live-dispatch approval.",
+  "proof_boundary": "Provider deployment source/binding metadata is verified. Neither an edge denial nor green CI proves runtime Function binding delivery, Android dispatch, or Independent Proof return."
+}
