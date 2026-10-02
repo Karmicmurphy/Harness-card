@@ -74,6 +74,45 @@ Inputs included four Harness files at the recovered authority revision plus fing
 
 This proves the read-only salvage preflight works with real artifact inputs. It does not prove Foundation execution.
 
+### 4. Certified local FRIDAY -> Foundation -> AIOS -> Independent Proof -> FRIDAY result return
+
+A manually invoked, allowlisted READ fixture completed through the actual local Foundation path and returned a correlated certified result through the registered FRIDAY MCP.
+
+Observed identifiers:
+
+- FRIDAY work order: `friday-work:7fcc12e4d9057ab09819ff2a`
+- canonical Foundry job: `job:4ea425916cc72eab71f134af`
+- AIOS state: `DONE`
+- Independent Proof verdict: `CERTIFIED`
+- certificate: `cert:4b8681457665e0e0678d028e97eb2217`
+
+The manually invoked bridge reused the existing grounded intent validator, job compiler, deny-by-default executor, AIOS adapter, and Independent Proof verifier. It accepted only the exact allowlisted READ request and rejected altered or unsupported requests.
+
+Three isolated local candidate files were created:
+
+- `bridge.py`
+- `verify_result.py`
+- `test_bridge.py`
+
+Validation:
+
+- 17 focused tests passed
+  - 7 bridge tests
+  - 7 FRIDAY gateway regressions
+  - 3 AIOS adapter regressions
+- the independent checker ran in an isolated workspace and reported no candidate mutation
+- the recovery capsule SHA256 remained unchanged
+- existing dirty Foundry files were not edited
+- no merge, deployment, promotion, authority change, Cloudflare mutation, or background worker occurred
+
+FRIDAY result return was confirmed by `friday_status`, which remained `READY`, preserved `RANDY_AND_HARNESS`, and exposed the correlated certified result under `read_fixture_result`.
+
+Important boundary: the work order itself remains `QUEUED_FOR_FOUNDATION`. The manually invoked immutable READ fixture executed, but this does **not** establish a live queue consumer or live-job completion semantics. FRIDAY's top-level `execution_performed: false` still describes the gateway layer, not the manually invoked fixture execution.
+
+The immutable result identified `PAGES_BOUNDED_JOB_ROUND_TRIP` as the next unproven gate in the recovered Harness snapshot at `732378db1eb5a35558627695e1436c3760e7a4ab`. This inspection does not prove that gate has passed.
+
+Evidence state: `PROVEN_LOCAL_CERTIFIED_READ_ROUND_TRIP`
+
 ## Incidents / losses / friction
 
 ### Incident A — Local command helper setup-refresh failure
@@ -178,6 +217,24 @@ Candidate explicitly avoids public-port changes, force-kill, Foundation executio
 
 **LEARNING:** Separate management plane from work plane. Codex/FRIDAY/Foundation work must not own the only channel capable of restoring Codex/FRIDAY/Foundation access.
 
+### Incident E — FRIDAY accepted work but had no live queue consumer
+
+**SYMPTOM:** `friday_submit_work_order` accepted and persisted the READ request as `QUEUED_FOR_FOUNDATION`, but inspection found no live queue consumer or completed-result retrieval path in the registered gateway.
+
+**EXPECTED:** A bounded accepted work order should correlate to a canonical Foundry job, execute through the compatible bounded path, receive Independent Proof, and return the result to FRIDAY.
+
+**LAYER:** ARCHITECTURE / EXECUTION / CONTRACT
+
+**ROOT CAUSE:** The FRIDAY gateway intentionally persisted work orders but had no capability-checked bridge from FRIDAY work-order IDs into the existing Foundry/AIOS/proof machinery.
+
+**FIX STATUS:** Candidate proof implemented locally as an isolated manually invoked READ bridge. The bridge reuses existing Foundation components rather than adding a new queue framework, worker service, database, or background daemon.
+
+**REAL-WORLD PROOF:** `PROVEN_LOCAL_CERTIFIED_READ_ROUND_TRIP` for the exact immutable allowlisted READ fixture; see Proven Win 4.
+
+**VERDICT:** PARTIALLY DONE — candidate bridge proof complete; live queue consumer / production handoff remains unproven.
+
+**LEARNING:** Work-order acceptance is not execution. Persisted queue state must never be promoted to job completion without correlated execution and Independent Proof. Reuse the existing execution spine before creating new orchestration infrastructure.
+
 ## Current proven FRIDAY boundary
 
 Proven:
@@ -188,15 +245,19 @@ Proven:
 4. Authority conflict fails closed.
 5. `friday_salvage` can run targeted, read-only estate preflight against real GitHub + local artifact inputs.
 6. A stale/closed Codex MCP transport can be recovered by full Quit/Exit + reopen without changing FRIDAY recovery state.
+7. `friday_submit_work_order` can accept and persist a bounded READ work order through the remote operator path.
+8. An isolated, manually invoked, exact-allowlist READ bridge can correlate FRIDAY work order -> Foundry job -> real AIOS execution -> Independent Proof -> FRIDAY result return.
+9. The focused certified round trip preserved the recovery capsule and governing authority and failed closed on altered/unsupported requests.
 
 Not yet proven:
 
-1. `friday_submit_work_order` through the remote phone path.
-2. A complete bounded work order reaching Foundry/AIOS/Independent Proof and returning a correlated useful result to the phone.
-3. Host recovery candidate on the actual Windows machine.
-4. Independent out-of-band management path.
-5. Cloud execution as FRIDAY's default worker.
-6. Full Workshop phone dispatch path; historical Cloudflare lane remains separately bounded and must not be inferred from FRIDAY MCP success.
+1. A live FRIDAY queue consumer automatically handing accepted work into Foundry/AIOS.
+2. A live/non-fixture arbitrary natural-language -> certified result path.
+3. `PAGES_BOUNDED_JOB_ROUND_TRIP`: authenticated phone dispatch of the approved bounded fixture followed by the exact correlated Independent Proof receipt returning to the phone.
+4. Host recovery candidate on the actual Windows machine.
+5. Independent out-of-band management path.
+6. Cloud execution as FRIDAY's default worker.
+7. Full Workshop phone dispatch path; historical Cloudflare lane remains separately bounded and must not be inferred from the local certified FRIDAY fixture.
 
 ## Durable operating rules extracted
 
@@ -207,9 +268,14 @@ Not yet proven:
 5. **Management plane must be independent.** The work-plane operator must not be the only means to restore the operator.
 6. **Owner interruption is a defect signal.** Prefer self-recovery, read-only inspection, and deterministic proof before asking the owner for manual diagnostics.
 7. **Prompt burden belongs in the harness.** Once authority, operating rules, and tool contracts are durable, the owner's normal request should be short natural-language intent; FRIDAY/Harness must recover context and choose the bounded next move.
+8. **Queue acceptance is not execution.** `QUEUED_FOR_FOUNDATION` proves persistence only; completion requires a correlated canonical job, execution result, and Independent Proof.
+9. **Reuse the execution spine.** Before creating orchestration infrastructure, combine the existing intent validator, compiler, AIOS adapter, and proof machinery through the smallest capability-checked bridge.
+10. **Fixture proof stays fixture-bounded.** A certified immutable local READ fixture does not prove arbitrary natural language, automatic queue consumption, cloud dispatch, or the live Pages path.
 
 ## Next safe proof
 
-The next live proof should be one bounded non-mutating `READ` or `RESEARCH` work order through `friday_submit_work_order`, followed through the existing Foundation path as far as the current implementation legitimately supports.
+The next governing unproven gate identified by the certified immutable READ fixture is `PAGES_BOUNDED_JOB_ROUND_TRIP`.
 
-Stop before mutation/approval/activation unless the work-order contract explicitly requires a separately authorized boundary.
+Treat that gate separately from the local FRIDAY bridge proof. Do not infer that local certified execution resolves Cloudflare/Workshop blockers. The required live proof remains authenticated phone dispatch of the approved bounded Foundation fixture followed by return of the exact correlated Independent Proof receipt.
+
+Stop before mutation, promotion, merge, deployment, authority change, or security-permission change unless a separately authorized work order explicitly crosses that boundary.
