@@ -4,14 +4,15 @@
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "lane": "INTEGRATION REPAIR / PHONE RESULT RETURN",
   "evidence_state": "PARTIALLY_PROVEN",
-  "next_action": "Connect the existing Pages Workshop to the already-pinned bounded GitHub job and return its correlated receipt. First prove authenticated dispatch and result retrieval for the approved aios-path-containment fixture; arbitrary natural-language coding remains a later, separately reviewed gate.",
+  "next_action": "Finish the explicitly authorized fixture-only Preview preparation recorded in state/receipts/PAGES_FIXTURE_PROMOTION_2026-10-02.json. Foundry PRs #32/#33 are merged at reviewed trees. Renew existing Cloudflare authentication without broader permissions, inspect existing Preview settings/rollback metadata and auto-deployment rules, then complete Workshop candidate CI and Preview-only deployment/binding verification at the exact approved source. Live fixture dispatch still requires separate explicit approval; arbitrary natural-language coding remains parked.",
   "status": "ACTIVE",
   "blockers": [
-    "PAGES_DISPATCH_AND_RECEIPT_ROUTES_NOT_IMPLEMENTED_IN_OBSERVED_BRANCH",
-    "AUTHENTICATED_PAGES_DEPLOYMENT_NOT_VERIFIED",
-    "ARBITRARY_NATURAL_LANGUAGE_TO_CERTIFIED_RESULT_NOT_PROVEN"
+    "EXISTING_CLOUDFLARE_AUTHENTICATION_EXPIRED_REFRESH_FAILED",
+    "WORKSHOP_CANDIDATE_REMOTE_CI_NOT_RUN_PENDING_PREVIEW_AUTO_DEPLOY_INSPECTION",
+    "EXACT_APPROVED_PREVIEW_DEPLOYMENT_AND_RUNTIME_BINDINGS_NOT_VERIFIED",
+    "LIVE_FIXTURE_DISPATCH_REQUIRES_SEPARATE_EXPLICIT_APPROVAL"
   ],
   "stop_condition": "An authenticated owner action in the existing Pages Workshop invokes only the approved bounded fixture at the pinned Foundry SHA and returns its exact correlated receipt to the phone. Reload/status recovery and denial paths pass. Record deployment, workflow_run_id, job_id, proof verdict and human-review state. This proves the bounded fixture round trip only.",
   "gate_id": "PAGES_BOUNDED_JOB_ROUND_TRIP",
-  "updated_at": "2026-09-27"
+  "updated_at": "2026-10-02"
 }
