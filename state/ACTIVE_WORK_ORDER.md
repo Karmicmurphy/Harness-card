@@ -12,7 +12,7 @@ Lane: INTEGRATION REPAIR / PHONE RESULT RETURN
 
 `PAGES_BOUNDED_JOB_ROUND_TRIP`
 
-Connect the existing Pages Workshop to the already-pinned bounded GitHub job and return its correlated receipt. First prove authenticated dispatch and result retrieval for the approved aios-path-containment fixture; arbitrary natural-language coding remains a later, separately reviewed gate.
+Finish the explicitly authorized fixture-only Preview preparation recorded in state/receipts/PAGES_FIXTURE_PROMOTION_2026-10-02.json. Foundry PRs #32/#33 are merged at reviewed trees. Renew existing Cloudflare authentication without broader permissions, inspect existing Preview settings/rollback metadata and auto-deployment rules, then complete Workshop candidate CI and Preview-only deployment/binding verification at the exact approved source. Live fixture dispatch still requires separate explicit approval; arbitrary natural-language coding remains parked.
 
 ## Human path
 
@@ -32,6 +32,12 @@ Branch advancement is observation, not automatic promotion.
 
 ## Known evidence
 
+- 2026-10-02: Owner approved only runner 5b23c55e6c0c7d945adf15af882ed59244399f35, dispatcher 6c14e3d7751d084d17a69c430a3873317cef4f02, and Workshop successor 256452bfc522af32260a6d78591acecf56379d52 through candidate CI, reviewed Foundry merges, Harness record and Preview-only preparation; live dispatch is not authorized.
+- 2026-10-02: Foundry PR #32 merged into software-builder-v0 at 319c4945c6b9bb180385cdf0935633e2f1915d61; tree 23854d0d60e09f765dd2f0f999ff68bd6f3585d3 exactly retains reviewed runner content. Runner execution must still check out approved SOURCE_SHA 5b23c55e6c0c7d945adf15af882ed59244399f35, not a moving branch.
+- 2026-10-02: Foundry PR #33 merged into main at 3787d3a468abea49d194a051364ce41f300f35d0; tree 80ff8ce81b5dd402ade34511ba624847d02dad60 exactly retains reviewed dispatcher content. Main-only dispatch policy, admission-rejection receipts and attempt-specific artifacts are included. Candidate unit and bounded-job checks passed at both approved heads.
+- 2026-10-02: Workshop successor contains the fixed-fixture Pages routes and receipt verifier; local phone, Python, cross-component, build and Function compilation checks passed. It is not remotely published or deployed; these checks do not prove Android arrival or runtime bindings.
+- 2026-10-02: FRIDAY recovery, certified immutable READ result, fresh READ receipt/request and work order hashes matched preserved evidence before promotion. No recovery/state mutation or new live dispatch occurred. Earlier remote-phone proof remains scoped to its recorded READ result.
+- The following 2026-09-27 observations are historical, not claims about current branch heads or deployed Preview source. Broader authority pins above intentionally remain unchanged; the exact fixture authorization is separate.
 - 2026-09-27: Foundry software-builder-v0 equals the approved e0e14e689b1d3a3bda1356276975b4b34f1b615e; AIOS and Salvage refs also match.
 - Foundry main contains .github/workflows/foundation-bounded-job.yml pinned to approved e0e14e6. The default-branch dispatcher was merged in PR #30; no branch migration is needed.
 - GitHub run 36248023448 job 108420731824 emitted CERTIFIED_AWAITING_HUMAN_REVIEW, job:phone-36248023448-aios-path-containment, CERTIFIED and activation_performed=false. Scope: EXACT_PATCH_FIXTURE_ONLY; this was a pull-request run, not a phone-arrival test.
@@ -42,9 +48,10 @@ Branch advancement is observation, not automatic promotion.
 
 ## Remaining gaps
 
-- PAGES_DISPATCH_AND_RECEIPT_ROUTES_NOT_IMPLEMENTED_IN_OBSERVED_BRANCH
-- AUTHENTICATED_PAGES_DEPLOYMENT_NOT_VERIFIED
-- ARBITRARY_NATURAL_LANGUAGE_TO_CERTIFIED_RESULT_NOT_PROVEN
+- EXISTING_CLOUDFLARE_AUTHENTICATION_EXPIRED_REFRESH_FAILED
+- WORKSHOP_CANDIDATE_REMOTE_CI_NOT_RUN_PENDING_PREVIEW_AUTO_DEPLOY_INSPECTION
+- EXACT_APPROVED_PREVIEW_DEPLOYMENT_AND_RUNTIME_BINDINGS_NOT_VERIFIED
+- LIVE_FIXTURE_DISPATCH_REQUIRES_SEPARATE_EXPLICIT_APPROVAL
 
 ## Stop condition
 
@@ -60,6 +67,7 @@ An authenticated owner action in the existing Pages Workshop invokes only the ap
 
 ## Constraints
 
+- Fixture-only authorization and exclusions are recorded in state/receipts/PAGES_FIXTURE_PROMOTION_2026-10-02.json. Stop on unexpected trees, authority conflicts or failed required checks. Do not repoint broader authority or rewrite protected FRIDAY state.
 - Use existing Cloudflare Pages/Pages Functions and GitHub dispatcher. Preserve private/local authority and loopback security.
 - One job_id across execution and proof; GitHub workflow_run_id is transport identity.
 - Keep observed branch heads separate from approved authority. No automatic SHA advancement, merge, publish, activation or spending.

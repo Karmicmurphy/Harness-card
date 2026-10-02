@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "work_id": "pages-fixture-promotion-2026-10-02",
+  "repo": "Karmicmurphy/Harness-card",
+  "baseline_sha": "390a7f4c0042115c181bf73f3bcffd0a6147b81b",
+  "scope": "EXACT_FIXTURE_ONLY_PREVIEW_PREPARATION",
+  "fixture": "aios-path-containment",
+  "evidence_state": "PARTIALLY_PROVEN",
+  "owner_authorization": {
+    "source": "Explicit owner approval in the current Codex conversation, 2026-10-02",
+    "candidate_ci": true,
+    "reviewed_foundry_merges": true,
+    "harness_fixture_lane_record": true,
+    "reviewed_preview_deployment_and_existing_binding_repair": true,
+    "live_fixture_dispatch": false,
+    "production_deployment": false,
+    "workshop_main_publication": false,
+    "permission_broadening": false,
+    "spending": false,
+    "friday_recovery_changes": false
+  },
+  "runner": {
+    "repo": "Karmicmurphy/temporal-capability-foundry",
+    "pull_request": 32,
+    "target_branch": "software-builder-v0",
+    "base_sha": "e0e14e689b1d3a3bda1356276975b4b34f1b615e",
+    "reviewed_source_sha": "5b23c55e6c0c7d945adf15af882ed59244399f35",
+    "merge_sha": "319c4945c6b9bb180385cdf0935633e2f1915d61",
+    "reviewed_and_merged_tree": "23854d0d60e09f765dd2f0f999ff68bd6f3585d3",
+    "tree_identity_verified": true,
+    "candidate_checks": {
+      "unit": {"run_id": 36507653168, "conclusion": "success"},
+      "bounded_job": {"run_id": 36507653189, "conclusion": "success"}
+    }
+  },
+  "dispatcher": {
+    "repo": "Karmicmurphy/temporal-capability-foundry",
+    "pull_request": 33,
+    "target_branch": "main",
+    "base_sha": "cc27cd6ee8e18326663b6f6b88c55a3426252dac",
+    "reviewed_source_sha": "6c14e3d7751d084d17a69c430a3873317cef4f02",
+    "merge_sha": "3787d3a468abea49d194a051364ce41f300f35d0",
+    "reviewed_and_merged_tree": "80ff8ce81b5dd402ade34511ba624847d02dad60",
+    "tree_identity_verified": true,
+    "candidate_checks": {
+      "unit": {"run_id": 37026686427, "conclusion": "success"},
+      "bounded_job": {"run_id": 37026687034, "conclusion": "success"}
+    }
+  },
+  "workshop_preview": {
+    "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
+    "branch": "codex/pages-bounded-reviewed-promotion",
+    "reviewed_source_sha": "256452bfc522af32260a6d78591acecf56379d52",
+    "reviewed_tree": "6528b275da5b398968aee3f1ed0f3fd09f9473ce",
+    "project": "ollie-twis-holo-workshop",
+    "remote_candidate_ci": "NOT_RUN",
+    "publication_performed": false,
+    "deployment_performed": false,
+    "bindings_changed": false,
+    "runtime_binding_evidence": "NOT_VERIFIED",
+    "rollback_metadata": "NOT_CAPTURED_AUTHENTICATION_BLOCKED",
+    "required_nonsecret_pins_after_authorized_preparation": {
+      "FOUNDATION_PHONE_ENABLED": "true",
+      "FOUNDATION_SOURCE_SHA": "5b23c55e6c0c7d945adf15af882ed59244399f35",
+      "FOUNDATION_DISPATCH_SHA": "3787d3a468abea49d194a051364ce41f300f35d0"
+    },
+    "credential_rule": "Reuse existing narrow owner Access and Foundry dispatch credentials. Do not reuse a broad CLI token, broaden permissions or expose secret values."
+  },
+  "preservation": {
+    "broader_authority_pins_changed": false,
+    "friday_recovery_state_changed": false,
+    "dirty_local_reconciliation_changed": false,
+    "private_local_workshop_changed": false,
+    "original_review_manifest_rewritten": false
+  },
+  "live_fixture_dispatch_performed": false,
+  "activation_performed": false,
+  "whole_phone_path_live_proof": "NOT_RUN",
+  "remaining_blockers": [
+    "Existing Cloudflare CLI authentication expired and refresh failed; browser-control kernel assets unavailable.",
+    "Read existing Preview deployment/build/branch rules and rollback metadata before publishing a branch that may auto-deploy.",
+    "Workshop candidate remote CI, exact Preview deployment and deployed Function bindings remain unverified.",
+    "Live fixture dispatch requires separate explicit owner approval after Preview readiness."
+  ]
+}
