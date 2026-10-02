@@ -69,25 +69,6 @@
 - **Rule:** Stale work-order prose and build prompts fail the same guard as stale JSON. Access failures remain UNKNOWN. Branch advancement never silently replaces approved pins.
 - **Evidence:** Local regression and guard proof only; corrected instructions not yet field-proven in a later session. Whole phone path remains unproven.
 
-### LR-014 — FRIDAY transport failure was mistaken for FRIDAY state failure
-- **Root cause learned:** Codex/MCP transport closed while FRIDAY's verified continuation capsule and recovered authority state remained intact.
-- **Rule:** Treat `Transport closed` as a transport/process-lifecycle fault first. Preserve FRIDAY recovery state, verify process/transport boundaries, and only rebuild FRIDAY if evidence proves FRIDAY itself is invalid.
-- **Evidence:** PROVEN_REMOTE_PHONE 2026-10-01: full Codex Quit/Exit + reopen restored `friday_status` to `READY` with unchanged capsule `vcc:3983583104e956414ddc19093e149213`, authority `RANDY_AND_HARNESS`, and no Foundation execution.
-
-### LR-015 — Dirty local authority-like edits are evidence, not governing authority
-- **Root cause learned:** A dirty local reconciliation branch contained uncommitted authority edits that conflicted with Harness GitHub `main`.
-- **Rule:** Fail closed on authority disagreement. Harness governing authority remains authoritative until a candidate/local state is explicitly reconciled and promoted; preserve the candidate instead of silently discarding it.
-- **Evidence:** PROVEN 2026-10-01: capsule verification initially stopped on conflict; after explicit authority resolution, the verified capsule recovered FRIDAY to `READY` while the dirty local branch remained untouched.
-
-### LR-016 — Work-plane operator cannot be the only management-plane recovery path
-- **Root cause learned:** Restarting Codex while the owner was remote risked stranding the owner because Codex Remote was the only proven operator doorway.
-- **Rule:** Separate management plane from work plane. Codex/FRIDAY/Foundation may use the recovery plane but must not be the only mechanism capable of restoring it. Prefer independent, fail-closed host recovery with no public control endpoint.
-- **Evidence:** INCIDENT 2026-10-01; candidate `candidate/friday-host-recovery-v0` / draft PR #15 prepared, host proof pending.
-
-### LR-017 — Prompt burden belongs in FRIDAY/Harness, not the owner
-- **Root cause learned:** The owner repeatedly had to restate architecture, authority, stop conditions, and known context in long prompts despite those rules already existing in Harness/FRIDAY.
-- **Rule:** Once durable authority and operating rules exist, normal owner prompts should be short natural-language intent. FRIDAY/Harness must recover current truth, load only relevant skills/evidence, choose one bounded move, prove it, and return only when an actual approval/authority boundary or irreducible blocker requires the owner.
-- **Evidence:** 2026-10-01 field trial successfully used durable FRIDAY recovery + `friday_salvage` with current Harness authority and real local fingerprints; owner did not need to restate repository internals for the successful salvage call.
 
 ## Repeated-layer escalations
 
@@ -95,8 +76,7 @@
 - **DEPLOY repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 - **TEST-CI repeated 6 times:** inspect sibling failure modes before another release touching this layer.
 - **CONTRACT repeated 11 times:** inspect sibling failure modes before another release touching this layer.
-- **AUTHORITY repeated 4 times:** inspect sibling failure modes before another release touching this layer.
-- **LOCAL / TRANSPORT / OPERATOR now has a user-facing recovery incident:** classify transport vs state before redesigning.
+- **AUTHORITY repeated 3 times:** inspect sibling failure modes before another release touching this layer.
 - **MOBILE AUDIO repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 - **CREATIVE repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 
