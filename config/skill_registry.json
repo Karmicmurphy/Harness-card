@@ -24,6 +24,11 @@
       "path": "skills/business-operator-harness/SKILL.md",
       "kind": "PROCEDURAL"
     },
+    "constraint-breaker-lab": {
+      "source": "harness_local",
+      "path": "skills/constraint-breaker-lab/SKILL.md",
+      "kind": "PROCEDURAL_CONDITIONAL"
+    },
     "intent-recovery-compass": {
       "source": "salvage_suite",
       "path": "intent-recovery-compass/SKILL.md",
