@@ -1,6 +1,6 @@
 {
   "schema_version": "1.2.0",
-  "generated_at": "2026-10-04T11:09:08.140049+00:00",
+  "generated_at": "2026-10-05T00:02:30.006347+00:00",
   "active_project": "FOUNDATION V0 \u2014 HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
   "incident_count": 13,
@@ -85,5 +85,7 @@
       "sha": "1785ed1405e769a17ec22066dc1e27a40dbf153b",
       "note": "Open Door -> Foundry compile-job is merged and proven in CI; live Foundation proof remains pending on any verified host."
     }
-  }
+  },
+  "learning_candidate_count": 1,
+  "proven_learning_candidate_count": 0
 }
