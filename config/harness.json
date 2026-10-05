@@ -1,7 +1,7 @@
 {
   "name": "Harness Card",
-  "version": "0.2.0",
-  "purpose": "Canonical AI operating harness for intent recovery, continuity, skill routing, bounded execution, proof, learning, and closeout across projects.",
+  "version": "0.3.0",
+  "purpose": "Canonical AI operating harness for intent recovery, continuity, skill routing, bounded execution, proof, learning, automation, and closeout across projects.",
   "manual_triggers": [
     "Use Harness Card",
     "Use Harness Card and continue",
@@ -14,9 +14,11 @@
     "ROUTING.md",
     "state/CURRENT_PROJECT.json",
     "state/ACTIVE_WORK_ORDER.md",
+    "state/LEARNING_CANDIDATES.json",
     "projects/PROJECT_INDEX.md",
     "skills/SKILL_SOURCES.md",
-    "config/skill_registry.json"
+    "config/skill_registry.json",
+    "config/friday_automation_policy.json"
   ],
   "evidence_states": [
     "CLAIMED",
@@ -43,5 +45,12 @@
     "registry": "config/skill_registry.json",
     "resolver": "scripts/resolve_skill.py",
     "rule": "Every routed skill must resolve to one canonical repo/path/ref before use."
+  },
+  "automation": {
+    "policy": "config/friday_automation_policy.json",
+    "mode": "AUTOMATE_UNTIL_OWNER_GATE",
+    "owner_view_builder": "scripts/friday_control_plane.py",
+    "learning_inbox": "state/LEARNING_CANDIDATES.json",
+    "rule": "Automate bounded reversible evidence-producing work; stop at explicit owner gates."
   }
 }
