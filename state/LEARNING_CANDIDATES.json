@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "privacy": "GENERALIZED_NON_SENSITIVE_ONLY",
+  "candidates": [
+    {
+      "id": "LC-2026-10-04-CONSTRAINT-INVERSION",
+      "status": "CANDIDATE",
+      "source": "FRIDAY local responsiveness investigation",
+      "trigger": "A capability worked but the current implementation was too slow on constrained hardware.",
+      "rule": "Separate the required outcome from the current implementation, expose and invert hidden assumptions, compare deterministic/cached/specialized/historical mechanisms, then run the cheapest discriminating bake-off before redesign or hardware purchase.",
+      "proof": "PENDING_BOUNDED_BAKE_OFF",
+      "route": "constraint-breaker-lab",
+      "privacy_note": "Generalized engineering lesson only; no raw private conversation content retained."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "AUTOMATE_UNTIL_OWNER_GATE",
+  "purpose": "Let FRIDAY perform bounded, reversible, evidence-producing work automatically while preserving explicit human authority for sensitive or irreversible actions.",
+  "principles": [
+    "Recover current truth before acting.",
+    "Automate repeated deterministic work before adding more AI.",
+    "Build and test in isolated candidate lanes before promotion.",
+    "Every automatic action must leave evidence and an undo path when mutation occurs.",
+    "Learning may generalize only non-sensitive durable lessons; raw private chat is not copied into this public repository.",
+    "Complexity may exist under FRIDAY but must not leak into the owner's normal operating view."
+  ],
+  "automatic_actions": [
+    "validate canonical continuity and authority files",
+    "observe approved repository refs read-only",
+    "run deterministic tests, validators, benchmarks, and candidate CI",
+    "refresh owner-readable machine status",
+    "run the existing self-improvement worker on durable sanitized harness inputs",
+    "index generalized learning candidates without promoting unproven lessons",
+    "generate isolated reversible candidate work orders",
+    "reuse cached or previously proven outputs when their validity conditions still hold",
+    "compare candidate mechanisms and select the cheapest bounded proof"
+  ],
+  "owner_gate_actions": [
+    "read, restore, rotate, export, or replace secret or identity material",
+    "broaden permissions or authorization scope",
+    "spend money or introduce paid recurring services",
+    "production deployment or public activation when not already pre-authorized by policy",
+    "live external side effects beyond an already approved bounded fixture",
+    "destructive or irreversible mutation",
+    "promotion of canonical authority when the evidence or policy cannot decide safely",
+    "work outside the locked target or stop condition"
+  ],
+  "never_automatic": [
+    "expose secret values",
+    "bypass security, provider, browser, authentication, or policy controls",
+    "overwrite dirty owner work",
+    "promote branch movement by itself to canonical authority",
+    "claim PROVEN_LIVE from tests, builds, deploy metadata, or mockups alone",
+    "copy sensitive personal conversation content into this public repository"
+  ],
+  "owner_gate_markers": [
+    "EXPLICIT_APPROVAL",
+    "SECRET",
+    "OWNER_",
+    "PRODUCTION",
+    "PERMISSION",
+    "SPEND",
+    "DESTRUCTIVE",
+    "IRREVERSIBLE"
+  ],
+  "learning": {
+    "source": "state/LEARNING_CANDIDATES.json",
+    "allowed_statuses": ["CANDIDATE", "PROVEN", "REJECTED", "RETIRED"],
+    "promotion_rule": "Only PROVEN generalized lessons may become generated operating rules.",
+    "privacy_rule": "Learning entries must be generalized and non-sensitive; preserve a source label and proof reference without copying private raw material."
+  }
+}
