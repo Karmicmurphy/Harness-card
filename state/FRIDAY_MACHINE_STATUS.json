@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-10-05T00:08:53.737991+00:00",
+  "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
+  "evidence_state": "PARTIALLY_PROVEN",
+  "lane": "INTEGRATION REPAIR / PHONE RESULT RETURN",
+  "machine_state": "READY_FOR_BOUNDED_AUTOMATION",
+  "automation_mode": "AUTOMATE_UNTIL_OWNER_GATE",
+  "automation_surface": {
+    "authority_guard": true,
+    "self_improvement_worker": true,
+    "drift_observer": true,
+    "continuity_renderer": true,
+    "automation_policy": true,
+    "learning_inbox": true,
+    "constraint_breaker": true
+  },
+  "current_gate": {
+    "gate_id": "PAGES_BOUNDED_JOB_ROUND_TRIP",
+    "status": "ACTIVE",
+    "stop_condition": "An authenticated owner action in the existing Pages Workshop invokes only the approved bounded fixture at the pinned Foundry SHA and returns its exact correlated receipt to the phone. Reload/status recovery and denial paths pass. Record deployment, workflow_run_id, job_id, proof verdict and human-review state. This proves the bounded fixture round trip only.",
+    "canonical_next_action": "Resume from state/receipts/PAGES_PREVIEW_PREPARATION_2026-10-02.json. Exact Workshop successor passed candidate CI and deployed to Preview only at 48d4cbf1-3e74-4c99-a26b-af97cc986f14 with reviewed source/pins. Restore only Preview's two missing existing secret bindings, FOUNDATION_GITHUB_TOKEN and FOUNDATION_OWNER_SUB, without broader permissions or Production changes. Then freshly deploy the same reviewed source and verify actual owner authentication/runtime bindings. Scripted GET was rejected at the edge (403/1010), not answered by the Function, and browser inspection is unavailable. Live fixture dispatch still requires separate explicit approval after readiness; do not rerun FRIDAY recovery or READ."
+  },
+  "blockers": {
+    "automatic": [],
+    "owner_gate": [
+      "PREVIEW_FOUNDATION_GITHUB_TOKEN_AND_FOUNDATION_OWNER_SUB_ABSENT",
+      "ACTUAL_FUNCTION_RUNTIME_BINDING_AND_OWNER_AUTH_PROOF_NOT_OBTAINED_EDGE_403_1010_BROWSER_HELPER_UNAVAILABLE",
+      "LIVE_FIXTURE_DISPATCH_REQUIRES_SEPARATE_EXPLICIT_APPROVAL"
+    ],
+    "owner_attention_required": true
+  },
+  "remote_authority_observation": {
+    "state": "RECONCILIATION_REQUIRED",
+    "observed_at": "2026-10-05T00:08:53.737991+00:00",
+    "match": 2,
+    "reconciliation_required": 1,
+    "unknown": 2,
+    "components": [
+      {
+        "role": "governance",
+        "repo": "Karmicmurphy/Harness-card",
+        "branch": "main",
+        "approved_sha": null,
+        "observed_sha": "53997a8240ea04909b2f734e1a47dd8550e0df37",
+        "state": "OBSERVED_GOVERNANCE"
+      },
+      {
+        "role": "factory",
+        "repo": "Karmicmurphy/temporal-capability-foundry",
+        "branch": "software-builder-v0",
+        "approved_sha": "e0e14e689b1d3a3bda1356276975b4b34f1b615e",
+        "observed_sha": null,
+        "state": "UNKNOWN",
+        "reason": "HTTP_404: existence/access unverified"
+      },
+      {
+        "role": "runtime",
+        "repo": "Karmicmurphy/Untethered-AIOS",
+        "branch": "main",
+        "approved_sha": "8a954439af2b15b00f7c961d83552772b382fd1f",
+        "observed_sha": "8a954439af2b15b00f7c961d83552772b382fd1f",
+        "state": "MATCH"
+      },
+      {
+        "role": "salvage",
+        "repo": "Karmicmurphy/digital-scrapyard-autopilot",
+        "branch": "main",
+        "approved_sha": "a059a27ef2bd662827a51da44dd8efb8863d634c",
+        "observed_sha": null,
+        "state": "UNKNOWN",
+        "reason": "HTTP_404: existence/access unverified"
+      },
+      {
+        "role": "cockpit",
+        "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
+        "branch": "living-workshop-main-build",
+        "approved_sha": "1785ed1405e769a17ec22066dc1e27a40dbf153b",
+        "observed_sha": "9822e988dd125f55b13be3891eb0a39975a26191",
+        "state": "RECONCILIATION_REQUIRED"
+      }
+    ]
+  },
+  "learning": {
+    "scope": "DURABLE_SANITIZED_HARNESS_INPUTS_NOT_RAW_CHAT",
+    "candidate_count": 1,
+    "status_counts": {
+      "CANDIDATE": 1,
+      "PROVEN": 0,
+      "REJECTED": 0,
+      "RETIRED": 0
+    },
+    "proven_rules_eligible": 0
+  },
+  "self_improvement": {
+    "incident_count": 13,
+    "learned_rule_count": 13,
+    "weird_salvage_count": 2,
+    "learning_contract": "PROVEN generalized candidates may join generated rules; raw private chat is not automatically ingested."
+  },
+  "policy": {
+    "automatic_actions": [
+      "validate canonical continuity and authority files",
+      "observe approved repository refs read-only",
+      "run deterministic tests, validators, benchmarks, and candidate CI",
+      "refresh owner-readable machine status",
+      "run the existing self-improvement worker on durable sanitized harness inputs",
+      "index generalized learning candidates without promoting unproven lessons",
+      "generate isolated reversible candidate work orders",
+      "reuse cached or previously proven outputs when their validity conditions still hold",
+      "compare candidate mechanisms and select the cheapest bounded proof"
+    ],
+    "owner_gate_actions": [
+      "read, restore, rotate, export, or replace secret or identity material",
+      "broaden permissions or authorization scope",
+      "spend money or introduce paid recurring services",
+      "production deployment or public activation when not already pre-authorized by policy",
+      "live external side effects beyond an already approved bounded fixture",
+      "destructive or irreversible mutation",
+      "promotion of canonical authority when the evidence or policy cannot decide safely",
+      "work outside the locked target or stop condition"
+    ],
+    "never_automatic": [
+      "expose secret values",
+      "bypass security, provider, browser, authentication, or policy controls",
+      "overwrite dirty owner work",
+      "promote branch movement by itself to canonical authority",
+      "claim PROVEN_LIVE from tests, builds, deploy metadata, or mockups alone",
+      "copy sensitive personal conversation content into this public repository"
+    ]
+  },
+  "next_machine_action": "RECONCILE_REMOTE_STATE_BEFORE_MUTATION",
+  "owner_view": {
+    "working": [
+      "authority_guard",
+      "self_improvement_worker",
+      "drift_observer",
+      "continuity_renderer",
+      "automation_policy",
+      "learning_inbox",
+      "constraint_breaker"
+    ],
+    "missing": [],
+    "what_friday_is_doing": "RECONCILE_REMOTE_STATE_BEFORE_MUTATION",
+    "what_friday_needs_from_owner": [
+      "PREVIEW_FOUNDATION_GITHUB_TOKEN_AND_FOUNDATION_OWNER_SUB_ABSENT",
+      "ACTUAL_FUNCTION_RUNTIME_BINDING_AND_OWNER_AUTH_PROOF_NOT_OBTAINED_EDGE_403_1010_BROWSER_HELPER_UNAVAILABLE",
+      "LIVE_FIXTURE_DISPATCH_REQUIRES_SEPARATE_EXPLICIT_APPROVAL"
+    ]
+  }
+}
