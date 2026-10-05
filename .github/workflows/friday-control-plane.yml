@@ -16,6 +16,7 @@ on:
       - "workers/learning_intake.py"
       - "skills/constraint-breaker-lab/**"
       - "tests/test_friday_control_plane.py"
+      - "tests/test_learning_intake.py"
       - ".github/workflows/friday-control-plane.yml"
   push:
     branches: [main]
@@ -30,6 +31,7 @@ on:
       - "workers/learning_intake.py"
       - "skills/constraint-breaker-lab/**"
       - "tests/test_friday_control_plane.py"
+      - "tests/test_learning_intake.py"
       - ".github/workflows/friday-control-plane.yml"
 
 permissions:
@@ -61,6 +63,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.FOUNDATION_READ_TOKEN || github.token }}
         run: python scripts/foundation_state.py observe > foundation-observation.json
+
+      - name: Test sanitized learning intake
+        run: python tests/test_learning_intake.py
 
       - name: Test FRIDAY control plane
         run: python tests/test_friday_control_plane.py
