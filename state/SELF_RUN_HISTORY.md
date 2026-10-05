@@ -307,3 +307,12 @@ Automatic record of the harness learning worker's own wins and losses.
 - **GENERALIZED_LEARNING:** success
 - **VALIDATION:** success
 - **RUN:** 37245907589
+
+### SELF-RUN
+- **RESULT:** WIN
+- **SHA:** 98331f853befd6456e3c50a0d5a4c67c72cc3f9f
+- **REGRESSION:** success
+- **LEARNER:** success
+- **GENERALIZED_LEARNING:** success
+- **VALIDATION:** success
+- **RUN:** 37246191240
