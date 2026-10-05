@@ -22,8 +22,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: harness-self-improvement
-  cancel-in-progress: true
+  group: harness-state-writer-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   learn-and-rewrite:
@@ -98,9 +98,16 @@ jobs:
             exit 0
           fi
           git commit -m "Harness learns from latest wins losses and weird"
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep 2
+          done
+          echo "Unable to publish Harness learning after three reconciliation attempts."
+          exit 1
 
       - name: Fail if the self-improvement run lost
         if: always()
