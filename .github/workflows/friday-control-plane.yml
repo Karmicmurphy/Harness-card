@@ -104,6 +104,10 @@ jobs:
             exit 0
           fi
           git commit -m "Refresh FRIDAY machine status"
+          # This is a disposable CI checkout. Remove all test/observation residue after
+          # the status commit so rebasing can never be blocked by unrelated dirty files.
+          git reset --hard HEAD
+          git clean -fd
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then
