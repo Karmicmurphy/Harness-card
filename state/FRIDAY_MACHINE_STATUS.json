@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-09T18:29:09.595126+00:00",
+  "generated_at": "2026-10-10T17:26:42.089346+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
   "lane": "INTEGRATION REPAIR / PHONE RESULT RETURN",
@@ -32,7 +32,7 @@
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-10-09T18:29:09.595126+00:00",
+    "observed_at": "2026-10-10T17:26:42.089346+00:00",
     "match": 2,
     "reconciliation_required": 1,
     "unknown": 2,
@@ -42,7 +42,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "a1ad99849a2911731df254c73801c39b62830e56",
+        "observed_sha": "e5edc5416699783173e265eb24d4be3bd731bb9b",
         "state": "OBSERVED_GOVERNANCE"
       },
       {
