@@ -165,3 +165,14 @@ When the owner mentions **COILSIDE**, **WTF Stupid Simple** (the field app), Sea
 - Recover verified Cloudflare/GitHub state first. If the Chat connector cannot perform a provider write, diagnose that connector's scope and consider an owner-confirmed provider-native action (Agent Lee) without making the owner wander through dashboard pages. Independently inspect the result.
 - Never assume a stored issue automatically changes FRIDAY's runtime. Honor the authority hierarchy and route this evidence only when the problem is relevant.
 - Protect local Android records: no cache clearing or profile switching before owner backup. Next unproven app gate is actual owner ↔ Sean notes and timecard save/reload/recovery, **not** another database or Worker architecture pass.
+
+### Phone-only FRIDAY / no reliable PC
+
+Trigger when the owner says they cannot access their PC, are operating only from Android, or asks FRIDAY to continue work despite missing local equipment.
+
+- Load `config/owner_access_profile.json` and `state/FRIDAY_PHONE_ONLY_RECOVERY_2026-10-15.md`; recover live Harness authority and provider state before acting.
+- Treat **Android as the primary operating environment**, not a degraded afterthought. Do repo, CI and provider actions through connected tools with bounded receipts. Never require a Windows launcher, local shell, past local files, or manually pasted secret tokens to make ordinary progress.
+- Protect local-only authority and owner data. Inaccessible private Workshop files are UNKNOWN/UNAVAILABLE, **not** reconstructed, lost, or silently copied into GitHub.
+- FRIDAY still obeys canonical `PAGES_BOUNDED_JOB_ROUND_TRIP` owner and provider gates: no production changes, secret transfers, spending or live dispatch without exact authorization and proof.
+- Minimize owner interruption. One phone action at a time only when the tools cannot cross an unavoidable gate, and retain a restart receipt.
+- The owner need not explain their personal circumstances or housing situation to use this route. No sensitive details go in this public repository.
