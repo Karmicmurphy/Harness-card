@@ -252,3 +252,20 @@ Foundation restart files disagreed and sent work back to completed stages
 - **BONUS SALVAGE:** Existing pinned GitHub dispatcher and certified fixture receipt recovered; no replacement engine needed.
 - **VERDICT:** BLOCKED
 - **STOP:** Close incident after the merged continuation is used successfully to resume without stale-stage restart; do not equate that with phone-path completion.
+
+### INCIDENT
+Correct owner intent existed in the harness but did not reliably reach action
+
+- **SYMPTOM:** An owner with an existing field application blocked by Cloudflare Access repeatedly received prompts and manual navigation after requesting direct repair. The connected provider reads succeeded, but Access policy writes returned error `1010`. The owner had to restate target, tool, and phone-only constraints.
+- **EXPECTED:** Recover the field app target, attempt the authorized bounded change, verify the outcome, and return one precise remaining human gate if provider write access blocks execution; keep Foundation/FRIDAY separate.
+- **CURRENT AUTHORITY:** Harness Card `main` operating contract; COILSIDE is a separate product. Connected Cloudflare reads reported unchanged Access policies after unsuccessful writes. Live local FRIDAY owner-node and Android application sign-in remain **UNKNOWN** from this session.
+- **LAYER:** CONTRACT / PROVIDER / AUTHORITY
+- **FALSE LEADS:** Treating a profane request as unclear; assuming account-superuser status also guarantees connector write authorization; treating prompt generation as execution.
+- **ROOT CAUSE:** Interaction rules existed as repository governance but were not verified as active runtime behavior. Cloudflare API error `1010` has an **UNKNOWN** underlying permission/configuration cause; do not conflate these distinct failures.
+- **FIX:** Clarify owner-language action-versus-prompt, correction, no-repeat, and phone-only behavior in the existing operating contract. Preserve a bounded live trial requirement rather than creating a new framework or claiming runtime deployment.
+- **REGRESSION / PREVENTION:** Acceptance tests N–P require actual owner-path behavior and rejection of prompt-only or proxy-success responses.
+- **REAL-WORLD PROOF:** **PENDING.** Documentation/branch checks, even if green, do not prove FRIDAY loads these rules. Cloudflare field-app access is not claimed restored.
+- **PREVENTION ARTIFACT:** Candidate Harness contract/acceptance edits and this generalized incident record; no private conversation transcript or credentials copied.
+- **BONUS SALVAGE:** Existing Harness recovery rules were already correct in principle; integration/proof and owner interruption are the missing gates, not another personality engine.
+- **VERDICT:** BLOCKED
+- **STOP:** Do not promote to DONE until real FRIDAY entry-point behavior and the separate field-app repair are independently verified.
