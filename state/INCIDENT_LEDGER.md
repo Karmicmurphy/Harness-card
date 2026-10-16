@@ -252,3 +252,22 @@ Foundation restart files disagreed and sent work back to completed stages
 - **BONUS SALVAGE:** Existing pinned GitHub dispatcher and certified fixture receipt recovered; no replacement engine needed.
 - **VERDICT:** BLOCKED
 - **STOP:** Close incident after the merged continuation is used successfully to resume without stale-stage restart; do not equate that with phone-path completion.
+
+
+### INCIDENT
+COILSIDE field app recovery — public Access, cloud D1 and two-person owner intent
+
+- **SYMPTOM:** A supposedly simple Android field app failed with public Access 403, repeated confusing navigation, a wrongly assumed email-login architecture, cloud-connector permission denials, and incomplete deployment proof.
+- **EXPECTED:** One public app, two actual people exchanging private notes without registration, three independent work/pay timesheets, durable local hours and Cloudflare-backed conversation; minimal owner interruption.
+- **CURRENT AUTHORITY:** [Complete field-win handoff](COILSIDE_FIELD_WIN_HANDOFF_2026-10-15.md) (same `state/` folder); COILSIDE `main` `c33cde503b4565bc21193fd3d9f3b06b3c40b083`; Harness issue #26 and Workshop intake #27.
+- **LAYER:** PROVIDER ACCESS / APPLICATION / CONTRACT / EVIDENCE / LEARNING.
+- **FALSE LEADS:** Account-wide shared Access policy; mandatory email sign-in; assuming Chat Cloudflare write denial means owner cannot create D1; assuming GitHub CI deploys Worker; equating visible buttons with working collaboration.
+- **ROOT CAUSE:** Shared Access include/action mismatch, provider-tool capability mismatch, and expansion away from owner-locked no-sign-in/two-person outcome. Some user-visible retries arose from speculative mobile guidance.
+- **FIX:** COILSIDE-only Access Bypass + Everyone, corrected time edit totals and regression tests, passwordless paired private room, stale-cloud-write 409 protection, owner-approved Cloudflare Agent Lee D1 provisioning/binding, verified source/Wrangler config on main.
+- **REGRESSION / PREVENTION:** Target Android and owner-language translation; provider-action fallback; policy shared-reach inspection; separate work-pay category from account; source/CI/deploy/runtime/binding/user-path ladder; backup before touching local data.
+- **REAL-WORLD PROOF:** **INFRASTRUCTURE WIN VERIFIED:** public home, dedicated D1 with three tables, `COILSIDE_DB` live binding and deployment, PR #5 and PR #6 merged. **NOT YET USER-PATH PROVEN:** owner ↔ Sean cross-phone notes, edited/reloaded Android timecards and restore.
+- **PREVENTION ARTIFACT:** `state/COILSIDE_FIELD_WIN_HANDOFF_2026-10-15.md`, Harness issue #26, Workshop issue #27; COILSIDE unit and CI tests.
+- **BONUS SALVAGE:** Provider-native assistant can execute limited owner-approved changes when another connector is read-only; verify result via independent API. Avoid building a new platform.
+- **FAILURE CYCLES:** Multiple owner-visible repeat attempts; precise count **UNKNOWN**. Internal CI catches existed; precise total **UNKNOWN**.
+- **VERDICT:** **PARTIAL WIN** — infrastructure DONE, live two-phone/Android experience PENDING.
+- **STOP:** Record this as earned infrastructure success without changing the separate Foundation V0 gate. Promote final app experience only after real phone action proof.
