@@ -36,4 +36,19 @@ assert "FRIDAY Machine Status" in rendered
 assert "What actually needs Randy" in rendered
 assert "Phone-only operation" in rendered
 assert "PC required:** NO" in rendered
+# A successful observation must cover every canonical repo; empty/partial output
+# must never be labelled fully reconciled.
+roles = ("governance", "factory", "runtime", "salvage", "cockpit")
+complete = {"components": [{"role": role, "state": "MATCH"} for role in roles]}
+assert module.observation_summary(complete)["state"] == "CURRENTLY_RECONCILED"
+assert module.observation_summary({"components": []})["state"] == "NOT_SUPPLIED"
+partial = module.observation_summary({"components": [{"role": "governance", "state": "MATCH"}]})
+assert partial["state"] == "PARTIAL_UNKNOWN" and partial["unknown"] == 4, partial
+bad_enum = {"components": [{"role": role, "state": "UNEXPECTED" if role == "salvage" else "MATCH"} for role in roles]}
+assert module.observation_summary(bad_enum)["state"] == "PARTIAL_UNKNOWN"
+duplicate = {"components": [{"role": "governance", "state": "MATCH"} for _ in roles]}
+assert module.observation_summary(duplicate)["state"] == "PARTIAL_UNKNOWN"
+drift = {"components": [{"role": role, "state": "RECONCILIATION_REQUIRED" if role == "cockpit" else "MATCH"} for role in roles]}
+assert module.observation_summary(drift)["state"] == "RECONCILIATION_REQUIRED"
+
 print("FRIDAY control plane PASS")

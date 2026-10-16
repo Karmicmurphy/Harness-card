@@ -56,10 +56,37 @@ def observation_summary(observation: dict[str, Any] | None) -> dict[str, Any]:
             "components": [],
         }
     rows = observation.get("components", [])
+    # A successful HTTP/observation step with zero usable component rows
+    # is not evidence that the approved remote revisions match.
+    if not isinstance(rows, list) or not rows:
+        return {
+            "state": "NOT_SUPPLIED",
+            "observed_at": observation.get("observed_at"),
+            "match": 0,
+            "reconciliation_required": 0,
+            "unknown": 0,
+            "components": [],
+        }
+    if any(not isinstance(row, dict) for row in rows):
+        return {
+            "state": "PARTIAL_UNKNOWN",
+            "observed_at": observation.get("observed_at"),
+            "match": 0,
+            "reconciliation_required": 0,
+            "unknown": len(rows),
+            "components": rows,
+        }
+    expected_roles = {"governance", "factory", "runtime", "salvage", "cockpit"}
+    observed_roles = [row.get("role") for row in rows]
+    # Missing or duplicate roles and unexpected enum values cannot prove all
+    # canonical sources are reconciled, even if every reported row says MATCH.
+    missing = expected_roles - set(role for role in observed_roles if isinstance(role, str))
+    duplicate_count = len(observed_roles) - len(set(str(role) for role in observed_roles))
     states = [str(row.get("state", "UNKNOWN")) for row in rows]
-    reconciliation = sum(s == "RECONCILIATION_REQUIRED" for s in states)
-    unknown = sum(s == "UNKNOWN" for s in states)
-    match = sum(s in {"MATCH", "OBSERVED_GOVERNANCE"} for s in states)
+    allowed = {"MATCH", "OBSERVED_GOVERNANCE", "RECONCILIATION_REQUIRED", "UNKNOWN"}
+    reconciliation = sum(state == "RECONCILIATION_REQUIRED" for state in states)
+    unknown = sum(state not in allowed or state == "UNKNOWN" for state in states) + len(missing) + duplicate_count
+    match = sum(state in {"MATCH", "OBSERVED_GOVERNANCE"} for state in states)
     if reconciliation:
         state = "RECONCILIATION_REQUIRED"
     elif unknown:
