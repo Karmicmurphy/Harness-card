@@ -8,6 +8,14 @@
 - **Lane:** INTEGRATION REPAIR / PHONE RESULT RETURN
 - **Automation:** AUTOMATE_UNTIL_OWNER_GATE
 - **Remote state:** RECONCILIATION_REQUIRED
+- **Owner environment:** PHONE_ONLY / ANDROID_PHONE
+- **PC required:** NO
+
+## Phone-only operation
+
+The owner currently operates from Android without dependable PC access. Use connected Chat tools, GitHub, and provider reads/writes within existing owner gates. Keep local-only Workshop files UNKNOWN/UNAVAILABLE; never invent them.
+Read [phone-only recovery](FRIDAY_PHONE_ONLY_RECOVERY_2026-10-15.md) when resuming from a phone.
+Minimize owner interruption: ask for one exact Android action only when tools cannot cross a genuine permission or real-device proof boundary.
 
 ## What FRIDAY is proving now
 
@@ -27,7 +35,7 @@ Resume from state/receipts/PAGES_PREVIEW_PREPARATION_2026-10-02.json. Exact Work
 
 ## Learning
 
-- Durable learned rules: **13**
+- Durable learned rules: **14**
 - Weird salvage items: **2**
 - New generalized learning candidates: **1**
 - Proven candidate rules eligible for promotion: **0**
