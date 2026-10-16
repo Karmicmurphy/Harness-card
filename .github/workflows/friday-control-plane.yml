@@ -73,6 +73,7 @@ jobs:
           python -m unittest tests.test_authority_spine tests.test_foundation_state tests.test_skill_registry -v
           python tests/test_self_improve.py
           python tests/test_learning_intake.py
+          python tests/test_night_shift_receipt.py
 
       - name: Restore test-generated state before owner-status build
         run: |
@@ -106,53 +107,7 @@ jobs:
           CONTROL_PLANE_RESULT: ${{ steps.control_plane_test.outcome }}
           RENDER_RESULT: ${{ steps.render.outcome }}
           VALIDATION_RESULT: ${{ steps.rendered_validation.outcome }}
-        run: |
-          mkdir -p night-shift
-          python - <<'PY'
-          import os
-          from pathlib import Path
-          labels = {
-              "Authority guard": os.environ["AUTHORITY_RESULT"],
-              "Continuity projection": os.environ["CONTINUITY_RESULT"],
-              "Full Harness regression": os.environ["REGRESSION_RESULT"],
-              "Remote-ref observation (read-only)": os.environ["OBSERVATION_RESULT"],
-              "FRIDAY control-plane test": os.environ["CONTROL_PLANE_RESULT"],
-              "Owner status rendering": os.environ["RENDER_RESULT"],
-              "Rendered-status validation": os.environ["VALIDATION_RESULT"],
-          }
-          required = [k for k in labels if not k.startswith("Remote-ref")]
-          verdict = "PASS" if all(labels[k] == "success" for k in required) else "FAILED_OR_INCOMPLETE"
-          lines = [
-              "# FRIDAY Night Shift - GitHub verification receipt",
-              "",
-              f"- **Verdict:** {verdict}",
-              f"- **Repository SHA:** ${{ github.sha }}",
-              f"- **Run:** https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}",
-              f"- **Trigger:** ${{ github.event_name }}",
-              "- **Production writes / secrets / live job dispatch:** NONE",
-              "- **Reference changes:** observed only, not promoted",
-              "- **Runtime proof:** NOT CLAIMED",
-              "",
-              "## Checks",
-              "",
-          ]
-          lines.extend(f"- **{name}:** {outcome}" for name, outcome in labels.items())
-          if labels["Remote-ref observation (read-only)"] != "success":
-              lines.append("- Remote observation failed or was blocked; access or drift remains UNKNOWN until independently verified.")
-          lines.extend([
-              "",
-              "## Next step",
-              "",
-              "If FAILED_OR_INCOMPLETE, inspect the first failing workflow step; repair only that layer on a branch.",
-              "If PASS, preserve the receipt and stay at the existing canonical owner gate. No automatic authority promotion.",
-              "",
-          ])
-          text = "\n".join(lines)
-          Path("night-shift/receipt.md").write_text(text, encoding="utf-8")
-          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
-              f.write(text)
-          print(text)
-          PY
+        run: python scripts/night_shift_receipt.py
 
       - name: Preserve status artifact for review
         if: always()
