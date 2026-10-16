@@ -56,6 +56,26 @@ def observation_summary(observation: dict[str, Any] | None) -> dict[str, Any]:
             "components": [],
         }
     rows = observation.get("components", [])
+    # A successful HTTP/observation step with zero usable component rows
+    # is not evidence that the approved remote revisions match.
+    if not isinstance(rows, list) or not rows:
+        return {
+            "state": "NOT_SUPPLIED",
+            "observed_at": observation.get("observed_at"),
+            "match": 0,
+            "reconciliation_required": 0,
+            "unknown": 0,
+            "components": [],
+        }
+    if any(not isinstance(row, dict) for row in rows):
+        return {
+            "state": "PARTIAL_UNKNOWN",
+            "observed_at": observation.get("observed_at"),
+            "match": 0,
+            "reconciliation_required": 0,
+            "unknown": len(rows),
+            "components": rows,
+        }
     states = [str(row.get("state", "UNKNOWN")) for row in rows]
     reconciliation = sum(s == "RECONCILIATION_REQUIRED" for s in states)
     unknown = sum(s == "UNKNOWN" for s in states)
