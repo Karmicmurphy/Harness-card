@@ -24,9 +24,16 @@ assert module.choose_next_action("CURRENTLY_RECONCILED", [], []) == "RUN_NEXT_BO
 status = module.build_status(ROOT, None)
 assert status["machine_state"] == "READY_FOR_BOUNDED_AUTOMATION", status
 assert status["automation_mode"] == "AUTOMATE_UNTIL_OWNER_GATE", status
+assert status["owner_access"]["mode"] == "PHONE_ONLY", status
+assert status["owner_access"]["platform"] == "ANDROID_PHONE", status
+assert status["owner_access"]["pc_required"] is False, status
+assert status["owner_access"]["resume_path"] == "state/FRIDAY_PHONE_ONLY_RECOVERY_2026-10-15.md", status
+assert module.owner_access_profile(ROOT)["source"] == "OWNER_REPORTED_CURRENT"
 assert status["learning"]["candidate_count"] >= 1, status
 assert status["blockers"]["owner_attention_required"] is True, status
 rendered = module.render_markdown(status)
 assert "FRIDAY Machine Status" in rendered
 assert "What actually needs Randy" in rendered
+assert "Phone-only operation" in rendered
+assert "PC required:** NO" in rendered
 print("FRIDAY control plane PASS")

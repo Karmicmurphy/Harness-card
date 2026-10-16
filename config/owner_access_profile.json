@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "PHONE_ONLY",
+  "source": "OWNER_REPORTED_CURRENT",
+  "platform": "ANDROID_PHONE",
+  "pc_required": false,
+  "priorities": [
+    "recover and inspect existing GitHub/provider state from connected tools first",
+    "execute bounded repository/CI/provider work in Chat without demanding a PC",
+    "minimize owner taps, one concrete step at a time only when truly blocked",
+    "preserve cloud-backed receipts and validated source with rollback",
+    "protect private local-only files and data; never claim they exist in cloud without evidence"
+  ],
+  "restrictions": [
+    "do not assume laptop, Windows shell, local Workshop launcher or PC-held secret material are available",
+    "do not ask owner to export secret values or paste personal/private data into chat/public GitHub",
+    "do not promote stale Git refs or unproven deployment to machine authority",
+    "do not create new front door, framework, paid services, or broaden access to bypass owner gates"
+  ],
+  "phone_path": "Owner on Android -> asks FRIDAY in ordinary language -> agent reads canonical Harness and approved current repos/provider -> performs bounded work using connected tools -> sends one clear result/receipt -> asks for only one truly necessary phone action",
+  "limitation": "PC-only private archives and local runtimes are not available through GitHub or Cloudflare by default. Treat them as unavailable, not lost or reconstructed."
+}

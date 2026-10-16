@@ -7,6 +7,7 @@ on:
   pull_request:
     paths:
       - "config/friday_automation_policy.json"
+      - "config/owner_access_profile.json"
       - "config/skill_registry.json"
       - "state/CURRENT_PROJECT.json"
       - "state/HARNESS_SCORECARD.json"
