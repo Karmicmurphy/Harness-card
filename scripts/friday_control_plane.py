@@ -21,6 +21,18 @@ def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def owner_access_profile(root: Path) -> dict[str, Any]:
+    """Non-sensitive owner interaction environment; never an authorization grant."""
+    profile = load_json(root / "config/owner_access_profile.json")
+    if profile.get("schema_version") != "1.0.0":
+        raise ValueError("unsupported owner access profile version")
+    if profile.get("mode") != "PHONE_ONLY":
+        raise ValueError("unsupported owner access mode")
+    if profile.get("platform") != "ANDROID_PHONE" or profile.get("pc_required") is not False:
+        raise ValueError("phone-only profile cannot require PC")
+    return profile
+
+
 def split_blockers(blockers: list[str], markers: list[str]) -> tuple[list[str], list[str]]:
     owner: list[str] = []
     automatic: list[str] = []
@@ -109,6 +121,7 @@ def build_status(root: Path = ROOT, observation: dict[str, Any] | None = None) -
     score = load_json(root / "state/HARNESS_SCORECARD.json")
     policy = load_json(root / "config/friday_automation_policy.json")
     learning = load_json(root / "state/LEARNING_CANDIDATES.json")
+    access = owner_access_profile(root)
 
     work = current["work_order"]
     owner_blockers, automatic_blockers = split_blockers(
@@ -134,6 +147,13 @@ def build_status(root: Path = ROOT, observation: dict[str, Any] | None = None) -
         "lane": current.get("lane"),
         "machine_state": "READY_FOR_BOUNDED_AUTOMATION" if surface_ready else "AUTOMATION_SPINE_INCOMPLETE",
         "automation_mode": policy.get("mode"),
+        "owner_access": {
+            "mode": access["mode"],
+            "platform": access["platform"],
+            "pc_required": access["pc_required"],
+            "source": access["source"],
+            "resume_path": "state/FRIDAY_PHONE_ONLY_RECOVERY_2026-10-15.md",
+        },
         "automation_surface": surface,
         "current_gate": {
             "gate_id": work.get("gate_id"),
@@ -184,6 +204,14 @@ def render_markdown(status: dict[str, Any]) -> str:
         f"- **Lane:** {status['lane']}",
         f"- **Automation:** {status['automation_mode']}",
         f"- **Remote state:** {remote['state']}",
+        f"- **Owner environment:** {status['owner_access']['mode']} / {status['owner_access']['platform']}",
+        "- **PC required:** NO",
+        "",
+        "## Phone-only operation",
+        "",
+        "The owner currently operates from Android without dependable PC access. Use connected Chat tools, GitHub, and provider reads/writes within existing owner gates. Keep local-only Workshop files UNKNOWN/UNAVAILABLE; never invent them.",
+        "Read [phone-only recovery](FRIDAY_PHONE_ONLY_RECOVERY_2026-10-15.md) when resuming from a phone.",
+        "Minimize owner interruption: ask for one exact Android action only when tools cannot cross a genuine permission or real-device proof boundary.",
         "",
         "## What FRIDAY is proving now",
         "",
