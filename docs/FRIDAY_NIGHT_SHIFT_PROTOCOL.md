@@ -18,6 +18,17 @@ Night Shift now runs:
 
 The run uses the runner's checked-out repository and existing policy only. It cannot see the owner's local PC artifacts or magically run private deployments. If a check fails, the workflow stays red and **does not automatically change source code** to silence the error.
 
+## Truthful Night Shift results (drift is not a clean machine)
+
+The machine can have **green regression tests while its remote authority is still mismatched or unknown**. The run receipt now has distinct meanings:
+
+- `TESTS_PASS__CURRENTLY_RECONCILED`: repository checks passed, remote refs supplied by the observation report agree with pinned refs. **Not** live phone-job proof.
+- `TESTS_PASS__RECONCILIATION_REQUIRED`: checks passed but at least one current remote ref differs from the approved pin; investigate before any mutation and **never** auto-repin.
+- `TESTS_PASS__REMOTE_UNVERIFIED`: checks passed but some remote refs are UNKNOWN, observation is missing, or its state is unrecognized. Private access errors do not equal confirmed drift or confirmed health.
+- `FAILED_OR_INCOMPLETE`: required tests or generated status failed/are missing. Preserve this verdict in the always-run receipt even though the Actions workflow is red.
+
+Receipt generation is pure reporting in `scripts/night_shift_receipt.py`, with regressions in `tests/test_night_shift_receipt.py`. The receipt includes the current canonical gate and count of owner-gated blockers so green CI is not mistaken for an operational FRIDAY. It does not read secret values, modify refs, write to another repository, or dispatch jobs.
+
 ## Meaning of a green run
 
 - **PROVEN_IN_TEST:** Repository authority, test contracts, deterministic learning, and owner-status rendering succeeded at one commit.
