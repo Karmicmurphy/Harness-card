@@ -69,13 +69,18 @@
 - **Rule:** Stale work-order prose and build prompts fail the same guard as stale JSON. Access failures remain UNKNOWN. Branch advancement never silently replaces approved pins.
 - **Evidence:** Local regression and guard proof only; corrected instructions not yet field-proven in a later session. Whole phone path remains unproven.
 
+### LR-014 — COILSIDE field app recovery — public Access, cloud D1 and two-person owner intent
+- **Root cause learned:** Shared Access include/action mismatch, provider-tool capability mismatch, and expansion away from owner-locked no-sign-in/two-person outcome. Some user-visible retries arose from speculative mobile guidance.
+- **Rule:** Target Android and owner-language translation; provider-action fallback; policy shared-reach inspection; separate work-pay category from account; source/CI/deploy/runtime/binding/user-path ladder; backup before touching local data.
+- **Evidence:** **INFRASTRUCTURE WIN VERIFIED:** public home, dedicated D1 with three tables, `COILSIDE_DB` live binding and deployment, PR #5 and PR #6 merged. **NOT YET USER-PATH PROVEN:** owner ↔ Sean cross-phone notes, edited/reloaded Android timecards and restore.
+
 
 ## Repeated-layer escalations
 
-- **APPLICATION repeated 9 times:** inspect sibling failure modes before another release touching this layer.
+- **APPLICATION repeated 10 times:** inspect sibling failure modes before another release touching this layer.
 - **DEPLOY repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 - **TEST-CI repeated 6 times:** inspect sibling failure modes before another release touching this layer.
-- **CONTRACT repeated 11 times:** inspect sibling failure modes before another release touching this layer.
+- **CONTRACT repeated 12 times:** inspect sibling failure modes before another release touching this layer.
 - **AUTHORITY repeated 3 times:** inspect sibling failure modes before another release touching this layer.
 - **MOBILE AUDIO repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 - **CREATIVE repeated 2 times:** inspect sibling failure modes before another release touching this layer.

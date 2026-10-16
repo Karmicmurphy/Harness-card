@@ -1,24 +1,24 @@
 {
   "schema_version": "1.2.0",
-  "generated_at": "2026-10-15T10:01:09.903936+00:00",
+  "generated_at": "2026-10-16T04:12:40.682881+00:00",
   "active_project": "FOUNDATION V0 \u2014 HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
-  "incident_count": 13,
+  "incident_count": 14,
   "wins": 7,
   "losses": 0,
   "blocked": 6,
-  "open": 0,
-  "user_facing_failure_cycles_observed": 7,
-  "learned_rule_count": 13,
+  "open": 1,
+  "user_facing_failure_cycles_observed": 8,
+  "learned_rule_count": 14,
   "weird_salvage_count": 2,
   "top_failure_layers": [
     [
       "CONTRACT",
-      11
+      12
     ],
     [
       "APPLICATION",
-      9
+      10
     ],
     [
       "TEST-CI",
@@ -54,6 +54,18 @@
     ],
     [
       "ARCHITECTURE",
+      1
+    ],
+    [
+      "PROVIDER ACCESS",
+      1
+    ],
+    [
+      "EVIDENCE",
+      1
+    ],
+    [
+      "LEARNING.",
       1
     ]
   ],

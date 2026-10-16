@@ -2,11 +2,11 @@
 
 > AUTO-GENERATED. Do not hand-edit.
 
-- Incidents: **13**
+- Incidents: **14**
 - Wins: **7**
 - Losses: **0**
-- Blocked/open: **6**
-- User-facing failure cycles: **7**
+- Blocked/open: **7**
+- User-facing failure cycles: **8**
 - Weird salvage items: **2**
 
 ## 1. Loop Deck looked done but phone showed old UI
@@ -125,3 +125,12 @@
 - **What changed:** Generate continuity views from CURRENT_PROJECT, validate full projections and evidence enum, observe remote refs without promotion, separate parked work from the single Pages round-trip gate.
 - **Why the corrected path won:** Local regression and guard proof only; corrected instructions not yet field-proven in a later session. Whole phone path remains unproven.
 - **Permanent lesson:** Stale work-order prose and build prompts fail the same guard as stale JSON. Access failures remain UNKNOWN. Branch advancement never silently replaces approved pins.
+
+## 14. COILSIDE field app recovery — public Access, cloud D1 and two-person owner intent
+
+- **Outcome:** **PARTIAL WIN** — infrastructure DONE, live two-phone/Android experience PENDING.
+- **What went wrong:** A supposedly simple Android field app failed with public Access 403, repeated confusing navigation, a wrongly assumed email-login architecture, cloud-connector permission denials, and incomplete deployment proof.
+- **Why it failed:** Shared Access include/action mismatch, provider-tool capability mismatch, and expansion away from owner-locked no-sign-in/two-person outcome. Some user-visible retries arose from speculative mobile guidance.
+- **What changed:** COILSIDE-only Access Bypass + Everyone, corrected time edit totals and regression tests, passwordless paired private room, stale-cloud-write 409 protection, owner-approved Cloudflare Agent Lee D1 provisioning/binding, verified source/Wrangler config on main.
+- **Why the corrected path won:** **INFRASTRUCTURE WIN VERIFIED:** public home, dedicated D1 with three tables, `COILSIDE_DB` live binding and deployment, PR #5 and PR #6 merged. **NOT YET USER-PATH PROVEN:** owner ↔ Sean cross-phone notes, edited/reloaded Android timecards and restore.
+- **Permanent lesson:** Target Android and owner-language translation; provider-action fallback; policy shared-reach inspection; separate work-pay category from account; source/CI/deploy/runtime/binding/user-path ladder; backup before touching local data.
