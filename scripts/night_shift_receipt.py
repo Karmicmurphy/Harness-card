@@ -40,7 +40,8 @@ def report(checks: Mapping[str, str], status: dict[str, Any] | None) -> dict[str
     passed = all(checks.get(key) == "success" for key in required)
     remote = (status or {}).get("remote_authority_observation") or {}
     state = remote.get("state") if isinstance(remote, dict) else None
-    if state not in VALID_REMOTE:
+    if state not in VALID_REMOTE or checks.get(REMOTE_LABEL) != "success":
+        # A failed observation cannot prove a stale generated status is current.
         state = "UNKNOWN"
     if not passed or status is None:
         verdict = "FAILED_OR_INCOMPLETE"
