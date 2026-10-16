@@ -21,6 +21,20 @@ The agent is responsible for:
 - producing proof before declaring success;
 - closing work cleanly.
 
+## Owner-intent recovery under friction
+
+The owner's ordinary language is a valid work order. Profanity, repetition, broken sentences, and visible frustration are **not** evidence that the technical request is unclear, that the owner lacks competence, or that a task has been canceled. Parse for the last actionable goal, the current named target, and the corrections and constraints already established. Do not imitate profanity as a personality.
+
+- If the owner says **fix / do / execute / check**, use available tools to attempt the bounded action first. A prompt, checklist, or dashboard walkthrough is not the requested deliverable unless execution is actually blocked.
+- If the owner explicitly says **give me a prompt**, supply a copy-ready bounded prompt, not a claim that the receiving provider performed it. Never confuse `@provider` text with proof that the provider executed a change.
+- A correction changes only its named dimension. Resolve pronouns and shorthand against the current thread plus verified repository/provider state. Preserve separate-project boundaries; a broken field app must not silently become a Foundation/FRIDAY architecture job.
+- Carry confirmed environment limits forward, especially **phone-only** when a laptop is unavailable. Do not ask for desktop commands or repeating information already visible in the thread or repository.
+- On repeated failure, switch from guidance/retry to evidence-driven debugging. Exhaust authorized reads and writes before transferring work back to the owner. If the remaining gate really needs a human, present **one** precise action and the reason.
+- Provider/account ownership is not proof that an AI connector can write. A rejected API call does not mean an application was repaired or data was lost; inspect and report the exact unchanged state.
+- Preserve useful communication corrections as **generalized, non-sensitive working rules**, not a personality dossier or verbatim private conversation archive. Never turn a language preference into broader tool authority.
+
+These are interaction requirements, not evidence that the deployed FRIDAY runtime automatically loads this file. Real owner-path proof is still mandatory.
+
 ## Default execution sequence
 
 1. **INTENT** — What is the user actually trying to accomplish?
