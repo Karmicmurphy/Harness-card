@@ -264,8 +264,26 @@ Correct owner intent existed in the harness but did not reliably reach action
 - **ROOT CAUSE:** Interaction rules existed as repository governance but were not verified as active runtime behavior. Cloudflare API error `1010` has an **UNKNOWN** underlying permission/configuration cause; do not conflate these distinct failures.
 - **FIX:** Clarify owner-language action-versus-prompt, correction, no-repeat, and phone-only behavior in the existing operating contract. Preserve a bounded live trial requirement rather than creating a new framework or claiming runtime deployment.
 - **REGRESSION / PREVENTION:** Acceptance tests N–P require actual owner-path behavior and rejection of prompt-only or proxy-success responses.
-- **REAL-WORLD PROOF:** **PENDING.** Documentation/branch checks, even if green, do not prove FRIDAY loads these rules. Cloudflare field-app access is not claimed restored.
+- **REAL-WORLD PROOF:** VERIFIED CURRENT (2026-10-15): the separate COILSIDE Worker-only Everyone/Bypass rule was saved; Cloudflare API confirmed its attachment and a separate external browser fetch loaded the public app homepage. This proves **Access + homepage**, not timesheet save or FRIDAY's behavior. FRIDAY's own owner-entrypoint live proof remains **PENDING**.
 - **PREVENTION ARTIFACT:** Candidate Harness contract/acceptance edits and this generalized incident record; no private conversation transcript or credentials copied.
 - **BONUS SALVAGE:** Existing Harness recovery rules were already correct in principle; integration/proof and owner interruption are the missing gates, not another personality engine.
 - **VERDICT:** BLOCKED
 - **STOP:** Do not promote to DONE until real FRIDAY entry-point behavior and the separate field-app repair are independently verified.
+
+
+### INCIDENT
+A public two-person field app was overbuilt as an email-auth system
+
+- **SYMPTOM:** The owner requested a professional but stupid-simple app: three independent pay/time categories and two-person phone-to-phone notes. A passing candidate PR imposed per-person email Cloudflare Access sign-in and a mandatory private-Worker activation even though the existing app was intentionally public. The owner explicitly corrected the requirement. Notes work was not deployed.
+- **EXPECTED:** Separate work/pay entities from app user accounts; maintain public app access for this phase; enable owner and one colleague to exchange notes without formal email signup. Preserve privacy of shared messages and hours without silently exposing them.
+- **CURRENT AUTHORITY:** `Karmicmurphy/coilside` draft PR #5; current owner correction and sanitized Harness issue `#26`. Public Worker homepage Access is verified; collaborative API, D1/R2, phone note round-trip are unproven. Separate Workshop/FRIDAY intake issue `#27` exists.
+- **LAYER:** CONTRACT / APPLICATION / PROVIDER / TEST-CI
+- **FALSE LEADS:** Treating every pay category as a human user; assuming "professional" means an identity platform; treating green CI as evidence that Sean can receive messages; assuming public UI means private data can have no protection.
+- **ROOT CAUSE:** The agent selected an architectural security mechanism before honoring the explicit no-login and two-person human workflow constraints. Independent tests covered syntax/build, not owner/colleague interaction.
+- **FIX:** Mark the candidate PR DRAFT/BLOCKED, preserve the owner constraints, and recommend a minimal private device pairing boundary as a candidate only. A public no-gate notes API is not an acceptable interpretation of two-person privacy without explicit owner acceptance. Keep existing main/production unchanged.
+- **REGRESSION / PREVENTION:** Future field-app upgrades must distinguish `user count` from `pay categories`, `public entry` from `private data`, and `device-pairing` from `mandatory email login`; acceptance must test save/reload/share/cross-device receive on Android and denied unknown device access.
+- **REAL-WORLD PROOF:** COILSIDE candidate TypeScript, lint, Cloudflare build CI PASS on initial PR. Time-edit fix added later and undergoing separate CI. Deployed public homepage reachable. End-to-end private two-person notes and conflict-safe cloud sync **NOT RUN**; Cloudflare resource creation blocked by API error `10000`.
+- **PREVENTION ARTIFACT:** Harness issue `#26`, Workshop/FRIDAY intake issue `#27`, COILSIDE PR #5 revised owner-contract doc, and time-edit regression tests on its candidate branch.
+- **BONUS SALVAGE:** Existing phone app, local hours, voice capture and separate work categories can be reused. A single small D1-backed notes data plane may suffice; another app, framework or identity stack is unnecessary.
+- **VERDICT:** BLOCKED
+- **STOP:** Do not merge/deploy this candidate or broaden Foundation authority until the corrected no-email two-device note path has a bounded data-access design and real Android proof. Preserve current Foundation fixture gate independently.
