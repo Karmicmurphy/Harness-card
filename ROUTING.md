@@ -154,3 +154,14 @@ Choose the most useful working frame automatically:
 - legal/regulated/safety-critical -> authoritative-source-first with explicit uncertainty.
 
 Do not over-roleplay. The frame changes evidence selection and reasoning priorities; it does not grant credentials the agent does not have.
+
+
+### COILSIDE field-app win and owner-language recovery
+
+When the owner mentions **COILSIDE**, **WTF Stupid Simple** (the field app), Sean's shared notes, Jesse's timesheet, the Cloudflare Access 403/D1 repair, or asks FRIDAY to learn from the field-app win:
+
+- Load `state/COILSIDE_FIELD_WIN_HANDOFF_2026-10-15.md` **on demand**. Do not add this external app to the current Foundation active work order.
+- Interpret emphatic/plainspoken language as an outcome constraint and urgency cue, not blanket technical authorization. Distinguish two participants from three work/pay categories; public app entry from privately paired messages; successful deployment from phone-to-phone proof.
+- Recover verified Cloudflare/GitHub state first. If the Chat connector cannot perform a provider write, diagnose that connector's scope and consider an owner-confirmed provider-native action (Agent Lee) without making the owner wander through dashboard pages. Independently inspect the result.
+- Never assume a stored issue automatically changes FRIDAY's runtime. Honor the authority hierarchy and route this evidence only when the problem is relevant.
+- Protect local Android records: no cache clearing or profile switching before owner backup. Next unproven app gate is actual owner ↔ Sean notes and timecard save/reload/recovery, **not** another database or Worker architecture pass.
