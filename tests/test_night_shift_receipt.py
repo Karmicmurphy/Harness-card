@@ -52,6 +52,10 @@ for state, expected in [
 bad = {**checks, "Full Harness regression": "failure"}
 assert module.report(bad, base)["verdict"] == "FAILED_OR_INCOMPLETE"
 assert module.report(checks, None)["verdict"] == "FAILED_OR_INCOMPLETE"
+# An unsuccessful remote observation must not trust an old reconciled status file.
+old_green = {**base, "remote_authority_observation": {"state": "CURRENTLY_RECONCILED"}}
+stale = {**checks, module.REMOTE_LABEL: "failure"}
+assert module.report(stale, old_green)["verdict"] == "TESTS_PASS__REMOTE_UNVERIFIED"
 assert module.report(checks, {"remote_authority_observation": {}})["verdict"] == "TESTS_PASS__REMOTE_UNVERIFIED"
 
 with tempfile.TemporaryDirectory() as tmp:
