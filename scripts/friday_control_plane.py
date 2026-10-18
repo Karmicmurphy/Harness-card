@@ -143,10 +143,28 @@ def choose_next_action(remote_state: str, automatic_blockers: list[str], owner_b
     return "RUN_NEXT_BOUNDED_PROOF"
 
 
-def delivery_readiness(current: dict[str, Any], owner_blockers: list[str]) -> dict[str, str]:
+def delivery_readiness(current: dict[str, Any], owner_blockers: list[str], operator_receipt: dict | None = None) -> dict[str, str]:
     """Describe the owner's real path; never infer delivery from CI or installed files."""
     gate = current.get("work_order", {}).get("gate_id")
     evidence = current.get("evidence_state")
+    if gate == "FRIDAY_BOUNDED_OPERATOR_LOOP":
+        r = operator_receipt or {}
+        proven = (
+            r.get("operator") == "FRIDAY_BOUNDED_HARNESS_OPERATOR"
+            and r.get("scope") == "EXISTING_HARNESS_MAINTENANCE_ONLY"
+            and str(r.get("verdict", "")).startswith("PASS_")
+            and bool(r.get("github_run_id"))
+            and r.get("github_run_id") != "LOCAL_TEST"
+            and all(r.get(flag) is False for flag in
+                    ("authority_changed", "other_repo_changed", "production_changed",
+                     "secret_values_accessed", "live_external_job_dispatched"))
+        )
+        return {
+            "state": "BOUNDED_OPERATOR_RUN_PROVEN" if proven else "OPERATOR_RUN_RECEIPT_PENDING",
+            "proof": "CI_BOUNDED_OPERATOR_ONLY_NOT_GENERAL_FRIDAY_MCP" if proven else "FIRST_REAL_OPERATOR_RUN_NOT_YET_PROVEN",
+            "one_next_owner_action": "None for preauthorized safe machine maintenance; consequential external actions still need applicable approval.",
+            "machine_next_action": "Continue the existing FRIDAY operator action/verification/learning loop and independently review receipts.",
+        }
     if gate == "PAGES_BOUNDED_JOB_ROUND_TRIP":
         if any("PREVIEW_FOUNDATION_GITHUB_TOKEN_AND_FOUNDATION_OWNER_SUB_ABSENT" in b for b in owner_blockers):
             return {
@@ -199,7 +217,11 @@ def build_status(root: Path = ROOT, observation: dict[str, Any] | None = None) -
     surface_ready = all(surface.values())
     next_action = choose_next_action(remote["state"], automatic_blockers, owner_blockers)
 
-    delivery = delivery_readiness(current, owner_blockers)
+    try:
+        operator_receipt = load_json(root / "state/FRIDAY_OPERATOR_LAST_RUN.json")
+    except (OSError, ValueError):
+        operator_receipt = None
+    delivery = delivery_readiness(current, owner_blockers, operator_receipt)
 
     generated_candidates = learning_summary(learning)
     generated_at = (
@@ -216,6 +238,12 @@ def build_status(root: Path = ROOT, observation: dict[str, Any] | None = None) -
         "lane": current.get("lane"),
         "machine_state": "READY_FOR_BOUNDED_AUTOMATION" if surface_ready else "AUTOMATION_SPINE_INCOMPLETE",
         "delivery_readiness": delivery,
+        "operator_last_run": {
+            "action": (operator_receipt or {}).get("action", "NOT_RUN"),
+            "verdict": (operator_receipt or {}).get("verdict", "NOT_RUN"),
+            "github_run_id": (operator_receipt or {}).get("github_run_id", "UNKNOWN"),
+            "receipt_path": "state/FRIDAY_OPERATOR_LAST_RUN.json" if operator_receipt else None,
+        },
         "automation_mode": policy.get("mode"),
         "owner_access": {
             "recent_continuity_path": "state/FRIDAY_RECENT_CONTINUITY_2026-10-18.md" if (root / "state/FRIDAY_RECENT_CONTINUITY_2026-10-18.md").is_file() else None,
@@ -273,7 +301,7 @@ def render_markdown(status: dict[str, Any]) -> str:
         "> AUTO-GENERATED from canonical Harness state. This is the owner view; canonical authority remains in CURRENT_PROJECT.json.",
         "",
         f"- **Machine:** {status['machine_state']}",
-        f"- **Owner phone delivery:** {status['delivery_readiness']['state']} (separate from automation setup)",
+        f"- **Active machine execution:** {status['delivery_readiness']['state']} (separate from installed scripts)",
         f"- **Project:** {status['active_project']}",
         f"- **Evidence:** {status['evidence_state']}",
         f"- **Lane:** {status['lane']}",
@@ -291,7 +319,10 @@ def render_markdown(status: dict[str, Any]) -> str:
         "",
         "## What actually works vs. what is still blocked",
         "",
-        "Installed automation scripts are not proof of a functioning FRIDAY phone worker.",
+        "Installed scripts or green checks alone never prove operator execution or a working live FRIDAY MCP.",
+        f"- **Last bounded FRIDAY action:** {status['operator_last_run']['action']}",
+        f"- **Last bounded action verdict:** {status['operator_last_run']['verdict']}",
+        f"- **Operator receipt:** {status['operator_last_run']['receipt_path'] or 'NOT YET RECORDED'}",
         f"- **Live-path evidence:** {status['delivery_readiness']['proof']}",
         f"- **Exact owner gate:** {status['delivery_readiness']['one_next_owner_action']}",
         f"- **FRIDAY's next permitted machine move:** {status['delivery_readiness']['machine_next_action']}",
