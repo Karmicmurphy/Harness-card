@@ -28,6 +28,8 @@ assert status["owner_access"]["mode"] == "PHONE_ONLY", status
 assert status["owner_access"]["platform"] == "ANDROID_PHONE", status
 assert status["owner_access"]["pc_required"] is False, status
 assert status["owner_access"]["resume_path"] == "state/FRIDAY_PHONE_ONLY_RECOVERY_2026-10-15.md", status
+assert status["owner_access"]["recent_continuity_path"] == "state/FRIDAY_RECENT_CONTINUITY_2026-10-18.md", status
+assert status["owner_access"]["recent_continuity_state"] == "FILE_PRESENT_RUNTIME_INGESTION_UNPROVEN", status
 assert module.owner_access_profile(ROOT)["source"] == "OWNER_REPORTED_CURRENT"
 assert status["learning"]["candidate_count"] >= 1, status
 assert status["blockers"]["owner_attention_required"] is True, status
