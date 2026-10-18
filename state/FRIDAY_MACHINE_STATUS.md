@@ -23,7 +23,7 @@ Minimize owner interruption: ask for one exact Android action only when tools ca
 
 Installed scripts or green checks alone never prove operator execution or a working live FRIDAY MCP.
 - **Last bounded FRIDAY action:** TRIAGE_APPROVED_REF_DRIFT
-- **Last bounded action verdict:** PASS_TRIAGED_REQUIRES_REVIEW
+- **Last bounded action verdict:** PASS_DELTA_INSPECTED_REQUIRES_REVIEW
 - **Operator receipt:** state/FRIDAY_OPERATOR_LAST_RUN.json
 - **Live-path evidence:** CI_BOUNDED_OPERATOR_ONLY_NOT_GENERAL_FRIDAY_MCP
 - **Exact owner gate:** None for preauthorized safe machine maintenance; consequential external actions still need applicable approval.

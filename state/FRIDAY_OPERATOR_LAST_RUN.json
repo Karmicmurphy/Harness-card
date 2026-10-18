@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "timestamp": "2026-10-18T05:54:48.740885+00:00",
+  "timestamp": "2026-10-18T05:57:22.730867+00:00",
   "operator": "FRIDAY_BOUNDED_HARNESS_OPERATOR",
-  "github_run_id": "39102170769",
-  "github_source_sha": "7bf011e5af92838c94158c4c2b190025f19b3ab1",
+  "github_run_id": "39102313685",
+  "github_source_sha": "da0476b252d4ddceb242e7c29bf8e54eecaab3fc",
   "github_event": "push",
   "scope": "EXISTING_HARNESS_MAINTENANCE_ONLY",
   "authority_changed": false,
@@ -17,8 +17,25 @@
     "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop"
   },
   "action": "TRIAGE_APPROVED_REF_DRIFT",
-  "verdict": "PASS_TRIAGED_REQUIRES_REVIEW",
-  "proof": "OBSERVED_REF_MISMATCH_WITH_CANONICAL_AUTHORITY",
+  "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
+  "proof": "READ_ONLY_GITHUB_COMPARE_OF_EXACT_CANONICAL_VS_BRANCH_REFS",
   "changed_paths": [],
-  "next_action": "Review the exact approved-vs-observed delta through existing GitHub tools; no silent merge or repin"
+  "inspected_delta": {
+    "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
+    "ahead_by": 3,
+    "behind_by": 0,
+    "changed_files": [
+      ".github/workflows/pages.yml",
+      "THIRD_PARTY_LOOP_DECK.md",
+      "app/assets/twis-pro-rig.js",
+      "app/pro-rig.html",
+      "app/rusty-phasewire-phone.html",
+      "tests/rusty_phasewire_pro_rig_contract_test.py"
+    ],
+    "approved_sha": "1785ed1405e769a17ec22066dc1e27a40dbf153b",
+    "observed_sha": "9822e988dd125f55b13be3891eb0a39975a26191",
+    "files_inspected_count": 6,
+    "no_auto_promotion": true
+  },
+  "next_action": "Use this exact delta as evidence for one scoped candidate decision; never silently merge or repin"
 }
