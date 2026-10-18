@@ -3,6 +3,7 @@
 > AUTO-GENERATED from canonical Harness state. This is the owner view; canonical authority remains in CURRENT_PROJECT.json.
 
 - **Machine:** READY_FOR_BOUNDED_AUTOMATION
+- **Owner phone delivery:** BLOCKED_PREVIEW_CREDENTIALS (separate from automation setup)
 - **Project:** FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY
 - **Evidence:** PARTIALLY_PROVEN
 - **Lane:** INTEGRATION REPAIR / PHONE RESULT RETURN
@@ -17,6 +18,13 @@ The owner currently operates from Android without dependable PC access. Use conn
 Read [phone-only recovery](FRIDAY_PHONE_ONLY_RECOVERY_2026-10-15.md) when resuming from a phone.
 Read [the Oct 15-18 recent continuation](FRIDAY_RECENT_CONTINUITY_2026-10-18.md) **when present**, then verify current provider evidence. A file pointer does not prove a live FRIDAY process consumed it.
 Minimize owner interruption: ask for one exact Android action only when tools cannot cross a genuine permission or real-device proof boundary.
+
+## What actually works vs. what is still blocked
+
+Installed automation scripts are not proof of a functioning FRIDAY phone worker.
+- **Live-path evidence:** ANDROID_TO_FOUNDRY_TO_PHONE_NOT_PROVEN
+- **Exact owner gate:** Securely configure the two existing protected Preview bindings in Cloudflare; do not put values in Chat or GitHub.
+- **FRIDAY's next permitted machine move:** After bindings are verified, inspect a fresh exact-source Preview deployment and owner authentication before requesting fixture dispatch.
 
 ## What FRIDAY is proving now
 
