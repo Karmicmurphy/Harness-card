@@ -109,12 +109,18 @@ jobs:
         id: friday_operator
         run: python scripts/friday_operator.py --observation foundation-observation.json --receipt friday-operator/receipt.json
 
+      - name: Refresh owner status with bounded FRIDAY operator receipt
+        id: operator_status
+        if: always()
+        run: python scripts/friday_control_plane.py build --observation foundation-observation.json
+
       # Night Shift can execute approved, local, reversible maintenance only; it never performs a deployment or a live job.
       # The receipt is kept even if an earlier test fails, so the next session can recover.
       - name: Preserve Night Shift check receipt
         if: always()
         env:
           OPERATOR_RESULT: ${{ steps.friday_operator.outcome }}
+          OPERATOR_STATUS_RESULT: ${{ steps.operator_status.outcome }}
           AUTHORITY_RESULT: ${{ steps.authority.outcome }}
           CONTINUITY_RESULT: ${{ steps.continuity.outcome }}
           REGRESSION_RESULT: ${{ steps.harness_tests.outcome }}
@@ -134,6 +140,7 @@ jobs:
             state/FRIDAY_MACHINE_STATUS.md
             foundation-observation.json
             friday-operator/receipt.json
+            state/FRIDAY_OPERATOR_LAST_RUN.json
             night-shift/receipt.md
             
 
@@ -142,7 +149,7 @@ jobs:
         run: |
           git config user.name "friday-control-plane"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/FRIDAY_MACHINE_STATUS.json state/FRIDAY_MACHINE_STATUS.md
+          git add state/FRIDAY_MACHINE_STATUS.json state/FRIDAY_MACHINE_STATUS.md state/FRIDAY_OPERATOR_LAST_RUN.json
           if git diff --cached --quiet; then
             echo "FRIDAY status already current."
             exit 0
