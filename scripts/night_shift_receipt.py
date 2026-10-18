@@ -60,6 +60,7 @@ def report(checks: Mapping[str, str], status: dict[str, Any] | None) -> dict[str
         "remote_unknown": remote.get("unknown", 0) if isinstance(remote, dict) else 0,
         "active_gate": gate.get("gate_id", "UNKNOWN") if isinstance(gate, dict) else "UNKNOWN",
         "owner_gates": len(blockers.get("owner_gate", [])) if isinstance(blockers, dict) else 0,
+        "owner_delivery_state": ((status or {}).get("delivery_readiness") or {}).get("state", "UNKNOWN"),
     }
 
 
@@ -78,6 +79,7 @@ def render(checks: Mapping[str, str], status: dict[str, Any] | None, env: Mappin
         "- **Production writes / secrets / live job dispatch:** NONE",
         "- **Reference changes:** observed only, not promoted",
         "- **Runtime proof:** NOT CLAIMED",
+        f"- **Owner phone path:** {result['owner_delivery_state']} (green CI is not live proof)",
         f"- **Remote authority:** {result['remote_state']}",
         f"- **Remote refs needing reconciliation:** {result['reconciliation_required']}",
         f"- **Remote refs unknown:** {result['remote_unknown']}",
@@ -98,6 +100,10 @@ def render(checks: Mapping[str, str], status: dict[str, Any] | None, env: Mappin
         lines.append("Tests passed; remote authority is partly unknown/not supplied. Recheck with correct read access before action.")
     else:
         lines.append("Tests and observed remote refs agree; stay at the canonical owner gate. No live proof or auto-dispatch implied.")
+    if result["owner_delivery_state"] == "BLOCKED_PREVIEW_CREDENTIALS":
+        lines.append("Owner phone path remains BLOCKED: Preview is missing two protected bindings. Do not ask to rebuild or rerun the phone fixture.")
+    elif result["owner_delivery_state"] == "UNKNOWN":
+        lines.append("Owner phone delivery is UNKNOWN; do not infer availability from a passing build.")
     if checks.get(REMOTE_LABEL) != "success":
         lines.append("Remote observation step itself did not succeed; provider/repo reachability remains UNKNOWN.")
     lines.append("")

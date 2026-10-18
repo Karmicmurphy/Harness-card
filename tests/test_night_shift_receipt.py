@@ -39,6 +39,18 @@ assert "TESTS_PASS__RECONCILIATION_REQUIRED" in text
 assert "NEVER auto-promote a branch SHA" in text
 assert "PAGES_BOUNDED_JOB_ROUND_TRIP" in text
 assert "Runtime proof:** NOT CLAIMED" in text
+assert "Owner phone path:** UNKNOWN" in text  # no direct runtime evidence in bare test fixture
+blocked_phone = {**base, "delivery_readiness": {"state": "BLOCKED_PREVIEW_CREDENTIALS"}}
+rendered_blocked = module.render(checks, blocked_phone, {
+    "GITHUB_REPOSITORY": "example/harness",
+    "GITHUB_RUN_ID": "123",
+    "GITHUB_SHA": "abc",
+    "GITHUB_EVENT_NAME": "schedule",
+})
+assert "BLOCKED_PREVIEW_CREDENTIALS" in rendered_blocked
+assert "Do not ask to rebuild" in rendered_blocked
+assert module.report(checks, blocked_phone)["owner_delivery_state"] == "BLOCKED_PREVIEW_CREDENTIALS"
+
 # The existing Night Shift receipt must point to a handoff when machine status carries one.
 with_handoff = {**base, "owner_access": {"recent_continuity_path": "state/FRIDAY_RECENT_CONTINUITY_2026-10-18.md"}}
 linked = module.render(checks, with_handoff, {"GITHUB_REPOSITORY": "example/harness"})
