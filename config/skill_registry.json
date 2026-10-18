@@ -113,6 +113,11 @@
       "source": "salvage_suite",
       "path": "scam-eyes/SKILL.md",
       "kind": "PROCEDURAL_CONDITIONAL"
+    },
+    "friday-provider-release": {
+      "source": "harness_local",
+      "path": "skills/friday-provider-release/SKILL.md",
+      "kind": "PROCEDURAL"
     }
   }
 }
