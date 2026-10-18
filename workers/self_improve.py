@@ -91,6 +91,7 @@ def rule_from(i):
         "root_cause": i.get("ROOT CAUSE", "UNKNOWN"),
         "rule": p,
         "proof": i.get("REAL-WORLD PROOF", "UNKNOWN"),
+        "incident_outcome": verdict_kind(i.get("VERDICT", "")),
     }
 
 
@@ -141,6 +142,9 @@ def main():
             seen.add(k)
             unique.append(r)
 
+    closed_rules = [r for r in unique if r["incident_outcome"] == "win"]
+    open_rules = [r for r in unique if r["incident_outcome"] != "win"]
+
     score = {
         "schema_version": "1.2.0",
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -153,6 +157,8 @@ def main():
         "open": kinds["open"],
         "user_facing_failure_cycles_observed": user_cycles,
         "learned_rule_count": len(unique),
+        "closed_incident_rule_count": len(closed_rules),
+        "unresolved_incident_prevention_count": len(open_rules),
         "weird_salvage_count": len(weird),
         "top_failure_layers": layer_counts.most_common(),
         "release_receipt_verdict": receipt_verdict(receipt),
@@ -194,21 +200,46 @@ def main():
     generated = [
         "# Auto-Generated Learned Rules",
         "",
-        "> MACHINE-WRITTEN from the Incident Ledger.",
+        "> MACHINE-WRITTEN from the Incident Ledger. Preventive advice from unresolved incidents is kept but never represented as a verified fix.",
         "",
-        "## Active learned rules",
+        "## Closed-incident learned rules",
+        "",
+        "An incident marked DONE contributed the following prevention rules. Its recorded proof applies only to the stated scope; this does not imply every downstream app is working.",
         "",
     ]
     for n, r in enumerate(unique, 1):
+        if r["incident_outcome"] != "win":
+            continue
         generated += [
             f"### LR-{n:03d} — {r['source']}",
+            f"- **Incident closure:** DONE",
             f"- **Root cause learned:** {r['root_cause']}",
             f"- **Rule:** {r['rule']}",
             f"- **Evidence:** {r['proof']}",
             "",
         ]
-    if not unique:
-        generated.append("- No learned rules yet.")
+    if not closed_rules:
+        generated.append("- No closed-incident prevention rules yet.")
+    generated += [
+        "",
+        "## Provisional prevention rules — original incident still unresolved",
+        "",
+        "These are protective hypotheses/checks from BLOCKED, FAILED, OPEN or RETIRED incidents. Use them to prevent harm, but do not claim the incident was fixed, the rule proven, or the target device validated.",
+        "",
+    ]
+    for n, r in enumerate(unique, 1):
+        if r["incident_outcome"] == "win":
+            continue
+        generated += [
+            f"### LR-{n:03d} — {r['source']}",
+            f"- **Incident closure:** {r['incident_outcome'].upper()} — NOT VERIFIED AS FIXED",
+            f"- **Root cause learned:** {r['root_cause']}",
+            f"- **Provisional prevention:** {r['rule']}",
+            f"- **Evidence:** {r['proof']}",
+            "",
+        ]
+    if not open_rules:
+        generated.append("- No unresolved-incident prevention candidates.")
     repeated = [(k, v) for k, v in layer_counts.items() if v >= 2]
     if repeated:
         generated += ["", "## Repeated-layer escalations", ""]
