@@ -1,12 +1,14 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-18T00:50:11.390684+00:00",
+  "generated_at": "2026-10-18T05:21:48.476521+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
   "lane": "INTEGRATION REPAIR / PHONE RESULT RETURN",
   "machine_state": "READY_FOR_BOUNDED_AUTOMATION",
   "automation_mode": "AUTOMATE_UNTIL_OWNER_GATE",
   "owner_access": {
+    "recent_continuity_path": "state/FRIDAY_RECENT_CONTINUITY_2026-10-18.md",
+    "recent_continuity_state": "FILE_PRESENT_RUNTIME_INGESTION_UNPROVEN",
     "mode": "PHONE_ONLY",
     "platform": "ANDROID_PHONE",
     "pc_required": false,
@@ -39,7 +41,7 @@
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-10-18T00:50:11.390684+00:00",
+    "observed_at": "2026-10-18T05:21:48.476521+00:00",
     "match": 2,
     "reconciliation_required": 1,
     "unknown": 2,
@@ -49,7 +51,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "a541b9a24c448d484c7e660bcd4c993aab2260bb",
+        "observed_sha": "ccc97cbe6cfc33e2b4bb8118f63d486f1b7331e3",
         "state": "OBSERVED_GOVERNANCE"
       },
       {

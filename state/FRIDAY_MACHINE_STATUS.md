@@ -15,6 +15,7 @@
 
 The owner currently operates from Android without dependable PC access. Use connected Chat tools, GitHub, and provider reads/writes within existing owner gates. Keep local-only Workshop files UNKNOWN/UNAVAILABLE; never invent them.
 Read [phone-only recovery](FRIDAY_PHONE_ONLY_RECOVERY_2026-10-15.md) when resuming from a phone.
+Read [the Oct 15-18 recent continuation](FRIDAY_RECENT_CONTINUITY_2026-10-18.md) **when present**, then verify current provider evidence. A file pointer does not prove a live FRIDAY process consumed it.
 Minimize owner interruption: ask for one exact Android action only when tools cannot cross a genuine permission or real-device proof boundary.
 
 ## What FRIDAY is proving now
