@@ -149,7 +149,8 @@ jobs:
         run: |
           git config user.name "friday-control-plane"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/FRIDAY_MACHINE_STATUS.json state/FRIDAY_MACHINE_STATUS.md state/FRIDAY_OPERATOR_LAST_RUN.json
+          git add state/FRIDAY_MACHINE_STATUS.json state/FRIDAY_MACHINE_STATUS.md
+          if [ -f state/FRIDAY_OPERATOR_LAST_RUN.json ]; then git add state/FRIDAY_OPERATOR_LAST_RUN.json; fi
           if git diff --cached --quiet; then
             echo "FRIDAY status already current."
             exit 0
