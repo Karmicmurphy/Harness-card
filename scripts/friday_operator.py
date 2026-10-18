@@ -12,12 +12,14 @@ from datetime import datetime, timezone
 import json
 import os
 from pathlib import Path
+import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from check_authority_spine import validate  # noqa: E402
 from friday_control_plane import build_status, render_markdown  # noqa: E402
+from foundation_state import github_get  # noqa: E402
 
 SCORE_KEYS = ("incident_count", "learned_rule_count",
               "closed_incident_rule_count", "unresolved_incident_prevention_count")
@@ -57,6 +59,47 @@ def pick_action(root: Path, observation: dict | None) -> dict:
                     "role": drift.get("role", "UNKNOWN"), "repo": drift.get("repo", "UNKNOWN")}
     return {"action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
             "reason": "No allowed repair is required based on the available evidence"}
+
+
+def inspect_approved_ref_delta(root: Path, observation: dict | None, decision: dict, get=github_get) -> dict:
+    """Read actual GitHub compare metadata for ONE approved vs observed ref.
+
+    No code checkout, branch update, production action, or automatic SHA promotion.
+    Fail closed if the observation does not match Harness authority.
+    """
+    current = load_optional_json(root / "state/CURRENT_PROJECT.json") or {}
+    role = decision.get("role")
+    canonical = (current.get("authority") or {}).get(role, {})
+    row = next((r for r in (observation or {}).get("components", [])
+                if isinstance(r, dict) and r.get("role") == role), None)
+    if not row or row.get("repo") != canonical.get("repo"):
+        return {"verdict": "BLOCKED_AUTHORITY_MISMATCH"}
+    approved, observed = row.get("approved_sha"), row.get("observed_sha")
+    if approved != canonical.get("sha") or not all(
+        isinstance(s, str) and re.fullmatch(r"[0-9a-f]{40}", s)
+        for s in (approved, observed)
+    ):
+        return {"verdict": "BLOCKED_UNVERIFIED_REFS"}
+    try:
+        response = get(f"{canonical['repo']}/compare/{approved}...{observed}")
+        if not isinstance(response, dict) or not isinstance(response.get("files"), list):
+            raise ValueError("GitHub compare not complete")
+        files = response["files"]
+        if len(files) > 300 or any(not isinstance(x, dict) or not isinstance(x.get("filename"), str)
+                                   for x in files):
+            raise ValueError("GitHub compare files invalid or truncated")
+        return {
+            "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
+            "ahead_by": response.get("ahead_by"),
+            "behind_by": response.get("behind_by"),
+            "changed_files": [x["filename"] for x in files],
+            "approved_sha": approved,
+            "observed_sha": observed,
+            "files_inspected_count": len(files),
+            "no_auto_promotion": True,
+        }
+    except (OSError, ValueError, KeyError, TypeError):
+        return {"verdict": "BLOCKED_REMOTE_DELTA_UNAVAILABLE", "no_auto_promotion": True}
 
 
 def write_status(root: Path, observation: dict | None) -> None:
@@ -109,10 +152,12 @@ def operate(root: Path = ROOT, observation: dict | None = None) -> dict:
             remaining_mismatches=disagreement)
     elif action == "TRIAGE_APPROVED_REF_DRIFT":
         # A new head is candidate evidence, never permission to change authority.
-        receipt.update(action=action, verdict="PASS_TRIAGED_REQUIRES_REVIEW",
-                       proof="OBSERVED_REF_MISMATCH_WITH_CANONICAL_AUTHORITY",
+        delta = inspect_approved_ref_delta(root, observation, decision)
+        receipt.update(action=action, verdict=delta["verdict"],
+                       proof="READ_ONLY_GITHUB_COMPARE_OF_EXACT_CANONICAL_VS_BRANCH_REFS",
                        changed_paths=[],
-                       next_action="Review the exact approved-vs-observed delta through existing GitHub tools; no silent merge or repin")
+                       inspected_delta=delta,
+                       next_action="Use this exact delta as evidence for one scoped candidate decision; never silently merge or repin")
     else:
         # The authority validator has already run, not just a status file check.
         receipt.update(action=action, verdict="PASS_VALIDATED_NO_SAFE_CHANGE",
