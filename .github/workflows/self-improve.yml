@@ -70,11 +70,34 @@ jobs:
           grep -q "Weird Salvage Index" state/WEIRD_SALVAGE_INDEX.md
           grep -q "Learning Candidate Index" state/LEARNING_CANDIDATE_INDEX.md
 
+      # Learning and FRIDAY's owner view must be updated in the SAME writer
+      # run. GitHub Actions does not recursively trigger workflows for pushes
+      # created with the default GITHUB_TOKEN; relying on a second workflow
+      # can leave machine status older than the learner that produced it.
+      - name: Refresh FRIDAY machine status from this learning pass
+        id: friday_status
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.FOUNDATION_READ_TOKEN || github.token }}
+        run: |
+          python scripts/foundation_state.py observe > foundation-observation.json || true
+          python scripts/friday_control_plane.py build --observation foundation-observation.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          score=json.loads(Path("state/HARNESS_SCORECARD.json").read_text())
+          status=json.loads(Path("state/FRIDAY_MACHINE_STATUS.json").read_text())
+          for key in ("incident_count", "learned_rule_count", "closed_incident_rule_count", "unresolved_incident_prevention_count"):
+              assert status["self_improvement"].get(key) == score.get(key), key
+          assert "FRIDAY Machine Status" in Path("state/FRIDAY_MACHINE_STATUS.md").read_text()
+          print("FRIDAY learning/status synchronization PASS")
+          PY
+
       - name: Record harness's own run
         if: always()
         run: |
           RESULT="WIN"
-          if [ "${{ steps.regression.outcome }}" != "success" ] || [ "${{ steps.learn.outcome }}" != "success" ] || [ "${{ steps.learning.outcome }}" != "success" ] || [ "${{ steps.validate.outcome }}" != "success" ]; then RESULT="LOSS"; fi
+          if [ "${{ steps.regression.outcome }}" != "success" ] || [ "${{ steps.learn.outcome }}" != "success" ] || [ "${{ steps.learning.outcome }}" != "success" ] || [ "${{ steps.validate.outcome }}" != "success" ] || [ "${{ steps.friday_status.outcome }}" != "success" ]; then RESULT="LOSS"; fi
           {
             echo ""
             echo "### SELF-RUN"
@@ -84,6 +107,7 @@ jobs:
             echo "- **LEARNER:** ${{ steps.learn.outcome }}"
             echo "- **GENERALIZED_LEARNING:** ${{ steps.learning.outcome }}"
             echo "- **VALIDATION:** ${{ steps.validate.outcome }}"
+            echo "- **FRIDAY_STATUS_SYNC:** ${{ steps.friday_status.outcome }}"
             echo "- **RUN:** $GITHUB_RUN_ID"
           } >> state/SELF_RUN_HISTORY.md
 
@@ -112,7 +136,7 @@ jobs:
       - name: Fail if the self-improvement run lost
         if: always()
         run: |
-          if [ "${{ steps.regression.outcome }}" != "success" ] || [ "${{ steps.learn.outcome }}" != "success" ] || [ "${{ steps.learning.outcome }}" != "success" ] || [ "${{ steps.validate.outcome }}" != "success" ]; then
+          if [ "${{ steps.regression.outcome }}" != "success" ] || [ "${{ steps.learn.outcome }}" != "success" ] || [ "${{ steps.learning.outcome }}" != "success" ] || [ "${{ steps.validate.outcome }}" != "success" ] || [ "${{ steps.friday_status.outcome }}" != "success" ]; then
             echo "Self-improvement run recorded as LOSS."
             exit 1
           fi
