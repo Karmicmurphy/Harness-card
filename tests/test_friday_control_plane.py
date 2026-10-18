@@ -24,6 +24,12 @@ assert module.choose_next_action("CURRENTLY_RECONCILED", [], []) == "RUN_NEXT_BO
 status = module.build_status(ROOT, None)
 assert status["machine_state"] == "READY_FOR_BOUNDED_AUTOMATION", status
 assert status["automation_mode"] == "AUTOMATE_UNTIL_OWNER_GATE", status
+# A file-backed automation spine is not a live FRIDAY phone path.
+assert status["delivery_readiness"]["state"] == "BLOCKED_PREVIEW_CREDENTIALS", status
+assert status["delivery_readiness"]["proof"] == "ANDROID_TO_FOUNDRY_TO_PHONE_NOT_PROVEN", status
+assert "protected Preview bindings" in status["delivery_readiness"]["one_next_owner_action"]
+assert "BLOCKED_PREVIEW_CREDENTIALS" in module.render_markdown(status)
+
 assert status["owner_access"]["mode"] == "PHONE_ONLY", status
 assert status["owner_access"]["platform"] == "ANDROID_PHONE", status
 assert status["owner_access"]["pc_required"] is False, status
@@ -52,5 +58,16 @@ duplicate = {"components": [{"role": "governance", "state": "MATCH"} for _ in ro
 assert module.observation_summary(duplicate)["state"] == "PARTIAL_UNKNOWN"
 drift = {"components": [{"role": role, "state": "RECONCILIATION_REQUIRED" if role == "cockpit" else "MATCH"} for role in roles]}
 assert module.observation_summary(drift)["state"] == "RECONCILIATION_REQUIRED"
+
+# A completed fixture is a separate evidence dimension from the observer output.
+from copy import deepcopy
+resolved = deepcopy(module.load_json(ROOT / "state/CURRENT_PROJECT.json"))
+resolved["work_order"]["blockers"] = []
+no_blockers = module.delivery_readiness(resolved, [])
+assert no_blockers["state"] == "PHONE_PROOF_REQUIRED", no_blockers
+resolved["work_order"]["gate_id"] = "OTHER_GATE"
+assert module.delivery_readiness(resolved, [])["state"] == "USER_PATH_NOT_PROVEN"
+resolved["evidence_state"] = "PROVEN_LIVE"
+assert module.delivery_readiness(resolved, [])["state"] == "RECORDED_LIVE_PROOF_REVERIFY_ON_CHANGE"
 
 print("FRIDAY control plane PASS")
