@@ -77,6 +77,9 @@ def operate(root: Path = ROOT, observation: dict | None = None) -> dict:
         "schema_version": "1.0.0",
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "operator": "FRIDAY_BOUNDED_HARNESS_OPERATOR",
+        "github_run_id": os.environ.get("GITHUB_RUN_ID", "LOCAL_TEST"),
+        "github_source_sha": os.environ.get("GITHUB_SHA", "LOCAL_TEST"),
+        "github_event": os.environ.get("GITHUB_EVENT_NAME", "LOCAL_TEST"),
         "scope": "EXISTING_HARNESS_MAINTENANCE_ONLY",
         "authority_changed": False,
         "other_repo_changed": False,
@@ -127,6 +130,13 @@ def main() -> int:
     result = operate(ROOT, observation)
     args.receipt.parent.mkdir(parents=True, exist_ok=True)
     args.receipt.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    # Preserve the exact machine-owned action receipt in canonical Harness history
+    # on the existing GitHub main-branch status-writer run only.
+    if os.environ.get("GITHUB_REF") == "refs/heads/main" and os.environ.get("GITHUB_ACTIONS") == "true":
+        (ROOT / "state/FRIDAY_OPERATOR_LAST_RUN.json").write_text(
+            json.dumps(result, indent=2) + "\n", encoding="utf-8"
+        )
+
     print(f"FRIDAY operator: {result['verdict']} | {result['action']}")
     return 0 if result["verdict"].startswith("PASS_") else 1
 
