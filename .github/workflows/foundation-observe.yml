@@ -21,16 +21,30 @@ jobs:
           python-version: '3.12'
       - name: Validate canonical continuity
         run: python scripts/check_authority_spine.py
+      - name: Test read-only preview inspector
+        if: always()
+        run: python -m unittest discover -s tests -p 'test_inspect_preview_sync.py' -v
       - name: Observe refs without promotion
+        if: always()
         env:
           # Existing optional read-only cross-repo credential; otherwise private
           # components correctly remain UNKNOWN with the repo-scoped token.
           GH_TOKEN: ${{ secrets.FOUNDATION_READ_TOKEN || github.token }}
         run: python scripts/foundation_state.py observe > foundation-observation.json
-      - name: Preserve observation even on drift or unavailable access
+      - name: Inspect approved Pages Preview without reading secret values
+        if: always()
+        env:
+          # Optional narrowly scoped read-only Cloudflare credential and account ID.
+          # Without these, the report is UNKNOWN, never falsely green.
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_READ_TOKEN: ${{ secrets.CLOUDFLARE_READ_TOKEN }}
+        run: python scripts/inspect_preview_sync.py > preview-sync-observation.json
+      - name: Preserve observations even on drift or unavailable access
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: foundation-observation
-          path: foundation-observation.json
+          name: foundation-sync-observations
+          path: |
+            foundation-observation.json
+            preview-sync-observation.json
           if-no-files-found: warn
