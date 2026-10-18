@@ -16,17 +16,17 @@ Project: `FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY`
 State source: `state/CURRENT_PROJECT.json`
 
 Status: **ACTIVE** | Evidence: **PARTIALLY_PROVEN**
-Lane: INTEGRATION REPAIR / PHONE RESULT RETURN
+Lane: FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY
 
 ## One next gate
 
-`PAGES_BOUNDED_JOB_ROUND_TRIP`
+`FRIDAY_BOUNDED_OPERATOR_LOOP`
 
-Resume from state/receipts/PAGES_PREVIEW_PREPARATION_2026-10-02.json. Exact Workshop successor passed candidate CI and deployed to Preview only at 48d4cbf1-3e74-4c99-a26b-af97cc986f14 with reviewed source/pins. Restore only Preview's two missing existing secret bindings, FOUNDATION_GITHUB_TOKEN and FOUNDATION_OWNER_SUB, without broader permissions or Production changes. Then freshly deploy the same reviewed source and verify actual owner authentication/runtime bindings. Scripted GET was rejected at the edge (403/1010), not answered by the Function, and browser inspection is unavailable. Live fixture dispatch still requires separate explicit approval after readiness; do not rerun FRIDAY recovery or READ.
+Run the existing FRIDAY Automation Spine with scripts/friday_operator.py as the bounded operator. FRIDAY must validate Harness, choose one allowlisted local action, actually execute or triage it, verify the result, and retain an operator receipt. No new scheduler, paid model, arbitrary shell command, phone requirement, Cloudflare dependency, authority promotion, or Production deployment. An operating FRIDAY local MCP and open-ended natural-language execution remain unproven until separately tested.
 
 ## Human path
 
-Owner opens Workshop on Android -> authenticates -> starts the approved bounded job -> sees progress -> receives the same job_id and Independent Proof receipt -> reviews; no automatic activation.
+Owner states intent once -> FRIDAY recovers governing Harness -> chooses one policy-allowed action -> executes in the existing machine automation -> independently verifies -> records receipt and next action -> requests an approval only for protected consequential work.
 
 ## Approved component refs
 
@@ -42,6 +42,7 @@ Branch advancement is observation, not automatic promotion.
 
 ## Known evidence
 
+- 2026-10-18 owner explicitly reprioritized the machine: FRIDAY herself should direct existing tools and bounded actions; a working machine is the goal, not another Cloudflare-to-phone integration. The earlier phone gate is deliberately deferred, not erased or falsely passed.
 - 2026-10-02 Preview preparation: Workshop CI run 37034675230 passed at exact approved 256452bfc522af32260a6d78591acecf56379d52, tree 6528b275da5b398968aee3f1ed0f3fd09f9473ce: 62 Python tests, 15 phone tests, smoke/API/Worker contract, static build and Pages Function compilation. The unchanged inherited Worker deploy workflow failed with zero jobs; it is not this Preview deployment gate.
 - 2026-10-02 Preview preparation: Renewed the existing Cloudflare connection with a subset of previous scopes. Captured rollback metadata. Temporarily excluded only the reviewed branch from automatic Preview deployment for CI, then restored original Preview rules. Production settings/config fingerprint and canonical deployment were unchanged.
 - 2026-10-02 Preview preparation: Clean exact source deployed only to Preview as 48d4cbf1-3e74-4c99-a26b-af97cc986f14; provider metadata confirms source, Functions, FOUNDATION_PHONE_ENABLED=true, approved runner SOURCE_SHA 5b23c55e6c0c7d945adf15af882ed59244399f35 and dispatcher merge SHA 3787d3a468abea49d194a051364ce41f300f35d0. The original older Preview is retained. Metadata is not Function runtime/Android proof.
@@ -63,16 +64,16 @@ Branch advancement is observation, not automatic promotion.
 
 ## Remaining gaps
 
-- PREVIEW_FOUNDATION_GITHUB_TOKEN_AND_FOUNDATION_OWNER_SUB_ABSENT
-- ACTUAL_FUNCTION_RUNTIME_BINDING_AND_OWNER_AUTH_PROOF_NOT_OBTAINED_EDGE_403_1010_BROWSER_HELPER_UNAVAILABLE
-- LIVE_FIXTURE_DISPATCH_REQUIRES_SEPARATE_EXPLICIT_APPROVAL
+- FIRST_POST_MERGE_FRIDAY_OPERATOR_RUN_AND_RECEIPT_NOT_YET_VERIFIED
+- GENERAL_FREEFORM_FRIDAY_RUNTIME_AND_CONNECTED_LOCAL_MACHINE_NOT_YET_PROVEN
 
 ## Stop condition
 
-An authenticated owner action in the existing Pages Workshop invokes only the approved bounded fixture at the pinned Foundry SHA and returns its exact correlated receipt to the phone. Reload/status recovery and denial paths pass. Record deployment, workflow_run_id, job_id, proof verdict and human-review state. This proves the bounded fixture round trip only.
+The existing FRIDAY GitHub automation selects and executes one safe bounded operator action without an owner conducting the tools, independently verifies its result, and emits a durable receipt with action, verdict, exact authority boundary, and next move. This proves bounded scheduled machine operation only, not general agent autonomy or live local FRIDAY MCP.
 
 ## Parked work (not prerequisites)
 
+- Cloudflare Preview / authenticated Android PAGES_BOUNDED_JOB_ROUND_TRIP is deferred by explicit owner reprioritization; previous tested fixture and missing protected bindings remain unchanged, as do all separate dispatch authorization requirements.
 - Local/private source-yard inventory and Windows diagnostics; use only when a job needs local material. Historical Windows field proof remains NOT_RUN.
 - Spatial map fixes, nested-repository preservation and recovery; separate product with its own no-backend constraints.
 - Music/Pro Rig, commerce, broad salvage, model relays, quantum/free-compute broker and autonomous self-improvement.
@@ -81,6 +82,7 @@ An authenticated owner action in the existing Pages Workshop invokes only the ap
 
 ## Constraints
 
+- FRIDAY can operate machine-maintenance tasks already authorized by config/friday_automation_policy.json, but cannot choose unrestricted commands, promote its own authority, change security/secret material, deploy Production, or execute external side effects without the owner's applicable approval.
 - Fixture-only authorization and exclusions are recorded in state/receipts/PAGES_FIXTURE_PROMOTION_2026-10-02.json. Stop on unexpected trees, authority conflicts or failed required checks. Do not repoint broader authority or rewrite protected FRIDAY state.
 - Use existing Cloudflare Pages/Pages Functions and GitHub dispatcher. Preserve private/local authority and loopback security.
 - One job_id across execution and proof; GitHub workflow_run_id is transport identity.
