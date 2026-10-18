@@ -30,4 +30,13 @@ assert "NOT VERIFIED AS FIXED" in rules
 assert "LR-004" in rules  # Stable incident-rule identifiers are preserved
 
 assert "Weird Salvage Index" in weird
+# Guard the handoff that previously let FRIDAY's status lag new learning
+# because GITHUB_TOKEN bot commits do not launch dependent workflows.
+workflow = (ROOT / ".github/workflows/self-improve.yml").read_text(encoding="utf-8")
+assert workflow.index("Sanitized generalized learning intake") < workflow.index("Refresh FRIDAY machine status from this learning pass")
+assert workflow.index("Refresh FRIDAY machine status from this learning pass") < workflow.index("Record harness's own run")
+assert "friday_control_plane.py build --observation" in workflow
+assert "FRIDAY learning/status synchronization PASS" in workflow
+assert "steps.friday_status.outcome" in workflow
+
 print("Harness self-improvement worker PASS")
