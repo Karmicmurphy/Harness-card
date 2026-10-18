@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-18T05:35:58.467846+00:00",
+  "generated_at": "2026-10-18T05:38:36.983070+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
   "lane": "INTEGRATION REPAIR / PHONE RESULT RETURN",
@@ -47,7 +47,7 @@
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-10-18T05:35:58.467846+00:00",
+    "observed_at": "2026-10-18T05:38:36.983070+00:00",
     "match": 2,
     "reconciliation_required": 1,
     "unknown": 2,
@@ -57,7 +57,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "589b6fe9716a4c972f0bdf3718a10df8660fb3b3",
+        "observed_sha": "11cc2fbefc0485b8fe4f5bf41a5e3a8f04b9adf3",
         "state": "OBSERVED_GOVERNANCE"
       },
       {
@@ -110,8 +110,8 @@
   "self_improvement": {
     "incident_count": 14,
     "learned_rule_count": 14,
-    "closed_incident_rule_count": null,
-    "unresolved_incident_prevention_count": null,
+    "closed_incident_rule_count": 7,
+    "unresolved_incident_prevention_count": 7,
     "weird_salvage_count": 2,
     "learning_contract": "PROVEN generalized candidates may join generated rules; raw private chat is not automatically ingested."
   },

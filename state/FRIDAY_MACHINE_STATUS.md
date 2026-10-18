@@ -45,8 +45,8 @@ Resume from state/receipts/PAGES_PREVIEW_PREPARATION_2026-10-02.json. Exact Work
 ## Learning
 
 - Documented prevention rules (closed + unresolved): **14**
-- Rules from closed incidents: **UNKNOWN UNTIL LEARNER REFRESH**
-- Unresolved prevention candidates (not proven fixes): **UNKNOWN UNTIL LEARNER REFRESH**
+- Rules from closed incidents: **7**
+- Unresolved prevention candidates (not proven fixes): **7**
 - Weird salvage items: **2**
 - New generalized learning candidates: **1**
 - Proven candidate rules eligible for promotion: **0**
