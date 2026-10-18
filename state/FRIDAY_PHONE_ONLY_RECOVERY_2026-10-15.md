@@ -4,6 +4,10 @@
 **Lane:** Recover verified state -> protect working artifacts -> resume one bounded phone path.  
 **Owner interaction profile:** `config/owner_access_profile.json` (`PHONE_ONLY`, Android; no reliable PC access). This document intentionally excludes housing details and all private information.
 
+## Current four-day continuation (load first on resume)
+
+**Latest sanitized October 15–18 operational handoff:** [FRIDAY_RECENT_CONTINUITY_2026-10-18.md](FRIDAY_RECENT_CONTINUITY_2026-10-18.md). This carries the recent COILSIDE repair, FRIDAY Night Shift, provider-release gate, and verified Cloudflare/branch drift from the resumed work. **Read it for context, then establish fresh GitHub/Cloudflare truth; it cannot supersede `state/CURRENT_PROJECT.json`.** Private chats and actual time entries are not copied into public Harness.
+
 ## Outcome
 
 The owner can keep working with FRIDAY, Harness and machine repositories from an **Android phone**, using ordinary language and Chat's connected GitHub/Cloudflare tools, without a Windows shell, local PC, pasting secrets, paid service or a new identity framework.

@@ -82,6 +82,7 @@ def render(checks: Mapping[str, str], status: dict[str, Any] | None, env: Mappin
         f"- **Remote refs needing reconciliation:** {result['reconciliation_required']}",
         f"- **Remote refs unknown:** {result['remote_unknown']}",
         f"- **Canonical next gate:** {result['active_gate']}",
+        f"- **Recent four-day continuity:** {(status or {}).get('owner_access', {}).get('recent_continuity_path') or 'UNAVAILABLE'} (file pointer, not live FRIDAY ingestion)",
         f"- **Owner-gated blockers still open:** {result['owner_gates']}",
         "",
         "## Checks",
