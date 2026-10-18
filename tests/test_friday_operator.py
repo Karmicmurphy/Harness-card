@@ -58,15 +58,48 @@ class OperatorTests(unittest.TestCase):
                                             "state": "RECONCILIATION_REQUIRED"}]}
             plan = module.pick_action(root, observation)
             self.assertEqual(plan["action"], "TRIAGE_APPROVED_REF_DRIFT")
-            old = module.validate
+            old, old_inspect = module.validate, module.inspect_approved_ref_delta
             try:
                 module.validate = lambda _: []
+                module.inspect_approved_ref_delta = lambda *_: {
+                    "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
+                    "changed_files": ["test.py"], "no_auto_promotion": True,
+                }
                 result = module.operate(root, observation)
             finally:
-                module.validate = old
-            self.assertEqual(result["verdict"], "PASS_TRIAGED_REQUIRES_REVIEW")
+                module.validate, module.inspect_approved_ref_delta = old, old_inspect
+            self.assertEqual(result["verdict"], "PASS_DELTA_INSPECTED_REQUIRES_REVIEW")
+            self.assertEqual(result["inspected_delta"]["changed_files"], ["test.py"])
             self.assertFalse(result["authority_changed"])
             self.assertEqual(result["changed_paths"], [])
+
+    def test_actual_approved_ref_comparison_and_fail_closed_guards(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            fixture(root)
+            canonical = {"authority": {"cockpit": {"repo": "example/cockpit", "sha": "a" * 40}}}
+            (root / "state/CURRENT_PROJECT.json").write_text(json.dumps(canonical))
+            row = {"role": "cockpit", "repo": "example/cockpit",
+                   "approved_sha": "a" * 40, "observed_sha": "b" * 40,
+                   "state": "RECONCILIATION_REQUIRED"}
+            seen = []
+            def remote(path):
+                seen.append(path)
+                return {"ahead_by": 1, "behind_by": 0, "files": [{"filename": "readme.md"}]}
+            decision = {"role": "cockpit"}
+            result = module.inspect_approved_ref_delta(root, {"components": [row]}, decision, get=remote)
+            self.assertEqual(result["verdict"], "PASS_DELTA_INSPECTED_REQUIRES_REVIEW")
+            self.assertEqual(result["changed_files"], ["readme.md"])
+            self.assertIn("compare/" + "a" * 40 + "..." + "b" * 40, seen[0])
+            altered = {**row, "observed_sha": "NOT_A_SHA"}
+            bad = module.inspect_approved_ref_delta(root, {"components": [altered]}, decision, get=remote)
+            self.assertEqual(bad["verdict"], "BLOCKED_UNVERIFIED_REFS")
+            mismatch = module.inspect_approved_ref_delta(root, {"components": [{**row, "repo": "wrong/name"}]}, decision, get=remote)
+            self.assertEqual(mismatch["verdict"], "BLOCKED_AUTHORITY_MISMATCH")
+            def fail(_):
+                raise ValueError("provider down")
+            offline = module.inspect_approved_ref_delta(root, {"components": [row]}, decision, get=fail)
+            self.assertEqual(offline["verdict"], "BLOCKED_REMOTE_DELTA_UNAVAILABLE")
 
     def test_missing_observation_does_not_claim_proof(self):
         with TemporaryDirectory() as tmp:
