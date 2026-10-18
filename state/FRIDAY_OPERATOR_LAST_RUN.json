@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "timestamp": "2026-10-18T05:54:48.740885+00:00",
+  "operator": "FRIDAY_BOUNDED_HARNESS_OPERATOR",
+  "github_run_id": "39102170769",
+  "github_source_sha": "7bf011e5af92838c94158c4c2b190025f19b3ab1",
+  "github_event": "push",
+  "scope": "EXISTING_HARNESS_MAINTENANCE_ONLY",
+  "authority_changed": false,
+  "other_repo_changed": false,
+  "production_changed": false,
+  "secret_values_accessed": false,
+  "live_external_job_dispatched": false,
+  "decision": {
+    "action": "TRIAGE_APPROVED_REF_DRIFT",
+    "role": "cockpit",
+    "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop"
+  },
+  "action": "TRIAGE_APPROVED_REF_DRIFT",
+  "verdict": "PASS_TRIAGED_REQUIRES_REVIEW",
+  "proof": "OBSERVED_REF_MISMATCH_WITH_CANONICAL_AUTHORITY",
+  "changed_paths": [],
+  "next_action": "Review the exact approved-vs-observed delta through existing GitHub tools; no silent merge or repin"
+}

@@ -1,15 +1,21 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-18T05:38:36.983070+00:00",
+  "generated_at": "2026-10-18T05:54:46.679474+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
-  "lane": "INTEGRATION REPAIR / PHONE RESULT RETURN",
+  "lane": "FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY",
   "machine_state": "READY_FOR_BOUNDED_AUTOMATION",
   "delivery_readiness": {
-    "state": "BLOCKED_PREVIEW_CREDENTIALS",
-    "proof": "ANDROID_TO_FOUNDRY_TO_PHONE_NOT_PROVEN",
-    "one_next_owner_action": "Securely configure the two existing protected Preview bindings in Cloudflare; do not put values in Chat or GitHub.",
-    "machine_next_action": "After bindings are verified, inspect a fresh exact-source Preview deployment and owner authentication before requesting fixture dispatch."
+    "state": "BOUNDED_OPERATOR_RUN_PROVEN",
+    "proof": "CI_BOUNDED_OPERATOR_ONLY_NOT_GENERAL_FRIDAY_MCP",
+    "one_next_owner_action": "None for preauthorized safe machine maintenance; consequential external actions still need applicable approval.",
+    "machine_next_action": "Continue the existing FRIDAY operator action/verification/learning loop and independently review receipts."
+  },
+  "operator_last_run": {
+    "action": "TRIAGE_APPROVED_REF_DRIFT",
+    "verdict": "PASS_TRIAGED_REQUIRES_REVIEW",
+    "github_run_id": "39102170769",
+    "receipt_path": "state/FRIDAY_OPERATOR_LAST_RUN.json"
   },
   "automation_mode": "AUTOMATE_UNTIL_OWNER_GATE",
   "owner_access": {
@@ -31,23 +37,22 @@
     "constraint_breaker": true
   },
   "current_gate": {
-    "gate_id": "PAGES_BOUNDED_JOB_ROUND_TRIP",
+    "gate_id": "FRIDAY_BOUNDED_OPERATOR_LOOP",
     "status": "ACTIVE",
-    "stop_condition": "An authenticated owner action in the existing Pages Workshop invokes only the approved bounded fixture at the pinned Foundry SHA and returns its exact correlated receipt to the phone. Reload/status recovery and denial paths pass. Record deployment, workflow_run_id, job_id, proof verdict and human-review state. This proves the bounded fixture round trip only.",
-    "canonical_next_action": "Resume from state/receipts/PAGES_PREVIEW_PREPARATION_2026-10-02.json. Exact Workshop successor passed candidate CI and deployed to Preview only at 48d4cbf1-3e74-4c99-a26b-af97cc986f14 with reviewed source/pins. Restore only Preview's two missing existing secret bindings, FOUNDATION_GITHUB_TOKEN and FOUNDATION_OWNER_SUB, without broader permissions or Production changes. Then freshly deploy the same reviewed source and verify actual owner authentication/runtime bindings. Scripted GET was rejected at the edge (403/1010), not answered by the Function, and browser inspection is unavailable. Live fixture dispatch still requires separate explicit approval after readiness; do not rerun FRIDAY recovery or READ."
+    "stop_condition": "The existing FRIDAY GitHub automation selects and executes one safe bounded operator action without an owner conducting the tools, independently verifies its result, and emits a durable receipt with action, verdict, exact authority boundary, and next move. This proves bounded scheduled machine operation only, not general agent autonomy or live local FRIDAY MCP.",
+    "canonical_next_action": "Run the existing FRIDAY Automation Spine with scripts/friday_operator.py as the bounded operator. FRIDAY must validate Harness, choose one allowlisted local action, actually execute or triage it, verify the result, and retain an operator receipt. No new scheduler, paid model, arbitrary shell command, phone requirement, Cloudflare dependency, authority promotion, or Production deployment. An operating FRIDAY local MCP and open-ended natural-language execution remain unproven until separately tested."
   },
   "blockers": {
-    "automatic": [],
-    "owner_gate": [
-      "PREVIEW_FOUNDATION_GITHUB_TOKEN_AND_FOUNDATION_OWNER_SUB_ABSENT",
-      "ACTUAL_FUNCTION_RUNTIME_BINDING_AND_OWNER_AUTH_PROOF_NOT_OBTAINED_EDGE_403_1010_BROWSER_HELPER_UNAVAILABLE",
-      "LIVE_FIXTURE_DISPATCH_REQUIRES_SEPARATE_EXPLICIT_APPROVAL"
+    "automatic": [
+      "FIRST_POST_MERGE_FRIDAY_OPERATOR_RUN_AND_RECEIPT_NOT_YET_VERIFIED",
+      "GENERAL_FREEFORM_FRIDAY_RUNTIME_AND_CONNECTED_LOCAL_MACHINE_NOT_YET_PROVEN"
     ],
-    "owner_attention_required": true
+    "owner_gate": [],
+    "owner_attention_required": false
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-10-18T05:38:36.983070+00:00",
+    "observed_at": "2026-10-18T05:54:46.679474+00:00",
     "match": 2,
     "reconciliation_required": 1,
     "unknown": 2,
@@ -57,7 +62,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "11cc2fbefc0485b8fe4f5bf41a5e3a8f04b9adf3",
+        "observed_sha": "7bf011e5af92838c94158c4c2b190025f19b3ab1",
         "state": "OBSERVED_GOVERNANCE"
       },
       {
@@ -159,10 +164,6 @@
     ],
     "missing": [],
     "what_friday_is_doing": "RECONCILE_REMOTE_STATE_BEFORE_MUTATION",
-    "what_friday_needs_from_owner": [
-      "PREVIEW_FOUNDATION_GITHUB_TOKEN_AND_FOUNDATION_OWNER_SUB_ABSENT",
-      "ACTUAL_FUNCTION_RUNTIME_BINDING_AND_OWNER_AUTH_PROOF_NOT_OBTAINED_EDGE_403_1010_BROWSER_HELPER_UNAVAILABLE",
-      "LIVE_FIXTURE_DISPATCH_REQUIRES_SEPARATE_EXPLICIT_APPROVAL"
-    ]
+    "what_friday_needs_from_owner": []
   }
 }
