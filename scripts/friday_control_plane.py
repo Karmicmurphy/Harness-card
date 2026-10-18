@@ -143,6 +143,46 @@ def choose_next_action(remote_state: str, automatic_blockers: list[str], owner_b
     return "RUN_NEXT_BOUNDED_PROOF"
 
 
+def delivery_readiness(current: dict[str, Any], owner_blockers: list[str]) -> dict[str, str]:
+    """Describe the owner's real path; never infer delivery from CI or installed files."""
+    gate = current.get("work_order", {}).get("gate_id")
+    evidence = current.get("evidence_state")
+    if gate == "PAGES_BOUNDED_JOB_ROUND_TRIP":
+        if any("PREVIEW_FOUNDATION_GITHUB_TOKEN_AND_FOUNDATION_OWNER_SUB_ABSENT" in b for b in owner_blockers):
+            return {
+                "state": "BLOCKED_PREVIEW_CREDENTIALS",
+                "proof": "ANDROID_TO_FOUNDRY_TO_PHONE_NOT_PROVEN",
+                "one_next_owner_action": "Securely configure the two existing protected Preview bindings in Cloudflare; do not put values in Chat or GitHub.",
+                "machine_next_action": "After bindings are verified, inspect a fresh exact-source Preview deployment and owner authentication before requesting fixture dispatch.",
+            }
+        if owner_blockers:
+            return {
+                "state": "BLOCKED_OWNER_GATE",
+                "proof": "ANDROID_TO_FOUNDRY_TO_PHONE_NOT_PROVEN",
+                "one_next_owner_action": "Resolve only the currently authorized owner gate recorded in CURRENT_PROJECT; do not bypass it.",
+                "machine_next_action": "Resume the bounded phone proof after independent readiness checks.",
+            }
+        return {
+            "state": "PHONE_PROOF_REQUIRED",
+            "proof": "ANDROID_TO_FOUNDRY_TO_PHONE_NOT_PROVEN",
+            "one_next_owner_action": "No new owner task until the existing bounded proof requires an explicit approval.",
+            "machine_next_action": "Verify the exact-source deployed app and correlated proof on Android; do not assume deployment equals success.",
+        }
+    if evidence == "PROVEN_LIVE":
+        return {
+            "state": "RECORDED_LIVE_PROOF_REVERIFY_ON_CHANGE",
+            "proof": "CANONICAL_EVIDENCE_ONLY",
+            "one_next_owner_action": "None unless the current job requires approval.",
+            "machine_next_action": "Recheck runtime proof when the code, deployment, or target device changes.",
+        }
+    return {
+        "state": "USER_PATH_NOT_PROVEN",
+        "proof": "CANONICAL_EVIDENCE_ONLY",
+        "one_next_owner_action": "Only the exact owner approval required by the active work order.",
+        "machine_next_action": "Prove the existing user path before calling the machine operational.",
+    }
+
+
 def build_status(root: Path = ROOT, observation: dict[str, Any] | None = None) -> dict[str, Any]:
     current = load_json(root / "state/CURRENT_PROJECT.json")
     score = load_json(root / "state/HARNESS_SCORECARD.json")
@@ -159,6 +199,8 @@ def build_status(root: Path = ROOT, observation: dict[str, Any] | None = None) -
     surface_ready = all(surface.values())
     next_action = choose_next_action(remote["state"], automatic_blockers, owner_blockers)
 
+    delivery = delivery_readiness(current, owner_blockers)
+
     generated_candidates = learning_summary(learning)
     generated_at = (
         remote.get("observed_at")
@@ -173,6 +215,7 @@ def build_status(root: Path = ROOT, observation: dict[str, Any] | None = None) -
         "evidence_state": current.get("evidence_state"),
         "lane": current.get("lane"),
         "machine_state": "READY_FOR_BOUNDED_AUTOMATION" if surface_ready else "AUTOMATION_SPINE_INCOMPLETE",
+        "delivery_readiness": delivery,
         "automation_mode": policy.get("mode"),
         "owner_access": {
             "recent_continuity_path": "state/FRIDAY_RECENT_CONTINUITY_2026-10-18.md" if (root / "state/FRIDAY_RECENT_CONTINUITY_2026-10-18.md").is_file() else None,
@@ -228,6 +271,7 @@ def render_markdown(status: dict[str, Any]) -> str:
         "> AUTO-GENERATED from canonical Harness state. This is the owner view; canonical authority remains in CURRENT_PROJECT.json.",
         "",
         f"- **Machine:** {status['machine_state']}",
+        f"- **Owner phone delivery:** {status['delivery_readiness']['state']} (separate from automation setup)",
         f"- **Project:** {status['active_project']}",
         f"- **Evidence:** {status['evidence_state']}",
         f"- **Lane:** {status['lane']}",
@@ -243,7 +287,14 @@ def render_markdown(status: dict[str, Any]) -> str:
         "Read [the Oct 15-18 recent continuation](FRIDAY_RECENT_CONTINUITY_2026-10-18.md) **when present**, then verify current provider evidence. A file pointer does not prove a live FRIDAY process consumed it." if status["owner_access"].get("recent_continuity_path") else "Recent continuation capsule unavailable; do not claim it was loaded.",
         "Minimize owner interruption: ask for one exact Android action only when tools cannot cross a genuine permission or real-device proof boundary.",
         "",
-        "## What FRIDAY is proving now",
+        "## What actually works vs. what is still blocked",
+        "",
+        "Installed automation scripts are not proof of a functioning FRIDAY phone worker.",
+        f"- **Live-path evidence:** {status['delivery_readiness']['proof']}",
+        f"- **Exact owner gate:** {status['delivery_readiness']['one_next_owner_action']}",
+        f"- **FRIDAY's next permitted machine move:** {status['delivery_readiness']['machine_next_action']}",
+        "",
+                "## What FRIDAY is proving now",
         "",
         f"**{gate['gate_id']}** — {gate['status']}",
         "",
