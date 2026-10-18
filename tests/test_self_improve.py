@@ -21,5 +21,13 @@ weird = (ROOT / "state" / "WEIRD_SALVAGE_INDEX.md").read_text()
 assert "Win / Loss Analysis" in win_loss
 assert "Auto-Generated Learned Rules" in rules
 assert "No learned rules yet." not in rules
+# A provisional prevention remains available, but must not be labelled a closed fix.
+assert score["closed_incident_rule_count"] + score["unresolved_incident_prevention_count"] == score["learned_rule_count"], score
+assert score["unresolved_incident_prevention_count"] >= 1, score
+assert "## Closed-incident learned rules" in rules
+assert "## Provisional prevention rules" in rules
+assert "NOT VERIFIED AS FIXED" in rules
+assert "LR-004" in rules  # Stable incident-rule identifiers are preserved
+
 assert "Weird Salvage Index" in weird
 print("Harness self-improvement worker PASS")
