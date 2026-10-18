@@ -47,6 +47,22 @@ When user says “FRIDAY, do this from my phone,” run the existing Chat Softwa
 
 Phone-only continuation should first attempt all non-secret read-only inspection using Chat connectors, then stop at **the minimal explicit owner gate for missing Preview bindings**. Do not request/handle sensitive values in a public conversation or repo. Once a legitimate configuration path is available, re-deploy only reviewed source and obtain authenticated owner/path evidence before any separately authorized single fixture job.
 
+## October 17 current provider check — minimum remaining owner gate
+
+Read-only verified on 2026-10-17 (Cloudflare and GitHub, no secret values retrieved):
+- Existing Pages project `ollie-twis-holo-workshop`, Preview environment, approved candidate deployment `48d4cbf1-3e74-4c99-a26b-af97cc986f14` remains successful at `256452bfc522af32260a6d78591acecf56379d52`; this does **not** verify live Function authentication or phone dispatch.
+- Preview `FOUNDATION_DISPATCH_SHA=3787d3a468abea49d194a051364ce41f300f35d0` **matches** the actual `Karmicmurphy/temporal-capability-foundry` `main` head. `FOUNDATION_SOURCE_SHA=5b23c55e6c0c7d945adf15af882ed59244399f35`; `FOUNDATION_PHONE_ENABLED=true`. Preserve these pins.
+- Preview **still lacks** the encrypted `FOUNDATION_GITHUB_TOKEN` and `FOUNDATION_OWNER_SUB`. Production has both names, but encrypted values cannot be read back, inferred from masked data, or safely copied by an API client. No account permissions, application authentication, production settings, or passwords were changed.
+- FRIDAY Provider Release skill and fail-closed checker are now merged into Harness Card main (PR #31); this checker is not a live dispatch agent.
+
+**One unavoidable owner-security setup, not a request to paste anything into Chat:**
+1. In GitHub Settings -> Developer settings -> Personal access tokens -> Fine-grained tokens, create a limited token for **only** `Karmicmurphy/temporal-capability-foundry`, with repository Actions **Read and write**; use an expiration and retain it securely. GitHub Actions workflow dispatch uses Actions write; artifact reads use Actions read.
+2. In a browser with the owner's **actual Access sign-in**, open the protected Workshop application's `/cdn-cgi/access/get-identity` path and use the returned `user_uuid` as the signed-in Access subject (`sub`) after matching the intended account. Do not guess from account email or provider user identifiers.
+3. In Cloudflare Dashboard -> Workers & Pages -> `ollie-twis-holo-workshop` -> Settings -> Variables and Secrets -> **Preview**, save encrypted `FOUNDATION_GITHUB_TOKEN` and encrypted `FOUNDATION_OWNER_SUB` using the two values above. Never publish values in GitHub, logs, Chat, plaintext env vars, or this public Harness.
+4. After both values are stored, the machine must independently re-read **names only**, generate a **fresh deployment of the exact reviewed Preview source**, verify edge Access + Function runtime behavior, and only then consider an explicit scoped owner-authorized single fixture dispatch and correlated receipt. No automatic Production activation.
+
+**Stop on unresolved credential setup.** No alternate secrets, bypass, new app/Worker or unrelated ref promotion is authorized. Do not retry deployments while missing the two secret bindings; it will not repair them.
+
 ## Proof and constraints
 
 **Completed for this work order:** mobile constraint recovered, verified current repo branches and Pages binding presence, phone-first status machinery and sanitized recovery document prepared/tested.  
