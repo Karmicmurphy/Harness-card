@@ -90,7 +90,7 @@ Trigger phrases include:
 - equivalent intent.
 
 
-### Business Operator Harness
+### FRIDAY Provider Release (GitHub/Cloudflare)\nUse when the owner asks to publish an existing app, repair a deployment, or verify whether changes actually reached production. Resolve `friday-provider-release` through the canonical registry, use current provider evidence and `scripts/provider_release_gate.py`, and keep deployment authorization separate from live phone proof.\n\n### Business Operator Harness
 Use automatically for business/commercialization work when the user wants to turn a product, service, skill, or idea into a functioning business or asks how to distribute, sell, price, automate, or prove demand.
 
 Canonical skill:
