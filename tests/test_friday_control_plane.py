@@ -25,10 +25,11 @@ status = module.build_status(ROOT, None)
 assert status["machine_state"] == "READY_FOR_BOUNDED_AUTOMATION", status
 assert status["automation_mode"] == "AUTOMATE_UNTIL_OWNER_GATE", status
 # A file-backed automation spine is not a live FRIDAY phone path.
-assert status["delivery_readiness"]["state"] == "BLOCKED_PREVIEW_CREDENTIALS", status
-assert status["delivery_readiness"]["proof"] == "ANDROID_TO_FOUNDRY_TO_PHONE_NOT_PROVEN", status
-assert "protected Preview bindings" in status["delivery_readiness"]["one_next_owner_action"]
-assert "BLOCKED_PREVIEW_CREDENTIALS" in module.render_markdown(status)
+assert status["delivery_readiness"]["state"] in ("OPERATOR_RUN_RECEIPT_PENDING", "BOUNDED_OPERATOR_RUN_PROVEN"), status
+assert status["current_gate"]["gate_id"] == "FRIDAY_BOUNDED_OPERATOR_LOOP", status
+assert "OPERATOR" in status["delivery_readiness"]["proof"], status
+assert "preauthorized safe machine maintenance" in status["delivery_readiness"]["one_next_owner_action"]
+assert "Active machine execution" in module.render_markdown(status)
 
 assert status["owner_access"]["mode"] == "PHONE_ONLY", status
 assert status["owner_access"]["platform"] == "ANDROID_PHONE", status
@@ -42,7 +43,8 @@ assert "closed_incident_rule_count" in status["self_improvement"]
 assert "unresolved_incident_prevention_count" in status["self_improvement"]
 assert "Unresolved prevention candidates" in module.render_markdown(status)
 
-assert status["blockers"]["owner_attention_required"] is True, status
+assert status["blockers"]["owner_attention_required"] is False, status
+assert len(status["blockers"]["automatic"]) >= 1, status
 rendered = module.render_markdown(status)
 assert "FRIDAY Machine Status" in rendered
 assert "What actually needs Randy" in rendered
@@ -67,11 +69,23 @@ assert module.observation_summary(drift)["state"] == "RECONCILIATION_REQUIRED"
 from copy import deepcopy
 resolved = deepcopy(module.load_json(ROOT / "state/CURRENT_PROJECT.json"))
 resolved["work_order"]["blockers"] = []
+resolved["work_order"]["gate_id"] = "PAGES_BOUNDED_JOB_ROUND_TRIP"
 no_blockers = module.delivery_readiness(resolved, [])
 assert no_blockers["state"] == "PHONE_PROOF_REQUIRED", no_blockers
 resolved["work_order"]["gate_id"] = "OTHER_GATE"
 assert module.delivery_readiness(resolved, [])["state"] == "USER_PATH_NOT_PROVEN"
 resolved["evidence_state"] = "PROVEN_LIVE"
 assert module.delivery_readiness(resolved, [])["state"] == "RECORDED_LIVE_PROOF_REVERIFY_ON_CHANGE"
+
+operator = module.load_json(ROOT / "state/CURRENT_PROJECT.json")
+receipt = {"operator": "FRIDAY_BOUNDED_HARNESS_OPERATOR",
+           "scope": "EXISTING_HARNESS_MAINTENANCE_ONLY",
+           "verdict": "PASS_VALIDATED_NO_SAFE_CHANGE", "github_run_id": "123",
+           "authority_changed": False, "other_repo_changed": False,
+           "production_changed": False, "secret_values_accessed": False,
+           "live_external_job_dispatched": False}
+assert module.delivery_readiness(operator, [], receipt)["state"] == "BOUNDED_OPERATOR_RUN_PROVEN"
+assert module.delivery_readiness(operator, [], {**receipt, "production_changed": True})["state"] == "OPERATOR_RUN_RECEIPT_PENDING"
+assert module.delivery_readiness(operator, [], {**receipt, "github_run_id": "LOCAL_TEST"})["state"] == "OPERATOR_RUN_RECEIPT_PENDING"
 
 print("FRIDAY control plane PASS")

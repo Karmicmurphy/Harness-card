@@ -2,16 +2,15 @@
   "schema_version": "1.1.0",
   "source_project_state_path": "state/CURRENT_PROJECT.json",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
-  "lane": "INTEGRATION REPAIR / PHONE RESULT RETURN",
+  "lane": "FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY",
   "evidence_state": "PARTIALLY_PROVEN",
-  "next_action": "Resume from state/receipts/PAGES_PREVIEW_PREPARATION_2026-10-02.json. Exact Workshop successor passed candidate CI and deployed to Preview only at 48d4cbf1-3e74-4c99-a26b-af97cc986f14 with reviewed source/pins. Restore only Preview's two missing existing secret bindings, FOUNDATION_GITHUB_TOKEN and FOUNDATION_OWNER_SUB, without broader permissions or Production changes. Then freshly deploy the same reviewed source and verify actual owner authentication/runtime bindings. Scripted GET was rejected at the edge (403/1010), not answered by the Function, and browser inspection is unavailable. Live fixture dispatch still requires separate explicit approval after readiness; do not rerun FRIDAY recovery or READ.",
+  "next_action": "Run the existing FRIDAY Automation Spine with scripts/friday_operator.py as the bounded operator. FRIDAY must validate Harness, choose one allowlisted local action, actually execute or triage it, verify the result, and retain an operator receipt. No new scheduler, paid model, arbitrary shell command, phone requirement, Cloudflare dependency, authority promotion, or Production deployment. An operating FRIDAY local MCP and open-ended natural-language execution remain unproven until separately tested.",
   "status": "ACTIVE",
   "blockers": [
-    "PREVIEW_FOUNDATION_GITHUB_TOKEN_AND_FOUNDATION_OWNER_SUB_ABSENT",
-    "ACTUAL_FUNCTION_RUNTIME_BINDING_AND_OWNER_AUTH_PROOF_NOT_OBTAINED_EDGE_403_1010_BROWSER_HELPER_UNAVAILABLE",
-    "LIVE_FIXTURE_DISPATCH_REQUIRES_SEPARATE_EXPLICIT_APPROVAL"
+    "FIRST_POST_MERGE_FRIDAY_OPERATOR_RUN_AND_RECEIPT_NOT_YET_VERIFIED",
+    "GENERAL_FREEFORM_FRIDAY_RUNTIME_AND_CONNECTED_LOCAL_MACHINE_NOT_YET_PROVEN"
   ],
-  "stop_condition": "An authenticated owner action in the existing Pages Workshop invokes only the approved bounded fixture at the pinned Foundry SHA and returns its exact correlated receipt to the phone. Reload/status recovery and denial paths pass. Record deployment, workflow_run_id, job_id, proof verdict and human-review state. This proves the bounded fixture round trip only.",
-  "gate_id": "PAGES_BOUNDED_JOB_ROUND_TRIP",
-  "updated_at": "2026-10-02"
+  "stop_condition": "The existing FRIDAY GitHub automation selects and executes one safe bounded operator action without an owner conducting the tools, independently verifies its result, and emits a durable receipt with action, verdict, exact authority boundary, and next move. This proves bounded scheduled machine operation only, not general agent autonomy or live local FRIDAY MCP.",
+  "gate_id": "FRIDAY_BOUNDED_OPERATOR_LOOP",
+  "updated_at": "2026-10-18"
 }

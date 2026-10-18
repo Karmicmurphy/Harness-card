@@ -18,6 +18,7 @@ CHECK_KEYS = (
     ("Remote-ref observation (read-only)", "OBSERVATION_RESULT"),
     ("FRIDAY control-plane test", "CONTROL_PLANE_RESULT"),
     ("Owner status rendering", "RENDER_RESULT"),
+    ("FRIDAY bounded operator", "OPERATOR_RESULT"),
     ("Rendered-status validation", "VALIDATION_RESULT"),
 )
 REMOTE_LABEL = "Remote-ref observation (read-only)"
