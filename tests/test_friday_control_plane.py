@@ -38,6 +38,10 @@ assert status["owner_access"]["recent_continuity_path"] == "state/FRIDAY_RECENT_
 assert status["owner_access"]["recent_continuity_state"] == "FILE_PRESENT_RUNTIME_INGESTION_UNPROVEN", status
 assert module.owner_access_profile(ROOT)["source"] == "OWNER_REPORTED_CURRENT"
 assert status["learning"]["candidate_count"] >= 1, status
+assert "closed_incident_rule_count" in status["self_improvement"]
+assert "unresolved_incident_prevention_count" in status["self_improvement"]
+assert "Unresolved prevention candidates" in module.render_markdown(status)
+
 assert status["blockers"]["owner_attention_required"] is True, status
 rendered = module.render_markdown(status)
 assert "FRIDAY Machine Status" in rendered
