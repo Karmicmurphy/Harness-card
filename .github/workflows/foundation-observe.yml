@@ -35,9 +35,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_inspect_preview_sync.py' -v
       - name: Observe refs without promotion
         if: always()
-        # Exit 1 is an expected observation (UNKNOWN/drift), not broken CI.
-        # A later strict receipt validator fails on absent/malformed output.
-        continue-on-error: true
+        # Valid UNKNOWN/drift exits 0 but remains visible in the JSON receipt.
+        # A broken observer must fail its step; the validator also checks output.
         env:
           # Existing optional read-only cross-repo credential; otherwise private
           # components correctly remain UNKNOWN with the repo-scoped token.
@@ -45,9 +44,8 @@ jobs:
         run: python scripts/foundation_state.py observe > foundation-observation.json
       - name: Inspect approved Pages Preview without reading secret values
         if: always()
-        # Exit 1 means access is UNKNOWN or readiness is blocked; preserve the
-        # report without generating a misleading nightly runtime-failure alert.
-        continue-on-error: true
+        # Valid UNKNOWN/CONFIG_BLOCKED exits 0 and remains in the receipt.
+        # Truly malformed or failing execution still fails the workflow.
         env:
           # Optional narrowly scoped read-only Cloudflare credential and account ID.
           # Without these, the report is UNKNOWN, never falsely green.

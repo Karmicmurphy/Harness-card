@@ -115,6 +115,29 @@ class ContinuityTests(unittest.TestCase):
         rows = MODULE.observe(self.current, lambda path: {})["components"]
         self.assertTrue(all(r["state"] == "UNKNOWN" for r in rows))
 
+    def test_cli_observe_reports_drift_without_workflow_failure(self):
+        # Missing read permissions or unapproved branch movement are findings,
+        # not failed execution; the emitted report still names the problem.
+        from unittest.mock import patch
+        from contextlib import redirect_stdout
+        from io import StringIO
+        report = MODULE.observe(self.current, self.fake_get)
+        report["components"][-1]["state"] = "RECONCILIATION_REQUIRED"
+        report["components"][1]["state"] = "UNKNOWN"
+        out = StringIO()
+        with (
+            patch("sys.argv", ["foundation_state.py", "observe"]),
+            patch.object(MODULE, "load", return_value=self.current),
+            patch.object(MODULE, "contract_errors", return_value=[]),
+            patch.object(MODULE, "projection_errors", return_value=[]),
+            patch.object(MODULE, "observe", return_value=report),
+            redirect_stdout(out),
+        ):
+            self.assertEqual(MODULE.main(), 0)
+        emitted = json.loads(out.getvalue())
+        self.assertEqual(emitted["components"][-1]["state"], "RECONCILIATION_REQUIRED")
+        self.assertEqual(emitted["components"][1]["state"], "UNKNOWN")
+
     def test_authority_digest_changes_when_a_pin_changes(self):
         before = MODULE.authority_digest(self.current)
         self.current["authority"]["factory"]["sha"] = "b" * 40

@@ -41,6 +41,21 @@ class SyncInspectTests(unittest.TestCase):
         self.assertEqual(r['state'], 'UNKNOWN')
         self.assertEqual(r['changes_performed'], False)
 
+    def test_cli_emits_actionable_preview_findings_without_false_failure(self):
+        from unittest.mock import patch
+        import json
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "state").mkdir()
+            (root / "state" / "CURRENT_PROJECT.json").write_text(json.dumps(CURRENT), encoding="utf-8")
+            with patch.object(module, "ROOT", root):
+                for state in ("UNKNOWN", "CONFIG_BLOCKED", "CONFIG_READY_RUNTIME_UNPROVEN"):
+                    with self.subTest(state=state), patch.object(module, "run", return_value={"state": state}):
+                        self.assertEqual(module.main(), 0)
+                with patch.object(module, "run", return_value={"state": "UNRECOGNIZED"}):
+                    self.assertEqual(module.main(), 2)
+
     def test_provider_failure_does_not_claim_blocked_or_ready(self):
         def failed(*_):
             raise ValueError('provider unavailable')
