@@ -2,11 +2,11 @@
 
 > AUTO-GENERATED. Do not hand-edit.
 
-- Incidents: **14**
+- Incidents: **15**
 - Wins: **7**
 - Losses: **0**
-- Blocked/open: **7**
-- User-facing failure cycles: **8**
+- Blocked/open: **8**
+- User-facing failure cycles: **9**
 - Weird salvage items: **2**
 
 ## 1. Loop Deck looked done but phone showed old UI
@@ -134,3 +134,12 @@
 - **What changed:** COILSIDE-only Access Bypass + Everyone, corrected time edit totals and regression tests, passwordless paired private room, stale-cloud-write 409 protection, owner-approved Cloudflare Agent Lee D1 provisioning/binding, verified source/Wrangler config on main.
 - **Why the corrected path won:** **INFRASTRUCTURE WIN VERIFIED:** public home, dedicated D1 with three tables, `COILSIDE_DB` live binding and deployment, PR #5 and PR #6 merged. **NOT YET USER-PATH PROVEN:** owner ↔ Sean cross-phone notes, edited/reloaded Android timecards and restore.
 - **Permanent lesson:** Target Android and owner-language translation; provider-action fallback; policy shared-reach inspection; separate work-pay category from account; source/CI/deploy/runtime/binding/user-path ladder; backup before touching local data.
+
+## 15. Scheduled Foundation monitor reported expected access gaps as nightly workflow crashes
+
+- **Outcome:** BLOCKED — first *scheduled main-branch* confirmation still pending; repository read credentials and protected Preview bindings remain independent owner-gated work.
+- **What went wrong:** Repeated GitHub Actions failure notifications for "Observe Foundation drift" on October 18–22 despite passing authority, observer-unit and FRIDAY Automation Spine checks.
+- **Why it failed:** The scheduled observation scripts intentionally returned exit 1 for UNKNOWN / RECONCILIATION_REQUIRED / CONFIG_BLOCKED, and the workflow escalated those *findings* into failing jobs. GitHub Actions' repo-scoped token cannot resolve two private components; Cloudflare read-only env inputs are absent. These genuine monitoring access limitations do not establish a core runtime crash.
+- **What changed:** PR #40 merged on 2026-10-22 at fdcb1ab4e48c7ef01af2028e8834105346e9fda3. Keep observation JSON artifacts, allow expected exit-1 findings, add strict receipt validation, visible ATTENTION_REQUIRED / UNVERIFIED summary, tests and PR-triggered CI. No secrets, authority pins, Provider Production or live dispatch were changed.
+- **Why the corrected path won:** PROVEN_IN_GITHUB_PR_CI: Authority Spine Guard 39862496405 and read-only observer 39862496340 both passed, and the observer preserved real UNKNOWN/drift facts. First post-merge scheduled run remains PENDING; no Android/general FRIDAY runtime proof.
+- **Permanent lesson:** Distinguish observation failure *states* from observer *execution* failure. A green observation job certifies the reporting machinery only. Missing/malformed reports must still fail CI; never make UNKNOWN look like reconciled/live.

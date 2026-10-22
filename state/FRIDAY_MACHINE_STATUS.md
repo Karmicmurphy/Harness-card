@@ -46,9 +46,9 @@ Run the existing FRIDAY Automation Spine with scripts/friday_operator.py as the 
 
 ## Learning
 
-- Documented prevention rules (closed + unresolved): **14**
+- Documented prevention rules (closed + unresolved): **15**
 - Rules from closed incidents: **7**
-- Unresolved prevention candidates (not proven fixes): **7**
+- Unresolved prevention candidates (not proven fixes): **8**
 - Weird salvage items: **2**
 - New generalized learning candidates: **1**
 - Proven candidate rules eligible for promotion: **0**

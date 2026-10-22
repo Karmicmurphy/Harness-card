@@ -1,17 +1,17 @@
 {
   "schema_version": "1.2.0",
-  "generated_at": "2026-10-22T10:17:06.273345+00:00",
+  "generated_at": "2026-10-22T22:10:26.506548+00:00",
   "active_project": "FOUNDATION V0 \u2014 HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
-  "incident_count": 14,
+  "incident_count": 15,
   "wins": 7,
   "losses": 0,
-  "blocked": 6,
+  "blocked": 7,
   "open": 1,
-  "user_facing_failure_cycles_observed": 8,
-  "learned_rule_count": 14,
+  "user_facing_failure_cycles_observed": 9,
+  "learned_rule_count": 15,
   "closed_incident_rule_count": 7,
-  "unresolved_incident_prevention_count": 7,
+  "unresolved_incident_prevention_count": 8,
   "weird_salvage_count": 2,
   "top_failure_layers": [
     [
@@ -24,7 +24,7 @@
     ],
     [
       "TEST-CI",
-      6
+      7
     ],
     [
       "AUTHORITY",
@@ -40,6 +40,10 @@
     ],
     [
       "CREATIVE",
+      2
+    ],
+    [
+      "PROVIDER ACCESS",
       2
     ],
     [
@@ -59,15 +63,15 @@
       1
     ],
     [
-      "PROVIDER ACCESS",
-      1
-    ],
-    [
       "EVIDENCE",
       1
     ],
     [
       "LEARNING.",
+      1
+    ],
+    [
+      "EVIDENCE.",
       1
     ]
   ],

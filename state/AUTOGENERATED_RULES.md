@@ -95,16 +95,23 @@ These are protective hypotheses/checks from BLOCKED, FAILED, OPEN or RETIRED inc
 - **Provisional prevention:** Target Android and owner-language translation; provider-action fallback; policy shared-reach inspection; separate work-pay category from account; source/CI/deploy/runtime/binding/user-path ladder; backup before touching local data.
 - **Evidence:** **INFRASTRUCTURE WIN VERIFIED:** public home, dedicated D1 with three tables, `COILSIDE_DB` live binding and deployment, PR #5 and PR #6 merged. **NOT YET USER-PATH PROVEN:** owner ↔ Sean cross-phone notes, edited/reloaded Android timecards and restore.
 
+### LR-015 — Scheduled Foundation monitor reported expected access gaps as nightly workflow crashes
+- **Incident closure:** BLOCKED — NOT VERIFIED AS FIXED
+- **Root cause learned:** The scheduled observation scripts intentionally returned exit 1 for UNKNOWN / RECONCILIATION_REQUIRED / CONFIG_BLOCKED, and the workflow escalated those *findings* into failing jobs. GitHub Actions' repo-scoped token cannot resolve two private components; Cloudflare read-only env inputs are absent. These genuine monitoring access limitations do not establish a core runtime crash.
+- **Provisional prevention:** Distinguish observation failure *states* from observer *execution* failure. A green observation job certifies the reporting machinery only. Missing/malformed reports must still fail CI; never make UNKNOWN look like reconciled/live.
+- **Evidence:** PROVEN_IN_GITHUB_PR_CI: Authority Spine Guard 39862496405 and read-only observer 39862496340 both passed, and the observer preserved real UNKNOWN/drift facts. First post-merge scheduled run remains PENDING; no Android/general FRIDAY runtime proof.
+
 
 ## Repeated-layer escalations
 
 - **APPLICATION repeated 10 times:** inspect sibling failure modes before another release touching this layer.
 - **DEPLOY repeated 2 times:** inspect sibling failure modes before another release touching this layer.
-- **TEST-CI repeated 6 times:** inspect sibling failure modes before another release touching this layer.
+- **TEST-CI repeated 7 times:** inspect sibling failure modes before another release touching this layer.
 - **CONTRACT repeated 12 times:** inspect sibling failure modes before another release touching this layer.
 - **AUTHORITY repeated 3 times:** inspect sibling failure modes before another release touching this layer.
 - **MOBILE AUDIO repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 - **CREATIVE repeated 2 times:** inspect sibling failure modes before another release touching this layer.
+- **PROVIDER ACCESS repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 
 ## Non-negotiable promotion rule
 
