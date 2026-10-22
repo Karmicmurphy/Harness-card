@@ -197,7 +197,9 @@ def main():
         if args.command == "observe":
             report = observe(current)
             print(encode(report), end="")
-            return 1 if any(r["state"] in ("UNKNOWN", "RECONCILIATION_REQUIRED") for r in report["components"]) else 0
+            # UNKNOWN and approved-ref advancement are legitimate observation findings,
+            # not a script execution error. Consumers inspect the preserved JSON.
+            return 0
         if args.command == "status":
             print(render(current), end="")
             print("Live refs/deployment NOT checked by status; run observe for current branch evidence.")
