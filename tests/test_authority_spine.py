@@ -37,6 +37,13 @@ class AuthoritySpineTests(unittest.TestCase):
             dst = root / rel
             shutil.copyfile(src, dst)
 
+    def test_phone_router_reads_active_gate_instead_of_resurrecting_parked_pages(self):
+        routing = (ROOT / "ROUTING.md").read_text(encoding="utf-8")
+        self.assertNotIn("canonical `PAGES_BOUNDED_JOB_ROUND_TRIP`", routing)
+        self.assertIn("state/CURRENT_PROJECT.json", routing)
+        self.assertIn("Pages Preview and the Android end-to-end round trip are **parked**", routing)
+        self.assertIn("existing owner/provider gates", routing)
+
     def test_detects_active_work_order_drift(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
