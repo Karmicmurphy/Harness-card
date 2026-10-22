@@ -271,3 +271,21 @@ COILSIDE field app recovery — public Access, cloud D1 and two-person owner int
 - **FAILURE CYCLES:** Multiple owner-visible repeat attempts; precise count **UNKNOWN**. Internal CI catches existed; precise total **UNKNOWN**.
 - **VERDICT:** **PARTIAL WIN** — infrastructure DONE, live two-phone/Android experience PENDING.
 - **STOP:** Record this as earned infrastructure success without changing the separate Foundation V0 gate. Promote final app experience only after real phone action proof.
+
+
+### INCIDENT
+Scheduled Foundation monitor reported expected access gaps as nightly workflow crashes
+
+- **SYMPTOM:** Repeated GitHub Actions failure notifications for "Observe Foundation drift" on October 18–22 despite passing authority, observer-unit and FRIDAY Automation Spine checks.
+- **EXPECTED:** Persist actionable remote drift, inaccessible private refs and missing Cloudflare observation credentials as truthful evidence; reserve failed CI for broken tests, missing/corrupt observation reports or invalid evidence.
+- **CURRENT AUTHORITY:** Harness-card main; read-only approved-ref observation and Preview configuration monitoring. Unchanged CURRENT_PROJECT pins; current FRIDAY bounded operator gate.
+- **LAYER:** TEST-CI / PROVIDER ACCESS / EVIDENCE.
+- **FALSE LEADS:** Treating GitHub red jobs as proof of a crashed FRIDAY runtime; treating an observer's exit 1 as identical to malformed reports; repinning three moving branches or copying Production secrets to stop alerts.
+- **ROOT CAUSE:** The scheduled observation scripts intentionally returned exit 1 for UNKNOWN / RECONCILIATION_REQUIRED / CONFIG_BLOCKED, and the workflow escalated those *findings* into failing jobs. GitHub Actions' repo-scoped token cannot resolve two private components; Cloudflare read-only env inputs are absent. These genuine monitoring access limitations do not establish a core runtime crash.
+- **FIX:** PR #40 merged on 2026-10-22 at fdcb1ab4e48c7ef01af2028e8834105346e9fda3. Keep observation JSON artifacts, allow expected exit-1 findings, add strict receipt validation, visible ATTENTION_REQUIRED / UNVERIFIED summary, tests and PR-triggered CI. No secrets, authority pins, Provider Production or live dispatch were changed.
+- **REGRESSION / PREVENTION:** Distinguish observation failure *states* from observer *execution* failure. A green observation job certifies the reporting machinery only. Missing/malformed reports must still fail CI; never make UNKNOWN look like reconciled/live.
+- **REAL-WORLD PROOF:** PROVEN_IN_GITHUB_PR_CI: Authority Spine Guard 39862496405 and read-only observer 39862496340 both passed, and the observer preserved real UNKNOWN/drift facts. First post-merge scheduled run remains PENDING; no Android/general FRIDAY runtime proof.
+- **PREVENTION ARTIFACT:** scripts/report_foundation_observations.py, tests/test_report_foundation_observations.py, .github/workflows/foundation-observe.yml; GitHub PR #40.
+- **BONUS SALVAGE:** Existing Night Shift status already independently classifies TESTS_PASS__REMOTE_UNVERIFIED; maintain separate status/proof planes rather than duplicating schedulers.
+- **VERDICT:** BLOCKED — first *scheduled main-branch* confirmation still pending; repository read credentials and protected Preview bindings remain independent owner-gated work.
+- **STOP:** Close the notification/failure classification incident after one scheduled main-branch observer run reports actual drift/UNKNOWN without a failed job and without concealment of a true malformed-output regression. Do not call broader FRIDAY live.
