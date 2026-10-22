@@ -125,12 +125,14 @@ class ContinuityTests(unittest.TestCase):
         report["components"][-1]["state"] = "RECONCILIATION_REQUIRED"
         report["components"][1]["state"] = "UNKNOWN"
         out = StringIO()
-        with patch("sys.argv", ["foundation_state.py", "observe"]), \\
-             patch.object(MODULE, "load", return_value=self.current), \\
-             patch.object(MODULE, "contract_errors", return_value=[]), \\
-             patch.object(MODULE, "projection_errors", return_value=[]), \\
-             patch.object(MODULE, "observe", return_value=report), \\
-             redirect_stdout(out):
+        with (
+            patch("sys.argv", ["foundation_state.py", "observe"]),
+            patch.object(MODULE, "load", return_value=self.current),
+            patch.object(MODULE, "contract_errors", return_value=[]),
+            patch.object(MODULE, "projection_errors", return_value=[]),
+            patch.object(MODULE, "observe", return_value=report),
+            redirect_stdout(out),
+        ):
             self.assertEqual(MODULE.main(), 0)
         emitted = json.loads(out.getvalue())
         self.assertEqual(emitted["components"][-1]["state"], "RECONCILIATION_REQUIRED")
