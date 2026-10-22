@@ -19,6 +19,7 @@ on:
       - "workers/learning_intake.py"
       - "skills/constraint-breaker-lab/**"
       - "tests/test_friday_control_plane.py"
+      - "tests/test_friday_status_writer.py"
       - "tests/test_learning_intake.py"
       - "config/skill_registry.json"
       - "skills/friday-provider-release/**"
@@ -193,6 +194,7 @@ jobs:
             python scripts/foundation_state.py check
             python scripts/foundation_state.py observe > foundation-observation.json
             python tests/test_friday_control_plane.py
+          python tests/test_friday_status_writer.py
             python scripts/friday_control_plane.py build --observation foundation-observation.json
             python scripts/friday_operator.py --observation foundation-observation.json --receipt friday-operator/receipt.json
             python scripts/friday_control_plane.py build --observation foundation-observation.json
