@@ -90,7 +90,9 @@ def main() -> int:
     report = run(current, os.environ.get("CLOUDFLARE_ACCOUNT_ID"),
                  os.environ.get("CLOUDFLARE_READ_TOKEN"))
     print(json.dumps(report, indent=2, sort_keys=True))
-    return 0 if report["state"] == "CONFIG_READY_RUNTIME_UNPROVEN" else 1
+    # A valid UNKNOWN or CONFIG_BLOCKED report is monitoring evidence, not
+    # a failed inspector process. Unknown enums remain a real error.
+    return 0 if report["state"] in ("CONFIG_READY_RUNTIME_UNPROVEN", "CONFIG_BLOCKED", "UNKNOWN") else 2
 
 
 if __name__ == "__main__":
