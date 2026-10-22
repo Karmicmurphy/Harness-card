@@ -31,7 +31,7 @@
   },
   "evidence_state": "PARTIALLY_PROVEN",
   "lane": "FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY",
-  "last_verified_at": "2026-10-18",
+  "last_verified_at": "2026-10-22",
   "next_action": "Run the existing FRIDAY Automation Spine with scripts/friday_operator.py as the bounded operator. FRIDAY must validate Harness, choose one allowlisted local action, actually execute or triage it, verify the result, and retain an operator receipt. No new scheduler, paid model, arbitrary shell command, phone requirement, Cloudflare dependency, authority promotion, or Production deployment. An operating FRIDAY local MCP and open-ended natural-language execution remain unproven until separately tested.",
   "separate_projects": [
     "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
@@ -178,11 +178,11 @@
     "status": "ACTIVE",
     "human_path": "Owner states intent once -> FRIDAY recovers governing Harness -> chooses one policy-allowed action -> executes in the existing machine automation -> independently verifies -> records receipt and next action -> requests an approval only for protected consequential work.",
     "blockers": [
-      "FIRST_POST_MERGE_FRIDAY_OPERATOR_RUN_AND_RECEIPT_NOT_YET_VERIFIED",
       "GENERAL_FREEFORM_FRIDAY_RUNTIME_AND_CONNECTED_LOCAL_MACHINE_NOT_YET_PROVEN"
     ],
     "stop_condition": "The existing FRIDAY GitHub automation selects and executes one safe bounded operator action without an owner conducting the tools, independently verifies its result, and emits a durable receipt with action, verdict, exact authority boundary, and next move. This proves bounded scheduled machine operation only, not general agent autonomy or live local FRIDAY MCP.",
     "verified_facts": [
+      "2026-10-22 VERIFIED GITHUB-ONLY BOUNDED OPERATOR: FRIDAY Automation Spine run 39823701672 passed, selected TRIAGE_APPROVED_REF_DRIFT, inspected the approved-versus-observed Workshop change (3 commits ahead), and retained state/FRIDAY_OPERATOR_LAST_RUN.json. No production writes, secret reads, authority changes, live dispatch or general FRIDAY MCP/phone-path proof. The first post-merge operator-run-and-receipt blocker is closed; the general FRIDAY runtime remains unproven.",
       "2026-10-18 owner explicitly reprioritized the machine: FRIDAY herself should direct existing tools and bounded actions; a working machine is the goal, not another Cloudflare-to-phone integration. The earlier phone gate is deliberately deferred, not erased or falsely passed.",
       "2026-10-02 Preview preparation: Workshop CI run 37034675230 passed at exact approved 256452bfc522af32260a6d78591acecf56379d52, tree 6528b275da5b398968aee3f1ed0f3fd09f9473ce: 62 Python tests, 15 phone tests, smoke/API/Worker contract, static build and Pages Function compilation. The unchanged inherited Worker deploy workflow failed with zero jobs; it is not this Preview deployment gate.",
       "2026-10-02 Preview preparation: Renewed the existing Cloudflare connection with a subset of previous scopes. Captured rollback metadata. Temporarily excluded only the reviewed branch from automatic Preview deployment for CI, then restored original Preview rules. Production settings/config fingerprint and canonical deployment were unchanged.",
@@ -192,7 +192,7 @@
       "2026-10-02: Owner approved only runner 5b23c55e6c0c7d945adf15af882ed59244399f35, dispatcher 6c14e3d7751d084d17a69c430a3873317cef4f02, and Workshop successor 256452bfc522af32260a6d78591acecf56379d52 through candidate CI, reviewed Foundry merges, Harness record and Preview-only preparation; live dispatch is not authorized.",
       "2026-10-02: Foundry PR #32 merged into software-builder-v0 at 319c4945c6b9bb180385cdf0935633e2f1915d61; tree 23854d0d60e09f765dd2f0f999ff68bd6f3585d3 exactly retains reviewed runner content. Runner execution must still check out approved SOURCE_SHA 5b23c55e6c0c7d945adf15af882ed59244399f35, not a moving branch.",
       "2026-10-02: Foundry PR #33 merged into main at 3787d3a468abea49d194a051364ce41f300f35d0; tree 80ff8ce81b5dd402ade34511ba624847d02dad60 exactly retains reviewed dispatcher content. Main-only dispatch policy, admission-rejection receipts and attempt-specific artifacts are included. Candidate unit and bounded-job checks passed at both approved heads.",
-      "2026-10-02: Workshop successor contains the fixed-fixture Pages routes and receipt verifier; local phone, Python, cross-component, build and Function compilation checks passed. It is not remotely published or deployed; these checks do not prove Android arrival or runtime bindings.",
+      "2026-10-02 (candidate test stage, before the subsequent Preview deployment): Workshop successor fixed-fixture Pages routes and receipt verifier passed local phone, Python, cross-component, build and Function compilation checks. At that stage the candidate had not yet been remotely published; the later verified Preview deployment is separately recorded above. Neither state proves Android arrival or runtime bindings.",
       "2026-10-02: FRIDAY recovery, certified immutable READ result, fresh READ receipt/request and work order hashes matched preserved evidence before promotion. No recovery/state mutation or new live dispatch occurred. Earlier remote-phone proof remains scoped to its recorded READ result.",
       "The following 2026-09-27 observations are historical, not claims about current branch heads or deployed Preview source. Broader authority pins above intentionally remain unchanged; the exact fixture authorization is separate.",
       "2026-09-27: Foundry software-builder-v0 equals the approved e0e14e689b1d3a3bda1356276975b4b34f1b615e; AIOS and Salvage refs also match.",
