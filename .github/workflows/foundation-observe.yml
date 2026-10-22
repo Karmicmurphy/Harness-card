@@ -2,6 +2,13 @@ name: Observe Foundation drift
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/foundation-observe.yml'
+      - 'scripts/report_foundation_observations.py'
+      - 'tests/test_report_foundation_observations.py'
+      - 'scripts/foundation_state.py'
+      - 'scripts/inspect_preview_sync.py'
   schedule:
     - cron: '17 12 * * *'
 
@@ -21,11 +28,16 @@ jobs:
           python-version: '3.12'
       - name: Validate canonical continuity
         run: python scripts/check_authority_spine.py
+      - name: Test truthful read-only observation receipts
+        run: python -m unittest discover -s tests -p 'test_report_foundation_observations.py' -v
       - name: Test read-only preview inspector
         if: always()
         run: python -m unittest discover -s tests -p 'test_inspect_preview_sync.py' -v
       - name: Observe refs without promotion
         if: always()
+        # Exit 1 is an expected observation (UNKNOWN/drift), not broken CI.
+        # A later strict receipt validator fails on absent/malformed output.
+        continue-on-error: true
         env:
           # Existing optional read-only cross-repo credential; otherwise private
           # components correctly remain UNKNOWN with the repo-scoped token.
@@ -33,12 +45,18 @@ jobs:
         run: python scripts/foundation_state.py observe > foundation-observation.json
       - name: Inspect approved Pages Preview without reading secret values
         if: always()
+        # Exit 1 means access is UNKNOWN or readiness is blocked; preserve the
+        # report without generating a misleading nightly runtime-failure alert.
+        continue-on-error: true
         env:
           # Optional narrowly scoped read-only Cloudflare credential and account ID.
           # Without these, the report is UNKNOWN, never falsely green.
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_READ_TOKEN: ${{ secrets.CLOUDFLARE_READ_TOKEN }}
         run: python scripts/inspect_preview_sync.py > preview-sync-observation.json
+      - name: Validate and summarize actual observation state
+        if: always()
+        run: python scripts/report_foundation_observations.py foundation-observation.json preview-sync-observation.json
       - name: Preserve observations even on drift or unavailable access
         if: always()
         uses: actions/upload-artifact@v4
