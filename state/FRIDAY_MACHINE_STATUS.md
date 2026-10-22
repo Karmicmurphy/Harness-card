@@ -37,7 +37,6 @@ Run the existing FRIDAY Automation Spine with scripts/friday_operator.py as the 
 
 ## What FRIDAY can handle automatically
 
-- FIRST_POST_MERGE_FRIDAY_OPERATOR_RUN_AND_RECEIPT_NOT_YET_VERIFIED
 - GENERAL_FREEFORM_FRIDAY_RUNTIME_AND_CONNECTED_LOCAL_MACHINE_NOT_YET_PROVEN
 
 ## What actually needs Randy
