@@ -10,6 +10,7 @@ on:
       - "state/INCIDENT_LEDGER.md"
       - "state/WEIRD_LEDGER.md"
       - "state/LEARNING_CANDIDATES.json"
+      - "state/FRIDAY_OPERATOR_REPAIR_HISTORY.json"
       - "state/CURRENT_PROJECT.json"
       - "state/RELEASE_RECEIPT.md"
       - "workers/self_improve.py"
@@ -37,7 +38,9 @@ jobs:
       - name: Regression-test learning ingestion first
         id: regression
         continue-on-error: true
-        run: python tests/test_self_improve.py
+        run: |
+          python tests/test_self_improve.py
+          python tests/test_friday_operator_learning.py
 
       - name: Outcome Counter + Why Worker + Rule Miner + Weird Salvage Indexer
         id: learn

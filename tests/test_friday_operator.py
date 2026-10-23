@@ -121,6 +121,90 @@ class OperatorTests(unittest.TestCase):
             self.assertEqual(receipt["action"], "NONE")
             self.assertFalse(receipt["secret_values_accessed"])
 
+    def test_transient_io_retry_then_independent_verified_repair(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            fixture(root)
+            called = []
+            original = module.write_status
+            try:
+                def intermittent(root, observation):
+                    called.append(len(called) + 1)
+                    if len(called) < 3:
+                        raise OSError("temporary local filesystem error")
+                    (root / "state/FRIDAY_MACHINE_STATUS.json").write_text(json.dumps(STATUS))
+                module.write_status = intermittent
+                proof = module.repair_with_proof(root, None)
+            finally:
+                module.write_status = original
+            self.assertEqual(len(called), 3)
+            self.assertEqual(proof["verdict"], "PASS_REPAIRED")
+            self.assertEqual([x["result"] for x in proof["attempts"]],
+                             ["RETRYABLE_LOCAL_IO_FAILURE"] * 2 + ["PASS_INDEPENDENT_RECHECK"])
+            self.assertEqual(proof["stopped_reason"], "PROOF_PASSED")
+
+    def test_semantic_failure_does_not_waste_retry_budget(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            fixture(root)
+            called = []
+            original = module.write_status
+            try:
+                def inconsistent(root, observation):
+                    called.append(1)
+                    (root / "state/FRIDAY_MACHINE_STATUS.json").write_text(
+                        json.dumps({"self_improvement": {"incident_count": -1}}))
+                module.write_status = inconsistent
+                proof = module.repair_with_proof(root, None)
+            finally:
+                module.write_status = original
+            self.assertEqual(len(called), 1)
+            self.assertEqual(proof["verdict"], "FAILED_REPAIR")
+            self.assertEqual(proof["stopped_reason"], "NON_RETRYABLE_SEMANTIC_FAILURE")
+            self.assertIn("incident_count", proof["remaining_mismatches"])
+
+    def test_io_budget_exhaustion_does_not_claim_success(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            fixture(root)
+            original = module.write_status
+            try:
+                module.write_status = lambda *_: (_ for _ in ()).throw(OSError("full filesystem"))
+                proof = module.repair_with_proof(root, None)
+            finally:
+                module.write_status = original
+            self.assertEqual(proof["verdict"], "FAILED_REPAIR")
+            self.assertEqual(proof["stopped_reason"], "RETRY_BUDGET_EXHAUSTED")
+            self.assertEqual(len(proof["attempts"]), 3)
+            with self.assertRaises(ValueError):
+                module.repair_with_proof(root, None, max_attempts=4)
+
+    def test_sanitized_deduplicated_bounded_learning_history(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry = {"github_run_id": "123", "action": "REPAIR_DERIVED_OWNER_STATUS",
+                     "verdict": "PASS_REPAIRED", "proof": "INDEPENDENT_SCORE_STATUS_RECHECK",
+                     "repair_attempts": [{"attempt": 1, "result": "PASS_INDEPENDENT_RECHECK"}],
+                     "repair_stop_reason": "PROOF_PASSED",
+                     "raw_owner_request": "sensitive content not for recording"}
+            module.preserve_sanitized_repair_history(root, entry)
+            module.preserve_sanitized_repair_history(root, entry)
+            path = root / "state/FRIDAY_OPERATOR_REPAIR_HISTORY.json"
+            record = json.loads(path.read_text())
+            self.assertEqual(len(record["runs"]), 1)
+            self.assertNotIn("sensitive content", path.read_text())
+            self.assertEqual(record["runs"][0]["attempt_count"], 1)
+            for i in range(50):
+                module.preserve_sanitized_repair_history(root, {
+                    **entry, "github_run_id": str(200 + i),
+                })
+            record = json.loads(path.read_text())
+            self.assertEqual(len(record["runs"]), 50)
+            with self.assertRaises(ValueError):
+                module.preserve_sanitized_repair_history(root, {**entry, "github_run_id": "LOCAL_TEST"})
+            with self.assertRaises(ValueError):
+                module.preserve_sanitized_repair_history(root, {**entry, "action": "DEPLOY"})
+
     def test_disabled_policy_blocks_even_status_repair(self):
         with TemporaryDirectory() as tmp:
             root = Path(tmp)

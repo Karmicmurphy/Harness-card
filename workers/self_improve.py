@@ -106,6 +106,61 @@ def receipt_verdict(text):
     return value
 
 
+
+def operator_outcome_summary(state: Path) -> dict:
+    """Consume only bounded sanitized CI operator evidence, never raw chat.
+
+    No rule is marked proven from a single run or from unverified claims.
+    """
+    path = state / "FRIDAY_OPERATOR_REPAIR_HISTORY.json"
+    if not path.exists():
+        return {"runs": 0, "repaired_runs": 0, "failed_repairs": 0,
+                "retry_recovered_runs": 0, "verified_repeatable_repair": False}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if (not isinstance(data, dict) or data.get("schema_version") != "1.0.0"
+            or data.get("privacy") != "SANITIZED_CI_OUTCOMES_ONLY"
+            or not isinstance(data.get("runs"), list) or len(data["runs"]) > 50):
+        raise ValueError("FRIDAY operator history is invalid or not sanitized")
+    seen = set()
+    successes = 0
+    failures = 0
+    recovered = 0
+    for row in data["runs"]:
+        if not isinstance(row, dict) or not isinstance(row.get("run_id"), str):
+            raise ValueError("malformed operator history row")
+        run_id = row["run_id"]
+        if not run_id.isdecimal() or run_id in seen:
+            raise ValueError("duplicate or invalid run ID in history")
+        seen.add(run_id)
+        action, verdict = row.get("action"), row.get("verdict")
+        if action not in {"REPAIR_DERIVED_OWNER_STATUS", "TRIAGE_APPROVED_REF_DRIFT",
+                          "VERIFY_EXISTING_MACHINE_CONTINUITY", "NONE"}:
+            raise ValueError("unrecognized operator action in history")
+        if not isinstance(verdict, str) or not verdict.startswith(("PASS_", "BLOCKED_", "FAILED_")):
+            raise ValueError("unrecognized operator outcome in history")
+        attempts = row.get("attempt_count")
+        if type(attempts) is not int or attempts < 0 or attempts > 3:
+            raise ValueError("invalid retry count in operator history")
+        outcomes = row.get("attempt_outcomes")
+        if not isinstance(outcomes, list) or len(outcomes) != attempts:
+            raise ValueError("operator history attempt sequence does not match count")
+        if not all(x in {"PASS_INDEPENDENT_RECHECK", "RETRYABLE_LOCAL_IO_FAILURE",
+                         "FAILED_SEMANTIC_RECHECK", "BLOCKED_INVALID_STATE"} for x in outcomes):
+            raise ValueError("unrecognized repair attempt outcome")
+        if action == "REPAIR_DERIVED_OWNER_STATUS":
+            if (verdict == "PASS_REPAIRED"
+                    and row.get("proof") == "INDEPENDENT_SCORE_STATUS_RECHECK"
+                    and outcomes and outcomes[-1] == "PASS_INDEPENDENT_RECHECK"):
+                successes += 1
+                if attempts > 1:
+                    recovered += 1
+            elif verdict == "FAILED_REPAIR":
+                failures += 1
+    return {"runs": len(seen), "repaired_runs": successes,
+            "failed_repairs": failures, "retry_recovered_runs": recovered,
+            "verified_repeatable_repair": successes >= 2}
+
+
 def main():
     incidents = parse_blocks(
         INCIDENTS.read_text(encoding="utf-8"),
@@ -129,6 +184,7 @@ def main():
     if weird_markers > 1 and not weird:
         raise RuntimeError("weird ledger contains entries but parser recovered zero weird items")
 
+    operator_learning = operator_outcome_summary(STATE)
     kinds = Counter(verdict_kind(i.get("VERDICT", "")) for i in incidents)
     layer_counts = Counter(x for i in incidents for x in layers(i))
     user_cycles = sum(1 for i in incidents if is_user_facing(i))
@@ -160,6 +216,7 @@ def main():
         "closed_incident_rule_count": len(closed_rules),
         "unresolved_incident_prevention_count": len(open_rules),
         "weird_salvage_count": len(weird),
+        "friday_operator_learning": operator_learning,
         "top_failure_layers": layer_counts.most_common(),
         "release_receipt_verdict": receipt_verdict(receipt),
         "authority": current.get("authority", {}),
@@ -179,6 +236,10 @@ def main():
         f"- Blocked/open: **{kinds['blocked'] + kinds['open']}**",
         f"- User-facing failure cycles: **{user_cycles}**",
         f"- Weird salvage items: **{len(weird)}**",
+        f"- FRIDAY bounded operator runs observed: **{operator_learning['runs']}**",
+        f"- Independently verified derived-status repairs: **{operator_learning['repaired_runs']}**",
+        f"- Bounded repair attempts recovered after I/O retry: **{operator_learning['retry_recovered_runs']}**",
+        f"- Failed derived-status repairs (require review): **{operator_learning['failed_repairs']}**",
         "",
     ]
     for n, i in enumerate(incidents, 1):
@@ -247,6 +308,27 @@ def main():
             generated.append(
                 f"- **{k} repeated {v} times:** inspect sibling failure modes before another release touching this layer."
             )
+    generated += [
+        "",
+        "## FRIDAY operator retry evidence — sanitized scheduled CI only",
+        "",
+        f"- Observed independent CI run identities: {operator_learning['runs']}",
+        f"- Verified bounded repairs: {operator_learning['repaired_runs']}",
+        f"- Recovered local I/O retry sequences: {operator_learning['retry_recovered_runs']}",
+        f"- Failed repairs awaiting review: {operator_learning['failed_repairs']}",
+    ]
+    if operator_learning["verified_repeatable_repair"]:
+        generated += [
+            "- **REPEATABILITY VERIFIED (derived status only):** Two or more distinct scheduled runs successfully regenerated owner-readable status and passed independent scorefield checks. Reuse that bounded repair, never generalize it to source edits or live jobs.",
+        ]
+    else:
+        generated += [
+            "- **PROVISIONAL:** Do not call status repair repeatable until two distinct CI runs independently verify it.",
+        ]
+    if operator_learning["failed_repairs"]:
+        generated += [
+            "- **REVIEW NEEDED:** One or more bounded repairs failed; inspect exact sanitized stop reasons and improve a candidate test before expanding the repair menu.",
+        ]
     generated += [
         "",
         "## Non-negotiable promotion rule",
