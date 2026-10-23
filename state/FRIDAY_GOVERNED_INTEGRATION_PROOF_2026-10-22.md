@@ -1,5 +1,7 @@
 # FRIDAY governed Foundry → AIOS integration proof — 2026-10-22
 
+> **2026-10-22 postscript:** The candidate described below was subsequently merged **only into the Foundry development branch** at `7ceaad7a82dcedc85f8c23cf88bea4bef05ee9ca`; both exact post-merge CI checks [guarded proof](https://github.com/Karmicmurphy/temporal-capability-foundry/actions/runs/39885548352) and [unit](https://github.com/Karmicmurphy/temporal-capability-foundry/actions/runs/39885548353) passed. The dated pre-merge descriptions below are retained for evidence chronology, not current status. No canonical factory authority repin or live FRIDAY assertion follows from this merge.
+
 **Current evidence: PROVEN_IN_TEST, not PROVEN_LIVE. Candidate only.** This is a dated observation receipt, not a new canonical work order, merge authorization, runtime activation, owner authentication, or general FRIDAY capability.
 
 ## Exact links and identities
