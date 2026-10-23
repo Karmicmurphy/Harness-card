@@ -113,6 +113,14 @@ These are protective hypotheses/checks from BLOCKED, FAILED, OPEN or RETIRED inc
 - **CREATIVE repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 - **PROVIDER ACCESS repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 
+## FRIDAY operator retry evidence — sanitized scheduled CI only
+
+- Observed independent CI run identities: 1
+- Verified bounded repairs: 0
+- Recovered local I/O retry sequences: 0
+- Failed repairs awaiting review: 0
+- **PROVISIONAL:** Do not call status repair repeatable until two distinct CI runs independently verify it.
+
 ## Non-negotiable promotion rule
 
 Generated rules may strengthen proof and quality requirements. They may not remove privacy/safety boundaries, erase incident history, silently change the user's locked outcome, or promote proxy evidence to PROVEN_LIVE.
