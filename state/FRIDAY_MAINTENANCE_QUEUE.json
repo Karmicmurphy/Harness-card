@@ -30,9 +30,9 @@
       "state": "TRIAGED_REVIEW_REQUIRED",
       "read_attempts": 1,
       "proof_verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-      "evidence": "Exact remote compare inspected; candidate held for review",
-      "next_method": "VERIFY_EXACT_GITHUB_COMPARE",
-      "candidate_disposition": "TEST",
+      "evidence": "Observed branch ahead/different: proof required",
+      "next_method": "NO_AUTOMATIC_ACTION_REQUIRES_REVIEW",
+      "candidate_disposition": "REVIEW",
       "skill_routes": [
         "artifact-compass",
         "proof-gate"
@@ -62,12 +62,12 @@
       "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
       "approved_sha": "1785ed1405e769a17ec22066dc1e27a40dbf153b",
       "observed_sha": "9822e988dd125f55b13be3891eb0a39975a26191",
-      "state": "UNTRIAGED_READ_ONLY",
-      "read_attempts": 0,
-      "proof_verdict": null,
-      "evidence": "Observed branch ahead/different: proof required",
-      "next_method": "VERIFY_EXACT_GITHUB_COMPARE",
-      "candidate_disposition": "TEST",
+      "state": "TRIAGED_REVIEW_REQUIRED",
+      "read_attempts": 1,
+      "proof_verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
+      "evidence": "Exact remote compare inspected; candidate held for review",
+      "next_method": "NO_AUTOMATIC_ACTION_REQUIRES_REVIEW",
+      "candidate_disposition": "REVIEW",
       "skill_routes": [
         "project-context-harvester",
         "proof-gate"
@@ -76,8 +76,8 @@
     }
   ],
   "summary": {
-    "pending": 1,
-    "triaged_for_review": 1,
+    "pending": 0,
+    "triaged_for_review": 2,
     "unknown_access": 2,
     "matched": 0,
     "read_attempts_exhausted": 0
