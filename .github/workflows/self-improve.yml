@@ -1,6 +1,12 @@
 name: Harness Self Improvement
 
 on:
+  pull_request:
+    paths:
+      - ".github/workflows/self-improve.yml"
+      - "tests/test_self_improve.py"
+      - "tests/test_self_improve_writer.py"
+      - "tests/test_friday_operator_learning.py"
   workflow_dispatch:
   schedule:
     - cron: "17 5 * * *"
@@ -41,6 +47,7 @@ jobs:
         run: |
           python tests/test_self_improve.py
           python tests/test_friday_operator_learning.py
+          python tests/test_self_improve_writer.py
 
       - name: Outcome Counter + Why Worker + Rule Miner + Weird Salvage Indexer
         id: learn
@@ -115,7 +122,7 @@ jobs:
           } >> state/SELF_RUN_HISTORY.md
 
       - name: Commit self-rewrite outputs
-        if: always()
+        if: always() && github.event_name != 'pull_request'
         run: |
           git config user.name "harness-learning-worker"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
