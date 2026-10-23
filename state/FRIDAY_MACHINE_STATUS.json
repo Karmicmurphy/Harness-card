@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-23T17:23:29.411715+00:00",
+  "generated_at": "2026-10-23T19:01:06.455689+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
   "lane": "FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY",
@@ -40,7 +40,7 @@
     "gate_id": "FRIDAY_BOUNDED_OPERATOR_LOOP",
     "status": "ACTIVE",
     "stop_condition": "The existing FRIDAY GitHub automation selects and executes one safe bounded operator action without an owner conducting the tools, independently verifies its result, and emits a durable receipt with action, verdict, exact authority boundary, and next move. This proves bounded scheduled machine operation only, not general agent autonomy or live local FRIDAY MCP.",
-    "canonical_next_action": "Keep FRIDAY's already proven scheduled Harness operator running. The next missing TEST-ONLY proof is: accept one explicit, low-risk owner intent; validate fresh Harness authority and an allowlisted job; reuse the already merged Foundry-to-AIOS deterministic execution machinery; independently verify the correlated result and a safe retry/stop receipt in an isolated credential-free candidate. Foundry PR #35 is merged into software-builder-v0 as test code, but canonical Factory SHA remains unchanged. Do not bulk-merge PR #31/#34, repin authority, deploy, expand permissions or revive parked Android/Cloudflare Preview. General-purpose resident FRIDAY, fresh live owner-machine connection, and unbounded autonomy remain NOT_PROVEN."
+    "canonical_next_action": "Keep the existing proven Harness operator and Foundry development tests green. Next one candidate-only gate: take an approved low-risk job through fresh owner-identity admission, deny missing/stale identity, then test durable duplicate/uncertain-attempt recovery across two separate processes with the same correlated independent receipt. Use the already merged PR #36 intent→Foundry→real AIOS execution machinery; no new framework, arbitrary commands, secrets, paid services, local Windows, phone, Cloudflare Preview, production dispatch or canonical SHA promotion. Stop on the first authentic owner-identity/permission boundary. General FRIDAY autonomy and live machine integration remain NOT_PROVEN."
   },
   "blockers": {
     "automatic": [
@@ -51,7 +51,7 @@
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-10-23T17:23:29.411715+00:00",
+    "observed_at": "2026-10-23T19:01:06.455689+00:00",
     "match": 1,
     "reconciliation_required": 2,
     "unknown": 2,
@@ -61,7 +61,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "75b745adc4e9af3f3c669096c13da1118aa734c3",
+        "observed_sha": "93a7eba4d6e6e5a56ba62b9055327784cd84be2a",
         "state": "OBSERVED_GOVERNANCE"
       },
       {
