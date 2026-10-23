@@ -4,12 +4,12 @@
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "lane": "FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY",
   "evidence_state": "PARTIALLY_PROVEN",
-  "next_action": "Keep FRIDAY's already proven scheduled Harness operator running. The next missing TEST-ONLY proof is: accept one explicit, low-risk owner intent; validate fresh Harness authority and an allowlisted job; reuse the already merged Foundry-to-AIOS deterministic execution machinery; independently verify the correlated result and a safe retry/stop receipt in an isolated credential-free candidate. Foundry PR #35 is merged into software-builder-v0 as test code, but canonical Factory SHA remains unchanged. Do not bulk-merge PR #31/#34, repin authority, deploy, expand permissions or revive parked Android/Cloudflare Preview. General-purpose resident FRIDAY, fresh live owner-machine connection, and unbounded autonomy remain NOT_PROVEN.",
+  "next_action": "Keep the existing proven Harness operator and Foundry development tests green. Next one candidate-only gate: take an approved low-risk job through fresh owner-identity admission, deny missing/stale identity, then test durable duplicate/uncertain-attempt recovery across two separate processes with the same correlated independent receipt. Use the already merged PR #36 intent→Foundry→real AIOS execution machinery; no new framework, arbitrary commands, secrets, paid services, local Windows, phone, Cloudflare Preview, production dispatch or canonical SHA promotion. Stop on the first authentic owner-identity/permission boundary. General FRIDAY autonomy and live machine integration remain NOT_PROVEN.",
   "status": "ACTIVE",
   "blockers": [
     "GENERAL_FREEFORM_FRIDAY_RUNTIME_AND_CONNECTED_LOCAL_MACHINE_NOT_YET_PROVEN"
   ],
   "stop_condition": "The existing FRIDAY GitHub automation selects and executes one safe bounded operator action without an owner conducting the tools, independently verifies its result, and emits a durable receipt with action, verdict, exact authority boundary, and next move. This proves bounded scheduled machine operation only, not general agent autonomy or live local FRIDAY MCP.",
   "gate_id": "FRIDAY_BOUNDED_OPERATOR_LOOP",
-  "updated_at": "2026-10-22"
+  "updated_at": "2026-10-23"
 }
