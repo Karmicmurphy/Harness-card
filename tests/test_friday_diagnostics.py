@@ -41,6 +41,16 @@ def receipt(role="factory", verdict="PASS_DELTA_INSPECTED_REQUIRES_REVIEW"):
 
 
 class RadarTests(unittest.TestCase):
+    def test_dated_protocols_route_to_live_friday_gate_not_parked_phone(self):
+        night = (ROOT / "docs/FRIDAY_NIGHT_SHIFT_PROTOCOL.md").read_text(encoding="utf-8")
+        spine = (ROOT / "docs/FRIDAY_AUTOMATION_SPINE.md").read_text(encoding="utf-8")
+        self.assertNotIn("The canonical Foundation next gate is still `PAGES_BOUNDED_JOB_ROUND_TRIP`", night)
+        self.assertIn("FRIDAY_BOUNDED_OPERATOR_LOOP", night)
+        self.assertIn("Android/phone and Cloudflare Pages Preview remain parked", night)
+        self.assertIn("state/CURRENT_PROJECT.json", spine)
+        self.assertIn("state/FRIDAY_MAINTENANCE_QUEUE.json", spine)
+        self.assertIn("NOT GENERAL LIVE FRIDAY", spine)
+
     def test_first_new_drift_then_verified_same_sha_is_not_repeated(self):
         with TemporaryDirectory() as d:
             root = Path(d)
