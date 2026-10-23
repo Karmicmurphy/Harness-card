@@ -171,6 +171,14 @@ def ingest_receipt(items: list[dict], receipt: dict) -> None:
     else:
         row["state"] = FAILED_READ
         row["evidence"] = "Bounded compare attempt failed; no permission to promote"
+    if row["state"] == TERMINAL_TRIAGED:
+        row["next_method"] = "NO_AUTOMATIC_ACTION_REQUIRES_REVIEW"
+        row["candidate_disposition"] = "REVIEW"
+    else:
+        row["next_method"] = ("STOP_REQUIRES_OWNER_REVIEW"
+                              if row["read_attempts"] >= MAX_READ_ATTEMPTS
+                              else "VERIFY_EXACT_GITHUB_COMPARE")
+        row["candidate_disposition"] = "DEFER" if row["read_attempts"] >= MAX_READ_ATTEMPTS else "TEST"
 
 
 def build_queue(root: Path, observation: dict | None, receipt: dict) -> dict:
