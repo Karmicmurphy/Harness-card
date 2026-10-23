@@ -35,7 +35,7 @@ Receipt generation is pure reporting in `scripts/night_shift_receipt.py`, with r
 - **NOT PROVEN_LIVE:** A phone sent a Foundry job, received a correlated receipt, or edited any real end-user artifact.
 - **Not a freshness guarantee:** Scheduled runs can be delayed or disabled by GitHub; latest world/AI research is not performed by these regression tests.
 
-The canonical Foundation next gate is still `PAGES_BOUNDED_JOB_ROUND_TRIP`. Preview authorization secrets remain a named blocker; do not copy Production secrets or launch the job to force a green result.
+The canonical Foundation next gate is resolved **live** from `state/CURRENT_PROJECT.json`, never from this dated protocol. As of October 23, 2026 it is `FRIDAY_BOUNDED_OPERATOR_LOOP`: keep the scheduled Harness/Foundry proof and diagnostics loop operating, and pursue only the bounded authorization/recovery test recorded in the current work order. **Android/phone and Cloudflare Pages Preview remain parked**, including their prior protected bindings; no credential copying or live job dispatch. The current [diagnostic queue](../state/FRIDAY_MAINTENANCE_QUEUE.json) remembers exact inspected source revisions. A reviewed branch delta is not an approved SHA or code repair.
 
 ## Allowed next actions for an interactive owner session
 
