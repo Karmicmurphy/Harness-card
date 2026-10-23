@@ -2,10 +2,10 @@
 
 > AUTO-GENERATED. Do not hand-edit.
 
-- Incidents: **15**
+- Incidents: **16**
 - Wins: **7**
 - Losses: **0**
-- Blocked/open: **8**
+- Blocked/open: **9**
 - User-facing failure cycles: **9**
 - Weird salvage items: **2**
 - FRIDAY bounded operator runs observed: **1**
@@ -147,3 +147,12 @@
 - **What changed:** PR #40 merged on 2026-10-22 at fdcb1ab4e48c7ef01af2028e8834105346e9fda3. Keep observation JSON artifacts, allow expected exit-1 findings, add strict receipt validation, visible ATTENTION_REQUIRED / UNVERIFIED summary, tests and PR-triggered CI. No secrets, authority pins, Provider Production or live dispatch were changed.
 - **Why the corrected path won:** PROVEN_IN_GITHUB_PR_CI: Authority Spine Guard 39862496405 and read-only observer 39862496340 both passed, and the observer preserved real UNKNOWN/drift facts. First post-merge scheduled run remains PENDING; no Android/general FRIDAY runtime proof.
 - **Permanent lesson:** Distinguish observation failure *states* from observer *execution* failure. A green observation job certifies the reporting machinery only. Missing/malformed reports must still fail CI; never make UNKNOWN look like reconciled/live.
+
+## 16. FRIDAY learner repeated a stale generated-status rebase and could not publish
+
+- **Outcome:** BLOCKED
+- **What went wrong:** Harness Self Improvement GitHub Actions run 40009382972 passed learner and validation steps but failed its final publish: the same generated FRIDAY machine status files conflicted on all three rebase attempts.
+- **Why it failed:** The former publisher rebased the SAME timestamped/generated status commit after each conflict, so three retries repeated an identical non-resolvable conflict instead of recomputing outputs on the current verified main.
+- **What changed:** Restrict collision reconciliation to known generated state; reject unexpected source/authority changes; rebuild sanitized learning, checks and FRIDAY owner status against fresh main; publish a fresh commit with a strict three-attempt budget.
+- **Why the corrected path won:** [PR #53 regression](https://github.com/Karmicmurphy/Harness-card/actions/runs/40009841762) PASS; [post-merge Harness Self Improvement](https://github.com/Karmicmurphy/Harness-card/actions/runs/40009934888) PASS and generated learning/FRIDAY status successfully published. **The new collision-specific retry branch has not yet been exercised by a second real collision: NOT PROVEN for that subcase.**
+- **Permanent lesson:** Every automated retry must change the failing precondition (fresh evidence / current base), remain bounded, and independently validate the candidate output. Otherwise stop safely, preserve the exact failure, and treat the lesson as provisional.

@@ -101,16 +101,23 @@ These are protective hypotheses/checks from BLOCKED, FAILED, OPEN or RETIRED inc
 - **Provisional prevention:** Distinguish observation failure *states* from observer *execution* failure. A green observation job certifies the reporting machinery only. Missing/malformed reports must still fail CI; never make UNKNOWN look like reconciled/live.
 - **Evidence:** PROVEN_IN_GITHUB_PR_CI: Authority Spine Guard 39862496405 and read-only observer 39862496340 both passed, and the observer preserved real UNKNOWN/drift facts. First post-merge scheduled run remains PENDING; no Android/general FRIDAY runtime proof.
 
+### LR-016 — FRIDAY learner repeated a stale generated-status rebase and could not publish
+- **Incident closure:** BLOCKED — NOT VERIFIED AS FIXED
+- **Root cause learned:** The former publisher rebased the SAME timestamped/generated status commit after each conflict, so three retries repeated an identical non-resolvable conflict instead of recomputing outputs on the current verified main.
+- **Provisional prevention:** Every automated retry must change the failing precondition (fresh evidence / current base), remain bounded, and independently validate the candidate output. Otherwise stop safely, preserve the exact failure, and treat the lesson as provisional.
+- **Evidence:** [PR #53 regression](https://github.com/Karmicmurphy/Harness-card/actions/runs/40009841762) PASS; [post-merge Harness Self Improvement](https://github.com/Karmicmurphy/Harness-card/actions/runs/40009934888) PASS and generated learning/FRIDAY status successfully published. **The new collision-specific retry branch has not yet been exercised by a second real collision: NOT PROVEN for that subcase.**
+
 
 ## Repeated-layer escalations
 
 - **APPLICATION repeated 10 times:** inspect sibling failure modes before another release touching this layer.
 - **DEPLOY repeated 2 times:** inspect sibling failure modes before another release touching this layer.
-- **TEST-CI repeated 7 times:** inspect sibling failure modes before another release touching this layer.
+- **TEST-CI repeated 8 times:** inspect sibling failure modes before another release touching this layer.
 - **CONTRACT repeated 12 times:** inspect sibling failure modes before another release touching this layer.
-- **AUTHORITY repeated 3 times:** inspect sibling failure modes before another release touching this layer.
+- **AUTHORITY repeated 4 times:** inspect sibling failure modes before another release touching this layer.
 - **MOBILE AUDIO repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 - **CREATIVE repeated 2 times:** inspect sibling failure modes before another release touching this layer.
+- **LEARNING repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 - **PROVIDER ACCESS repeated 2 times:** inspect sibling failure modes before another release touching this layer.
 
 ## FRIDAY operator retry evidence — sanitized scheduled CI only

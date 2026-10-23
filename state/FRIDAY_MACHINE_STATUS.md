@@ -45,9 +45,9 @@ Keep the existing proven Harness operator and Foundry development tests green. N
 
 ## Learning
 
-- Documented prevention rules (closed + unresolved): **15**
+- Documented prevention rules (closed + unresolved): **16**
 - Rules from closed incidents: **7**
-- Unresolved prevention candidates (not proven fixes): **8**
+- Unresolved prevention candidates (not proven fixes): **9**
 - Weird salvage items: **2**
 - Bounded FRIDAY operator outcomes (sanitized distinct runs): **1**
 - Independently verified derived-status fixes: **0**
