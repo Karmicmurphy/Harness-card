@@ -95,6 +95,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_friday_operator.py' -v
           python tests/test_friday_operator_learning.py
           python tests/test_friday_diagnostics.py
+          python tests/test_friday_private_read_access.py
           python tests/test_friday_status_writer.py
 
       - name: Restore test-generated state before owner-status build
