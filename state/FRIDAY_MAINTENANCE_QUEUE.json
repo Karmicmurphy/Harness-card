@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "scope": "APPROVED_REFS_READ_ONLY",
+  "evidence_state": "DIAGNOSTIC_NOT_LIVE_EXECUTION",
+  "authority_gate": "FRIDAY_BOUNDED_OPERATOR_LOOP",
+  "items": [
+    {
+      "role": "factory",
+      "repo": "Karmicmurphy/temporal-capability-foundry",
+      "approved_sha": "e0e14e689b1d3a3bda1356276975b4b34f1b615e",
+      "observed_sha": null,
+      "state": "UNKNOWN_READ_ACCESS",
+      "read_attempts": 0,
+      "proof_verdict": null,
+      "evidence": "UNKNOWN or malformed remote evidence",
+      "next_method": "STOP_NEEDS_AUTHORIZED_READ",
+      "candidate_disposition": "DEFER",
+      "skill_routes": [
+        "artifact-compass",
+        "proof-gate",
+        "rights-gate"
+      ],
+      "owner_gate": "NO_AUTO_REPIN_OR_MERGE"
+    },
+    {
+      "role": "runtime",
+      "repo": "Karmicmurphy/Untethered-AIOS",
+      "approved_sha": "8a954439af2b15b00f7c961d83552772b382fd1f",
+      "observed_sha": "dfc50a6eff39eae738b1c77af61c771b297df506",
+      "state": "TRIAGED_REVIEW_REQUIRED",
+      "read_attempts": 1,
+      "proof_verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
+      "evidence": "Exact remote compare inspected; candidate held for review",
+      "next_method": "VERIFY_EXACT_GITHUB_COMPARE",
+      "candidate_disposition": "TEST",
+      "skill_routes": [
+        "artifact-compass",
+        "proof-gate"
+      ],
+      "owner_gate": "NO_AUTO_REPIN_OR_MERGE"
+    },
+    {
+      "role": "salvage",
+      "repo": "Karmicmurphy/digital-scrapyard-autopilot",
+      "approved_sha": "a059a27ef2bd662827a51da44dd8efb8863d634c",
+      "observed_sha": null,
+      "state": "UNKNOWN_READ_ACCESS",
+      "read_attempts": 0,
+      "proof_verdict": null,
+      "evidence": "UNKNOWN or malformed remote evidence",
+      "next_method": "STOP_NEEDS_AUTHORIZED_READ",
+      "candidate_disposition": "DEFER",
+      "skill_routes": [
+        "artifact-salvage",
+        "rights-gate",
+        "proof-gate"
+      ],
+      "owner_gate": "NO_AUTO_REPIN_OR_MERGE"
+    },
+    {
+      "role": "cockpit",
+      "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
+      "approved_sha": "1785ed1405e769a17ec22066dc1e27a40dbf153b",
+      "observed_sha": "9822e988dd125f55b13be3891eb0a39975a26191",
+      "state": "UNTRIAGED_READ_ONLY",
+      "read_attempts": 0,
+      "proof_verdict": null,
+      "evidence": "Observed branch ahead/different: proof required",
+      "next_method": "VERIFY_EXACT_GITHUB_COMPARE",
+      "candidate_disposition": "TEST",
+      "skill_routes": [
+        "project-context-harvester",
+        "proof-gate"
+      ],
+      "owner_gate": "NO_AUTO_REPIN_OR_MERGE"
+    }
+  ],
+  "summary": {
+    "pending": 1,
+    "triaged_for_review": 1,
+    "unknown_access": 2,
+    "matched": 0,
+    "read_attempts_exhausted": 0
+  },
+  "salvage_contract": {
+    "use_registered_skills": [
+      "artifact-compass",
+      "artifact-salvage",
+      "rights-gate",
+      "proof-gate"
+    ],
+    "no_source_install_or_import": true,
+    "proof_before_any_upgrade": true,
+    "parked_phone_and_preview": true
+  }
+}

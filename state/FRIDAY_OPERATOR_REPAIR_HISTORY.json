@@ -10,6 +10,15 @@
       "attempt_outcomes": [],
       "proof": "READ_ONLY_GITHUB_COMPARE_OF_EXACT_CANONICAL_VS_BRANCH_REFS",
       "stopped_reason": "NONE"
+    },
+    {
+      "run_id": "40021676417",
+      "action": "TRIAGE_APPROVED_REF_DRIFT",
+      "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
+      "attempt_count": 0,
+      "attempt_outcomes": [],
+      "proof": "READ_ONLY_GITHUB_COMPARE_OF_EXACT_CANONICAL_VS_BRANCH_REFS",
+      "stopped_reason": "NONE"
     }
   ]
 }

@@ -45,12 +45,12 @@ Keep the existing proven Harness operator and Foundry development tests green. N
 
 ## Automatic maintenance diagnostics
 
-- **Evidence:** NOT_YET_OBSERVED
-- **New exact-source comparisons pending:** NOT_OBSERVED
-- **Already inspected; awaiting bounded review:** NOT_OBSERVED
-- **Unknown access / missing observation:** NOT_OBSERVED
-- **Exact approved SHA matches:** NOT_OBSERVED
-- **Compare failures capped for review:** NOT_OBSERVED
+- **Evidence:** BOUNDED_DIAGNOSTICS_ONLY_NOT_AUTONOMOUS_CODE_FIX
+- **New exact-source comparisons pending:** 1
+- **Already inspected; awaiting bounded review:** 1
+- **Unknown access / missing observation:** 2
+- **Exact approved SHA matches:** 0
+- **Compare failures capped for review:** 0
 - Registered Artifact Compass, Rights Gate and Proof Gate route findings; no automatic merge, external code installation, access grants or deploy.
 
 

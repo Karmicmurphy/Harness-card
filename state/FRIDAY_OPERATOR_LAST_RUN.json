@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "timestamp": "2026-10-23T19:11:17.723740+00:00",
+  "timestamp": "2026-10-23T20:45:57.480174+00:00",
   "operator": "FRIDAY_BOUNDED_HARNESS_OPERATOR",
-  "github_run_id": "40009382971",
-  "github_source_sha": "abd19748a0150c4f3b72acad8a73c0688fc944a7",
+  "github_run_id": "40021676417",
+  "github_source_sha": "dc21e8f5125c0b0443286876e3b12949795dfaf2",
   "github_event": "push",
   "scope": "EXISTING_HARNESS_MAINTENANCE_ONLY",
   "authority_changed": false,
@@ -14,7 +14,8 @@
   "decision": {
     "action": "TRIAGE_APPROVED_REF_DRIFT",
     "role": "runtime",
-    "repo": "Karmicmurphy/Untethered-AIOS"
+    "repo": "Karmicmurphy/Untethered-AIOS",
+    "reason": "New exact source SHA needs read-only review"
   },
   "action": "TRIAGE_APPROVED_REF_DRIFT",
   "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
@@ -36,5 +37,16 @@
     "files_inspected_count": 5,
     "no_auto_promotion": true
   },
-  "next_action": "Use this exact delta as evidence for one scoped candidate decision; never silently merge or repin"
+  "next_action": "Use this exact delta as evidence for one scoped candidate decision; never silently merge or repin",
+  "diagnostic_queue": {
+    "path": "state/FRIDAY_MAINTENANCE_QUEUE.json",
+    "summary": {
+      "pending": 1,
+      "triaged_for_review": 1,
+      "unknown_access": 2,
+      "matched": 0,
+      "read_attempts_exhausted": 0
+    },
+    "source": "READ_ONLY_APPROVED_REF_OBSERVATION"
+  }
 }
