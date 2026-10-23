@@ -20,6 +20,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from check_authority_spine import validate  # noqa: E402
 from friday_control_plane import build_status, render_markdown  # noqa: E402
 from foundation_state import github_get  # noqa: E402
+from friday_diagnostics import (load_queue, candidates, pick_untriaged,
+                                build_queue, write_queue, InvalidQueue)  # noqa: E402
 
 SCORE_KEYS = ("incident_count", "learned_rule_count",
               "closed_incident_rule_count", "unresolved_incident_prevention_count")
@@ -136,10 +138,25 @@ def pick_action(root: Path, observation: dict | None) -> dict:
         return {"action": "REPAIR_DERIVED_OWNER_STATUS", "fields": mismatch}
     rows = (observation or {}).get("components")
     if isinstance(rows, list):
-        drift = next((r for r in rows if isinstance(r, dict) and r.get("state") == "RECONCILIATION_REQUIRED"), None)
-        if drift:
-            return {"action": "TRIAGE_APPROVED_REF_DRIFT",
-                    "role": drift.get("role", "UNKNOWN"), "repo": drift.get("repo", "UNKNOWN")}
+        # Only read real registered canonical state. Some narrow regression
+        # fixtures deliberately omit it; keep their read-only fallback.
+        current = load_optional_json(root / "state/CURRENT_PROJECT.json")
+        if current:
+            try:
+                prior = load_queue(root / "state/FRIDAY_MAINTENANCE_QUEUE.json")
+                eligible = pick_untriaged(candidates(current, observation, prior))
+            except (InvalidQueue, KeyError, ValueError, TypeError):
+                return {"action": "BLOCKED_DIAGNOSTIC_QUEUE_INVALID",
+                        "reason": "Preserve and inspect malformed queue/authority evidence"}
+            if eligible:
+                return {"action": "TRIAGE_APPROVED_REF_DRIFT",
+                        "role": eligible["role"], "repo": eligible["repo"],
+                        "reason": "New exact source SHA needs read-only review"}
+        else:
+            drift = next((r for r in rows if isinstance(r, dict) and r.get("state") == "RECONCILIATION_REQUIRED"), None)
+            if drift:
+                return {"action": "TRIAGE_APPROVED_REF_DRIFT",
+                        "role": drift.get("role", "UNKNOWN"), "repo": drift.get("repo", "UNKNOWN")}
     return {"action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
             "reason": "No allowed repair is required based on the available evidence"}
 
@@ -258,6 +275,20 @@ def main() -> int:
     observation = load_optional_json(args.observation) if args.observation else None
     result = operate(ROOT, observation)
     args.receipt.parent.mkdir(parents=True, exist_ok=True)
+    # A diagnostics queue is materialized only on the existing scheduled
+    # main-branch operator; PR/test invocations do not mutate canonical state.
+    on_main = os.environ.get("GITHUB_REF") == "refs/heads/main" and os.environ.get("GITHUB_ACTIONS") == "true"
+    if on_main:
+        try:
+            queue = build_queue(ROOT, observation, result)
+            write_queue(ROOT, queue)
+            result["diagnostic_queue"] = {
+                "path": "state/FRIDAY_MAINTENANCE_QUEUE.json",
+                "summary": queue["summary"], "source": "READ_ONLY_APPROVED_REF_OBSERVATION"}
+        except (InvalidQueue, OSError, ValueError, TypeError, KeyError):
+            result["verdict"] = "BLOCKED_DIAGNOSTIC_QUEUE_INVALID"
+            result["diagnostic_queue"] = {"state": "BLOCKED_PRESERVED_ORIGINAL",
+                                           "proof": "NO_OVERWRITE_OF_INVALID_QUEUE"}
     args.receipt.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     # Preserve the exact machine-owned action receipt in canonical Harness history
     # on the existing GitHub main-branch status-writer run only.
