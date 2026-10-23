@@ -48,6 +48,7 @@ jobs:
           python tests/test_self_improve.py
           python tests/test_friday_operator_learning.py
           python tests/test_self_improve_writer.py
+          python tests/test_friday_private_read_access.py
 
       - name: Outcome Counter + Why Worker + Rule Miner + Weird Salvage Indexer
         id: learn
@@ -88,7 +89,7 @@ jobs:
         id: friday_status
         continue-on-error: true
         env:
-          GH_TOKEN: ${{ secrets.FOUNDATION_READ_TOKEN || github.token }}
+          GH_TOKEN: ${{ github.event_name != 'pull_request' && secrets.FOUNDATION_READ_TOKEN || github.token }}
         run: |
           python scripts/foundation_state.py observe > foundation-observation.json || true
           python scripts/friday_control_plane.py build --observation foundation-observation.json
@@ -123,6 +124,8 @@ jobs:
 
       - name: Commit self-rewrite outputs
         if: always() && github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.FOUNDATION_READ_TOKEN || github.token }}
         run: |
           git config user.name "harness-learning-worker"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
