@@ -81,7 +81,7 @@ jobs:
         id: observe
         continue-on-error: true
         env:
-          GH_TOKEN: ${{ secrets.FOUNDATION_READ_TOKEN || github.token }}
+          GH_TOKEN: ${{ github.event_name != 'pull_request' && secrets.FOUNDATION_READ_TOKEN || github.token }}
         run: python scripts/foundation_state.py observe > foundation-observation.json
 
       - name: Night Shift full Harness regression suite
@@ -119,6 +119,8 @@ jobs:
 
       - name: FRIDAY chooses and executes one allowed machine-maintenance action
         id: friday_operator
+        env:
+          GH_TOKEN: ${{ github.event_name != 'pull_request' && secrets.FOUNDATION_READ_TOKEN || github.token }}
         run: python scripts/friday_operator.py --observation foundation-observation.json --receipt friday-operator/receipt.json
 
       - name: Refresh owner status with bounded FRIDAY operator receipt
@@ -160,6 +162,8 @@ jobs:
 
       - name: Commit refreshed owner view on main only
         if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.FOUNDATION_READ_TOKEN || github.token }}
         run: |
           git config user.name "friday-control-plane"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
