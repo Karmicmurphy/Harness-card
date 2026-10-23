@@ -1,6 +1,6 @@
 # FRIDAY pre-Codex machine clearance — 2026-10-22
 
-> **Evidence-backed recovery receipt, not a second source of authority.** The live state always comes from [CURRENT_PROJECT.json](CURRENT_PROJECT.json), [FRIDAY_MACHINE_STATUS.md](FRIDAY_MACHINE_STATUS.md), and [FRIDAY_OPERATOR_LAST_RUN.json](FRIDAY_OPERATOR_LAST_RUN.json), plus fresh GitHub/provider evidence. This file is a dated snapshot, not a command to promote refs, turn on services, or reactivate old gates.
+> **2026-10-22/23 SUPPLEMENT:** The previously unproven *bounded* cross-repo Foundation integration has now passed a Harness-governed CI fixture at Foundry PR #35. See [exact verified receipt](FRIDAY_GOVERNED_INTEGRATION_PROOF_2026-10-22.md) and [Actions run 39879548240](https://github.com/Karmicmurphy/temporal-capability-foundry/actions/runs/39879548240). The general-purpose FRIDAY runtime, owner-intent execution path, durable dispatcher, and local machine integration **remain unproven**; candidate is unmerged. Historical "next proof" wording below is retained as a dated snapshot.\n\n> **Evidence-backed recovery receipt, not a second source of authority.** The live state always comes from [CURRENT_PROJECT.json](CURRENT_PROJECT.json), [FRIDAY_MACHINE_STATUS.md](FRIDAY_MACHINE_STATUS.md), and [FRIDAY_OPERATOR_LAST_RUN.json](FRIDAY_OPERATOR_LAST_RUN.json), plus fresh GitHub/provider evidence. This file is a dated snapshot, not a command to promote refs, turn on services, or reactivate old gates.
 
 ## Owner outcome and scope
 
