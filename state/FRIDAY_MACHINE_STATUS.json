@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-23T19:01:21.949808+00:00",
+  "generated_at": "2026-10-23T19:11:16.617455+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
   "lane": "FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY",
@@ -14,7 +14,7 @@
   "operator_last_run": {
     "action": "TRIAGE_APPROVED_REF_DRIFT",
     "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-    "github_run_id": "40008026062",
+    "github_run_id": "40009382971",
     "receipt_path": "state/FRIDAY_OPERATOR_LAST_RUN.json"
   },
   "automation_mode": "AUTOMATE_UNTIL_OWNER_GATE",
@@ -51,7 +51,7 @@
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-10-23T19:01:21.949808+00:00",
+    "observed_at": "2026-10-23T19:11:16.617455+00:00",
     "match": 1,
     "reconciliation_required": 2,
     "unknown": 2,
@@ -61,7 +61,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "6c3bc5b06e17c8ff89e9d2b68b0a84dc316f5408",
+        "observed_sha": "abd19748a0150c4f3b72acad8a73c0688fc944a7",
         "state": "OBSERVED_GOVERNANCE"
       },
       {
@@ -117,6 +117,7 @@
     "closed_incident_rule_count": 7,
     "unresolved_incident_prevention_count": 8,
     "weird_salvage_count": 2,
+    "friday_operator_outcomes": null,
     "learning_contract": "PROVEN generalized candidates may join generated rules; raw private chat is not automatically ingested."
   },
   "policy": {

@@ -49,6 +49,10 @@ Keep the existing proven Harness operator and Foundry development tests green. N
 - Rules from closed incidents: **7**
 - Unresolved prevention candidates (not proven fixes): **8**
 - Weird salvage items: **2**
+- Bounded FRIDAY operator outcomes (sanitized distinct runs): **AWAITING LEARNING RUN**
+- Independently verified derived-status fixes: **AWAITING LEARNING RUN**
+- Recovered local retry sequences: **AWAITING LEARNING RUN**
+- Repair failures requiring review: **AWAITING LEARNING RUN**
 - New generalized learning candidates: **1**
 - Proven candidate rules eligible for promotion: **0**
 - Raw private chat is not copied automatically into the public Harness.
