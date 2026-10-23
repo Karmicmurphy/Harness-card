@@ -65,7 +65,7 @@
       "state": "TRIAGED_REVIEW_REQUIRED",
       "read_attempts": 1,
       "proof_verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-      "evidence": "Exact remote compare inspected; candidate held for review",
+      "evidence": "Observed branch ahead/different: proof required",
       "next_method": "NO_AUTOMATIC_ACTION_REQUIRES_REVIEW",
       "candidate_disposition": "REVIEW",
       "skill_routes": [

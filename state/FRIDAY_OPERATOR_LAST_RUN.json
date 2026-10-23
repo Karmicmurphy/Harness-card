@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "timestamp": "2026-10-23T20:48:22.302498+00:00",
+  "timestamp": "2026-10-23T20:50:31.994405+00:00",
   "operator": "FRIDAY_BOUNDED_HARNESS_OPERATOR",
-  "github_run_id": "40022019723",
-  "github_source_sha": "7863715727aa54c92d8d7c0462a3e9c54d6f41e9",
+  "github_run_id": "40022296000",
+  "github_source_sha": "319463e628dfa93c348dd5f7200500454cfc4bbb",
   "github_event": "push",
   "scope": "EXISTING_HARNESS_MAINTENANCE_ONLY",
   "authority_changed": false,
@@ -12,33 +12,14 @@
   "secret_values_accessed": false,
   "live_external_job_dispatched": false,
   "decision": {
-    "action": "TRIAGE_APPROVED_REF_DRIFT",
-    "role": "cockpit",
-    "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
-    "reason": "New exact source SHA needs read-only review"
+    "action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
+    "reason": "No allowed repair is required based on the available evidence"
   },
-  "action": "TRIAGE_APPROVED_REF_DRIFT",
-  "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-  "proof": "READ_ONLY_GITHUB_COMPARE_OF_EXACT_CANONICAL_VS_BRANCH_REFS",
+  "action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
+  "verdict": "PASS_VALIDATED_NO_SAFE_CHANGE",
+  "proof": "AUTHORITY_SPINE_VALIDATION",
   "changed_paths": [],
-  "inspected_delta": {
-    "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-    "ahead_by": 3,
-    "behind_by": 0,
-    "changed_files": [
-      ".github/workflows/pages.yml",
-      "THIRD_PARTY_LOOP_DECK.md",
-      "app/assets/twis-pro-rig.js",
-      "app/pro-rig.html",
-      "app/rusty-phasewire-phone.html",
-      "tests/rusty_phasewire_pro_rig_contract_test.py"
-    ],
-    "approved_sha": "1785ed1405e769a17ec22066dc1e27a40dbf153b",
-    "observed_sha": "9822e988dd125f55b13be3891eb0a39975a26191",
-    "files_inspected_count": 6,
-    "no_auto_promotion": true
-  },
-  "next_action": "Use this exact delta as evidence for one scoped candidate decision; never silently merge or repin",
+  "next_action": "Continue the existing approved work order within its owner gates",
   "diagnostic_queue": {
     "path": "state/FRIDAY_MAINTENANCE_QUEUE.json",
     "summary": {
