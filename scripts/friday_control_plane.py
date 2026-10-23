@@ -201,6 +201,22 @@ def delivery_readiness(current: dict[str, Any], owner_blockers: list[str], opera
     }
 
 
+def diagnostic_queue_summary(root: Path) -> dict[str, Any]:
+    path = root / "state/FRIDAY_MAINTENANCE_QUEUE.json"
+    if not path.is_file():
+        return {"state": "NOT_YET_OBSERVED", "summary": {}}
+    import sys
+    sys.path.insert(0, str(root / "scripts"))
+    from friday_diagnostics import load_queue
+    queue = load_queue(path)  # malformed evidence is an error, never false green
+    summary = queue.get("summary")
+    if not isinstance(summary, dict):
+        raise ValueError("maintenance queue missing evidence summary")
+    return {"state": "BOUNDED_DIAGNOSTICS_ONLY_NOT_AUTONOMOUS_CODE_FIX",
+            "path": "state/FRIDAY_MAINTENANCE_QUEUE.json",
+            "summary": summary, "items": queue["items"]}
+
+
 def build_status(root: Path = ROOT, observation: dict[str, Any] | None = None) -> dict[str, Any]:
     current = load_json(root / "state/CURRENT_PROJECT.json")
     score = load_json(root / "state/HARNESS_SCORECARD.json")
@@ -267,6 +283,7 @@ def build_status(root: Path = ROOT, observation: dict[str, Any] | None = None) -
             "owner_attention_required": bool(owner_blockers),
         },
         "remote_authority_observation": remote,
+        "maintenance_diagnostics": diagnostic_queue_summary(root),
         "learning": generated_candidates,
         "self_improvement": {
             "incident_count": score.get("incident_count"),
@@ -346,6 +363,17 @@ def render_markdown(status: dict[str, Any]) -> str:
         lines.append(f"- {item}")
     if not blockers["owner_gate"]:
         lines.append("- Nothing at the current gate.")
+    radar = status.get("maintenance_diagnostics") or {}
+    counts = radar.get("summary") or {}
+    lines += ["", "## Automatic maintenance diagnostics", "",
+              f"- **Evidence:** {radar.get('state', 'UNKNOWN')}",
+              f"- **New exact-source comparisons pending:** {counts.get('pending', 'NOT_OBSERVED')}",
+              f"- **Already inspected; awaiting bounded review:** {counts.get('triaged_for_review', 'NOT_OBSERVED')}",
+              f"- **Unknown access / missing observation:** {counts.get('unknown_access', 'NOT_OBSERVED')}",
+              f"- **Exact approved SHA matches:** {counts.get('matched', 'NOT_OBSERVED')}",
+              f"- **Compare failures capped for review:** {counts.get('read_attempts_exhausted', 'NOT_OBSERVED')}",
+              "- Registered Artifact Compass, Rights Gate and Proof Gate route findings; no automatic merge, external code installation, access grants or deploy.",
+              ""]
     lines += [
         "",
         "## Learning",
