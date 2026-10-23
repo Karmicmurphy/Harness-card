@@ -289,3 +289,20 @@ Scheduled Foundation monitor reported expected access gaps as nightly workflow c
 - **BONUS SALVAGE:** Existing Night Shift status already independently classifies TESTS_PASS__REMOTE_UNVERIFIED; maintain separate status/proof planes rather than duplicating schedulers.
 - **VERDICT:** BLOCKED — first *scheduled main-branch* confirmation still pending; repository read credentials and protected Preview bindings remain independent owner-gated work.
 - **STOP:** Close the notification/failure classification incident after one scheduled main-branch observer run reports actual drift/UNKNOWN without a failed job and without concealment of a true malformed-output regression. Do not call broader FRIDAY live.
+
+### INCIDENT
+FRIDAY learner repeated a stale generated-status rebase and could not publish
+
+- **SYMPTOM:** Harness Self Improvement GitHub Actions run 40009382972 passed learner and validation steps but failed its final publish: the same generated FRIDAY machine status files conflicted on all three rebase attempts.
+- **EXPECTED:** When a generated-state writer is beaten by an authorized concurrent writer, FRIDAY should reconcile current evidence and safely publish freshly checked learning, without making the owner manually resolve generated artifacts.
+- **CURRENT AUTHORITY:** `Karmicmurphy/Harness-card` / `main`; failed run `40009382972`; prior FRIDAY operator main run `40009382971`; repair PRs [#52](https://github.com/Karmicmurphy/Harness-card/pull/52) and [#53](https://github.com/Karmicmurphy/Harness-card/pull/53).
+- **LAYER:** TEST-CI / AUTHORITY / LEARNING
+- **FALSE LEADS:** A bad model, broken incident parser, absent learning history, or a failed learning/regression test. The worker's computation succeeded; only stale commit publication conflicted.
+- **ROOT CAUSE:** The former publisher rebased the SAME timestamped/generated status commit after each conflict, so three retries repeated an identical non-resolvable conflict instead of recomputing outputs on the current verified main.
+- **FIX:** Restrict collision reconciliation to known generated state; reject unexpected source/authority changes; rebuild sanitized learning, checks and FRIDAY owner status against fresh main; publish a fresh commit with a strict three-attempt budget.
+- **REGRESSION / PREVENTION:** Every automated retry must change the failing precondition (fresh evidence / current base), remain bounded, and independently validate the candidate output. Otherwise stop safely, preserve the exact failure, and treat the lesson as provisional.
+- **REAL-WORLD PROOF:** [PR #53 regression](https://github.com/Karmicmurphy/Harness-card/actions/runs/40009841762) PASS; [post-merge Harness Self Improvement](https://github.com/Karmicmurphy/Harness-card/actions/runs/40009934888) PASS and generated learning/FRIDAY status successfully published. **The new collision-specific retry branch has not yet been exercised by a second real collision: NOT PROVEN for that subcase.**
+- **PREVENTION ARTIFACT:** `.github/workflows/self-improve.yml` generated-state replay guard; `tests/test_self_improve_writer.py`; sanitized `state/FRIDAY_OPERATOR_REPAIR_HISTORY.json`; bounded operator repair and learning tests; this incident.
+- **BONUS SALVAGE:** Existing Harness CI, protected repo approvals and deterministic worker can support bounded self-repair without requiring a separate AI model, new scheduler or another warehouse.
+- **VERDICT:** BLOCKED
+- **STOP:** Await the first genuine conflicting-writer recovery proof before claiming the race itself is closed; regular learning publication is independently verified.
