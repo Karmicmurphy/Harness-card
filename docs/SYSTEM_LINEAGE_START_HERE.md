@@ -2,6 +2,9 @@
 
 This is the short front door to the deeper five-year salvage.
 
+Current work and live proof remain in `state/CURRENT_PROJECT.json` and `state/FRIDAY_MACHINE_STATUS.md`.
+The dated [pre-Codex Artifact Compass / five-repo recovery receipt](../state/FRIDAY_PRE_CODEX_MACHINE_CLEARANCE_2026-10-22.md) captures verified repairs, source pins vs observed refs, candidate PRs and remaining proof gates; it is not new authority.
+
 If Randy asks:
 - What have I actually built?
 - How do all my projects connect?
