@@ -1,9 +1,9 @@
 # FRIDAY Automation Spine
 
-Status: CANDIDATE / ISOLATED  
+Status: MERGED / BOUNDED HARNESS CI OPERATOR (NOT GENERAL LIVE FRIDAY)  
 Target: make the existing Foundation/Harness machine operable as one automated system before adding more product capability.
 
-## Owner outcome
+Current authority lives in `state/CURRENT_PROJECT.json`; the current machine's bounded execution/learning diagnostics live in `state/FRIDAY_MACHINE_STATUS.json` and `state/FRIDAY_MAINTENANCE_QUEUE.json`. The existing GitHub schedules can detect/ref-check, repair a known generated-status issue, retry safely, learn from bounded receipts and skip previously investigated exact revisions. That is **not** unattended arbitrary software rewriting. The next extension is one safe, testable Foundry source-repair candidate behind fresh authorization and independent proof, not a new agent framework. Phone/Cloudflare Preview stay parked until reprioritized.\n\n## Owner outcome
 
 Randy should not have to remember repository roles, compare SHAs, translate normal speech into engineering prompts, manually run repeated checks, or reconstruct what FRIDAY learned.
 
