@@ -43,6 +43,17 @@ Keep the existing proven Harness operator and Foundry development tests green. N
 
 - Nothing at the current gate.
 
+## Automatic maintenance diagnostics
+
+- **Evidence:** NOT_YET_OBSERVED
+- **New exact-source comparisons pending:** NOT_OBSERVED
+- **Already inspected; awaiting bounded review:** NOT_OBSERVED
+- **Unknown access / missing observation:** NOT_OBSERVED
+- **Exact approved SHA matches:** NOT_OBSERVED
+- **Compare failures capped for review:** NOT_OBSERVED
+- Registered Artifact Compass, Rights Gate and Proof Gate route findings; no automatic merge, external code installation, access grants or deploy.
+
+
 ## Learning
 
 - Documented prevention rules (closed + unresolved): **16**
