@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "timestamp": "2026-10-22T23:44:17.417751+00:00",
+  "timestamp": "2026-10-23T01:49:09.768498+00:00",
   "operator": "FRIDAY_BOUNDED_HARNESS_OPERATOR",
-  "github_run_id": "39873723953",
-  "github_source_sha": "0f72774ea7066b0bb74a6e83c680da24903916cf",
+  "github_run_id": "39886101303",
+  "github_source_sha": "a8ea61e5635dbc3b5c4c2fddcf78be3bf4d24259",
   "github_event": "push",
   "scope": "EXISTING_HARNESS_MAINTENANCE_ONLY",
   "authority_changed": false,
@@ -13,8 +13,8 @@
   "live_external_job_dispatched": false,
   "decision": {
     "action": "TRIAGE_APPROVED_REF_DRIFT",
-    "role": "cockpit",
-    "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop"
+    "role": "runtime",
+    "repo": "Karmicmurphy/Untethered-AIOS"
   },
   "action": "TRIAGE_APPROVED_REF_DRIFT",
   "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
@@ -25,16 +25,15 @@
     "ahead_by": 3,
     "behind_by": 0,
     "changed_files": [
-      ".github/workflows/pages.yml",
-      "THIRD_PARTY_LOOP_DECK.md",
-      "app/assets/twis-pro-rig.js",
-      "app/pro-rig.html",
-      "app/rusty-phasewire-phone.html",
-      "tests/rusty_phasewire_pro_rig_contract_test.py"
+      "AGENTS.md",
+      "CODEX_START_HERE.md",
+      "README.md",
+      "docs/CODEX_HANDOFF.md",
+      "tests/test_codex_launch_contract.py"
     ],
-    "approved_sha": "1785ed1405e769a17ec22066dc1e27a40dbf153b",
-    "observed_sha": "9822e988dd125f55b13be3891eb0a39975a26191",
-    "files_inspected_count": 6,
+    "approved_sha": "8a954439af2b15b00f7c961d83552772b382fd1f",
+    "observed_sha": "dfc50a6eff39eae738b1c77af61c771b297df506",
+    "files_inspected_count": 5,
     "no_auto_promotion": true
   },
   "next_action": "Use this exact delta as evidence for one scoped candidate decision; never silently merge or repin"
