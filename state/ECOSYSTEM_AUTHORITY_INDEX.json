@@ -404,6 +404,6 @@
         "foundation_authority": false
       }
     ],
-    "next": "Run the existing FRIDAY Automation Spine with scripts/friday_operator.py as the bounded operator. FRIDAY must validate Harness, choose one allowlisted local action, actually execute or triage it, verify the result, and retain an operator receipt. No new scheduler, paid model, arbitrary shell command, phone requirement, Cloudflare dependency, authority promotion, or Production deployment. An operating FRIDAY local MCP and open-ended natural-language execution remain unproven until separately tested."
+    "next": "Keep FRIDAY's already proven scheduled Harness operator running. The next missing TEST-ONLY proof is: accept one explicit, low-risk owner intent; validate fresh Harness authority and an allowlisted job; reuse the already merged Foundry-to-AIOS deterministic execution machinery; independently verify the correlated result and a safe retry/stop receipt in an isolated credential-free candidate. Foundry PR #35 is merged into software-builder-v0 as test code, but canonical Factory SHA remains unchanged. Do not bulk-merge PR #31/#34, repin authority, deploy, expand permissions or revive parked Android/Cloudflare Preview. General-purpose resident FRIDAY, fresh live owner-machine connection, and unbounded autonomy remain NOT_PROVEN."
   }
 }
