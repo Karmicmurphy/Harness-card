@@ -48,6 +48,7 @@ jobs:
           python tests/test_self_improve.py
           python tests/test_friday_operator_learning.py
           python tests/test_self_improve_writer.py
+          python tests/test_friday_private_read_access.py
 
       - name: Outcome Counter + Why Worker + Rule Miner + Weird Salvage Indexer
         id: learn
