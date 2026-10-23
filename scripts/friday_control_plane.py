@@ -274,6 +274,7 @@ def build_status(root: Path = ROOT, observation: dict[str, Any] | None = None) -
             "closed_incident_rule_count": score.get("closed_incident_rule_count"),
             "unresolved_incident_prevention_count": score.get("unresolved_incident_prevention_count"),
             "weird_salvage_count": score.get("weird_salvage_count"),
+            "friday_operator_outcomes": score.get("friday_operator_learning"),
             "learning_contract": "PROVEN generalized candidates may join generated rules; raw private chat is not automatically ingested.",
         },
         "policy": {
@@ -353,6 +354,10 @@ def render_markdown(status: dict[str, Any]) -> str:
         f"- Rules from closed incidents: **{status['self_improvement']['closed_incident_rule_count'] if status['self_improvement']['closed_incident_rule_count'] is not None else 'UNKNOWN UNTIL LEARNER REFRESH'}**",
         f"- Unresolved prevention candidates (not proven fixes): **{status['self_improvement']['unresolved_incident_prevention_count'] if status['self_improvement']['unresolved_incident_prevention_count'] is not None else 'UNKNOWN UNTIL LEARNER REFRESH'}**",
         f"- Weird salvage items: **{status['self_improvement']['weird_salvage_count']}**",
+        f"- Bounded FRIDAY operator outcomes (sanitized distinct runs): **{(status['self_improvement'].get('friday_operator_outcomes') or {}).get('runs', 'AWAITING LEARNING RUN')}**",
+        f"- Independently verified derived-status fixes: **{(status['self_improvement'].get('friday_operator_outcomes') or {}).get('repaired_runs', 'AWAITING LEARNING RUN')}**",
+        f"- Recovered local retry sequences: **{(status['self_improvement'].get('friday_operator_outcomes') or {}).get('retry_recovered_runs', 'AWAITING LEARNING RUN')}**",
+        f"- Repair failures requiring review: **{(status['self_improvement'].get('friday_operator_outcomes') or {}).get('failed_repairs', 'AWAITING LEARNING RUN')}**",
         f"- New generalized learning candidates: **{status['learning']['candidate_count']}**",
         f"- Proven candidate rules eligible for promotion: **{status['learning']['proven_rules_eligible']}**",
         "- Raw private chat is not copied automatically into the public Harness.",
