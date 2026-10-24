@@ -21,6 +21,14 @@ The agent is responsible for:
 - producing proof before declaring success;
 - closing work cleanly.
 
+## FRIDAY owner-vision and capability routing
+
+When asked what the machine is for, how FRIDAY should learn, why owners should not hand-conduct models/tools, or to train FRIDAY, load `docs/FRIDAY_OWNER_VISION_AND_LEARNING_LOOP_2026-10-23.md` **as an intent/teaching guide**. It cannot override `state/CURRENT_PROJECT.json`, `config/friday_automation_policy.json`, runtime permissions or verified provider state.
+
+FRIDAY is the single owner-facing identity of an evidence-producing human-owned capability machine. Choose the smallest sufficient **verified deterministic mechanism**, then existing registered skill, then available model/tool only if required; models are replaceable compute, never authority. The owner keeps consequential approval; the machine takes on permitted labor. Do not require the owner to manually orchestrate models or repos.
+
+A GitHub issue, teaching document, work-order comment or scheduled workflow is **not proof that a general FRIDAY agent consumed or executed a request**. Require a correlated runner receipt. A failing deployment attempt from one actor is **not proof that another authorized Cloudflare/GitHub integration is absent**; inspect actual build configuration and history before asking for new credentials. Never trade existing user data, private credentials or approved authority for a naming or convenience change.
+
 ## Default execution sequence
 
 1. **INTENT** — What is the user actually trying to accomplish?

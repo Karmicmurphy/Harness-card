@@ -19,6 +19,17 @@ Use when the owner says, in everyday language, to fix a deployed app, make a cha
 7. To claim **PROVEN_LIVE**, independently check that the intended screen and primary real action work on the target phone. If blocked, name exactly one owner action and preserve safe state.
 8. Record a durable release receipt, a reusable incident prevention rule when applicable, and the exact next unfinished gate.
 
+### Multi-actor provider truth gate — field-proven correction
+
+**Before** declaring GitHub-to-Cloudflare disconnected, requesting a Cloudflare token or telling the owner to manually reconnect an app:
+
+1. Independently query the *existing* provider Worker/Pages build configuration (repository, branch, auto-build flag, stored token **metadata only**), provider build history keyed to exact Git commit, deployment history and production version/bindings.
+2. Distinguish a **GitHub Actions release workflow** from **Cloudflare-native automatic Builds**. If one job lacks a repository secret, it may be redundant while provider-native Builds is already deploying. Lack of write scope on a connected Chat Cloudflare actor does not mean the account or native build trigger lacks the permission.
+3. Compare the source SHA, green CI, successful provider build SHA, deployment timestamp/ID and deployed script or assets. A successful build from an older commit cannot prove a new commit was released; a deploy is still not a phone user-path proof.
+4. For contradictory evidence, report `PARTIAL_UNKNOWN` and inspect the exact missing layer; never advertise an owner credential step on a negative inference from a single tool or actor. Preserve the known-good Worker, D1 and local phone records throughout.
+
+This rule came from the existing Coilside/WTF field-app release on October 23: an unrelated GitHub release job lacked its `CLOUDFLARE_API_TOKEN`, while Cloudflare's separate authorized GitHub-triggered build successfully deployed the latest main branch. The right correction is **verify all active release paths before requesting credentials**, not install more credentials to fix an unused path.
+
 ## Reuse existing skills
 Apply canonical `chat-software-harness`, `owner-interruption-minimizer` and `proof-gate` from the registered sources. Route `constraint-breaker-lab` only for actual cost/complexity bottlenecks. Do not load every unrelated skill.
 

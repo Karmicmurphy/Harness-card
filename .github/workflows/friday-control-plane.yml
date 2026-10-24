@@ -10,6 +10,11 @@ on:
       - "scripts/friday_diagnostics.py"
       - "tests/test_friday_diagnostics.py"
       - "tests/test_friday_operator.py"
+      - "tests/test_friday_owner_vision_contract.py"
+      - "docs/FRIDAY_OWNER_VISION_AND_LEARNING_LOOP_2026-10-23.md"
+      - "skills/chat-software-harness/SKILL.md"
+      - "skills/friday-provider-release/SKILL.md"
+      - "AGENTS.md"
       - "tests/test_friday_operator_learning.py"
       - "workers/self_improve.py"
       - "config/friday_automation_policy.json"
@@ -37,6 +42,11 @@ on:
       - "scripts/friday_diagnostics.py"
       - "tests/test_friday_diagnostics.py"
       - "tests/test_friday_operator.py"
+      - "tests/test_friday_owner_vision_contract.py"
+      - "docs/FRIDAY_OWNER_VISION_AND_LEARNING_LOOP_2026-10-23.md"
+      - "skills/chat-software-harness/SKILL.md"
+      - "skills/friday-provider-release/SKILL.md"
+      - "AGENTS.md"
       - "tests/test_friday_operator_learning.py"
       - "workers/self_improve.py"
       - "config/friday_automation_policy.json"
@@ -94,6 +104,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_provider_release_gate.py' -v
           python -m unittest discover -s tests -p 'test_friday_operator.py' -v
           python tests/test_friday_operator_learning.py
+          python tests/test_friday_owner_vision_contract.py
           python tests/test_friday_diagnostics.py
           python tests/test_friday_private_read_access.py
           python tests/test_friday_status_writer.py
