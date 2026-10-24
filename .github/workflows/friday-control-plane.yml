@@ -6,6 +6,8 @@ on:
     - cron: "37 12 * * *"
   pull_request:
     paths:
+      - "scripts/night_shift_receipt.py"
+      - "tests/test_night_shift_receipt.py"
       - "scripts/friday_operator.py"
       - "scripts/friday_diagnostics.py"
       - "tests/test_friday_diagnostics.py"
@@ -38,6 +40,8 @@ on:
   push:
     branches: [main]
     paths:
+      - "scripts/night_shift_receipt.py"
+      - "tests/test_night_shift_receipt.py"
       - "scripts/friday_operator.py"
       - "scripts/friday_diagnostics.py"
       - "tests/test_friday_diagnostics.py"

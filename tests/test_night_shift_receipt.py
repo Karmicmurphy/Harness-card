@@ -66,6 +66,14 @@ for state, expected in [
     candidate = {**base, "remote_authority_observation": {"state": state}}
     assert module.report(checks, candidate)["verdict"] == expected, state
 
+# A successful operator followed by a failed/missing final status refresh is
+# not a fully verified Night Shift, even when the earlier render passed.
+assert "Post-operator status refresh" in checks
+for outcome in ("failure", "missing", "skipped"):
+    broken = {**checks, "Post-operator status refresh": outcome}
+    assert module.report(broken, base)["verdict"] == "FAILED_OR_INCOMPLETE"
+    assert f"**Post-operator status refresh:** {outcome}" in module.render(broken, base, {})
+
 bad = {**checks, "Full Harness regression": "failure"}
 assert module.report(bad, base)["verdict"] == "FAILED_OR_INCOMPLETE"
 assert module.report(checks, None)["verdict"] == "FAILED_OR_INCOMPLETE"
