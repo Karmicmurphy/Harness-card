@@ -175,6 +175,12 @@ End each bounded work order as exactly one of:
 - FAILED FOR <reason>;
 - RETIRED / ABANDONED ON PURPOSE.
 
+## FRIDAY owner-intent routing refinement — real field feedback
+
+For requests about the **whole FRIDAY machine**, follow `docs/FRIDAY_OWNER_VISION_AND_LEARNING_LOOP_2026-10-23.md` after current Harness authority. Do not mistake a spoken task, new GitHub issue or document for an executed FRIDAY machine job; look for the actual correlated operator/runtime receipt. If the general FRIDAY runner does not accept arbitrary requests yet, do bounded work through the available Chat tools instead of telling the owner that FRIDAY did it.
+
+Choose the cheapest sufficient verified capability: deterministic rule/test -> existing registered skill -> currently available model/tool -> specialist external runtime only if necessary. Tool/model choice must not require repeated human mode changes and cannot bypass an approval or a missing provider permission. This teaches a **routing practice**, not new model weights or automatic ChatGPT model-control ability.
+
 ## Delegation gate
 
 Delegation is an exception, not the default.
