@@ -8,7 +8,7 @@
 - Blocked/open: **9**
 - User-facing failure cycles: **9**
 - Weird salvage items: **2**
-- FRIDAY bounded operator runs observed: **4**
+- FRIDAY bounded operator runs observed: **6**
 - Independently verified derived-status repairs: **0**
 - Bounded repair attempts recovered after I/O retry: **0**
 - Failed derived-status repairs (require review): **0**
