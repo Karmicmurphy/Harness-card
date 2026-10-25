@@ -50,3 +50,21 @@ def authorize(root: Path, principal: dict, request: dict, *, test_identity=False
             'authority_digest': digest(binding), 'runtime': runtime,
             'queue_identity': digest(row), 'scope': 'DISPOSABLE_CANDIDATE_ONLY',
             'activation_permitted': False}
+
+
+def project_outcome(root: Path, envelope: dict, receipt: dict):
+    """Join a certified candidate outcome to its diagnostic row, without repinning.
+
+    Called on result publication/replay. Canonical diagnostic state is preserved;
+    this projection reports the separate candidate execution state to the owner.
+    """
+    queue = json.loads((root/'state/FRIDAY_MAINTENANCE_QUEUE.json').read_text())
+    rows = [row for row in queue['items'] if digest(row) == envelope['queue_identity']]
+    cert = (receipt.get('core_result') or {}).get('certificate') or {}
+    if (len(rows) != 1 or cert.get('verdict') != 'CERTIFIED'
+            or (cert.get('certificate_boundary') or {}).get('foundry_job_id') != receipt.get('job_id')
+            or (cert.get('evidence') or {}).get('final_candidate_matches') is not True):
+        raise ValueError('queue projection requires current row and correlated final-byte proof')
+    return {'queue_identity':envelope['queue_identity'], 'queue_status':'CANDIDATE_PROOF_COMPLETE',
+            'canonical_diagnostic_state':rows[0]['state'], 'job_id':receipt['job_id'],
+            'owner_gate':rows[0]['owner_gate']}
