@@ -65,6 +65,14 @@ def load_queue(path: Path) -> dict:
         attempts = row.get("read_attempts")
         if type(attempts) is not int or attempts < 0 or attempts > MAX_READ_ATTEMPTS:
             raise InvalidQueue("Queue contains invalid read attempts")
+        memory = row.get('last_verified_observation')
+        if memory is not None and (not isinstance(memory, dict)
+                or not is_sha(memory.get('observed_sha'))
+                or memory.get('state') not in (TERMINAL_TRIAGED, PENDING, FAILED_READ, MATCH)
+                or type(memory.get('read_attempts')) is not int
+                or not 0 <= memory['read_attempts'] <= MAX_READ_ATTEMPTS
+                or (memory['state'] == TERMINAL_TRIAGED and memory.get('proof_verdict') != 'PASS_DELTA_INSPECTED_REQUIRES_REVIEW')):
+            raise InvalidQueue('invalid retained observation memory')
         if row.get("state") == TERMINAL_TRIAGED and not (
             is_sha(row.get("approved_sha")) and is_sha(row.get("observed_sha"))
             and row.get("proof_verdict") == "PASS_DELTA_INSPECTED_REQUIRES_REVIEW"
@@ -110,6 +118,14 @@ def candidates(authority: dict, observation: dict | None, old: dict) -> list[dic
             else:
                 state, sha, evidence = ACCESS, None, "UNKNOWN or malformed remote evidence"
         prior = previous.get(role)
+        memory = None
+        if prior and prior.get('repo') == repo and prior.get('approved_sha') == approved:
+            if prior.get('state') == ACCESS:
+                memory = prior.get('last_verified_observation')
+            elif is_sha(prior.get('observed_sha')):
+                memory = {key: prior.get(key) for key in ('observed_sha','state','read_attempts','proof_verdict')}
+            if memory:
+                prior = {**prior, **memory}
         attempts = 0
         verdict = None
         if (prior and prior.get("repo") == repo and prior.get("approved_sha") == approved
@@ -120,18 +136,23 @@ def candidates(authority: dict, observation: dict | None, old: dict) -> list[dic
                 state, verdict = TERMINAL_TRIAGED, "PASS_DELTA_INSPECTED_REQUIRES_REVIEW"
             elif old_state == FAILED_READ:
                 state = FAILED_READ
+        if state == ACCESS and memory:
+            attempts = memory['read_attempts']
+        exhausted = state == FAILED_READ and attempts >= MAX_READ_ATTEMPTS
         result.append({
             "role": role, "repo": repo, "approved_sha": approved, "observed_sha": sha,
             "state": state, "read_attempts": attempts, "proof_verdict": verdict,
             "evidence": evidence, "next_method": (
                 "NO_AUTOMATIC_ACTION_REQUIRES_REVIEW" if state == TERMINAL_TRIAGED
+                else "STOP_REQUIRES_OWNER_REVIEW" if exhausted
                 else "VERIFY_EXACT_GITHUB_COMPARE" if state in (PENDING, FAILED_READ)
                 else "STOP_NEEDS_AUTHORIZED_READ" if state == ACCESS
                 else "MONITOR"),
             "candidate_disposition": "REVIEW" if state == TERMINAL_TRIAGED else (
-                "TEST" if state in (PENDING, FAILED_READ) else "DEFER"),
+                "TEST" if state in (PENDING, FAILED_READ) and not exhausted else "DEFER"),
             "skill_routes": ROLE_SKILLS[role],
             "owner_gate": "NO_AUTO_REPIN_OR_MERGE",
+            **({"last_verified_observation": memory} if state == ACCESS and memory else {}),
         })
     return result
 
@@ -160,6 +181,9 @@ def ingest_receipt(items: list[dict], receipt: dict) -> None:
         row["state"] = FAILED_READ
         row["read_attempts"] = min(MAX_READ_ATTEMPTS, row["read_attempts"] + 1)
         row["evidence"] = "Comparison lacked exact approved and observed identities"
+        if row['read_attempts'] >= MAX_READ_ATTEMPTS:
+            row['next_method'] = 'STOP_REQUIRES_OWNER_REVIEW'
+            row['candidate_disposition'] = 'DEFER'
         return
     row["read_attempts"] = min(MAX_READ_ATTEMPTS, row["read_attempts"] + 1)
     if (receipt.get("verdict") == "PASS_DELTA_INSPECTED_REQUIRES_REVIEW"
