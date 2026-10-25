@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "timestamp": "2026-10-24T18:41:22.054224+00:00",
+  "timestamp": "2026-10-25T07:00:18.021074+00:00",
   "operator": "FRIDAY_BOUNDED_HARNESS_OPERATOR",
   "github_run_id": "40121836088",
   "github_source_sha": "862bdb54351d95bfcdb706ecb1a43e089fe2541d",
@@ -12,20 +12,43 @@
   "secret_values_accessed": false,
   "live_external_job_dispatched": false,
   "decision": {
-    "action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
-    "reason": "No allowed repair is required based on the available evidence"
+    "action": "TRIAGE_APPROVED_REF_DRIFT",
+    "role": "factory",
+    "repo": "Karmicmurphy/temporal-capability-foundry",
+    "reason": "New exact source SHA needs read-only review"
   },
-  "action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
-  "verdict": "PASS_VALIDATED_NO_SAFE_CHANGE",
-  "proof": "AUTHORITY_SPINE_VALIDATION",
+  "action": "TRIAGE_APPROVED_REF_DRIFT",
+  "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
+  "proof": "READ_ONLY_GITHUB_COMPARE_OF_EXACT_CANONICAL_VS_BRANCH_REFS",
   "changed_paths": [],
-  "next_action": "Continue the existing approved work order within its owner gates",
+  "inspected_delta": {
+    "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
+    "ahead_by": 6,
+    "behind_by": 0,
+    "changed_files": [
+      ".github/workflows/candidate-bounded-foundation-job.yml",
+      ".github/workflows/friday-governed-proof.yml",
+      ".github/workflows/friday-intent-execution-proof.yml",
+      "docs/PHONE_CORRELATION_CANDIDATE.md",
+      "scripts/run_bounded_phone_foundation_job.py",
+      "scripts/run_friday_governed_integration_proof.py",
+      "scripts/run_friday_intent_execution_proof.py",
+      "tests/test_friday_governed_integration_proof.py",
+      "tests/test_friday_intent_execution_proof.py",
+      "tests/test_phone_job_correlation.py"
+    ],
+    "approved_sha": "e0e14e689b1d3a3bda1356276975b4b34f1b615e",
+    "observed_sha": "58ef07c46c71943b313ae36298fece54281046ad",
+    "files_inspected_count": 10,
+    "no_auto_promotion": true
+  },
+  "next_action": "Use this exact delta as evidence for one scoped candidate decision; never silently merge or repin",
   "diagnostic_queue": {
     "path": "state/FRIDAY_MAINTENANCE_QUEUE.json",
     "summary": {
-      "pending": 0,
-      "triaged_for_review": 2,
-      "unknown_access": 2,
+      "pending": 1,
+      "triaged_for_review": 3,
+      "unknown_access": 0,
       "matched": 0,
       "read_attempts_exhausted": 0
     },

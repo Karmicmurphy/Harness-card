@@ -22,8 +22,8 @@ Minimize owner interruption: ask for one exact Android action only when tools ca
 ## What actually works vs. what is still blocked
 
 Installed scripts or green checks alone never prove operator execution or a working live FRIDAY MCP.
-- **Last bounded FRIDAY action:** VERIFY_EXISTING_MACHINE_CONTINUITY
-- **Last bounded action verdict:** PASS_VALIDATED_NO_SAFE_CHANGE
+- **Last bounded FRIDAY action:** TRIAGE_APPROVED_REF_DRIFT
+- **Last bounded action verdict:** PASS_DELTA_INSPECTED_REQUIRES_REVIEW
 - **Operator receipt:** state/FRIDAY_OPERATOR_LAST_RUN.json
 - **Live-path evidence:** CI_BOUNDED_OPERATOR_ONLY_NOT_GENERAL_FRIDAY_MCP
 - **Exact owner gate:** None for preauthorized safe machine maintenance; consequential external actions still need applicable approval.
@@ -46,9 +46,9 @@ Keep the existing proven Harness operator and Foundry development tests green. N
 ## Automatic maintenance diagnostics
 
 - **Evidence:** BOUNDED_DIAGNOSTICS_ONLY_NOT_AUTONOMOUS_CODE_FIX
-- **New exact-source comparisons pending:** 0
-- **Already inspected; awaiting bounded review:** 2
-- **Unknown access / missing observation:** 2
+- **New exact-source comparisons pending:** 1
+- **Already inspected; awaiting bounded review:** 3
+- **Unknown access / missing observation:** 0
 - **Exact approved SHA matches:** 0
 - **Compare failures capped for review:** 0
 - Registered Artifact Compass, Rights Gate and Proof Gate route findings; no automatic merge, external code installation, access grants or deploy.
