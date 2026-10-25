@@ -12,7 +12,7 @@
       "state": "TRIAGED_REVIEW_REQUIRED",
       "read_attempts": 1,
       "proof_verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-      "evidence": "Exact remote compare inspected; candidate held for review",
+      "evidence": "Observed branch ahead/different: proof required",
       "next_method": "NO_AUTOMATIC_ACTION_REQUIRES_REVIEW",
       "candidate_disposition": "REVIEW",
       "skill_routes": [
@@ -26,11 +26,11 @@
       "role": "runtime",
       "repo": "Karmicmurphy/Untethered-AIOS",
       "approved_sha": "8a954439af2b15b00f7c961d83552772b382fd1f",
-      "observed_sha": "dfc50a6eff39eae738b1c77af61c771b297df506",
+      "observed_sha": "358724e92678275830909948c6c33b2e7815c9e2",
       "state": "TRIAGED_REVIEW_REQUIRED",
       "read_attempts": 1,
       "proof_verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-      "evidence": "Observed branch ahead/different: proof required",
+      "evidence": "Exact remote compare inspected; candidate held for review",
       "next_method": "NO_AUTOMATIC_ACTION_REQUIRES_REVIEW",
       "candidate_disposition": "REVIEW",
       "skill_routes": [
