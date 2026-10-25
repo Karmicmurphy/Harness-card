@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-25T07:00:17.698854+00:00",
+  "generated_at": "2026-10-25T09:53:12.903181+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
   "lane": "FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY",
@@ -51,7 +51,7 @@
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-10-25T07:00:17.698854+00:00",
+    "observed_at": "2026-10-25T09:53:12.903181+00:00",
     "match": 1,
     "reconciliation_required": 4,
     "unknown": 0,
@@ -61,7 +61,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "3c8149e5b25354ef08200e6f0291b614693772a7",
+        "observed_sha": "772a4854b3616ed9e1eecac388698e384609234d",
         "state": "OBSERVED_GOVERNANCE"
       },
       {
@@ -77,7 +77,7 @@
         "repo": "Karmicmurphy/Untethered-AIOS",
         "branch": "main",
         "approved_sha": "8a954439af2b15b00f7c961d83552772b382fd1f",
-        "observed_sha": "dfc50a6eff39eae738b1c77af61c771b297df506",
+        "observed_sha": "358724e92678275830909948c6c33b2e7815c9e2",
         "state": "RECONCILIATION_REQUIRED"
       },
       {
@@ -199,7 +199,7 @@
     "unresolved_incident_prevention_count": 9,
     "weird_salvage_count": 2,
     "friday_operator_outcomes": {
-      "runs": 6,
+      "runs": 8,
       "repaired_runs": 0,
       "failed_repairs": 0,
       "retry_recovered_runs": 0,
