@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "timestamp": "2026-10-25T16:44:42.157820+00:00",
+  "timestamp": "2026-10-26T18:50:30.741585+00:00",
   "operator": "FRIDAY_BOUNDED_HARNESS_OPERATOR",
-  "github_run_id": "40213127622",
-  "github_source_sha": "8a36d5a0509f31052150f4ba046da3538f1b09ae",
+  "github_run_id": "40381296590",
+  "github_source_sha": "6f8d9420616780f6d49cfc7d0b1e1d6363a5a7e7",
   "github_event": "schedule",
   "scope": "EXISTING_HARNESS_MAINTENANCE_ONLY",
   "authority_changed": false,
@@ -13,8 +13,8 @@
   "live_external_job_dispatched": false,
   "decision": {
     "action": "TRIAGE_APPROVED_REF_DRIFT",
-    "role": "runtime",
-    "repo": "Karmicmurphy/Untethered-AIOS",
+    "role": "salvage",
+    "repo": "Karmicmurphy/digital-scrapyard-autopilot",
     "reason": "New exact source SHA needs read-only review"
   },
   "action": "TRIAGE_APPROVED_REF_DRIFT",
@@ -23,28 +23,22 @@
   "changed_paths": [],
   "inspected_delta": {
     "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-    "ahead_by": 4,
+    "ahead_by": 1,
     "behind_by": 0,
     "changed_files": [
-      "AGENTS.md",
-      "CODEX_START_HERE.md",
-      "README.md",
-      "docs/CODEX_HANDOFF.md",
-      "skills/artifact-compass/SKILL.md",
-      "tests/test_artifact_compass_frontier.py",
-      "tests/test_codex_launch_contract.py"
+      "warehouse/intake/2026-09-28-css-animation-guide.md"
     ],
-    "approved_sha": "8a954439af2b15b00f7c961d83552772b382fd1f",
-    "observed_sha": "358724e92678275830909948c6c33b2e7815c9e2",
-    "files_inspected_count": 7,
+    "approved_sha": "a059a27ef2bd662827a51da44dd8efb8863d634c",
+    "observed_sha": "a904f29213b5a5bcf1b39f1392bca740c46a6093",
+    "files_inspected_count": 1,
     "no_auto_promotion": true
   },
   "next_action": "Use this exact delta as evidence for one scoped candidate decision; never silently merge or repin",
   "diagnostic_queue": {
     "path": "state/FRIDAY_MAINTENANCE_QUEUE.json",
     "summary": {
-      "pending": 1,
-      "triaged_for_review": 3,
+      "pending": 0,
+      "triaged_for_review": 4,
       "unknown_access": 0,
       "matched": 0,
       "read_attempts_exhausted": 0

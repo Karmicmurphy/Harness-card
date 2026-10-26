@@ -46,8 +46,8 @@ Keep the existing proven Harness operator and Foundry development tests green. N
 ## Automatic maintenance diagnostics
 
 - **Evidence:** BOUNDED_DIAGNOSTICS_ONLY_NOT_AUTONOMOUS_CODE_FIX
-- **New exact-source comparisons pending:** 1
-- **Already inspected; awaiting bounded review:** 3
+- **New exact-source comparisons pending:** 0
+- **Already inspected; awaiting bounded review:** 4
 - **Unknown access / missing observation:** 0
 - **Exact approved SHA matches:** 0
 - **Compare failures capped for review:** 0

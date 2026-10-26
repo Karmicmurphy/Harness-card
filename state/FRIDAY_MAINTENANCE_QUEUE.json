@@ -30,7 +30,7 @@
       "state": "TRIAGED_REVIEW_REQUIRED",
       "read_attempts": 1,
       "proof_verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-      "evidence": "Exact remote compare inspected; candidate held for review",
+      "evidence": "Observed branch ahead/different: proof required",
       "next_method": "NO_AUTOMATIC_ACTION_REQUIRES_REVIEW",
       "candidate_disposition": "REVIEW",
       "skill_routes": [
@@ -44,12 +44,12 @@
       "repo": "Karmicmurphy/digital-scrapyard-autopilot",
       "approved_sha": "a059a27ef2bd662827a51da44dd8efb8863d634c",
       "observed_sha": "a904f29213b5a5bcf1b39f1392bca740c46a6093",
-      "state": "UNTRIAGED_READ_ONLY",
-      "read_attempts": 0,
-      "proof_verdict": null,
-      "evidence": "Observed branch ahead/different: proof required",
-      "next_method": "VERIFY_EXACT_GITHUB_COMPARE",
-      "candidate_disposition": "TEST",
+      "state": "TRIAGED_REVIEW_REQUIRED",
+      "read_attempts": 1,
+      "proof_verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
+      "evidence": "Exact remote compare inspected; candidate held for review",
+      "next_method": "NO_AUTOMATIC_ACTION_REQUIRES_REVIEW",
+      "candidate_disposition": "REVIEW",
       "skill_routes": [
         "artifact-salvage",
         "rights-gate",
@@ -76,8 +76,8 @@
     }
   ],
   "summary": {
-    "pending": 1,
-    "triaged_for_review": 3,
+    "pending": 0,
+    "triaged_for_review": 4,
     "unknown_access": 0,
     "matched": 0,
     "read_attempts_exhausted": 0

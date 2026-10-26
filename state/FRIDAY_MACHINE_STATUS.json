@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-26T11:12:24.135328+00:00",
+  "generated_at": "2026-10-26T18:50:29.225396+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
   "lane": "FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY",
@@ -14,7 +14,7 @@
   "operator_last_run": {
     "action": "TRIAGE_APPROVED_REF_DRIFT",
     "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-    "github_run_id": "40213127622",
+    "github_run_id": "40381296590",
     "receipt_path": "state/FRIDAY_OPERATOR_LAST_RUN.json"
   },
   "automation_mode": "AUTOMATE_UNTIL_OWNER_GATE",
@@ -51,7 +51,7 @@
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-10-26T11:12:24.135328+00:00",
+    "observed_at": "2026-10-26T18:50:29.225396+00:00",
     "match": 1,
     "reconciliation_required": 4,
     "unknown": 0,
@@ -61,7 +61,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "855e3083d90465da46959c42d98b8dcaf5befe82",
+        "observed_sha": "6f8d9420616780f6d49cfc7d0b1e1d6363a5a7e7",
         "state": "OBSERVED_GOVERNANCE"
       },
       {
@@ -102,8 +102,8 @@
     "state": "BOUNDED_DIAGNOSTICS_ONLY_NOT_AUTONOMOUS_CODE_FIX",
     "path": "state/FRIDAY_MAINTENANCE_QUEUE.json",
     "summary": {
-      "pending": 1,
-      "triaged_for_review": 3,
+      "pending": 0,
+      "triaged_for_review": 4,
       "unknown_access": 0,
       "matched": 0,
       "read_attempts_exhausted": 0
@@ -135,7 +135,7 @@
         "state": "TRIAGED_REVIEW_REQUIRED",
         "read_attempts": 1,
         "proof_verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-        "evidence": "Exact remote compare inspected; candidate held for review",
+        "evidence": "Observed branch ahead/different: proof required",
         "next_method": "NO_AUTOMATIC_ACTION_REQUIRES_REVIEW",
         "candidate_disposition": "REVIEW",
         "skill_routes": [
@@ -149,12 +149,12 @@
         "repo": "Karmicmurphy/digital-scrapyard-autopilot",
         "approved_sha": "a059a27ef2bd662827a51da44dd8efb8863d634c",
         "observed_sha": "a904f29213b5a5bcf1b39f1392bca740c46a6093",
-        "state": "UNTRIAGED_READ_ONLY",
-        "read_attempts": 0,
-        "proof_verdict": null,
-        "evidence": "Observed branch ahead/different: proof required",
-        "next_method": "VERIFY_EXACT_GITHUB_COMPARE",
-        "candidate_disposition": "TEST",
+        "state": "TRIAGED_REVIEW_REQUIRED",
+        "read_attempts": 1,
+        "proof_verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
+        "evidence": "Exact remote compare inspected; candidate held for review",
+        "next_method": "NO_AUTOMATIC_ACTION_REQUIRES_REVIEW",
+        "candidate_disposition": "REVIEW",
         "skill_routes": [
           "artifact-salvage",
           "rights-gate",
