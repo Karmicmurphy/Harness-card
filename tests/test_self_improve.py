@@ -34,8 +34,8 @@ assert "LR-004" in rules  # Stable incident-rule identifiers are preserved
 # observer green is NOT repository reconciliation or live phone/runtime proof.
 ledger = (ROOT / "state" / "INCIDENT_LEDGER.md").read_text(encoding="utf-8")
 observer_incident = ledger.split(
-    "### INCIDENT\\nScheduled Foundation monitor reported expected access gaps as nightly workflow crashes\\n", 1
-)[1].split("\\n### INCIDENT", 1)[0]
+    "### INCIDENT\nScheduled Foundation monitor reported expected access gaps as nightly workflow crashes\n", 1
+)[1].split("\n### INCIDENT", 1)[0]
 assert "- **VERDICT:** DONE" in observer_incident
 assert "40556124576" in observer_incident
 assert "ATTENTION_REQUIRED" in observer_incident
