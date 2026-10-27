@@ -29,6 +29,20 @@ assert "## Provisional prevention rules" in rules
 assert "NOT VERIFIED AS FIXED" in rules
 assert "LR-004" in rules  # Stable incident-rule identifiers are preserved
 
+# A scheduled main observer has independently met LR-015's original stop
+# condition. Keep this closure evidence and its strict proof scope intact:
+# observer green is NOT repository reconciliation or live phone/runtime proof.
+ledger = (ROOT / "state" / "INCIDENT_LEDGER.md").read_text(encoding="utf-8")
+observer_incident = ledger.split(
+    "### INCIDENT\nScheduled Foundation monitor reported expected access gaps as nightly workflow crashes\n", 1
+)[1].split("\n### INCIDENT", 1)[0]
+assert "- **VERDICT:** DONE" in observer_incident
+assert "40556124576" in observer_incident
+assert "ATTENTION_REQUIRED" in observer_incident
+assert "Preview UNKNOWN" in observer_incident
+assert "not repository drift" in observer_incident
+assert score["closed_incident_rule_count"] >= 8, score
+
 assert "Weird Salvage Index" in weird
 # Guard the handoff that previously let FRIDAY's status lag new learning
 # because GITHUB_TOKEN bot commits do not launch dependent workflows.
