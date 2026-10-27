@@ -46,3 +46,4 @@ jobs:
           python -m unittest tests.test_foundation_state -v
           python tests/test_self_improve.py
           python -m unittest tests.test_skill_registry -v
+          python -m unittest tests.test_thy_continuity_recovery -v
