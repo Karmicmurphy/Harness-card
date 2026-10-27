@@ -126,6 +126,12 @@ Actions:
 - prefer better source material/arrangement/mix over more UI;
 - require target-device/listening proof before promotion.
 
+### THY Continuity Recovery — separate creative lane
+
+When the owner says "Recover Thousand-Year Hangover", "continue the THY saga", "where's the THY video", "find Ollie's approved voice", or reports redoing finished THY footage, resolve `thy-continuity-recovery` through `config/skill_registry.json` and follow `skills/thy-continuity-recovery/SKILL.md`.
+
+**Do not** import the story, grief canon, media, personal Library file IDs, private audio links, or creative source files into Harness Card, FRIDAY, CTOS, the Workshop, Foundry, AIOS, or Scrapyard. This is a routing bridge to the user's independently stored creative project, not Foundation authority or an active FRIDAY work order. ChatGPT Library access is separate from GitHub/FRIDAY credentials; if unavailable, report the exact missing access and stop rather than regenerating. A resolved route is not proof of a live FRIDAY creative-agent execution.
+
 ### Cost & Complexity Challenge
 Use before introducing substantial new infrastructure, dependencies, paid services, complex frameworks, or agent swarms.
 
