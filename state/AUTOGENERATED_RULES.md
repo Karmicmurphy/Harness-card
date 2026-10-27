@@ -48,6 +48,12 @@ An incident marked DONE contributed the following prevention rules. Its recorded
 - **Rule:** Unified browser proof explicitly requires ADVANCED to reveal eight loop rows, record controls, and import control.
 - **Evidence:** PROVEN_LIVE_BROWSER on deployed main; advanced workstation opened correctly in automation run `c000d5c8-bdaa-4e03-b68d-078c05d062a9`.
 
+### LR-015 — Scheduled Foundation monitor reported expected access gaps as nightly workflow crashes
+- **Incident closure:** DONE
+- **Root cause learned:** The scheduled observation scripts intentionally returned exit 1 for UNKNOWN / RECONCILIATION_REQUIRED / CONFIG_BLOCKED, and the workflow escalated those *findings* into failing jobs. GitHub Actions' repo-scoped token cannot resolve two private components; Cloudflare read-only env inputs are absent. These genuine monitoring access limitations do not establish a core runtime crash.
+- **Rule:** Distinguish observation failure *states* from observer *execution* failure. A green observation job certifies the reporting machinery only. Missing/malformed reports must still fail CI; never make UNKNOWN look like reconciled/live.
+- **Evidence:** PROVEN_SCHEDULED_MAIN_2026-10-27: read-only observer GitHub Actions run 40556124576 (scheduled on main, source SHA 214613f0b5fe7d28b3dd2d118c342cf2609f1985) completed SUCCESS. Its receipt explicitly reported ATTENTION_REQUIRED with four RECONCILIATION_REQUIRED component refs and Pages Preview UNKNOWN (READ_ONLY_CLOUDFLARE_CREDENTIAL_NOT_CONFIGURED). Observation validation and the regression test for missing/corrupt reports both passed; the artifact foundation-sync-observations was retained. This closes only the false-nightly-crash classification, not repository drift, Preview access, Android or general FRIDAY runtime proof. Earlier PR CI: Authority Spine Guard 39862496405 and observer 39862496340 passed.
+
 
 ## Provisional prevention rules — original incident still unresolved
 
@@ -95,12 +101,6 @@ These are protective hypotheses/checks from BLOCKED, FAILED, OPEN or RETIRED inc
 - **Provisional prevention:** Target Android and owner-language translation; provider-action fallback; policy shared-reach inspection; separate work-pay category from account; source/CI/deploy/runtime/binding/user-path ladder; backup before touching local data.
 - **Evidence:** **INFRASTRUCTURE WIN VERIFIED:** public home, dedicated D1 with three tables, `COILSIDE_DB` live binding and deployment, PR #5 and PR #6 merged. **NOT YET USER-PATH PROVEN:** owner ↔ Sean cross-phone notes, edited/reloaded Android timecards and restore.
 
-### LR-015 — Scheduled Foundation monitor reported expected access gaps as nightly workflow crashes
-- **Incident closure:** BLOCKED — NOT VERIFIED AS FIXED
-- **Root cause learned:** The scheduled observation scripts intentionally returned exit 1 for UNKNOWN / RECONCILIATION_REQUIRED / CONFIG_BLOCKED, and the workflow escalated those *findings* into failing jobs. GitHub Actions' repo-scoped token cannot resolve two private components; Cloudflare read-only env inputs are absent. These genuine monitoring access limitations do not establish a core runtime crash.
-- **Provisional prevention:** Distinguish observation failure *states* from observer *execution* failure. A green observation job certifies the reporting machinery only. Missing/malformed reports must still fail CI; never make UNKNOWN look like reconciled/live.
-- **Evidence:** PROVEN_IN_GITHUB_PR_CI: Authority Spine Guard 39862496405 and read-only observer 39862496340 both passed, and the observer preserved real UNKNOWN/drift facts. First post-merge scheduled run remains PENDING; no Android/general FRIDAY runtime proof.
-
 ### LR-016 — FRIDAY learner repeated a stale generated-status rebase and could not publish
 - **Incident closure:** BLOCKED — NOT VERIFIED AS FIXED
 - **Root cause learned:** The former publisher rebased the SAME timestamped/generated status commit after each conflict, so three retries repeated an identical non-resolvable conflict instead of recomputing outputs on the current verified main.
@@ -122,7 +122,7 @@ These are protective hypotheses/checks from BLOCKED, FAILED, OPEN or RETIRED inc
 
 ## FRIDAY operator retry evidence — sanitized scheduled CI only
 
-- Observed independent CI run identities: 10
+- Observed independent CI run identities: 11
 - Verified bounded repairs: 0
 - Recovered local I/O retry sequences: 0
 - Failed repairs awaiting review: 0

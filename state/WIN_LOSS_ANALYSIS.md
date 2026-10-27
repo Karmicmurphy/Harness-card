@@ -3,12 +3,12 @@
 > AUTO-GENERATED. Do not hand-edit.
 
 - Incidents: **16**
-- Wins: **7**
+- Wins: **8**
 - Losses: **0**
-- Blocked/open: **9**
+- Blocked/open: **8**
 - User-facing failure cycles: **9**
 - Weird salvage items: **2**
-- FRIDAY bounded operator runs observed: **10**
+- FRIDAY bounded operator runs observed: **11**
 - Independently verified derived-status repairs: **0**
 - Bounded repair attempts recovered after I/O retry: **0**
 - Failed derived-status repairs (require review): **0**
@@ -141,11 +141,11 @@
 
 ## 15. Scheduled Foundation monitor reported expected access gaps as nightly workflow crashes
 
-- **Outcome:** BLOCKED — first *scheduled main-branch* confirmation still pending; repository read credentials and protected Preview bindings remain independent owner-gated work.
+- **Outcome:** DONE — scheduled main-branch observer confirmed correct reporting with real drift/UNKNOWN and green execution. Four component revisions still require separate review; Preview observation remains UNKNOWN. Neither is silently fixed by this incident closure.
 - **What went wrong:** Repeated GitHub Actions failure notifications for "Observe Foundation drift" on October 18–22 despite passing authority, observer-unit and FRIDAY Automation Spine checks.
 - **Why it failed:** The scheduled observation scripts intentionally returned exit 1 for UNKNOWN / RECONCILIATION_REQUIRED / CONFIG_BLOCKED, and the workflow escalated those *findings* into failing jobs. GitHub Actions' repo-scoped token cannot resolve two private components; Cloudflare read-only env inputs are absent. These genuine monitoring access limitations do not establish a core runtime crash.
 - **What changed:** PR #40 merged on 2026-10-22 at fdcb1ab4e48c7ef01af2028e8834105346e9fda3. Keep observation JSON artifacts, allow expected exit-1 findings, add strict receipt validation, visible ATTENTION_REQUIRED / UNVERIFIED summary, tests and PR-triggered CI. No secrets, authority pins, Provider Production or live dispatch were changed.
-- **Why the corrected path won:** PROVEN_IN_GITHUB_PR_CI: Authority Spine Guard 39862496405 and read-only observer 39862496340 both passed, and the observer preserved real UNKNOWN/drift facts. First post-merge scheduled run remains PENDING; no Android/general FRIDAY runtime proof.
+- **Why the corrected path won:** PROVEN_SCHEDULED_MAIN_2026-10-27: read-only observer GitHub Actions run 40556124576 (scheduled on main, source SHA 214613f0b5fe7d28b3dd2d118c342cf2609f1985) completed SUCCESS. Its receipt explicitly reported ATTENTION_REQUIRED with four RECONCILIATION_REQUIRED component refs and Pages Preview UNKNOWN (READ_ONLY_CLOUDFLARE_CREDENTIAL_NOT_CONFIGURED). Observation validation and the regression test for missing/corrupt reports both passed; the artifact foundation-sync-observations was retained. This closes only the false-nightly-crash classification, not repository drift, Preview access, Android or general FRIDAY runtime proof. Earlier PR CI: Authority Spine Guard 39862496405 and observer 39862496340 passed.
 - **Permanent lesson:** Distinguish observation failure *states* from observer *execution* failure. A green observation job certifies the reporting machinery only. Missing/malformed reports must still fail CI; never make UNKNOWN look like reconciled/live.
 
 ## 16. FRIDAY learner repeated a stale generated-status rebase and could not publish
