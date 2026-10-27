@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-27T10:39:35.119497+00:00",
+  "generated_at": "2026-10-27T18:11:41.290318+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
   "lane": "FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY",
@@ -12,9 +12,9 @@
     "machine_next_action": "Continue the existing FRIDAY operator action/verification/learning loop and independently review receipts."
   },
   "operator_last_run": {
-    "action": "TRIAGE_APPROVED_REF_DRIFT",
-    "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-    "github_run_id": "40381296590",
+    "action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
+    "verdict": "PASS_VALIDATED_NO_SAFE_CHANGE",
+    "github_run_id": "40557640898",
     "receipt_path": "state/FRIDAY_OPERATOR_LAST_RUN.json"
   },
   "automation_mode": "AUTOMATE_UNTIL_OWNER_GATE",
@@ -51,7 +51,7 @@
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-10-27T10:39:35.119497+00:00",
+    "observed_at": "2026-10-27T18:11:41.290318+00:00",
     "match": 1,
     "reconciliation_required": 4,
     "unknown": 0,
@@ -61,7 +61,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "e50c3b2921d37f855f08e9fbb8500c1df1a7eaa5",
+        "observed_sha": "214613f0b5fe7d28b3dd2d118c342cf2609f1985",
         "state": "OBSERVED_GOVERNANCE"
       },
       {
@@ -152,7 +152,7 @@
         "state": "TRIAGED_REVIEW_REQUIRED",
         "read_attempts": 1,
         "proof_verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-        "evidence": "Exact remote compare inspected; candidate held for review",
+        "evidence": "Observed branch ahead/different: proof required",
         "next_method": "NO_AUTOMATIC_ACTION_REQUIRES_REVIEW",
         "candidate_disposition": "REVIEW",
         "skill_routes": [

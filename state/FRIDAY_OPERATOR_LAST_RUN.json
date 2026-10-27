@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "timestamp": "2026-10-26T18:50:30.741585+00:00",
+  "timestamp": "2026-10-27T18:11:42.821213+00:00",
   "operator": "FRIDAY_BOUNDED_HARNESS_OPERATOR",
-  "github_run_id": "40381296590",
-  "github_source_sha": "6f8d9420616780f6d49cfc7d0b1e1d6363a5a7e7",
+  "github_run_id": "40557640898",
+  "github_source_sha": "214613f0b5fe7d28b3dd2d118c342cf2609f1985",
   "github_event": "schedule",
   "scope": "EXISTING_HARNESS_MAINTENANCE_ONLY",
   "authority_changed": false,
@@ -12,28 +12,14 @@
   "secret_values_accessed": false,
   "live_external_job_dispatched": false,
   "decision": {
-    "action": "TRIAGE_APPROVED_REF_DRIFT",
-    "role": "salvage",
-    "repo": "Karmicmurphy/digital-scrapyard-autopilot",
-    "reason": "New exact source SHA needs read-only review"
+    "action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
+    "reason": "No allowed repair is required based on the available evidence"
   },
-  "action": "TRIAGE_APPROVED_REF_DRIFT",
-  "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-  "proof": "READ_ONLY_GITHUB_COMPARE_OF_EXACT_CANONICAL_VS_BRANCH_REFS",
+  "action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
+  "verdict": "PASS_VALIDATED_NO_SAFE_CHANGE",
+  "proof": "AUTHORITY_SPINE_VALIDATION",
   "changed_paths": [],
-  "inspected_delta": {
-    "verdict": "PASS_DELTA_INSPECTED_REQUIRES_REVIEW",
-    "ahead_by": 1,
-    "behind_by": 0,
-    "changed_files": [
-      "warehouse/intake/2026-09-28-css-animation-guide.md"
-    ],
-    "approved_sha": "a059a27ef2bd662827a51da44dd8efb8863d634c",
-    "observed_sha": "a904f29213b5a5bcf1b39f1392bca740c46a6093",
-    "files_inspected_count": 1,
-    "no_auto_promotion": true
-  },
-  "next_action": "Use this exact delta as evidence for one scoped candidate decision; never silently merge or repin",
+  "next_action": "Continue the existing approved work order within its owner gates",
   "diagnostic_queue": {
     "path": "state/FRIDAY_MAINTENANCE_QUEUE.json",
     "summary": {

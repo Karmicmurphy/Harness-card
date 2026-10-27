@@ -91,6 +91,15 @@
       "attempt_outcomes": [],
       "proof": "READ_ONLY_GITHUB_COMPARE_OF_EXACT_CANONICAL_VS_BRANCH_REFS",
       "stopped_reason": "NONE"
+    },
+    {
+      "run_id": "40557640898",
+      "action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
+      "verdict": "PASS_VALIDATED_NO_SAFE_CHANGE",
+      "attempt_count": 0,
+      "attempt_outcomes": [],
+      "proof": "AUTHORITY_SPINE_VALIDATION",
+      "stopped_reason": "NONE"
     }
   ]
 }
