@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-27T18:40:13.352822+00:00",
+  "generated_at": "2026-10-28T11:24:00.724779+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
   "lane": "FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY",
@@ -51,7 +51,7 @@
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-10-27T18:40:13.352822+00:00",
+    "observed_at": "2026-10-28T11:24:00.724779+00:00",
     "match": 1,
     "reconciliation_required": 4,
     "unknown": 0,
@@ -61,7 +61,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "f777671e87ac7f8dd8637eac3968ea51e60b2afb",
+        "observed_sha": "dfedba12852ee2cbe7c3e65e34be9f1f6546a3d1",
         "state": "OBSERVED_GOVERNANCE"
       },
       {
