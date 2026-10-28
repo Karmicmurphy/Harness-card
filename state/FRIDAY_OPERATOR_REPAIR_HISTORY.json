@@ -109,6 +109,15 @@
       "attempt_outcomes": [],
       "proof": "AUTHORITY_SPINE_VALIDATION",
       "stopped_reason": "NONE"
+    },
+    {
+      "run_id": "40745362309",
+      "action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
+      "verdict": "PASS_VALIDATED_NO_SAFE_CHANGE",
+      "attempt_count": 0,
+      "attempt_outcomes": [],
+      "proof": "AUTHORITY_SPINE_VALIDATION",
+      "stopped_reason": "NONE"
     }
   ]
 }
