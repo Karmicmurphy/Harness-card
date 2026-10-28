@@ -46,3 +46,25 @@ def main():
 
 if __name__=="__main__":
     main()
+
+
+def discover_verified_lessons(warehouse, conditions):
+    """Discover data-only proof lessons; never import executable code or grants."""
+    import hashlib
+    pointer = resolve('proof-gate')
+    if pointer['repo'] != 'Karmicmurphy/digital-scrapyard-autopilot':
+        raise ValueError('proof skill source changed')
+    results = []
+    for path in sorted(Path(warehouse).glob('*.json')):
+        if path.is_symlink():
+            raise ValueError('lesson must not be a symlink')
+        row = json.loads(path.read_text())
+        payload = row.get('lesson', {})
+        actual = hashlib.sha256(json.dumps(payload, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+        if row.get('digest') != actual:
+            raise ValueError('lesson integrity mismatch')
+        if (payload.get('conditions') == conditions and payload.get('status') == 'PROVEN_IN_TEST'
+                and payload.get('action') == 'VERIFY_FINAL_BYTES_BEFORE_REUSE'
+                and payload.get('authority_grants') == []):
+            results.append({**payload, 'skill': pointer['name']})
+    return results
