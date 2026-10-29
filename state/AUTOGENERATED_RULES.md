@@ -122,7 +122,7 @@ These are protective hypotheses/checks from BLOCKED, FAILED, OPEN or RETIRED inc
 
 ## FRIDAY operator retry evidence — sanitized scheduled CI only
 
-- Observed independent CI run identities: 11
+- Observed independent CI run identities: 13
 - Verified bounded repairs: 0
 - Recovered local I/O retry sequences: 0
 - Failed repairs awaiting review: 0
