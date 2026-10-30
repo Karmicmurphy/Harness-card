@@ -60,7 +60,7 @@ Keep the existing proven Harness operator and Foundry development tests green. N
 - Rules from closed incidents: **8**
 - Unresolved prevention candidates (not proven fixes): **8**
 - Weird salvage items: **2**
-- Bounded FRIDAY operator outcomes (sanitized distinct runs): **13**
+- Bounded FRIDAY operator outcomes (sanitized distinct runs): **14**
 - Independently verified derived-status fixes: **0**
 - Recovered local retry sequences: **0**
 - Repair failures requiring review: **0**
