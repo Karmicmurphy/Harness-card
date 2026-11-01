@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-01T14:40:15.729884+00:00",
+  "generated_at": "2026-11-01T16:12:24.934713+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
-  "lane": "SUPERVISED ANDROID INVENTORY / ONE OWNER-APPROVED SESSION",
+  "lane": "FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY",
   "machine_state": "READY_FOR_BOUNDED_AUTOMATION",
   "delivery_readiness": {
-    "state": "USER_PATH_NOT_PROVEN",
-    "proof": "CANONICAL_EVIDENCE_ONLY",
-    "one_next_owner_action": "Only the exact owner approval required by the active work order.",
-    "machine_next_action": "Prove the existing user path before calling the machine operational."
+    "state": "BOUNDED_OPERATOR_RUN_PROVEN",
+    "proof": "CI_BOUNDED_OPERATOR_ONLY_NOT_GENERAL_FRIDAY_MCP",
+    "one_next_owner_action": "None for preauthorized safe machine maintenance; consequential external actions still need applicable approval.",
+    "machine_next_action": "Continue the existing FRIDAY operator action/verification/learning loop and independently review receipts."
   },
   "operator_last_run": {
     "action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
@@ -37,21 +37,21 @@
     "constraint_breaker": true
   },
   "current_gate": {
-    "gate_id": "FRIDAY_SUPERVISED_ANDROID_INVENTORY_READ",
+    "gate_id": "FRIDAY_BOUNDED_OPERATOR_LOOP",
     "status": "ACTIVE",
-    "stop_condition": "One actual Android owner-authenticated request returns independently certified SQLite-backed inventory paths and a correlated durable receipt in the same Workshop conversation; then stop the supervised host and remove temporary reachability. Otherwise stop at the failing gate without calling it live.",
-    "canonical_next_action": "Execute the owner's explicitly approved one-session Android inventory read through the reviewed existing Workshop Preview and supervised Windows host. Require the existing real Access subject binding, exact repaired source commitments, request-bound inventory-only delegation and Independent Proof. Stop after one result or the first failure; shut down, deny the temporary route and restore this temporary work order through the guard. No Production, app merges/pushes, canonical repinning, arbitrary tasks or unattended service."
+    "stop_condition": "The existing FRIDAY GitHub automation selects and executes one safe bounded operator action without an owner conducting the tools, independently verifies its result, and emits a durable receipt with action, verdict, exact authority boundary, and next move. This proves bounded scheduled machine operation only, not general agent autonomy or live local FRIDAY MCP.",
+    "canonical_next_action": "Keep the existing proven Harness operator and Foundry development tests green. Next one candidate-only gate: take an approved low-risk job through fresh owner-identity admission, deny missing/stale identity, then test durable duplicate/uncertain-attempt recovery across two separate processes with the same correlated independent receipt. Use the already merged PR #36 intent→Foundry→real AIOS execution machinery; no new framework, arbitrary commands, secrets, paid services, local Windows, phone, Cloudflare Preview, production dispatch or canonical SHA promotion. Stop on the first authentic owner-identity/permission boundary. General FRIDAY autonomy and live machine integration remain NOT_PROVEN."
   },
   "blockers": {
     "automatic": [
-      "LIVE_ANDROID_ROUND_TRIP_NOT_RUN"
+      "GENERAL_FREEFORM_FRIDAY_RUNTIME_AND_CONNECTED_LOCAL_MACHINE_NOT_YET_PROVEN"
     ],
     "owner_gate": [],
     "owner_attention_required": false
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-11-01T14:40:15.729884+00:00",
+    "observed_at": "2026-11-01T16:12:24.934713+00:00",
     "match": 1,
     "reconciliation_required": 4,
     "unknown": 0,
@@ -61,7 +61,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "b638f34b023363994d5fd051971e89225f4a242a",
+        "observed_sha": "561958f399a41ad240d91f7a22931edf3cf128d8",
         "state": "OBSERVED_GOVERNANCE"
       },
       {

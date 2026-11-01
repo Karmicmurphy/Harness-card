@@ -3,10 +3,10 @@
 > AUTO-GENERATED from canonical Harness state. This is the owner view; canonical authority remains in CURRENT_PROJECT.json.
 
 - **Machine:** READY_FOR_BOUNDED_AUTOMATION
-- **Active machine execution:** USER_PATH_NOT_PROVEN (separate from installed scripts)
+- **Active machine execution:** BOUNDED_OPERATOR_RUN_PROVEN (separate from installed scripts)
 - **Project:** FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY
 - **Evidence:** PARTIALLY_PROVEN
-- **Lane:** SUPERVISED ANDROID INVENTORY / ONE OWNER-APPROVED SESSION
+- **Lane:** FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY
 - **Automation:** AUTOMATE_UNTIL_OWNER_GATE
 - **Remote state:** RECONCILIATION_REQUIRED
 - **Owner environment:** PHONE_ONLY / ANDROID_PHONE
@@ -25,19 +25,19 @@ Installed scripts or green checks alone never prove operator execution or a work
 - **Last bounded FRIDAY action:** VERIFY_EXISTING_MACHINE_CONTINUITY
 - **Last bounded action verdict:** PASS_VALIDATED_NO_SAFE_CHANGE
 - **Operator receipt:** state/FRIDAY_OPERATOR_LAST_RUN.json
-- **Live-path evidence:** CANONICAL_EVIDENCE_ONLY
-- **Exact owner gate:** Only the exact owner approval required by the active work order.
-- **FRIDAY's next permitted machine move:** Prove the existing user path before calling the machine operational.
+- **Live-path evidence:** CI_BOUNDED_OPERATOR_ONLY_NOT_GENERAL_FRIDAY_MCP
+- **Exact owner gate:** None for preauthorized safe machine maintenance; consequential external actions still need applicable approval.
+- **FRIDAY's next permitted machine move:** Continue the existing FRIDAY operator action/verification/learning loop and independently review receipts.
 
 ## What FRIDAY is proving now
 
-**FRIDAY_SUPERVISED_ANDROID_INVENTORY_READ** — ACTIVE
+**FRIDAY_BOUNDED_OPERATOR_LOOP** — ACTIVE
 
-Execute the owner's explicitly approved one-session Android inventory read through the reviewed existing Workshop Preview and supervised Windows host. Require the existing real Access subject binding, exact repaired source commitments, request-bound inventory-only delegation and Independent Proof. Stop after one result or the first failure; shut down, deny the temporary route and restore this temporary work order through the guard. No Production, app merges/pushes, canonical repinning, arbitrary tasks or unattended service.
+Keep the existing proven Harness operator and Foundry development tests green. Next one candidate-only gate: take an approved low-risk job through fresh owner-identity admission, deny missing/stale identity, then test durable duplicate/uncertain-attempt recovery across two separate processes with the same correlated independent receipt. Use the already merged PR #36 intent→Foundry→real AIOS execution machinery; no new framework, arbitrary commands, secrets, paid services, local Windows, phone, Cloudflare Preview, production dispatch or canonical SHA promotion. Stop on the first authentic owner-identity/permission boundary. General FRIDAY autonomy and live machine integration remain NOT_PROVEN.
 
 ## What FRIDAY can handle automatically
 
-- LIVE_ANDROID_ROUND_TRIP_NOT_RUN
+- GENERAL_FREEFORM_FRIDAY_RUNTIME_AND_CONNECTED_LOCAL_MACHINE_NOT_YET_PROVEN
 
 ## What actually needs Randy
 
@@ -74,4 +74,4 @@ Execute the owner's explicitly approved one-session Android inventory read throu
 
 ## Stop condition
 
-One actual Android owner-authenticated request returns independently certified SQLite-backed inventory paths and a correlated durable receipt in the same Workshop conversation; then stop the supervised host and remove temporary reachability. Otherwise stop at the failing gate without calling it live.
+The existing FRIDAY GitHub automation selects and executes one safe bounded operator action without an owner conducting the tools, independently verifies its result, and emits a durable receipt with action, verdict, exact authority boundary, and next move. This proves bounded scheduled machine operation only, not general agent autonomy or live local FRIDAY MCP.
