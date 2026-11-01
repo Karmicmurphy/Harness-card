@@ -6,17 +6,17 @@ Project: `FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY`
 State source: `state/CURRENT_PROJECT.json`
 
 Status: **ACTIVE** | Evidence: **PARTIALLY_PROVEN**
-Lane: SUPERVISED ANDROID INVENTORY / ONE OWNER-APPROVED SESSION
+Lane: FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY
 
 ## One next gate
 
-`FRIDAY_SUPERVISED_ANDROID_INVENTORY_READ`
+`FRIDAY_BOUNDED_OPERATOR_LOOP`
 
-Execute the owner's explicitly approved one-session Android inventory read through the reviewed existing Workshop Preview and supervised Windows host. Require the existing real Access subject binding, exact repaired source commitments, request-bound inventory-only delegation and Independent Proof. Stop after one result or the first failure; shut down, deny the temporary route and restore this temporary work order through the guard. No Production, app merges/pushes, canonical repinning, arbitrary tasks or unattended service.
+Keep the existing proven Harness operator and Foundry development tests green. Next one candidate-only gate: take an approved low-risk job through fresh owner-identity admission, deny missing/stale identity, then test durable duplicate/uncertain-attempt recovery across two separate processes with the same correlated independent receipt. Use the already merged PR #36 intent→Foundry→real AIOS execution machinery; no new framework, arbitrary commands, secrets, paid services, local Windows, phone, Cloudflare Preview, production dispatch or canonical SHA promotion. Stop on the first authentic owner-identity/permission boundary. General FRIDAY autonomy and live machine integration remain NOT_PROVEN.
 
 ## Human path
 
-Owner signs into existing Access-protected Workshop on Android -> exact approved phrase -> verified subject binding -> request-bound inventory-only handoff -> supervised loopback host -> unchanged SQLite adapter -> Independent Proof -> exact paths/job/receipt in the same conversation -> shutdown.
+Owner states intent once -> FRIDAY recovers governing Harness -> chooses one policy-allowed action -> executes in the existing machine automation -> independently verifies -> records receipt and next action -> requests an approval only for protected consequential work.
 
 ## Approved component refs
 
@@ -32,8 +32,6 @@ Branch advancement is observation, not automatic promotion.
 
 ## Known evidence
 
-- 2026-11-01 owner explicitly approved the supervised session and repaired-source amendment, and the temporary six-file Harness authority publication/restoration. Provider-confirmed Access subject binding is approved for existing FRIDAY owner only. Repaired source/build manifest SHA256 7b9fccf35f20fbfd96fa62e435f8171ff0afff0d34f0a4e429a4ffd11cb3c987; reviewed Preview upload manifest SHA256 9a416f400c87c54b2bff5c4a691a9a08d22053e351596202232457b65d1cfaa9. 23 targeted plus 36 affected repair regressions passed historically; 238 artifact checks passed at approval. Actual Android inventory round trip remains NOT_RUN. Approval and artifact checks are not live certification.
-- 2026-10-31 local candidate production build and 88 Windows tests passed; 17 offline routing/shutdown preparation checks passed. These are not Android or live-owner proof. Existing accepted certificates and source/build commitments are preserved.
 - 2026-10-23 VERIFIED TEST-ONLY OWNER-STYLE REQUEST FLOW: Foundry PR #36 merged into development branch software-builder-v0 at 58ef07c46c71943b313ae36298fece54281046ad. Three post-merge CI workflows 40007468407 (fixed allowlisted intent → job compiler → real AIOS → independent certificate → safe duplicate replay), 40007468443 (prior governed core), and 40007468380 (unit suite) passed. Artifact receipt 12524722024 preserved a pre-merge exact proof. This is NOT authenticated human intake, durable exactly-once after crashes, production deployment, a canonical Factory repin, or general autonomous FRIDAY.
 - 2026-10-22 VERIFIED BOUNDED CROSS-REPO PROOF: Foundry PR #35 merged into software-builder-v0 at 7ceaad7a82dcedc85f8c23cf88bea4bef05ee9ca. Both post-merge CI jobs 39885548352 (Harness-gated real Foundry→AIOS repair and independently certified receipt) and 39885548353 (Foundry unit tests) passed. This is PROVEN_IN_TEST only, not a canonical SHA promotion, a resident/owner-intent FRIDAY, a live local-host task, or production dispatch.
 - 2026-10-22 VERIFIED GITHUB-ONLY BOUNDED OPERATOR: FRIDAY Automation Spine run 39823701672 passed, selected TRIAGE_APPROVED_REF_DRIFT, inspected the approved-versus-observed Workshop change (3 commits ahead), and retained state/FRIDAY_OPERATOR_LAST_RUN.json. No production writes, secret reads, authority changes, live dispatch or general FRIDAY MCP/phone-path proof. The first post-merge operator-run-and-receipt blocker is closed; the general FRIDAY runtime remains unproven.
@@ -59,15 +57,16 @@ Branch advancement is observation, not automatic promotion.
 
 ## Remaining gaps
 
-- LIVE_ANDROID_ROUND_TRIP_NOT_RUN
+- GENERAL_FREEFORM_FRIDAY_RUNTIME_AND_CONNECTED_LOCAL_MACHINE_NOT_YET_PROVEN
 
 ## Stop condition
 
-One actual Android owner-authenticated request returns independently certified SQLite-backed inventory paths and a correlated durable receipt in the same Workshop conversation; then stop the supervised host and remove temporary reachability. Otherwise stop at the failing gate without calling it live.
+The existing FRIDAY GitHub automation selects and executes one safe bounded operator action without an owner conducting the tools, independently verifies its result, and emits a durable receipt with action, verdict, exact authority boundary, and next move. This proves bounded scheduled machine operation only, not general agent autonomy or live local FRIDAY MCP.
 
 ## Parked work (not prerequisites)
 
-- All other local Windows, inventory-analysis, phone execution, general commands, production changes, autonomous actions and unrelated projects remain out of scope.
+- Cloudflare Preview / authenticated Android PAGES_BOUNDED_JOB_ROUND_TRIP is deferred by explicit owner reprioritization; previous tested fixture and missing protected bindings remain unchanged, as do all separate dispatch authorization requirements.
+- Local/private source-yard inventory and Windows diagnostics; use only when a job needs local material. Historical Windows field proof remains NOT_RUN.
 - Spatial map fixes, nested-repository preservation and recovery; separate product with its own no-backend constraints.
 - Music/Pro Rig, commerce, broad salvage, model relays, quantum/free-compute broker and autonomous self-improvement.
 - Standalone Workshop Worker, D1, another queue and additional orchestration frameworks; no new infrastructure is required to reconcile state.
@@ -75,7 +74,6 @@ One actual Android owner-authenticated request returns independently certified S
 
 ## Constraints
 
-- Owner approved friday-approval:51a4ec9bf483351ecb4666ff including the repaired-source amendment, then explicitly authorized only this six-file temporary Harness main publication and guarded restoration. Preserve original authority and canonical refs, stop on conflicts, unexpected changes or branch-protection requirements; never force-push or bypass protections. All other exclusions in the reviewed activation packet remain in force.
 - FRIDAY can operate machine-maintenance tasks already authorized by config/friday_automation_policy.json, but cannot choose unrestricted commands, promote its own authority, change security/secret material, deploy Production, or execute external side effects without the owner's applicable approval.
 - Fixture-only authorization and exclusions are recorded in state/receipts/PAGES_FIXTURE_PROMOTION_2026-10-02.json. Stop on unexpected trees, authority conflicts or failed required checks. Do not repoint broader authority or rewrite protected FRIDAY state.
 - Use existing Cloudflare Pages/Pages Functions and GitHub dispatcher. Preserve private/local authority and loopback security.
