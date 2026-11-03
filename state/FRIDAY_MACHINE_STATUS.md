@@ -3,10 +3,10 @@
 > AUTO-GENERATED from canonical Harness state. This is the owner view; canonical authority remains in CURRENT_PROJECT.json.
 
 - **Machine:** READY_FOR_BOUNDED_AUTOMATION
-- **Active machine execution:** BOUNDED_OPERATOR_RUN_PROVEN (separate from installed scripts)
+- **Active machine execution:** USER_PATH_NOT_PROVEN (separate from installed scripts)
 - **Project:** FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY
 - **Evidence:** PARTIALLY_PROVEN
-- **Lane:** FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY
+- **Lane:** FRIDAY / PERSISTENT OWNER INVENTORY READ
 - **Automation:** AUTOMATE_UNTIL_OWNER_GATE
 - **Remote state:** RECONCILIATION_REQUIRED
 - **Owner environment:** PHONE_ONLY / ANDROID_PHONE
@@ -25,15 +25,15 @@ Installed scripts or green checks alone never prove operator execution or a work
 - **Last bounded FRIDAY action:** VERIFY_EXISTING_MACHINE_CONTINUITY
 - **Last bounded action verdict:** PASS_VALIDATED_NO_SAFE_CHANGE
 - **Operator receipt:** state/FRIDAY_OPERATOR_LAST_RUN.json
-- **Live-path evidence:** CI_BOUNDED_OPERATOR_ONLY_NOT_GENERAL_FRIDAY_MCP
-- **Exact owner gate:** None for preauthorized safe machine maintenance; consequential external actions still need applicable approval.
-- **FRIDAY's next permitted machine move:** Continue the existing FRIDAY operator action/verification/learning loop and independently review receipts.
+- **Live-path evidence:** CANONICAL_EVIDENCE_ONLY
+- **Exact owner gate:** Only the exact owner approval required by the active work order.
+- **FRIDAY's next permitted machine move:** Prove the existing user path before calling the machine operational.
 
 ## What FRIDAY is proving now
 
-**FRIDAY_BOUNDED_OPERATOR_LOOP** — ACTIVE
+**FRIDAY_PERSISTENT_OWNER_INVENTORY_READ** — ACTIVE
 
-Keep the existing proven Harness operator and Foundry development tests green. Next one candidate-only gate: take an approved low-risk job through fresh owner-identity admission, deny missing/stale identity, then test durable duplicate/uncertain-attempt recovery across two separate processes with the same correlated independent receipt. Use the already merged PR #36 intent→Foundry→real AIOS execution machinery; no new framework, arbitrary commands, secrets, paid services, local Windows, phone, Cloudflare Preview, production dispatch or canonical SHA promotion. Stop on the first authentic owner-identity/permission boundary. General FRIDAY autonomy and live machine integration remain NOT_PROVEN.
+Owner authorizes standing read-only inventory integration from the dedicated FRIDAY Pages origin using the verified Access subject, exact issuer and audience, and fresh request-bound inventory-only handoffs. Promote runtime only after reviewed source commitments, deny-by-default ingress, restart and disable tests, and independent receipt verification. No original Workshop change, arbitrary execution, file writes or canonical repinning.
 
 ## What FRIDAY can handle automatically
 
@@ -60,7 +60,7 @@ Keep the existing proven Harness operator and Foundry development tests green. N
 - Rules from closed incidents: **8**
 - Unresolved prevention candidates (not proven fixes): **8**
 - Weird salvage items: **2**
-- Bounded FRIDAY operator outcomes (sanitized distinct runs): **19**
+- Bounded FRIDAY operator outcomes (sanitized distinct runs): **20**
 - Independently verified derived-status fixes: **0**
 - Recovered local retry sequences: **0**
 - Repair failures requiring review: **0**
@@ -74,4 +74,4 @@ Keep the existing proven Harness operator and Foundry development tests green. N
 
 ## Stop condition
 
-The existing FRIDAY GitHub automation selects and executes one safe bounded operator action without an owner conducting the tools, independently verifies its result, and emits a durable receipt with action, verdict, exact authority boundary, and next move. This proves bounded scheduled machine operation only, not general agent autonomy or live local FRIDAY MCP.
+Require real owner evidence and receipt, denial of unauthenticated, stale, malformed and replayed requests, bounded inputs and audit logs, restart with durable admission state and unchanged authority, and immediate owner disable with restart inhibited, ingress denied and credential revoked. Fail closed on uncertain job state, owner binding, authority or health. No live proof claimed.

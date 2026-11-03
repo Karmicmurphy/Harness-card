@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-03T19:44:48.382548+00:00",
+  "generated_at": "2026-11-03T23:12:07.210728+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
-  "lane": "FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY",
+  "lane": "FRIDAY / PERSISTENT OWNER INVENTORY READ",
   "machine_state": "READY_FOR_BOUNDED_AUTOMATION",
   "delivery_readiness": {
-    "state": "BOUNDED_OPERATOR_RUN_PROVEN",
-    "proof": "CI_BOUNDED_OPERATOR_ONLY_NOT_GENERAL_FRIDAY_MCP",
-    "one_next_owner_action": "None for preauthorized safe machine maintenance; consequential external actions still need applicable approval.",
-    "machine_next_action": "Continue the existing FRIDAY operator action/verification/learning loop and independently review receipts."
+    "state": "USER_PATH_NOT_PROVEN",
+    "proof": "CANONICAL_EVIDENCE_ONLY",
+    "one_next_owner_action": "Only the exact owner approval required by the active work order.",
+    "machine_next_action": "Prove the existing user path before calling the machine operational."
   },
   "operator_last_run": {
     "action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
@@ -37,10 +37,10 @@
     "constraint_breaker": true
   },
   "current_gate": {
-    "gate_id": "FRIDAY_BOUNDED_OPERATOR_LOOP",
+    "gate_id": "FRIDAY_PERSISTENT_OWNER_INVENTORY_READ",
     "status": "ACTIVE",
-    "stop_condition": "The existing FRIDAY GitHub automation selects and executes one safe bounded operator action without an owner conducting the tools, independently verifies its result, and emits a durable receipt with action, verdict, exact authority boundary, and next move. This proves bounded scheduled machine operation only, not general agent autonomy or live local FRIDAY MCP.",
-    "canonical_next_action": "Keep the existing proven Harness operator and Foundry development tests green. Next one candidate-only gate: take an approved low-risk job through fresh owner-identity admission, deny missing/stale identity, then test durable duplicate/uncertain-attempt recovery across two separate processes with the same correlated independent receipt. Use the already merged PR #36 intent→Foundry→real AIOS execution machinery; no new framework, arbitrary commands, secrets, paid services, local Windows, phone, Cloudflare Preview, production dispatch or canonical SHA promotion. Stop on the first authentic owner-identity/permission boundary. General FRIDAY autonomy and live machine integration remain NOT_PROVEN."
+    "stop_condition": "Require real owner evidence and receipt, denial of unauthenticated, stale, malformed and replayed requests, bounded inputs and audit logs, restart with durable admission state and unchanged authority, and immediate owner disable with restart inhibited, ingress denied and credential revoked. Fail closed on uncertain job state, owner binding, authority or health. No live proof claimed.",
+    "canonical_next_action": "Owner authorizes standing read-only inventory integration from the dedicated FRIDAY Pages origin using the verified Access subject, exact issuer and audience, and fresh request-bound inventory-only handoffs. Promote runtime only after reviewed source commitments, deny-by-default ingress, restart and disable tests, and independent receipt verification. No original Workshop change, arbitrary execution, file writes or canonical repinning."
   },
   "blockers": {
     "automatic": [
@@ -51,7 +51,7 @@
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-11-03T19:44:48.382548+00:00",
+    "observed_at": "2026-11-03T23:12:07.210728+00:00",
     "match": 1,
     "reconciliation_required": 4,
     "unknown": 0,
@@ -61,7 +61,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "53e65e9b6be7b83914500f7fbf81a393f5d3fb82",
+        "observed_sha": "33d9989845693b911297e9287d13b1b6c98a1ddd",
         "state": "OBSERVED_GOVERNANCE"
       },
       {
@@ -199,7 +199,7 @@
     "unresolved_incident_prevention_count": 8,
     "weird_salvage_count": 2,
     "friday_operator_outcomes": {
-      "runs": 19,
+      "runs": 20,
       "repaired_runs": 0,
       "failed_repairs": 0,
       "retry_recovered_runs": 0,
