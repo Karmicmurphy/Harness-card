@@ -6,17 +6,17 @@ Project: `FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY`
 State source: `state/CURRENT_PROJECT.json`
 
 Status: **ACTIVE** | Evidence: **PARTIALLY_PROVEN**
-Lane: FRIDAY OPERATOR / PROVE BOUNDED MACHINE AUTONOMY
+Lane: FRIDAY / PERSISTENT OWNER INVENTORY READ
 
 ## One next gate
 
-`FRIDAY_BOUNDED_OPERATOR_LOOP`
+`FRIDAY_PERSISTENT_OWNER_INVENTORY_READ`
 
-Keep the existing proven Harness operator and Foundry development tests green. Next one candidate-only gate: take an approved low-risk job through fresh owner-identity admission, deny missing/stale identity, then test durable duplicate/uncertain-attempt recovery across two separate processes with the same correlated independent receipt. Use the already merged PR #36 intent→Foundry→real AIOS execution machinery; no new framework, arbitrary commands, secrets, paid services, local Windows, phone, Cloudflare Preview, production dispatch or canonical SHA promotion. Stop on the first authentic owner-identity/permission boundary. General FRIDAY autonomy and live machine integration remain NOT_PROVEN.
+Owner authorizes standing read-only inventory integration from the dedicated FRIDAY Pages origin using the verified Access subject, exact issuer and audience, and fresh request-bound inventory-only handoffs. Promote runtime only after reviewed source commitments, deny-by-default ingress, restart and disable tests, and independent receipt verification. No original Workshop change, arbitrary execution, file writes or canonical repinning.
 
 ## Human path
 
-Owner states intent once -> FRIDAY recovers governing Harness -> chooses one policy-allowed action -> executes in the existing machine automation -> independently verifies -> records receipt and next action -> requests an approval only for protected consequential work.
+Authenticated owner -> dedicated FRIDAY Pages -> request-bound inventory handoff -> existing tunnel exact query path -> Windows loopback inventory reader -> independent correlated receipt -> same conversation.
 
 ## Approved component refs
 
@@ -61,7 +61,7 @@ Branch advancement is observation, not automatic promotion.
 
 ## Stop condition
 
-The existing FRIDAY GitHub automation selects and executes one safe bounded operator action without an owner conducting the tools, independently verifies its result, and emits a durable receipt with action, verdict, exact authority boundary, and next move. This proves bounded scheduled machine operation only, not general agent autonomy or live local FRIDAY MCP.
+Require real owner evidence and receipt, denial of unauthenticated, stale, malformed and replayed requests, bounded inputs and audit logs, restart with durable admission state and unchanged authority, and immediate owner disable with restart inhibited, ingress denied and credential revoked. Fail closed on uncertain job state, owner binding, authority or health. No live proof claimed.
 
 ## Parked work (not prerequisites)
 
