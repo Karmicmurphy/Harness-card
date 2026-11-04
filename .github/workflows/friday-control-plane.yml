@@ -10,6 +10,9 @@ on:
       - "tests/test_night_shift_receipt.py"
       - "scripts/friday_operator.py"
       - "scripts/friday_diagnostics.py"
+      - "scripts/friday_foundry_consumer.py"
+      - "scripts/resolve_skill.py"
+      - "tests/test_friday_foundry_consumer.py"
       - "tests/test_friday_diagnostics.py"
       - "tests/test_friday_operator.py"
       - "tests/test_friday_owner_vision_contract.py"
@@ -44,6 +47,9 @@ on:
       - "tests/test_night_shift_receipt.py"
       - "scripts/friday_operator.py"
       - "scripts/friday_diagnostics.py"
+      - "scripts/friday_foundry_consumer.py"
+      - "scripts/resolve_skill.py"
+      - "tests/test_friday_foundry_consumer.py"
       - "tests/test_friday_diagnostics.py"
       - "tests/test_friday_operator.py"
       - "tests/test_friday_owner_vision_contract.py"
@@ -110,6 +116,7 @@ jobs:
           python tests/test_friday_operator_learning.py
           python tests/test_friday_owner_vision_contract.py
           python tests/test_friday_diagnostics.py
+          python -m unittest discover -s tests -p test_friday_foundry_consumer.py -v
           python tests/test_friday_private_read_access.py
           python tests/test_friday_status_writer.py
 

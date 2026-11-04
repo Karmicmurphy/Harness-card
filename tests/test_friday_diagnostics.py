@@ -41,6 +41,23 @@ def receipt(role="factory", verdict="PASS_DELTA_INSPECTED_REQUIRES_REVIEW"):
 
 
 class RadarTests(unittest.TestCase):
+    def test_observation_outage_preserves_exhaustion_and_triage(self):
+        for final in (radar.FAILED_READ, radar.TERMINAL_TRIAGED):
+            with self.subTest(final=final):
+                rows=radar.candidates(canonical(),observation(),{'items':[]})
+                rows[0].update(state=final,read_attempts=3,
+                    proof_verdict='PASS_DELTA_INSPECTED_REQUIRES_REVIEW' if final==radar.TERMINAL_TRIAGED else None)
+                outage=radar.candidates(canonical(),None,{'items':rows})
+                self.assertIsNone(outage[0]['observed_sha'])
+                self.assertEqual(outage[0]['read_attempts'],3)
+                returned=radar.candidates(canonical(),observation(),{'items':outage})
+                self.assertEqual(returned[0]['state'],final)
+                self.assertEqual(returned[0]['read_attempts'],3)
+                self.assertIsNone(radar.pick_untriaged(returned))
+                if final==radar.FAILED_READ:
+                    self.assertEqual(returned[0]['next_method'],'STOP_REQUIRES_OWNER_REVIEW')
+                    self.assertEqual(returned[0]['candidate_disposition'],'DEFER')
+
     def test_dated_protocols_route_to_live_friday_gate_not_parked_phone(self):
         night = (ROOT / "docs/FRIDAY_NIGHT_SHIFT_PROTOCOL.md").read_text(encoding="utf-8")
         spine = (ROOT / "docs/FRIDAY_AUTOMATION_SPINE.md").read_text(encoding="utf-8")
