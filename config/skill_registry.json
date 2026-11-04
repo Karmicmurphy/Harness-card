@@ -118,6 +118,11 @@
       "source": "harness_local",
       "path": "skills/friday-provider-release/SKILL.md",
       "kind": "PROCEDURAL"
+    },
+    "thy-continuity-recovery": {
+      "source": "harness_local",
+      "path": "skills/thy-continuity-recovery/SKILL.md",
+      "kind": "PROCEDURAL_CONDITIONAL"
     }
   }
 }

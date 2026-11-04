@@ -41,6 +41,12 @@ These skills are canonical in Harness Card because they define harness behavior 
   - purpose: make Harness Card operate across demand, offer, pricing, trust, distribution, automation, transaction, fulfillment, measurement, and business proof
   - source policy: orchestrate canonical salvage-suite business/research skills rather than copying them
 
+
+- `thy-continuity-recovery`
+  - canonical path: `skills/thy-continuity-recovery/SKILL.md`
+  - purpose: public-safe procedural locator for the separately held Thousand-Year Hangover recovery package in owner-authorized ChatGPT Library
+  - boundary: not a copy of the saga, its canon, private media, or Library identifiers; do not treat route registration as FRIDAY runtime/media access
+
 ## Source-of-truth rule
 
 Before copying any skill into Harness Card:
