@@ -24,11 +24,11 @@ assert module.choose_next_action("CURRENTLY_RECONCILED", [], []) == "RUN_NEXT_BO
 status = module.build_status(ROOT, None)
 assert status["machine_state"] == "READY_FOR_BOUNDED_AUTOMATION", status
 assert status["automation_mode"] == "AUTOMATE_UNTIL_OWNER_GATE", status
-# A file-backed automation spine is not a live FRIDAY phone path.
-assert status["delivery_readiness"]["state"] in ("OPERATOR_RUN_RECEIPT_PENDING", "BOUNDED_OPERATOR_RUN_PROVEN"), status
-assert status["current_gate"]["gate_id"] == "FRIDAY_BOUNDED_OPERATOR_LOOP", status
-assert "OPERATOR" in status["delivery_readiness"]["proof"], status
-assert "preauthorized safe machine maintenance" in status["delivery_readiness"]["one_next_owner_action"]
+# The current PC fixture has no owner request/receipt proof yet. Historical
+# maintenance receipts must not certify this new user path.
+assert status["delivery_readiness"]["state"] == "USER_PATH_NOT_PROVEN", status
+assert status["current_gate"]["gate_id"] == "FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF", status
+assert status["delivery_readiness"]["proof"] == "CANONICAL_EVIDENCE_ONLY", status
 assert "Active machine execution" in module.render_markdown(status)
 
 assert status["owner_access"]["mode"] == "PHONE_ONLY", status
@@ -43,8 +43,8 @@ assert "closed_incident_rule_count" in status["self_improvement"]
 assert "unresolved_incident_prevention_count" in status["self_improvement"]
 assert "Unresolved prevention candidates" in module.render_markdown(status)
 
-assert status["blockers"]["owner_attention_required"] is False, status
-assert len(status["blockers"]["automatic"]) >= 1, status
+assert status["blockers"]["owner_attention_required"] is True, status
+assert "REAL_OWNER_DISPATCH_AND_WORKSHOP_REQUEST_RECEIPT_HANDOFF_NOT_PROVEN" in status["blockers"]["owner_gate"], status
 rendered = module.render_markdown(status)
 assert "FRIDAY Machine Status" in rendered
 assert "What actually needs Randy" in rendered
@@ -77,7 +77,8 @@ assert module.delivery_readiness(resolved, [])["state"] == "USER_PATH_NOT_PROVEN
 resolved["evidence_state"] = "PROVEN_LIVE"
 assert module.delivery_readiness(resolved, [])["state"] == "RECORDED_LIVE_PROOF_REVERIFY_ON_CHANGE"
 
-operator = module.load_json(ROOT / "state/CURRENT_PROJECT.json")
+operator = deepcopy(module.load_json(ROOT / "state/CURRENT_PROJECT.json"))
+operator["work_order"]["gate_id"] = "FRIDAY_BOUNDED_OPERATOR_LOOP"
 receipt = {"operator": "FRIDAY_BOUNDED_HARNESS_OPERATOR",
            "scope": "EXISTING_HARNESS_MAINTENANCE_ONLY",
            "verdict": "PASS_VALIDATED_NO_SAFE_CHANGE", "github_run_id": "123",
