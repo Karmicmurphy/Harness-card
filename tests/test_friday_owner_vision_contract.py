@@ -35,7 +35,16 @@ class FridayOwnerVisionContractTests(unittest.TestCase):
         self.assertIn("broaden permissions or authorization scope", policy["owner_gate_actions"])
         self.assertIn("destructive or irreversible mutation", policy["owner_gate_actions"])
         self.assertIn("claim PROVEN_LIVE from tests, builds, deploy metadata, or mockups alone", policy["never_automatic"])
-        self.assertEqual(current["work_order"]["gate_id"], "FRIDAY_BOUNDED_OPERATOR_LOOP")
+        work = current["work_order"]
+        self.assertEqual(work["gate_id"], "FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF")
+        self.assertEqual(work["status"], "ACTIVE")
+        self.assertEqual(work["hosted_fixture"], {
+            "request_id": "request-first-001",
+            "recipe": "aios-path-containment-fixture-v1",
+            "owner_github_id": 141688225,
+            "manifest_sha256": "4d4e1956d8bb4cca939e3ce025ff4bfb5dc581ffef328dda34d1404f5cc98704",
+            "workflow_sha": "99ff4900f192c07becbc39989f1b8f282145f490",
+        })
         operator = content("scripts/friday_operator.py")
         self.assertIn("Choose from the fixed local action menu, never from free-form text.", operator)
 
