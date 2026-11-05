@@ -16,17 +16,17 @@ Project: `FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY`
 State source: `state/CURRENT_PROJECT.json`
 
 Status: **ACTIVE** | Evidence: **PARTIALLY_PROVEN**
-Lane: FRIDAY / PERSISTENT OWNER INVENTORY READ
+Lane: FRIDAY / PC WORKSHOP DISPOSABLE AIOS PROOF
 
 ## One next gate
 
-`FRIDAY_PERSISTENT_OWNER_INVENTORY_READ`
+`FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF`
 
-Owner authorizes standing read-only inventory integration from the dedicated FRIDAY Pages origin using the verified Access subject, exact issuer and audience, and fresh request-bound inventory-only handoffs. Promote runtime only after reviewed source commitments, deny-by-default ingress, restart and disable tests, and independent receipt verification. No original Workshop change, arbitrary execution, file writes or canonical repinning.
+Publish the exact hosted fixture binding only after the required default-branch publication approval. This isolated Harness candidate is not canonical authority. The live checkout-only run 41979979649 verified the pinned private Scrapyard commit under GitHub owner 141688225. The zero-additional-cost boundary is recorded in the private release checkpoint; provider admitted standard Linux compute, but remaining quota is not independently visible. Preserve the one-shot engine request for the authenticated Workshop path; no worker or deployment has run.
 
 ## Human path
 
-Authenticated owner -> dedicated FRIDAY Pages -> request-bound inventory handoff -> existing tunnel exact query path -> Windows loopback inventory reader -> independent correlated receipt -> same conversation.
+First prove an authenticated owner-triggered GitHub run of the fixed fixture. Then prove the same request and receipt through PC Workshop Open Door, Harness admission, Foundry, AIOS, independent verification and Scrapyard retention.
 
 ## Approved component refs
 
@@ -67,14 +67,16 @@ Branch advancement is observation, not automatic promotion.
 
 ## Remaining gaps
 
-- GENERAL_FREEFORM_FRIDAY_RUNTIME_AND_CONNECTED_LOCAL_MACHINE_NOT_YET_PROVEN
+- FOUNDRY_DEFAULT_BRANCH_PUBLICATION_REQUIRES_EXPLICIT_APPROVAL_AFTER_REVIEWER_DENIAL
+- REAL_OWNER_DISPATCH_AND_WORKSHOP_REQUEST_RECEIPT_HANDOFF_NOT_PROVEN
 
 ## Stop condition
 
-Require real owner evidence and receipt, denial of unauthenticated, stale, malformed and replayed requests, bounded inputs and audit logs, restart with durable admission state and unchanged authority, and immediate owner disable with restart inhibited, ingress denied and credential revoked. Fail closed on uncertain job state, owner binding, authority or health. No live proof claimed.
+Require one verified owner request, matching request and job identities, actual repaired fixture output, independent certificate, exact source manifest and retained lesson. Deny wrong owner and duplicate execution; publication retry must only reuse verified output. Retrieve the receipt after worker exit in the originating Workshop conversation. Fail closed on unavailable authority, budget, identity, source or receipt evidence.
 
 ## Parked work (not prerequisites)
 
+- FRIDAY_PERSISTENT_OWNER_INVENTORY_READ and Phase Five evidence remain preserved; no Windows inventory, host, tunnel or credential action.
 - Cloudflare Preview / authenticated Android PAGES_BOUNDED_JOB_ROUND_TRIP is deferred by explicit owner reprioritization; previous tested fixture and missing protected bindings remain unchanged, as do all separate dispatch authorization requirements.
 - Local/private source-yard inventory and Windows diagnostics; use only when a job needs local material. Historical Windows field proof remains NOT_RUN.
 - Spatial map fixes, nested-repository preservation and recovery; separate product with its own no-backend constraints.
@@ -86,7 +88,7 @@ Require real owner evidence and receipt, denial of unauthenticated, stale, malfo
 
 - FRIDAY can operate machine-maintenance tasks already authorized by config/friday_automation_policy.json, but cannot choose unrestricted commands, promote its own authority, change security/secret material, deploy Production, or execute external side effects without the owner's applicable approval.
 - Fixture-only authorization and exclusions are recorded in state/receipts/PAGES_FIXTURE_PROMOTION_2026-10-02.json. Stop on unexpected trees, authority conflicts or failed required checks. Do not repoint broader authority or rewrite protected FRIDAY state.
-- Use existing Cloudflare Pages/Pages Functions and GitHub dispatcher. Preserve private/local authority and loopback security.
+- Use existing GitHub dispatcher and Workshop request/result mechanisms only where their verified contracts apply; no phone, always-on host or new service. Live dispatch, deployment, permission change and canonical promotion need separate approval.
 - One job_id across execution and proof; GitHub workflow_run_id is transport identity.
 - Keep observed branch heads separate from approved authority. No automatic SHA advancement, merge, publish, activation or spending.
 - Models may propose; Foundry validates; Independent Proof verifies; the owner retains approval.

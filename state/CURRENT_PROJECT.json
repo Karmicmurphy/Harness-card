@@ -30,9 +30,9 @@
     }
   },
   "evidence_state": "PARTIALLY_PROVEN",
-  "lane": "FRIDAY / PERSISTENT OWNER INVENTORY READ",
-  "last_verified_at": "2026-10-23",
-  "next_action": "Owner authorizes standing read-only inventory integration from the dedicated FRIDAY Pages origin using the verified Access subject, exact issuer and audience, and fresh request-bound inventory-only handoffs. Promote runtime only after reviewed source commitments, deny-by-default ingress, restart and disable tests, and independent receipt verification. No original Workshop change, arbitrary execution, file writes or canonical repinning.",
+  "lane": "FRIDAY / PC WORKSHOP DISPOSABLE AIOS PROOF",
+  "last_verified_at": "2026-11-05",
+  "next_action": "Publish the exact hosted fixture binding only after the required default-branch publication approval. This isolated Harness candidate is not canonical authority. The live checkout-only run 41979979649 verified the pinned private Scrapyard commit under GitHub owner 141688225. The zero-additional-cost boundary is recorded in the private release checkpoint; provider admitted standard Linux compute, but remaining quota is not independently visible. Preserve the one-shot engine request for the authenticated Workshop path; no worker or deployment has run.",
   "separate_projects": [
     "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
     "First3 Local / nemoclw_new_agent — proving-ground product; not Foundation authority",
@@ -174,13 +174,21 @@
   },
   "evidence_detail": "FOUNDATION_CORE_V0_OPERATIONAL_IN_TEST; OPEN_DOOR_COMPILE_JOB_V1_PROVEN_IN_TEST_AND_MERGED; UNIFIED_JOB_CORRELATION_THROUGH_AIOS_BUILDER_PROOF_PROVEN_IN_TEST_AND_MERGED; LOCAL_SOURCE_YARD_INVENTORY_V1_PROVEN_IN_TEST; LIVE_HOST_VERTICAL_SLICE_NOT_YET_PROVEN",
   "work_order": {
-    "gate_id": "FRIDAY_PERSISTENT_OWNER_INVENTORY_READ",
+    "gate_id": "FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF",
     "status": "ACTIVE",
-    "human_path": "Authenticated owner -> dedicated FRIDAY Pages -> request-bound inventory handoff -> existing tunnel exact query path -> Windows loopback inventory reader -> independent correlated receipt -> same conversation.",
+    "hosted_fixture": {
+      "request_id": "request-first-001",
+      "recipe": "aios-path-containment-fixture-v1",
+      "owner_github_id": 141688225,
+      "manifest_sha256": "4d4e1956d8bb4cca939e3ce025ff4bfb5dc581ffef328dda34d1404f5cc98704",
+      "workflow_sha": "99ff4900f192c07becbc39989f1b8f282145f490"
+    },
+    "human_path": "First prove an authenticated owner-triggered GitHub run of the fixed fixture. Then prove the same request and receipt through PC Workshop Open Door, Harness admission, Foundry, AIOS, independent verification and Scrapyard retention.",
     "blockers": [
-      "GENERAL_FREEFORM_FRIDAY_RUNTIME_AND_CONNECTED_LOCAL_MACHINE_NOT_YET_PROVEN"
+      "FOUNDRY_DEFAULT_BRANCH_PUBLICATION_REQUIRES_EXPLICIT_APPROVAL_AFTER_REVIEWER_DENIAL",
+      "REAL_OWNER_DISPATCH_AND_WORKSHOP_REQUEST_RECEIPT_HANDOFF_NOT_PROVEN"
     ],
-    "stop_condition": "Require real owner evidence and receipt, denial of unauthenticated, stale, malformed and replayed requests, bounded inputs and audit logs, restart with durable admission state and unchanged authority, and immediate owner disable with restart inhibited, ingress denied and credential revoked. Fail closed on uncertain job state, owner binding, authority or health. No live proof claimed.",
+    "stop_condition": "Require one verified owner request, matching request and job identities, actual repaired fixture output, independent certificate, exact source manifest and retained lesson. Deny wrong owner and duplicate execution; publication retry must only reuse verified output. Retrieve the receipt after worker exit in the originating Workshop conversation. Fail closed on unavailable authority, budget, identity, source or receipt evidence.",
     "verified_facts": [
       "2026-10-23 VERIFIED TEST-ONLY OWNER-STYLE REQUEST FLOW: Foundry PR #36 merged into development branch software-builder-v0 at 58ef07c46c71943b313ae36298fece54281046ad. Three post-merge CI workflows 40007468407 (fixed allowlisted intent → job compiler → real AIOS → independent certificate → safe duplicate replay), 40007468443 (prior governed core), and 40007468380 (unit suite) passed. Artifact receipt 12524722024 preserved a pre-merge exact proof. This is NOT authenticated human intake, durable exactly-once after crashes, production deployment, a canonical Factory repin, or general autonomous FRIDAY.",
       "2026-10-22 VERIFIED BOUNDED CROSS-REPO PROOF: Foundry PR #35 merged into software-builder-v0 at 7ceaad7a82dcedc85f8c23cf88bea4bef05ee9ca. Both post-merge CI jobs 39885548352 (Harness-gated real Foundry→AIOS repair and independently certified receipt) and 39885548353 (Foundry unit tests) passed. This is PROVEN_IN_TEST only, not a canonical SHA promotion, a resident/owner-intent FRIDAY, a live local-host task, or production dispatch.",
@@ -206,6 +214,7 @@
       "Foundry PR #31 is an open coding-engine candidate, with successful PR test run 36305666502. It is not merged authority and does not establish phone-path proof."
     ],
     "parked": [
+      "FRIDAY_PERSISTENT_OWNER_INVENTORY_READ and Phase Five evidence remain preserved; no Windows inventory, host, tunnel or credential action.",
       "Cloudflare Preview / authenticated Android PAGES_BOUNDED_JOB_ROUND_TRIP is deferred by explicit owner reprioritization; previous tested fixture and missing protected bindings remain unchanged, as do all separate dispatch authorization requirements.",
       "Local/private source-yard inventory and Windows diagnostics; use only when a job needs local material. Historical Windows field proof remains NOT_RUN.",
       "Spatial map fixes, nested-repository preservation and recovery; separate product with its own no-backend constraints.",
@@ -216,7 +225,7 @@
     "constraints": [
       "FRIDAY can operate machine-maintenance tasks already authorized by config/friday_automation_policy.json, but cannot choose unrestricted commands, promote its own authority, change security/secret material, deploy Production, or execute external side effects without the owner's applicable approval.",
       "Fixture-only authorization and exclusions are recorded in state/receipts/PAGES_FIXTURE_PROMOTION_2026-10-02.json. Stop on unexpected trees, authority conflicts or failed required checks. Do not repoint broader authority or rewrite protected FRIDAY state.",
-      "Use existing Cloudflare Pages/Pages Functions and GitHub dispatcher. Preserve private/local authority and loopback security.",
+      "Use existing GitHub dispatcher and Workshop request/result mechanisms only where their verified contracts apply; no phone, always-on host or new service. Live dispatch, deployment, permission change and canonical promotion need separate approval.",
       "One job_id across execution and proof; GitHub workflow_run_id is transport identity.",
       "Keep observed branch heads separate from approved authority. No automatic SHA advancement, merge, publish, activation or spending.",
       "Models may propose; Foundry validates; Independent Proof verifies; the owner retains approval.",
