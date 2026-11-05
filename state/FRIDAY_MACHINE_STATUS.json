@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-04T13:03:41.869843+00:00",
+  "generated_at": "2026-11-05T07:15:35.390204+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
-  "lane": "FRIDAY / PERSISTENT OWNER INVENTORY READ",
+  "lane": "FRIDAY / PC WORKSHOP DISPOSABLE AIOS PROOF",
   "machine_state": "READY_FOR_BOUNDED_AUTOMATION",
   "delivery_readiness": {
     "state": "USER_PATH_NOT_PROVEN",
@@ -37,21 +37,22 @@
     "constraint_breaker": true
   },
   "current_gate": {
-    "gate_id": "FRIDAY_PERSISTENT_OWNER_INVENTORY_READ",
+    "gate_id": "FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF",
     "status": "ACTIVE",
-    "stop_condition": "Require real owner evidence and receipt, denial of unauthenticated, stale, malformed and replayed requests, bounded inputs and audit logs, restart with durable admission state and unchanged authority, and immediate owner disable with restart inhibited, ingress denied and credential revoked. Fail closed on uncertain job state, owner binding, authority or health. No live proof claimed.",
-    "canonical_next_action": "Owner authorizes standing read-only inventory integration from the dedicated FRIDAY Pages origin using the verified Access subject, exact issuer and audience, and fresh request-bound inventory-only handoffs. Promote runtime only after reviewed source commitments, deny-by-default ingress, restart and disable tests, and independent receipt verification. No original Workshop change, arbitrary execution, file writes or canonical repinning."
+    "stop_condition": "Require one verified owner request, matching request and job identities, actual repaired fixture output, independent certificate, exact source manifest and retained lesson. Deny wrong owner and duplicate execution; publication retry must only reuse verified output. Retrieve the receipt after worker exit in the originating Workshop conversation. Fail closed on unavailable authority, budget, identity, source or receipt evidence.",
+    "canonical_next_action": "Publish the exact hosted fixture binding only after the required default-branch publication approval. This isolated Harness candidate is not canonical authority. The live checkout-only run 41979979649 verified the pinned private Scrapyard commit under GitHub owner 141688225. The zero-additional-cost boundary is recorded in the private release checkpoint; provider admitted standard Linux compute, but remaining quota is not independently visible. Preserve the one-shot engine request for the authenticated Workshop path; no worker or deployment has run."
   },
   "blockers": {
-    "automatic": [
-      "GENERAL_FREEFORM_FRIDAY_RUNTIME_AND_CONNECTED_LOCAL_MACHINE_NOT_YET_PROVEN"
+    "automatic": [],
+    "owner_gate": [
+      "FOUNDRY_DEFAULT_BRANCH_PUBLICATION_REQUIRES_EXPLICIT_APPROVAL_AFTER_REVIEWER_DENIAL",
+      "REAL_OWNER_DISPATCH_AND_WORKSHOP_REQUEST_RECEIPT_HANDOFF_NOT_PROVEN"
     ],
-    "owner_gate": [],
-    "owner_attention_required": false
+    "owner_attention_required": true
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-11-04T13:03:41.869843+00:00",
+    "observed_at": "2026-11-05T07:15:35.390204+00:00",
     "match": 1,
     "reconciliation_required": 4,
     "unknown": 0,
@@ -61,7 +62,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "6d66dac71545ef3349a16483ede5f592fed60929",
+        "observed_sha": "bd63bc8a090e00b57214f0e5c59900a62e3ab9c6",
         "state": "OBSERVED_GOVERNANCE"
       },
       {
@@ -251,6 +252,9 @@
     ],
     "missing": [],
     "what_friday_is_doing": "RECONCILE_REMOTE_STATE_BEFORE_MUTATION",
-    "what_friday_needs_from_owner": []
+    "what_friday_needs_from_owner": [
+      "FOUNDRY_DEFAULT_BRANCH_PUBLICATION_REQUIRES_EXPLICIT_APPROVAL_AFTER_REVIEWER_DENIAL",
+      "REAL_OWNER_DISPATCH_AND_WORKSHOP_REQUEST_RECEIPT_HANDOFF_NOT_PROVEN"
+    ]
   }
 }

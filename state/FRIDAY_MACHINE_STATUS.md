@@ -6,7 +6,7 @@
 - **Active machine execution:** USER_PATH_NOT_PROVEN (separate from installed scripts)
 - **Project:** FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY
 - **Evidence:** PARTIALLY_PROVEN
-- **Lane:** FRIDAY / PERSISTENT OWNER INVENTORY READ
+- **Lane:** FRIDAY / PC WORKSHOP DISPOSABLE AIOS PROOF
 - **Automation:** AUTOMATE_UNTIL_OWNER_GATE
 - **Remote state:** RECONCILIATION_REQUIRED
 - **Owner environment:** PHONE_ONLY / ANDROID_PHONE
@@ -31,17 +31,18 @@ Installed scripts or green checks alone never prove operator execution or a work
 
 ## What FRIDAY is proving now
 
-**FRIDAY_PERSISTENT_OWNER_INVENTORY_READ** — ACTIVE
+**FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF** — ACTIVE
 
-Owner authorizes standing read-only inventory integration from the dedicated FRIDAY Pages origin using the verified Access subject, exact issuer and audience, and fresh request-bound inventory-only handoffs. Promote runtime only after reviewed source commitments, deny-by-default ingress, restart and disable tests, and independent receipt verification. No original Workshop change, arbitrary execution, file writes or canonical repinning.
+Publish the exact hosted fixture binding only after the required default-branch publication approval. This isolated Harness candidate is not canonical authority. The live checkout-only run 41979979649 verified the pinned private Scrapyard commit under GitHub owner 141688225. The zero-additional-cost boundary is recorded in the private release checkpoint; provider admitted standard Linux compute, but remaining quota is not independently visible. Preserve the one-shot engine request for the authenticated Workshop path; no worker or deployment has run.
 
 ## What FRIDAY can handle automatically
 
-- GENERAL_FREEFORM_FRIDAY_RUNTIME_AND_CONNECTED_LOCAL_MACHINE_NOT_YET_PROVEN
+- No current blocker is classified as automatic repair work.
 
 ## What actually needs Randy
 
-- Nothing at the current gate.
+- FOUNDRY_DEFAULT_BRANCH_PUBLICATION_REQUIRES_EXPLICIT_APPROVAL_AFTER_REVIEWER_DENIAL
+- REAL_OWNER_DISPATCH_AND_WORKSHOP_REQUEST_RECEIPT_HANDOFF_NOT_PROVEN
 
 ## Automatic maintenance diagnostics
 
@@ -74,4 +75,4 @@ Owner authorizes standing read-only inventory integration from the dedicated FRI
 
 ## Stop condition
 
-Require real owner evidence and receipt, denial of unauthenticated, stale, malformed and replayed requests, bounded inputs and audit logs, restart with durable admission state and unchanged authority, and immediate owner disable with restart inhibited, ingress denied and credential revoked. Fail closed on uncertain job state, owner binding, authority or health. No live proof claimed.
+Require one verified owner request, matching request and job identities, actual repaired fixture output, independent certificate, exact source manifest and retained lesson. Deny wrong owner and duplicate execution; publication retry must only reuse verified output. Retrieve the receipt after worker exit in the originating Workshop conversation. Fail closed on unavailable authority, budget, identity, source or receipt evidence.
