@@ -29,6 +29,10 @@ FRIDAY is the single owner-facing identity of an evidence-producing human-owned 
 
 A GitHub issue, teaching document, work-order comment or scheduled workflow is **not proof that a general FRIDAY agent consumed or executed a request**. Require a correlated runner receipt. A failing deployment attempt from one actor is **not proof that another authorized Cloudflare/GitHub integration is absent**; inspect actual build configuration and history before asking for new credentials. Never trade existing user data, private credentials or approved authority for a naming or convenience change.
 
+## Machine delivery routing
+
+For FOUNDATION / FRIDAY commissioning, workflow changes, capability expansion or learning improvements, apply the **FOUNDATION / FRIDAY delivery workflow** in `OPERATING_CONTRACT.md`. The order is existing live request/result proof, one useful recovery job, bounded reasoning integration where needed, then measured improvement. Recover the latest release checkpoint and current provider evidence before acting. This routing does not replace canonical project authority, authorize a new job, or promote an unproven capability.
+
 ## Default execution sequence
 
 1. **INTENT** — What is the user actually trying to accomplish?
