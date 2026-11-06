@@ -200,3 +200,28 @@ For every primary control or workflow, define:
 - target-device behavior.
 
 For music/audio tools, every primary control should have one obvious musical job unless complexity is explicitly requested.
+
+## FOUNDATION / FRIDAY delivery workflow
+
+Apply this sequence when building or improving the machine. Recover the latest verified release checkpoint and provider state first. This contract defines sequencing, not new runtime permissions or proof that a capability exists.
+
+1. **Commission the existing path.** Finish the already-authorized Workshop request, hosted execution, independent output verification, and result retrieval in the originating conversation. Resume at the first unproven gate. Do not restart completed approvals, recreate working credentials, or substitute a new architecture for a specific integration failure. If an unavoidable owner-only credential action remains, describe it precisely without asking for the secret.
+2. **Deliver one useful recovery job.** After the live round trip is proven, select one owner-relevant artifact through the existing index and Digital Scrapyard Autopilot mechanisms. Record its source revision, rights/provenance, intended use, usable output and retrieval evidence. Review the next job's authority before execution. The one-shot fixture authorization does not authorize general salvage or repeatable execution.
+3. **Add bounded reasoning only where needed.** Inspect existing Workshop Talk/model adapters and Foundry candidates before building another integration. Verify an actual model call separately from deterministic execution. Start with natural-language interpretation into a supported proposed job. Existing Harness admission, execution limits and independent verification remain authoritative. An available chat assistant, GitHub account or Cloudflare deployment does not establish an integrated reasoning runtime.
+4. **Improve from completed work.** Measure delivery and retrieval success, owner interventions and time, repeated failure causes, elapsed runtime, and AI calls/tokens and compute cost where observable. Mark missing measurements UNKNOWN rather than inventing savings or treating unavailable usage as zero. Use this evidence to choose one improvement, not a general self-improvement expansion.
+
+### Deterministic work and learning
+
+Use ordinary code for stable, testable operations such as source indexing, hashing, validation, routing known job types, persistence, receipt retrieval and bounded retry handling. Use a model for ambiguity, synthesis or unfamiliar repair when deterministic mechanisms and registered skills are insufficient.
+
+Before converting a repeated model-assisted step into code, identify the repeated task, expected inputs/outputs, failure behavior and acceptance evidence. Preserve a model-assisted or explicit BLOCKED route for unsupported cases. A shortcut must not weaken identity, authorization, source validation or proof.
+
+Retain reusable lessons with their source, evidence scope, applicability and known limits. Retrieving a stored lesson is not model training, and an untested lesson is not a verified capability. Feed lessons into later jobs through existing retrieval and validation mechanisms.
+
+### Work ownership and finish line
+
+The agent owns routine planning, repository coordination, implementation, verification and recovery within existing authorization. Randy supplies the desired outcome and genuinely unavailable owner decisions, not expert prompts or manual coordination between components.
+
+Keep one active delivery target. Park new frameworks, repositories, agent fleets and speculative capabilities unless a measured blocker requires them. Existing component roles remain Workshop for owner interaction, Harness Card for governance, Foundry for coordination, AIOS for bounded execution, and Digital Scrapyard Autopilot for artifact recovery and retained knowledge.
+
+At closeout, state the delivered user-visible result, its evidence, any remaining blocker and the next bounded job. Describe protocol changes as protocol changes. Do not claim that editing these instructions installs an AI model, enables autonomous execution or proves the live machine.
