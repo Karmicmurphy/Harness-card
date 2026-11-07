@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-11-07",
+  "specification": "docs/FOUNDATION_WORKFLOW_IMPLEMENTATION_PLAN.md",
+  "execution_authority": "state/CURRENT_PROJECT.json",
+  "grants_execution": false,
+  "canonical_pins_changed": false,
+  "private_context_store": "Workshop private SQLite; never public Harness history",
+  "components": {
+    "authority": "Karmicmurphy/Harness-card",
+    "front_door": "Karmicmurphy/Ollie_Twis_Holo_workshop",
+    "coordination": "Karmicmurphy/temporal-capability-foundry",
+    "execution": "Karmicmurphy/Untethered-AIOS",
+    "discovery_and_lessons": "Karmicmurphy/digital-scrapyard-autopilot"
+  },
+  "commissioning": {
+    "state": "BLOCKED",
+    "original_request": "request-first-001",
+    "original_run": "https://github.com/Karmicmurphy/temporal-capability-foundry/actions/runs/42166883135",
+    "observed_result": "FAILED before worker execution: historical recipe authority differs",
+    "control_revision": "99ff4900f192c07becbc39989f1b8f282145f490",
+    "repair": "UTF-8 successor PR #41 at 74039e9103848922fa5cb7fbc13f830bd0abb1d7 passed hosted Linux CI 42409179968. Twenty-three local admission tests and actual disposable worker/retrieval passed with simulated admission. Default-branch promotion is blocked pending explicit approval; no hosted successor result.",
+    "candidate_manifest_sha256": "b5b91368d272b67b9178ce30a5dd01933ae5ac870d8c859f7144f1cd5b17da13",
+    "successor_request": "request-commissioning-002",
+    "successor_manifest_sha256": "b160b07429a29e7fe8fe7aa1c237da7dc519fb18201b71b468ee2863c01c1d7b",
+    "gate": "Consolidated protected release approval; then verify the actual merge/control source, matched Harness and Workshop bindings, real owner readback, one live request and original-result delivery. Preserve the consumed request and original run."
+  },
+  "workstreams": [
+    {
+      "id": "private-project-continuity",
+      "owner_component": "front_door",
+      "state": "PROVEN_IN_TEST",
+      "implementation": "Existing companion SQLite plus app/assets/foundation-context-store.js, foundation-job-client.js and the existing Workshop UI/result path",
+      "tests": "tests/test_project_context.py; tests/foundation-context-store.test.mjs; tests/foundation-job-client.test.mjs; tests/foundation-hosted-browser.cjs",
+      "proof": "Disposable HTTP/SQLite persistence and restart/restore passed. Nine deterministic browser-context/client tests passed. Mocked regular-Workshop Chrome transport verified one submission, saved goal/correction reference, originating project and retained result after reopen without execution.",
+      "limits": "Candidate only, not deployed. Browser-private storage survives same-browser reopening but can be cleared or evicted; no cloud archive or cross-device recovery claim. Goal references are client delivery metadata, not independently certified worker parameters. No in-flight cancellation or model connection."
+    },
+    {
+      "id": "supported-jobs-beyond-fixture",
+      "owner_component": "coordination",
+      "state": "PLANNED",
+      "reuse": "Existing dispatcher, typed recipes, PR 40 source reader and commissioning adapter",
+      "gate": "Do not widen the current one-shot binding or dispatch an unsupported job."
+    },
+    {
+      "id": "verified-asset-and-lesson-reuse",
+      "owner_component": "discovery_and_lessons",
+      "state": "PARTIALLY_PROVEN",
+      "proof": "Historical disposable five-repo rehearsal, simulated owner; not a real Workshop recovery job.",
+      "gate": "Require source provenance, rights, independent output proof and retrieval from the original job."
+    },
+    {
+      "id": "bounded-reasoning",
+      "owner_component": "front_door",
+      "state": "BLOCKED",
+      "gate": "An adapter is not a model connection. No verified runtime model call or additional spending authorization."
+    },
+    {
+      "id": "measured-improvement",
+      "owner_component": "authority",
+      "state": "PLANNED",
+      "reuse": "Existing incident, learning-candidate and self-improvement pipeline",
+      "gate": "Keep hypotheses as candidates; measure actual verified job outcomes."
+    }
+  ],
+  "parked": ["phone integration", "Windows inventory", "always-on server", "new business jobs"],
+  "release_limits": [
+    "No sixth core repository or replacement orchestration framework",
+    "No additional spending",
+    "No credential changes in this implementation slice",
+    "No resubmission or rerun of request-first-001",
+    "Candidate context receipts are storage evidence, not independent job certificates"
+  ]
+}

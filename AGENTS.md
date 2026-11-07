@@ -31,6 +31,12 @@ A GitHub issue, teaching document, work-order comment or scheduled workflow is *
 
 ## Machine delivery routing
 
+Load `docs/FOUNDATION_WORKFLOW_IMPLEMENTATION_PLAN.md` for the owner's chosen
+workflow and `state/FOUNDATION_WORKFLOW_IMPLEMENTATION.json` for implementation
+status. Neither replaces `state/CURRENT_PROJECT.json`, grants new runtime
+permissions, or promotes local tests into live evidence. Private Workshop context
+must not be copied into this public repository.
+
 For FOUNDATION / FRIDAY commissioning, workflow changes, capability expansion or learning improvements, apply the **FOUNDATION / FRIDAY delivery workflow** in `OPERATING_CONTRACT.md`. The order is existing live request/result proof, one useful recovery job, bounded reasoning integration where needed, then measured improvement. Recover the latest release checkpoint and current provider evidence before acting. This routing does not replace canonical project authority, authorize a new job, or promote an unproven capability.
 
 ## Default execution sequence

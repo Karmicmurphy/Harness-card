@@ -203,6 +203,13 @@ For music/audio tools, every primary control should have one obvious musical job
 
 ## FOUNDATION / FRIDAY delivery workflow
 
+The owner-selected specification is
+`docs/FOUNDATION_WORKFLOW_IMPLEMENTATION_PLAN.md`; implementation evidence is
+tracked in `state/FOUNDATION_WORKFLOW_IMPLEMENTATION.json`. This extends the
+delivery sequence below without changing active job bindings, canonical component
+pins or approval requirements. A Workshop context revision records private owner
+intent, not Harness approval, independent execution proof or a verified lesson.
+
 Apply this sequence when building or improving the machine. Recover the latest verified release checkpoint and provider state first. This contract defines sequencing, not new runtime permissions or proof that a capability exists.
 
 1. **Commission the existing path.** Finish the already-authorized Workshop request, hosted execution, independent output verification, and result retrieval in the originating conversation. Resume at the first unproven gate. Do not restart completed approvals, recreate working credentials, or substitute a new architecture for a specific integration failure. If an unavoidable owner-only credential action remains, describe it precisely without asking for the secret.
