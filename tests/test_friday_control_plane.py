@@ -44,7 +44,11 @@ assert "unresolved_incident_prevention_count" in status["self_improvement"]
 assert "Unresolved prevention candidates" in module.render_markdown(status)
 
 assert status["blockers"]["owner_attention_required"] is True, status
-assert "REAL_OWNER_DISPATCH_AND_WORKSHOP_REQUEST_RECEIPT_HANDOFF_NOT_PROVEN" in status["blockers"]["owner_gate"], status
+assert status["blockers"]["owner_gate"] == [
+    "CONSOLIDATED_SUCCESSOR_RELEASE_REQUIRES_OWNER_APPROVAL_AFTER_REVIEWER_DENIAL",
+    "CORRECTED_WORKSHOP_OWNER_REQUEST_AND_VERIFIED_RESULT_DELIVERY_NOT_PROVEN",
+], status
+assert status["next_machine_action"] == "STOP_AT_OWNER_GATE_WITH_PRECISE_REQUEST", status
 rendered = module.render_markdown(status)
 assert "FRIDAY Machine Status" in rendered
 assert "What actually needs Randy" in rendered
