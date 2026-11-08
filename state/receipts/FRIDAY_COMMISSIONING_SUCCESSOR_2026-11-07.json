@@ -7,7 +7,7 @@
     "recipe": "aios-path-containment-fixture-v1",
     "owner_github_id": 141688225,
     "manifest_sha256": "b160b07429a29e7fe8fe7aa1c237da7dc519fb18201b71b468ee2863c01c1d7b",
-    "workflow_sha": "74039e9103848922fa5cb7fbc13f830bd0abb1d7"
+    "workflow_sha": "08f86bcfed3a9e41a0cb95ef0112db32082dc479"
   },
   "workflow": ".github/workflows/friday-commissioning-002.yml",
   "reviewed_control_tree": "ce2a9ece7e35720afe705140dcbd9be42bf0bcf8",
