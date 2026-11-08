@@ -12,7 +12,7 @@ Lane: FRIDAY / PC WORKSHOP DISPOSABLE AIOS PROOF
 
 `FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF`
 
-Publish the exact hosted fixture binding only after the required default-branch publication approval. This isolated Harness candidate is not canonical authority. The live checkout-only run 41979979649 verified the pinned private Scrapyard commit under GitHub owner 141688225. The zero-additional-cost boundary is recorded in the private release checkpoint; provider admitted standard Linux compute, but remaining quota is not independently visible. Preserve the one-shot engine request for the authenticated Workshop path; no worker or deployment has run.
+Complete the consolidated successor release review: Foundry PR #41 at 74039e9103848922fa5cb7fbc13f830bd0abb1d7 passed hosted Linux CI 42409179968, but default-branch promotion requires explicit owner approval. Preserve failed request-first-001/run 42166883135. Bind request-commissioning-002 to the exact reviewed UTF-8 source, then require regular Workshop owner authentication, one deliberate submission, original output and receipt retrieval, and submission shutdown. No successor hosted job has executed. Existing zero-additional-spend boundaries remain; no credential replacement is authorized by this candidate.
 
 ## Human path
 
@@ -57,8 +57,8 @@ Branch advancement is observation, not automatic promotion.
 
 ## Remaining gaps
 
-- FOUNDRY_DEFAULT_BRANCH_PUBLICATION_REQUIRES_EXPLICIT_APPROVAL_AFTER_REVIEWER_DENIAL
-- REAL_OWNER_DISPATCH_AND_WORKSHOP_REQUEST_RECEIPT_HANDOFF_NOT_PROVEN
+- CONSOLIDATED_SUCCESSOR_RELEASE_REQUIRES_OWNER_APPROVAL_AFTER_REVIEWER_DENIAL
+- CORRECTED_WORKSHOP_OWNER_REQUEST_AND_VERIFIED_RESULT_DELIVERY_NOT_PROVEN
 
 ## Stop condition
 

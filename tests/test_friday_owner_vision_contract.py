@@ -38,13 +38,19 @@ class FridayOwnerVisionContractTests(unittest.TestCase):
         work = current["work_order"]
         self.assertEqual(work["gate_id"], "FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF")
         self.assertEqual(work["status"], "ACTIVE")
+        successor = json.loads(content("state/receipts/FRIDAY_COMMISSIONING_SUCCESSOR_2026-11-07.json"))
+        self.assertEqual(work["hosted_fixture"], successor["hosted_fixture"])
         self.assertEqual(work["hosted_fixture"], {
-            "request_id": "request-first-001",
+            "request_id": "request-commissioning-002",
             "recipe": "aios-path-containment-fixture-v1",
             "owner_github_id": 141688225,
-            "manifest_sha256": "4d4e1956d8bb4cca939e3ce025ff4bfb5dc581ffef328dda34d1404f5cc98704",
-            "workflow_sha": "99ff4900f192c07becbc39989f1b8f282145f490",
+            "manifest_sha256": "b160b07429a29e7fe8fe7aa1c237da7dc519fb18201b71b468ee2863c01c1d7b",
+            "workflow_sha": successor["hosted_fixture"]["workflow_sha"],
         })
+        self.assertEqual(successor["reviewed_control_tree"], "ce2a9ece7e35720afe705140dcbd9be42bf0bcf8")
+        self.assertRegex(work["hosted_fixture"]["workflow_sha"], r"^[0-9a-f]{40}$")
+        self.assertEqual(work["previous_hosted_fixtures"][0]["request_id"], "request-first-001")
+        self.assertFalse(work["previous_hosted_fixtures"][0]["rerun_authorized"])
         operator = content("scripts/friday_operator.py")
         self.assertIn("Choose from the fixed local action menu, never from free-form text.", operator)
 

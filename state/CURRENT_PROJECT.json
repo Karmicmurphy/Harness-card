@@ -31,8 +31,8 @@
   },
   "evidence_state": "PARTIALLY_PROVEN",
   "lane": "FRIDAY / PC WORKSHOP DISPOSABLE AIOS PROOF",
-  "last_verified_at": "2026-11-05",
-  "next_action": "Publish the exact hosted fixture binding only after the required default-branch publication approval. This isolated Harness candidate is not canonical authority. The live checkout-only run 41979979649 verified the pinned private Scrapyard commit under GitHub owner 141688225. The zero-additional-cost boundary is recorded in the private release checkpoint; provider admitted standard Linux compute, but remaining quota is not independently visible. Preserve the one-shot engine request for the authenticated Workshop path; no worker or deployment has run.",
+  "last_verified_at": "2026-11-07",
+  "next_action": "Complete the consolidated successor release review: Foundry PR #41 at 74039e9103848922fa5cb7fbc13f830bd0abb1d7 passed hosted Linux CI 42409179968, but default-branch promotion requires explicit owner approval. Preserve failed request-first-001/run 42166883135. Bind request-commissioning-002 to the exact reviewed UTF-8 source, then require regular Workshop owner authentication, one deliberate submission, original output and receipt retrieval, and submission shutdown. No successor hosted job has executed. Existing zero-additional-spend boundaries remain; no credential replacement is authorized by this candidate.",
   "separate_projects": [
     "TWIS LOOP DECK / PRO RIG — creative sonic project; not Foundation authority",
     "First3 Local / nemoclw_new_agent — proving-ground product; not Foundation authority",
@@ -177,16 +177,22 @@
     "gate_id": "FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF",
     "status": "ACTIVE",
     "hosted_fixture": {
-      "request_id": "request-first-001",
+      "request_id": "request-commissioning-002",
       "recipe": "aios-path-containment-fixture-v1",
       "owner_github_id": 141688225,
-      "manifest_sha256": "4d4e1956d8bb4cca939e3ce025ff4bfb5dc581ffef328dda34d1404f5cc98704",
-      "workflow_sha": "99ff4900f192c07becbc39989f1b8f282145f490"
+      "manifest_sha256": "b160b07429a29e7fe8fe7aa1c237da7dc519fb18201b71b468ee2863c01c1d7b",
+      "workflow_sha": "08f86bcfed3a9e41a0cb95ef0112db32082dc479"
     },
+    "previous_hosted_fixtures": [{
+      "request_id": "request-first-001", "run_id": 42166883135,
+      "workflow_sha": "99ff4900f192c07becbc39989f1b8f282145f490",
+      "manifest_sha256": "4d4e1956d8bb4cca939e3ce025ff4bfb5dc581ffef328dda34d1404f5cc98704",
+      "status": "FAILED_BEFORE_WORKER", "rerun_authorized": false
+    }],
     "human_path": "First prove an authenticated owner-triggered GitHub run of the fixed fixture. Then prove the same request and receipt through PC Workshop Open Door, Harness admission, Foundry, AIOS, independent verification and Scrapyard retention.",
     "blockers": [
-      "FOUNDRY_DEFAULT_BRANCH_PUBLICATION_REQUIRES_EXPLICIT_APPROVAL_AFTER_REVIEWER_DENIAL",
-      "REAL_OWNER_DISPATCH_AND_WORKSHOP_REQUEST_RECEIPT_HANDOFF_NOT_PROVEN"
+      "CONSOLIDATED_SUCCESSOR_RELEASE_REQUIRES_OWNER_APPROVAL_AFTER_REVIEWER_DENIAL",
+      "CORRECTED_WORKSHOP_OWNER_REQUEST_AND_VERIFIED_RESULT_DELIVERY_NOT_PROVEN"
     ],
     "stop_condition": "Require one verified owner request, matching request and job identities, actual repaired fixture output, independent certificate, exact source manifest and retained lesson. Deny wrong owner and duplicate execution; publication retry must only reuse verified output. Retrieve the receipt after worker exit in the originating Workshop conversation. Fail closed on unavailable authority, budget, identity, source or receipt evidence.",
     "verified_facts": [

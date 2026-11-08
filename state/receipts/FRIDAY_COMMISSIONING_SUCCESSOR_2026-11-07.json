@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "state": "PREPARED_NOT_ACTIVATED",
+  "release_id": "foundation-commissioning-002-release-20261107",
+  "hosted_fixture": {
+    "request_id": "request-commissioning-002",
+    "recipe": "aios-path-containment-fixture-v1",
+    "owner_github_id": 141688225,
+    "manifest_sha256": "b160b07429a29e7fe8fe7aa1c237da7dc519fb18201b71b468ee2863c01c1d7b",
+    "workflow_sha": "08f86bcfed3a9e41a0cb95ef0112db32082dc479"
+  },
+  "workflow": ".github/workflows/friday-commissioning-002.yml",
+  "reviewed_control_tree": "ce2a9ece7e35720afe705140dcbd9be42bf0bcf8",
+  "pull_request": "https://github.com/Karmicmurphy/temporal-capability-foundry/pull/41",
+  "hosted_ci": "https://github.com/Karmicmurphy/temporal-capability-foundry/actions/runs/42409179968",
+  "original_failed_run": "https://github.com/Karmicmurphy/temporal-capability-foundry/actions/runs/42166883135",
+  "original_request_consumed": true,
+  "local_worker_proof": "PROVEN_IN_TEST_SIMULATED_ADMISSION",
+  "live_owner_successor_proof": "NOT_RUN",
+  "limits": [
+    "One fixed disposable fixture; no arbitrary worker or source change",
+    "New workflow must be run number 1 and attempt 1 under verified GitHub owner 141688225",
+    "No automatic dispatch retries, native reruns or original-request reuse",
+    "Exact control SHA may be reconciled only to the approved PR merge with this identical reviewed tree and passing CI",
+    "No extra spending, credential creation or permission expansion",
+    "Independent output and provider artifact provenance required before a live claim",
+    "Private project direction is not Harness execution authority"
+  ]
+}
