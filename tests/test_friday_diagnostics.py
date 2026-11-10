@@ -134,6 +134,35 @@ class RadarTests(unittest.TestCase):
             with self.assertRaises(radar.InvalidQueue):
                 radar.build_queue(root,obs,{})
 
+    def test_post003_lesson_gate_parks_drift_queue_without_reading_or_repinning(self):
+        with TemporaryDirectory() as d:
+            root=Path(d)
+            (root/"state").mkdir()
+            (root/"config").mkdir()
+            post=canonical()
+            post["work_order"]["gate_id"]="FRIDAY_POST_003_LESSON_RETRIEVAL_REUSE_REVIEW"
+            (root/"state/CURRENT_PROJECT.json").write_text(json.dumps(post))
+            score={"incident_count":1,"learned_rule_count":1,
+                   "closed_incident_rule_count":1,"unresolved_incident_prevention_count":0}
+            (root/"state/HARNESS_SCORECARD.json").write_text(json.dumps(score))
+            (root/"state/FRIDAY_MACHINE_STATUS.json").write_text(json.dumps({"self_improvement":score}))
+            (root/"config/friday_automation_policy.json").write_text(json.dumps({
+                "mode":"AUTOMATE_UNTIL_OWNER_GATE",
+                "automatic_actions":["refresh owner-readable machine status"]
+            }))
+            # Deliberately malformed historical queue: this gate must not read or overwrite it.
+            path=root/"state/FRIDAY_MAINTENANCE_QUEUE.json"
+            path.write_text("{historic_untrusted")
+            actual=op.pick_action(root,observation())
+            self.assertEqual(actual["action"],"VERIFY_EXISTING_MACHINE_CONTINUITY")
+            self.assertIn("parks old ref-drift",actual["reason"])
+            self.assertEqual(path.read_text(),"{historic_untrusted")
+            # The original operator gate still refuses the same invalid evidence.
+            post["work_order"]["gate_id"]="FRIDAY_BOUNDED_OPERATOR_LOOP"
+            (root/"state/CURRENT_PROJECT.json").write_text(json.dumps(post))
+            self.assertEqual(op.pick_action(root,observation())["action"],
+                             "BLOCKED_DIAGNOSTIC_QUEUE_INVALID")
+
     def test_operator_chooses_next_unique_item_not_perpetual_same_diff(self):
         with TemporaryDirectory() as d:
             root=Path(d)
