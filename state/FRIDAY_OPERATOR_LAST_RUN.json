@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
-  "timestamp": "2026-11-03T19:44:49.854756+00:00",
+  "timestamp": "2026-11-10T14:58:15.596848+00:00",
   "operator": "FRIDAY_BOUNDED_HARNESS_OPERATOR",
-  "github_run_id": "41706073852",
-  "github_source_sha": "53e65e9b6be7b83914500f7fbf81a393f5d3fb82",
-  "github_event": "schedule",
+  "github_run_id": "42839474132",
+  "github_source_sha": "7d48188768dcb7da4f323d980496c04284fa9894",
+  "github_event": "push",
   "scope": "EXISTING_HARNESS_MAINTENANCE_ONLY",
   "authority_changed": false,
   "other_repo_changed": false,
@@ -13,7 +13,7 @@
   "live_external_job_dispatched": false,
   "decision": {
     "action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
-    "reason": "No allowed repair is required based on the available evidence"
+    "reason": "Post-003 lesson-review gate parks old ref-drift queue"
   },
   "action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
   "verdict": "PASS_VALIDATED_NO_SAFE_CHANGE",
@@ -21,14 +21,8 @@
   "changed_paths": [],
   "next_action": "Continue the existing approved work order within its owner gates",
   "diagnostic_queue": {
+    "state": "PARKED_BY_POST_003_GATE",
     "path": "state/FRIDAY_MAINTENANCE_QUEUE.json",
-    "summary": {
-      "pending": 0,
-      "triaged_for_review": 4,
-      "unknown_access": 0,
-      "matched": 0,
-      "read_attempts_exhausted": 0
-    },
-    "source": "READ_ONLY_APPROVED_REF_OBSERVATION"
+    "proof": "NO_QUEUE_READ_OR_WRITE_NO_AUTO_REPIN"
   }
 }
