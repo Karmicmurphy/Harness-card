@@ -142,6 +142,13 @@ def pick_action(root: Path, observation: dict | None) -> dict:
         # fixtures deliberately omit it; keep their read-only fallback.
         current = load_optional_json(root / "state/CURRENT_PROJECT.json")
         if current:
+            # Only the original operator gate authorizes diagnostic drift triage.
+            # The post-003 lesson review is a different read-only work order;
+            # preserve the prior queue as historical evidence, without reading,
+            # refreshing, or treating it as new owner authorization.
+            if current.get("work_order", {}).get("gate_id") == "FRIDAY_POST_003_LESSON_RETRIEVAL_REUSE_REVIEW":
+                return {"action": "VERIFY_EXISTING_MACHINE_CONTINUITY",
+                        "reason": "Post-003 lesson-review gate parks old ref-drift queue"}
             try:
                 prior = load_queue(root / "state/FRIDAY_MAINTENANCE_QUEUE.json")
                 eligible = pick_untriaged(candidates(current, observation, prior))
@@ -279,16 +286,26 @@ def main() -> int:
     # main-branch operator; PR/test invocations do not mutate canonical state.
     on_main = os.environ.get("GITHUB_REF") == "refs/heads/main" and os.environ.get("GITHUB_ACTIONS") == "true"
     if on_main:
-        try:
-            queue = build_queue(ROOT, observation, result)
-            write_queue(ROOT, queue)
+        current = load_optional_json(ROOT / "state/CURRENT_PROJECT.json") or {}
+        gate = current.get("work_order", {}).get("gate_id")
+        if gate == "FRIDAY_POST_003_LESSON_RETRIEVAL_REUSE_REVIEW":
+            # No diagnostic queue mutation under the lesson-only work order.
+            # The previous triage results remain preserved for future review.
             result["diagnostic_queue"] = {
+                "state": "PARKED_BY_POST_003_GATE",
                 "path": "state/FRIDAY_MAINTENANCE_QUEUE.json",
-                "summary": queue["summary"], "source": "READ_ONLY_APPROVED_REF_OBSERVATION"}
-        except (InvalidQueue, OSError, ValueError, TypeError, KeyError):
-            result["verdict"] = "BLOCKED_DIAGNOSTIC_QUEUE_INVALID"
-            result["diagnostic_queue"] = {"state": "BLOCKED_PRESERVED_ORIGINAL",
-                                           "proof": "NO_OVERWRITE_OF_INVALID_QUEUE"}
+                "proof": "NO_QUEUE_READ_OR_WRITE_NO_AUTO_REPIN"}
+        else:
+            try:
+                queue = build_queue(ROOT, observation, result)
+                write_queue(ROOT, queue)
+                result["diagnostic_queue"] = {
+                    "path": "state/FRIDAY_MAINTENANCE_QUEUE.json",
+                    "summary": queue["summary"], "source": "READ_ONLY_APPROVED_REF_OBSERVATION"}
+            except (InvalidQueue, OSError, ValueError, TypeError, KeyError):
+                result["verdict"] = "BLOCKED_DIAGNOSTIC_QUEUE_INVALID"
+                result["diagnostic_queue"] = {"state": "BLOCKED_PRESERVED_ORIGINAL",
+                                               "proof": "NO_OVERWRITE_OF_INVALID_QUEUE"}
     args.receipt.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     # Preserve the exact machine-owned action receipt in canonical Harness history
     # on the existing GitHub main-branch status-writer run only.
