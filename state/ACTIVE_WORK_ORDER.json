@@ -4,14 +4,14 @@
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "lane": "FRIDAY / PC WORKSHOP DISPOSABLE AIOS PROOF",
   "evidence_state": "PARTIALLY_PROVEN",
-  "next_action": "Preserve the completed one-shot FRIDAY 003 result (GitHub run 42802809287, certificate cert:f2bcbd32adb65eafadff2b0c4c7d902b, Workshop owner GET COMPLETE) without rerun. Private Scrapyard holds the original verified lesson candidate at warehouse/lessons/candidates/friday-commissioning-003-verified-lesson.json, committed c7e5709e38347875601a47bb44761ac16ad2cf82; perform only read-only hash/provenance/applicability checks before any proposed reuse. Do not auto-apply the lesson, re-pin authority, dispatch another work order or reactivate 003. The owner reports the Windows PC sleeping on 2026-11-10: no Windows inventory, wake, tunnel, or local command until owner confirms the computer awake and separately authorizes that gate. Production submissions remain OFF and fail-closed.",
+  "next_action": "Original 003 is CERTIFIED_DELIVERED_READONLY_CLOSED and must never run again. The archived private Scrapyard lesson was independently retrieved and original-condition validated by Foundry GitHub runner 42849214662; the lesson remains a candidate, not an auto-applied rule or AIOS-runtime reuse proof. Under the existing post-003 review gate, prepare only one read-only proposed useful recovery job with exact source/provenance, expected outcome, budget, and authority packet for separate owner approval; do not dispatch, promote, repin or activate anything automatically. Owner reports the Windows PC sleeping: no inventory, wake, tunnel, or local command until owner reports it awake and separately authorizes that job. Workshop submission remains OFF and Cloudflare fail-closed.",
   "status": "ACTIVE",
   "blockers": [
     "SCRAPYARD_LESSON_CANDIDATE_SAVED_BUT_RUNTIME_READ_AND_VALIDATED_REUSE_NOT_PROVEN",
     "NEW_NON_FIXTURE_USEFUL_RECOVERY_JOB_REQUIRES_ITS_OWN_REVIEWED_AUTHORITY_AND_OWNER_APPROVAL",
     "WINDOWS_LOCAL_INVENTORY_DEFERRED_OWNER_REPORTS_PC_SLEEPING"
   ],
-  "stop_condition": "The previous 003 dispatch is consumed and MUST NOT be rerun. For the current read-only lesson review, confirm the exact private Scrapyard candidate bytes and embedded digest against the first-run artifact; document applicability and source/rights boundary, but grant no auto-reuse or activation. Do not repin canonical authority or enable new submissions. Windows inventory is separately blocked until the owner reports the PC awake and explicitly approves a scoped, disabled-preflighted request.",
+  "stop_condition": "Close the read-only 003 lesson retrieval check using run 42849214662 and artifact 13780435036, but do not claim live AIOS lesson reuse. Retain the private lesson under exact certificate, source, runtime, and recipe conditions with zero grants. Stop before any new dispatch, promotion, production change, credential action or Windows host work; prepare at most one next job candidate and require its independent owner approval.",
   "gate_id": "FRIDAY_POST_003_LESSON_RETRIEVAL_REUSE_REVIEW",
   "updated_at": "2026-11-10"
 }
