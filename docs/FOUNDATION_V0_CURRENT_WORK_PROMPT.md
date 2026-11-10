@@ -22,11 +22,11 @@ Lane: FRIDAY / PC WORKSHOP DISPOSABLE AIOS PROOF
 
 `FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF`
 
-Complete the consolidated successor release review: Foundry PR #41 at 74039e9103848922fa5cb7fbc13f830bd0abb1d7 passed hosted Linux CI 42409179968, but default-branch promotion requires explicit owner approval. Preserve failed request-first-001/run 42166883135. Bind request-commissioning-002 to the exact reviewed UTF-8 source, then require regular Workshop owner authentication, one deliberate submission, original output and receipt retrieval, and submission shutdown. No successor hosted job has executed. Existing zero-additional-spend boundaries remain; no credential replacement is authorized by this candidate.
+Commission the new owner-bound request-commissioning-003 only after Foundry main 6e37d786b5f73ea8de03f95ed99ec21cf09113b8, manifest 46e0cb9446779bdcf65dc442897a4775de17dfa04a756af2d8bcd39579550961, and the reviewed disabled Workshop 003 delivery are reconciled. Preserve consumed failed 001/run 42166883135 and 002/run 42702669099 without retry. Verify Access and read-only authenticated status before one owner-approved POST, then independently verify original output, certificate, source manifest, retained Scrapyard lesson and later Workshop retrieval. Immediately shut off new submissions and preserve fail-closed Production/Preview and existing encrypted bindings. No unrelated credential or infrastructure changes.
 
 ## Human path
 
-First prove an authenticated owner-triggered GitHub run of the fixed fixture. Then prove the same request and receipt through PC Workshop Open Door, Harness admission, Foundry, AIOS, independent verification and Scrapyard retention.
+Regular Workshop 003 must first prove Access-authenticated owner status via read-only GET. Only when the reviewed 003 contract, live control SHA and disabled-submit rollback are verified, deliberately submit once as the actual owner. Follow the original GitHub run through Foundry and AIOS, independently verify the receipt, certificate, exact source manifest and Scrapyard lesson, retrieve via the originating Workshop project, then disable submissions.
 
 ## Approved component refs
 
@@ -42,6 +42,9 @@ Branch advancement is observation, not automatic promotion.
 
 ## Known evidence
 
+- 2026-11-09 PRIVATE SCRAPYARD PINNED CHECKOUT VERIFIED IN REAL GITHUB ACTIONS: run 42735533202 completed successfully with the existing FRIDAY_SCRAPYARD_READ Actions secret selection; checked exact commit cc88a10790d3bb70164e2cf95d0946ed04fa374c and source digest 83073ea7c54b5045d85967b543d943313890613ef2f4edceb81ed399b14fbd06. No private source execution or repair worker.
+- 2026-11-09 REQUEST 002 CONSUMED: original real-owner hosted run 42702669099 passed provider owner/admission but failed private Scrapyard checkout before worker. It must never be rerun. No repair, certificate or lesson was generated.
+- 2026-11-09 FOUNDRY 003 NEW ONE-SHOT CONTRACT: PR #42 merged into main as 6e37d786b5f73ea8de03f95ed99ec21cf09113b8; pull-request CI 42736432569 and post-merge CI 42737050696 passed. This is NOT a live owner submission; Workshop 003 is separately staged disabled.
 - 2026-10-23 VERIFIED TEST-ONLY OWNER-STYLE REQUEST FLOW: Foundry PR #36 merged into development branch software-builder-v0 at 58ef07c46c71943b313ae36298fece54281046ad. Three post-merge CI workflows 40007468407 (fixed allowlisted intent → job compiler → real AIOS → independent certificate → safe duplicate replay), 40007468443 (prior governed core), and 40007468380 (unit suite) passed. Artifact receipt 12524722024 preserved a pre-merge exact proof. This is NOT authenticated human intake, durable exactly-once after crashes, production deployment, a canonical Factory repin, or general autonomous FRIDAY.
 - 2026-10-22 VERIFIED BOUNDED CROSS-REPO PROOF: Foundry PR #35 merged into software-builder-v0 at 7ceaad7a82dcedc85f8c23cf88bea4bef05ee9ca. Both post-merge CI jobs 39885548352 (Harness-gated real Foundry→AIOS repair and independently certified receipt) and 39885548353 (Foundry unit tests) passed. This is PROVEN_IN_TEST only, not a canonical SHA promotion, a resident/owner-intent FRIDAY, a live local-host task, or production dispatch.
 - 2026-10-22 VERIFIED GITHUB-ONLY BOUNDED OPERATOR: FRIDAY Automation Spine run 39823701672 passed, selected TRIAGE_APPROVED_REF_DRIFT, inspected the approved-versus-observed Workshop change (3 commits ahead), and retained state/FRIDAY_OPERATOR_LAST_RUN.json. No production writes, secret reads, authority changes, live dispatch or general FRIDAY MCP/phone-path proof. The first post-merge operator-run-and-receipt blocker is closed; the general FRIDAY runtime remains unproven.
@@ -67,8 +70,8 @@ Branch advancement is observation, not automatic promotion.
 
 ## Remaining gaps
 
-- CONSOLIDATED_SUCCESSOR_RELEASE_REQUIRES_OWNER_APPROVAL_AFTER_REVIEWER_DENIAL
-- CORRECTED_WORKSHOP_OWNER_REQUEST_AND_VERIFIED_RESULT_DELIVERY_NOT_PROVEN
+- REVIEWED_DISABLED_WORKSHOP_003_DELIVERY_AND_LIVE_READ_ONLY_OWNER_CHECK_PENDING
+- COMMISSIONING_003_OWNER_POST_CERTIFICATE_LESSON_RETRIEVAL_AND_SHUTOFF_NOT_PROVEN
 
 ## Stop condition
 
