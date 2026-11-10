@@ -24,10 +24,11 @@ assert module.choose_next_action("CURRENTLY_RECONCILED", [], []) == "RUN_NEXT_BO
 status = module.build_status(ROOT, None)
 assert status["machine_state"] == "READY_FOR_BOUNDED_AUTOMATION", status
 assert status["automation_mode"] == "AUTOMATE_UNTIL_OWNER_GATE", status
-# The current PC fixture has no owner request/receipt proof yet. Historical
-# maintenance receipts must not certify this new user path.
+# The archived 003 owner round trip is proven; the next private lesson reuse and
+# actual Windows host path are separately unproven. Generic machine readiness
+# remains PARTIALLY_PROVEN, not proof of full automation.
 assert status["delivery_readiness"]["state"] == "USER_PATH_NOT_PROVEN", status
-assert status["current_gate"]["gate_id"] == "FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF", status
+assert status["current_gate"]["gate_id"] == "FRIDAY_POST_003_LESSON_RETRIEVAL_REUSE_REVIEW", status
 assert status["delivery_readiness"]["proof"] == "CANONICAL_EVIDENCE_ONLY", status
 assert "Active machine execution" in module.render_markdown(status)
 
@@ -45,10 +46,13 @@ assert "Unresolved prevention candidates" in module.render_markdown(status)
 
 assert status["blockers"]["owner_attention_required"] is True, status
 assert status["blockers"]["owner_gate"] == [
-    "REVIEWED_DISABLED_WORKSHOP_003_DELIVERY_AND_LIVE_READ_ONLY_OWNER_CHECK_PENDING",
-    "COMMISSIONING_003_OWNER_POST_CERTIFICATE_LESSON_RETRIEVAL_AND_SHUTOFF_NOT_PROVEN",
+    "NEW_NON_FIXTURE_USEFUL_RECOVERY_JOB_REQUIRES_ITS_OWN_REVIEWED_AUTHORITY_AND_OWNER_APPROVAL",
+    "WINDOWS_LOCAL_INVENTORY_DEFERRED_OWNER_REPORTS_PC_SLEEPING",
 ], status
-assert status["next_machine_action"] == "STOP_AT_OWNER_GATE_WITH_PRECISE_REQUEST", status
+assert status["next_machine_action"] == "AUTOMATE_BOUNDED_BLOCKER_REPAIR_AND_PROOF", status
+assert status["blockers"]["automatic"] == [
+    "SCRAPYARD_LESSON_CANDIDATE_SAVED_BUT_RUNTIME_READ_AND_VALIDATED_REUSE_NOT_PROVEN",
+], status
 rendered = module.render_markdown(status)
 assert "FRIDAY Machine Status" in rendered
 assert "What actually needs Randy" in rendered

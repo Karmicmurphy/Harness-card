@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "release_id": "foundation-hosted-commissioning-003-closeout-20261110",
+  "status": "HOSTED_FIXTURE_CERTIFIED_DELIVERED_SUBMISSION_CLOSED",
+  "scope": "One fixed owner-authenticated disposable AIOS repair and read-only return; not general automation, Windows inventory, production candidate promotion, or live lesson reuse",
+  "request_id": "request-commissioning-003",
+  "github": {
+    "repo": "Karmicmurphy/temporal-capability-foundry",
+    "workflow": ".github/workflows/friday-commissioning-003.yml",
+    "run_id": 42802809287,
+    "run_number": 1,
+    "run_attempt": 1,
+    "conclusion": "success",
+    "actor_github_id": 141688225,
+    "control_sha": "6e37d786b5f73ea8de03f95ed99ec21cf09113b8",
+    "harness_commit_at_dispatch": "51b1d192c88f9df1a84f408f015a2aee8488586d"
+  },
+  "job": {
+    "job_id": "job:c47e60f0f0ab972e197b7494",
+    "recipe": "aios-path-containment-fixture-v1",
+    "certificate_id": "cert:f2bcbd32adb65eafadff2b0c4c7d902b",
+    "status": "CERTIFIED_AWAITING_HUMAN_REVIEW",
+    "certificate_verdict": "CERTIFIED",
+    "output_sha256": "ac21d433ec92264d47ee56cb4dc51f3217ec00411a7c452e501e97c127859bee",
+    "test_gate": "THREE_TESTS_PASS_AFTER_SINGLE_DISPOSABLE_REPAIR",
+    "activation_performed": false
+  },
+  "proof": {
+    "artifact_id": 13756912332,
+    "artifact_name": "friday-request-commissioning-003",
+    "artifact_zip_sha256": "b287d6676eda20409e0afc8072932a6c74b4e2ed3f365b72fd910017e15a0482",
+    "artifact_contains": [
+      "receipt.json",
+      "source-manifest.json",
+      "verified-lesson.json",
+      "capabilities.py"
+    ],
+    "manifest_sha256": "46e0cb9446779bdcf65dc442897a4775de17dfa04a756af2d8bcd39579550961",
+    "workshop_readonly_return": "COMPLETE",
+    "workshop_return_observed": "OWNER_RETURNED_FULL_JSON_AFTER_LIVE_GET",
+    "workshop_source_sha_at_success": "a878449d82ad8036131588aac9effec19e9554e0"
+  },
+  "lesson_archive": {
+    "repo": "Karmicmurphy/digital-scrapyard-autopilot",
+    "private": true,
+    "path": "warehouse/lessons/candidates/friday-commissioning-003-verified-lesson.json",
+    "merge_commit_sha": "c7e5709e38347875601a47bb44761ac16ad2cf82",
+    "source_member_sha256": "dee3f19d6db5664c02555273f0f88a1b46a4c2ad7a8cbe3cdfc88be35ce68fab",
+    "source_member_bytes": 708,
+    "canonical_digest": "91a6a09cacc1b91cf3ac494cd9d855a66501faab6af6435fcecd36b075e0c423",
+    "action": "VERIFY_FINAL_BYTES_BEFORE_REUSE",
+    "source_status": "PROVEN_IN_TEST",
+    "authority_grants": [],
+    "automatic_runtime_retrieval_proven": false,
+    "automatic_reuse_proven": false,
+    "rule_promoted": false
+  },
+  "shutdown": {
+    "workshop_submit_enabled": false,
+    "read_enabled": true,
+    "cloudflare_production_fail_open": false,
+    "cloudflare_preview_fail_open": false,
+    "no_rerun_003": true,
+    "no_new_dispatch": true
+  },
+  "next_gate": {
+    "id": "FRIDAY_POST_003_LESSON_RETRIEVAL_REUSE_REVIEW",
+    "condition": "Read-only private lesson retrieval and hash/applicability review; any new work separately scoped and approved",
+    "windows_pc": "OWNER_REPORTED_SLEEPING_2026_11_10",
+    "windows_inventory_performed": false,
+    "wake_attempted": false
+  },
+  "retired_claims": [
+    "Current 003 commissioning still awaiting owner submit",
+    "Workshop 003 delivery unproven",
+    "Private Scrapyard candidate lesson not committed"
+  ],
+  "limits": [
+    "Original fixture was disposable and did not activate/publish the repair",
+    "No proof of private lesson reuse by FRIDAY runtime",
+    "No proof of Windows reachability or inventory; PC is asleep per owner report",
+    "Do not change broader authority pins automatically"
+  ]
+}

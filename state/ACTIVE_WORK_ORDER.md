@@ -10,13 +10,13 @@ Lane: FRIDAY / PC WORKSHOP DISPOSABLE AIOS PROOF
 
 ## One next gate
 
-`FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF`
+`FRIDAY_POST_003_LESSON_RETRIEVAL_REUSE_REVIEW`
 
-Commission the new owner-bound request-commissioning-003 only after Foundry main 6e37d786b5f73ea8de03f95ed99ec21cf09113b8, manifest 46e0cb9446779bdcf65dc442897a4775de17dfa04a756af2d8bcd39579550961, and the reviewed disabled Workshop 003 delivery are reconciled. Preserve consumed failed 001/run 42166883135 and 002/run 42702669099 without retry. Verify Access and read-only authenticated status before one owner-approved POST, then independently verify original output, certificate, source manifest, retained Scrapyard lesson and later Workshop retrieval. Immediately shut off new submissions and preserve fail-closed Production/Preview and existing encrypted bindings. No unrelated credential or infrastructure changes.
+Preserve the completed one-shot FRIDAY 003 result (GitHub run 42802809287, certificate cert:f2bcbd32adb65eafadff2b0c4c7d902b, Workshop owner GET COMPLETE) without rerun. Private Scrapyard holds the original verified lesson candidate at warehouse/lessons/candidates/friday-commissioning-003-verified-lesson.json, committed c7e5709e38347875601a47bb44761ac16ad2cf82; perform only read-only hash/provenance/applicability checks before any proposed reuse. Do not auto-apply the lesson, re-pin authority, dispatch another work order or reactivate 003. The owner reports the Windows PC sleeping on 2026-11-10: no Windows inventory, wake, tunnel, or local command until owner confirms the computer awake and separately authorizes that gate. Production submissions remain OFF and fail-closed.
 
 ## Human path
 
-Regular Workshop 003 must first prove Access-authenticated owner status via read-only GET. Only when the reviewed 003 contract, live control SHA and disabled-submit rollback are verified, deliberately submit once as the actual owner. Follow the original GitHub run through Foundry and AIOS, independently verify the receipt, certificate, exact source manifest and Scrapyard lesson, retrieve via the originating Workshop project, then disable submissions.
+The owner does not need to do anything while the PC is sleeping. The next machine-side work is read-only verification of the 003 lesson candidate in private Scrapyard against its original artifact and exact applicability conditions. It may prepare a new proposed useful recovery job but may not dispatch it or promote the lesson without separate authority. For Windows later, wait for explicit owner report that the PC is awake, then run disabled-only local preflight before requesting authorization for one inventory job.
 
 ## Approved component refs
 
@@ -32,6 +32,9 @@ Branch advancement is observation, not automatic promotion.
 
 ## Known evidence
 
+- 2026-11-10 LIVE HOSTED COMMISSIONING 003 COMPLETE: owner-authenticated Workshop GET returned COMPLETE for first/only GitHub Actions workflow_dispatch run 42802809287 (run_attempt 1), request-commissioning-003, job:c47e60f0f0ab972e197b7494, certificate cert:f2bcbd32adb65eafadff2b0c4c7d902b, candidate SHA-256 ac21d433ec92264d47ee56cb4dc51f3217ec00411a7c452e501e97c127859bee; initial fixture tests failed and all three passed after a bounded disposable repair. Signed ZIP metadata digest b287d6676eda20409e0afc8072932a6c74b4e2ed3f365b72fd910017e15a0482; full-source manifest and lesson were independently verified. Certificate is AWAITING_HUMAN_REVIEW, activation_performed=false, no production AIOS change/promotion.
+- 2026-11-10 HOSTED 003 READ-ONLY DELIVERY AND SHUTOFF VERIFIED: Workshop production deployment a878449d82ad8036131588aac9effec19e9554e0 fixed Cloudflare signed-archive retrieval, owner saw COMPLETE with original output and receipt. FRIDAY_THIRD_SUBMIT_ENABLED=false and READ_ENABLED=true; Cloudflare Production/Preview fail_open=false; no second dispatch. Any further job requires separate scope and authority.
+- 2026-11-10 PRIVATE SCRAPYARD LESSON CANDIDATE ARCHIVED: PR #32 merged as c7e5709e38347875601a47bb44761ac16ad2cf82, retaining exact 708-byte verified-lesson.json at warehouse/lessons/candidates/friday-commissioning-003-verified-lesson.json. ZIP-member SHA-256 dee3f19d6db5664c02555273f0f88a1b46a4c2ad7a8cbe3cdfc88be35ce68fab; embedded canonical digest 91a6a09cacc1b91cf3ac494cd9d855a66501faab6af6435fcecd36b075e0c423, PROVEN_IN_TEST, authority_grants empty. PRIVATE REPO STORAGE PROVEN; FRIDAY RUNTIME LESSON RETRIEVAL AND REUSE NOT YET PROVEN.
 - 2026-11-09 PRIVATE SCRAPYARD PINNED CHECKOUT VERIFIED IN REAL GITHUB ACTIONS: run 42735533202 completed successfully with the existing FRIDAY_SCRAPYARD_READ Actions secret selection; checked exact commit cc88a10790d3bb70164e2cf95d0946ed04fa374c and source digest 83073ea7c54b5045d85967b543d943313890613ef2f4edceb81ed399b14fbd06. No private source execution or repair worker.
 - 2026-11-09 REQUEST 002 CONSUMED: original real-owner hosted run 42702669099 passed provider owner/admission but failed private Scrapyard checkout before worker. It must never be rerun. No repair, certificate or lesson was generated.
 - 2026-11-09 FOUNDRY 003 NEW ONE-SHOT CONTRACT: PR #42 merged into main as 6e37d786b5f73ea8de03f95ed99ec21cf09113b8; pull-request CI 42736432569 and post-merge CI 42737050696 passed. This is NOT a live owner submission; Workshop 003 is separately staged disabled.
@@ -60,12 +63,13 @@ Branch advancement is observation, not automatic promotion.
 
 ## Remaining gaps
 
-- REVIEWED_DISABLED_WORKSHOP_003_DELIVERY_AND_LIVE_READ_ONLY_OWNER_CHECK_PENDING
-- COMMISSIONING_003_OWNER_POST_CERTIFICATE_LESSON_RETRIEVAL_AND_SHUTOFF_NOT_PROVEN
+- SCRAPYARD_LESSON_CANDIDATE_SAVED_BUT_RUNTIME_READ_AND_VALIDATED_REUSE_NOT_PROVEN
+- NEW_NON_FIXTURE_USEFUL_RECOVERY_JOB_REQUIRES_ITS_OWN_REVIEWED_AUTHORITY_AND_OWNER_APPROVAL
+- WINDOWS_LOCAL_INVENTORY_DEFERRED_OWNER_REPORTS_PC_SLEEPING
 
 ## Stop condition
 
-Require one verified owner request, matching request and job identities, actual repaired fixture output, independent certificate, exact source manifest and retained lesson. Deny wrong owner and duplicate execution; publication retry must only reuse verified output. Retrieve the receipt after worker exit in the originating Workshop conversation. Fail closed on unavailable authority, budget, identity, source or receipt evidence.
+The previous 003 dispatch is consumed and MUST NOT be rerun. For the current read-only lesson review, confirm the exact private Scrapyard candidate bytes and embedded digest against the first-run artifact; document applicability and source/rights boundary, but grant no auto-reuse or activation. Do not repin canonical authority or enable new submissions. Windows inventory is separately blocked until the owner reports the PC awake and explicitly approves a scoped, disabled-preflighted request.
 
 ## Parked work (not prerequisites)
 
