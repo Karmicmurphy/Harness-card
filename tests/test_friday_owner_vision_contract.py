@@ -36,7 +36,7 @@ class FridayOwnerVisionContractTests(unittest.TestCase):
         self.assertIn("destructive or irreversible mutation", policy["owner_gate_actions"])
         self.assertIn("claim PROVEN_LIVE from tests, builds, deploy metadata, or mockups alone", policy["never_automatic"])
         work = current["work_order"]
-        self.assertEqual(work["gate_id"], "FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF")
+        self.assertEqual(work["gate_id"], "FRIDAY_POST_003_LESSON_RETRIEVAL_REUSE_REVIEW")
         self.assertEqual(work["status"], "ACTIVE")
         historical = json.loads(content("state/receipts/FRIDAY_COMMISSIONING_SUCCESSOR_2026-11-07.json"))
         next_release = json.loads(content("state/receipts/FRIDAY_COMMISSIONING_003_RELEASE_2026-11-09.json"))
@@ -54,8 +54,23 @@ class FridayOwnerVisionContractTests(unittest.TestCase):
         self.assertEqual(next_release["state"], "PREPARED_NOT_ACTIVATED")
         self.assertRegex(work["hosted_fixture"]["workflow_sha"], r"^[0-9a-f]{40}$")
         self.assertEqual([x["request_id"] for x in work["previous_hosted_fixtures"]],
-                         ["request-first-001", "request-commissioning-002"])
+                         ["request-first-001", "request-commissioning-002", "request-commissioning-003"])
         self.assertTrue(all(not x["rerun_authorized"] for x in work["previous_hosted_fixtures"]))
+        closed = work["previous_hosted_fixtures"][-1]
+        self.assertEqual(closed["run_id"], 42802809287)
+        self.assertEqual(closed["status"], "CERTIFIED_DELIVERED_READONLY_CLOSED")
+        self.assertFalse(closed["rerun_authorized"])
+        self.assertFalse(closed["activation_performed"])
+        self.assertIn("WINDOWS_LOCAL_INVENTORY_DEFERRED_OWNER_REPORTS_PC_SLEEPING", work["blockers"])
+        self.assertIn("no Windows inventory", current["next_action"])
+        receipt = json.loads(content("state/receipts/FRIDAY_COMMISSIONING_003_CLOSEOUT_2026-11-10.json"))
+        self.assertEqual(receipt["github"]["run_id"], closed["run_id"])
+        self.assertEqual(receipt["job"]["certificate_id"], closed["certificate_id"])
+        self.assertFalse(receipt["job"]["activation_performed"])
+        self.assertFalse(receipt["shutdown"]["workshop_submit_enabled"])
+        self.assertFalse(receipt["lesson_archive"]["automatic_reuse_proven"])
+        self.assertEqual(receipt["lesson_archive"]["authority_grants"], [])
+
         operator = content("scripts/friday_operator.py")
         self.assertIn("Choose from the fixed local action menu, never from free-form text.", operator)
 
