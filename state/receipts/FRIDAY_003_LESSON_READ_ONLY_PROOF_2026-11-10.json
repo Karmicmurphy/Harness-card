@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "proof_id": "friday-003-original-lesson-provider-read-20261110",
+  "verdict": "PRIVATE_LESSON_RETRIEVED_AND_ORIGINAL_CONDITIONS_MATCH_CANDIDATE_ONLY",
+  "scope": "Foundry GitHub runner read-only source retrieval and validation, not live AIOS reuse, activation, or new-job execution",
+  "foundry": {
+    "repo": "Karmicmurphy/temporal-capability-foundry",
+    "merge_commit": "676477bc5ccddb923b1b543483fd8bf9c3471216",
+    "pr": 43,
+    "workflow": ".github/workflows/friday-003-lesson-readonly-proof.yml",
+    "run_id": 42849214662,
+    "run_attempt": 1,
+    "conclusion": "success",
+    "actor_id": 141688225
+  },
+  "proof_artifact": {
+    "id": 13780435036,
+    "name": "friday-003-readonly-lesson-review",
+    "zip_sha256": "f32ee6a768fc71d89a73ff0f776986721022f3819f39b5ca1e19fca9fbb97cc6",
+    "receipt_json_verified": true
+  },
+  "source": {
+    "private_repo": "Karmicmurphy/digital-scrapyard-autopilot",
+    "commit": "c7e5709e38347875601a47bb44761ac16ad2cf82",
+    "path": "warehouse/lessons/candidates/friday-commissioning-003-verified-lesson.json",
+    "member_sha256": "dee3f19d6db5664c02555273f0f88a1b46a4c2ad7a8cbe3cdfc88be35ce68fab",
+    "canonical_lesson_digest": "91a6a09cacc1b91cf3ac494cd9d855a66501faab6af6435fcecd36b075e0c423",
+    "original_certificate_id": "cert:f2bcbd32adb65eafadff2b0c4c7d902b"
+  },
+  "outcome": {
+    "conditions_match": true,
+    "mismatched_fields": [],
+    "candidate_only": true,
+    "automatic_reuse_authorized": false,
+    "activation_performed": false,
+    "new_job_dispatched": false,
+    "runtime_reuse_proven": false,
+    "actual_windows_access": false
+  },
+  "constraints": [
+    "Existing private read credential used, no new secret/scope",
+    "Workshop job submit remains disabled",
+    "Canonical authority refs not repinned",
+    "Windows host owner-reported asleep; no local commands",
+    "003 old one shot remains consumed; no reruns"
+  ]
+}
