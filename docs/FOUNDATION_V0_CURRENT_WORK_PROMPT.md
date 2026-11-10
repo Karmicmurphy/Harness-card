@@ -22,7 +22,7 @@ Lane: FRIDAY / PC WORKSHOP DISPOSABLE AIOS PROOF
 
 `FRIDAY_POST_003_LESSON_RETRIEVAL_REUSE_REVIEW`
 
-Original 003 is CERTIFIED_DELIVERED_READONLY_CLOSED and must never run again. The archived private Scrapyard lesson was independently retrieved and original-condition validated by Foundry GitHub runner 42849214662; the lesson remains a candidate, not an auto-applied rule or AIOS-runtime reuse proof. Under the existing post-003 review gate, prepare only one read-only proposed useful recovery job with exact source/provenance, expected outcome, budget, and authority packet for separate owner approval; do not dispatch, promote, repin or activate anything automatically. Owner reports the Windows PC sleeping: no inventory, wake, tunnel, or local command until owner reports it awake and separately authorizes that job. Workshop submission remains OFF and Cloudflare fail-closed.
+Original 003 is CERTIFIED_DELIVERED_READONLY_CLOSED and must never run again. The archived private Scrapyard lesson was independently retrieved and original-condition validated by Foundry GitHub runner 42849214662; the lesson remains a candidate, not an auto-applied rule or AIOS-runtime reuse proof. Under the existing post-003 review gate, prepare only one read-only proposed useful recovery job with exact source/provenance, expected outcome, budget, and authority packet for separate owner approval; do not dispatch, promote, repin or activate anything automatically. Owner reports the Windows PC sleeping: no Windows inventory, wake, tunnel, or local command until owner reports it awake and separately authorizes that job. Workshop submission remains OFF and Cloudflare fail-closed.
 
 ## Human path
 
