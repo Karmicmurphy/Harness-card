@@ -404,6 +404,6 @@
         "foundation_authority": false
       }
     ],
-    "next": "Complete the consolidated successor release review: Foundry PR #41 at 74039e9103848922fa5cb7fbc13f830bd0abb1d7 passed hosted Linux CI 42409179968, but default-branch promotion requires explicit owner approval. Preserve failed request-first-001/run 42166883135. Bind request-commissioning-002 to the exact reviewed UTF-8 source, then require regular Workshop owner authentication, one deliberate submission, original output and receipt retrieval, and submission shutdown. No successor hosted job has executed. Existing zero-additional-spend boundaries remain; no credential replacement is authorized by this candidate."
+    "next": "Commission the new owner-bound request-commissioning-003 only after Foundry main 6e37d786b5f73ea8de03f95ed99ec21cf09113b8, manifest 46e0cb9446779bdcf65dc442897a4775de17dfa04a756af2d8bcd39579550961, and the reviewed disabled Workshop 003 delivery are reconciled. Preserve consumed failed 001/run 42166883135 and 002/run 42702669099 without retry. Verify Access and read-only authenticated status before one owner-approved POST, then independently verify original output, certificate, source manifest, retained Scrapyard lesson and later Workshop retrieval. Immediately shut off new submissions and preserve fail-closed Production/Preview and existing encrypted bindings. No unrelated credential or infrastructure changes."
   }
 }
