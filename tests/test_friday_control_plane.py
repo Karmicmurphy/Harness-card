@@ -45,8 +45,8 @@ assert "Unresolved prevention candidates" in module.render_markdown(status)
 
 assert status["blockers"]["owner_attention_required"] is True, status
 assert status["blockers"]["owner_gate"] == [
-    "CONSOLIDATED_SUCCESSOR_RELEASE_REQUIRES_OWNER_APPROVAL_AFTER_REVIEWER_DENIAL",
-    "CORRECTED_WORKSHOP_OWNER_REQUEST_AND_VERIFIED_RESULT_DELIVERY_NOT_PROVEN",
+    "REVIEWED_DISABLED_WORKSHOP_003_DELIVERY_AND_LIVE_READ_ONLY_OWNER_CHECK_PENDING",
+    "COMMISSIONING_003_OWNER_POST_CERTIFICATE_LESSON_RETRIEVAL_AND_SHUTOFF_NOT_PROVEN",
 ], status
 assert status["next_machine_action"] == "STOP_AT_OWNER_GATE_WITH_PRECISE_REQUEST", status
 rendered = module.render_markdown(status)
