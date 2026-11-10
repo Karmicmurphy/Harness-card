@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "state": "PREPARED_NOT_ACTIVATED",
+  "release_id": "foundation-commissioning-003-release-20261109",
+  "hosted_fixture": {
+    "request_id": "request-commissioning-003",
+    "recipe": "aios-path-containment-fixture-v1",
+    "owner_github_id": 141688225,
+    "manifest_sha256": "46e0cb9446779bdcf65dc442897a4775de17dfa04a756af2d8bcd39579550961",
+    "workflow_sha": "6e37d786b5f73ea8de03f95ed99ec21cf09113b8"
+  },
+  "workflow": ".github/workflows/friday-commissioning-003.yml",
+  "foundry_review": {
+    "pr": "https://github.com/Karmicmurphy/temporal-capability-foundry/pull/42",
+    "merge_sha": "6e37d786b5f73ea8de03f95ed99ec21cf09113b8",
+    "ci_pr": 42736432569,
+    "ci_post_merge": 42737050696
+  },
+  "credential_preflight": {
+    "run_id": 42735533202,
+    "status": "PINNED_PRIVATE_READ_VERIFIED",
+    "source_execution": false
+  },
+  "prior_failures": [
+    {
+      "request_id": "request-first-001",
+      "run_id": 42166883135,
+      "workflow_sha": "99ff4900f192c07becbc39989f1b8f282145f490",
+      "manifest_sha256": "4d4e1956d8bb4cca939e3ce025ff4bfb5dc581ffef328dda34d1404f5cc98704",
+      "status": "FAILED_BEFORE_WORKER",
+      "rerun_authorized": false
+    },
+    {
+      "request_id": "request-commissioning-002",
+      "run_id": 42702669099,
+      "workflow_sha": "08f86bcfed3a9e41a0cb95ef0112db32082dc479",
+      "manifest_sha256": "b160b07429a29e7fe8fe7aa1c237da7dc519fb18201b71b468ee2863c01c1d7b",
+      "status": "FAILED_BEFORE_WORKER",
+      "rerun_authorized": false
+    }
+  ],
+  "workshop_delivery": {
+    "pull_request": "https://github.com/Karmicmurphy/Ollie_Twis_Holo_workshop/pull/33",
+    "status": "DRAFT_NOT_DEPLOYED_FOR_003",
+    "submit_enabled": false
+  },
+  "limits": [
+    "Same reviewed disposable recipe and fixed five source refs",
+    "Real owner identity, exact approved control SHA, one first run only",
+    "No retries on unknown transport result, no activation or production writes by worker",
+    "No dispatch before Access owner check, independent proof retrieval and shutoff plan",
+    "Previous failed requests remain consumed, no token replacement or added spending"
+  ]
+}

@@ -38,19 +38,24 @@ class FridayOwnerVisionContractTests(unittest.TestCase):
         work = current["work_order"]
         self.assertEqual(work["gate_id"], "FRIDAY_PC_WORKSHOP_DISPOSABLE_AIOS_PROOF")
         self.assertEqual(work["status"], "ACTIVE")
-        successor = json.loads(content("state/receipts/FRIDAY_COMMISSIONING_SUCCESSOR_2026-11-07.json"))
-        self.assertEqual(work["hosted_fixture"], successor["hosted_fixture"])
+        historical = json.loads(content("state/receipts/FRIDAY_COMMISSIONING_SUCCESSOR_2026-11-07.json"))
+        next_release = json.loads(content("state/receipts/FRIDAY_COMMISSIONING_003_RELEASE_2026-11-09.json"))
+        self.assertEqual(work["hosted_fixture"], next_release["hosted_fixture"])
         self.assertEqual(work["hosted_fixture"], {
-            "request_id": "request-commissioning-002",
+            "request_id": "request-commissioning-003",
             "recipe": "aios-path-containment-fixture-v1",
             "owner_github_id": 141688225,
-            "manifest_sha256": "b160b07429a29e7fe8fe7aa1c237da7dc519fb18201b71b468ee2863c01c1d7b",
-            "workflow_sha": successor["hosted_fixture"]["workflow_sha"],
+            "manifest_sha256": "46e0cb9446779bdcf65dc442897a4775de17dfa04a756af2d8bcd39579550961",
+            "workflow_sha": "6e37d786b5f73ea8de03f95ed99ec21cf09113b8",
         })
-        self.assertEqual(successor["reviewed_control_tree"], "ce2a9ece7e35720afe705140dcbd9be42bf0bcf8")
+        # A past approval is an immutable historical record, not current authority.
+        self.assertEqual(historical["hosted_fixture"]["request_id"], "request-commissioning-002")
+        self.assertEqual(historical["reviewed_control_tree"], "ce2a9ece7e35720afe705140dcbd9be42bf0bcf8")
+        self.assertEqual(next_release["state"], "PREPARED_NOT_ACTIVATED")
         self.assertRegex(work["hosted_fixture"]["workflow_sha"], r"^[0-9a-f]{40}$")
-        self.assertEqual(work["previous_hosted_fixtures"][0]["request_id"], "request-first-001")
-        self.assertFalse(work["previous_hosted_fixtures"][0]["rerun_authorized"])
+        self.assertEqual([x["request_id"] for x in work["previous_hosted_fixtures"]],
+                         ["request-first-001", "request-commissioning-002"])
+        self.assertTrue(all(not x["rerun_authorized"] for x in work["previous_hosted_fixtures"]))
         operator = content("scripts/friday_operator.py")
         self.assertIn("Choose from the fixed local action menu, never from free-form text.", operator)
 
