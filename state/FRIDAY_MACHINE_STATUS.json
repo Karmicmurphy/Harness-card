@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-14T18:26:18.508947+00:00",
+  "generated_at": "2026-11-15T12:48:37.216033+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
   "lane": "FRIDAY / PC WORKSHOP DISPOSABLE AIOS PROOF",
@@ -54,7 +54,7 @@
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-11-14T18:26:18.508947+00:00",
+    "observed_at": "2026-11-15T12:48:37.216033+00:00",
     "match": 1,
     "reconciliation_required": 4,
     "unknown": 0,
@@ -64,7 +64,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "e1767738e59f3b7da0a76b42c1ef5f5a258dbe20",
+        "observed_sha": "b0cfce34fe7a1d2d4b9255e8ec43eae8fc3cb018",
         "state": "OBSERVED_GOVERNANCE"
       },
       {
@@ -96,7 +96,7 @@
         "repo": "Karmicmurphy/Ollie_Twis_Holo_workshop",
         "branch": "living-workshop-main-build",
         "approved_sha": "1785ed1405e769a17ec22066dc1e27a40dbf153b",
-        "observed_sha": "a878449d82ad8036131588aac9effec19e9554e0",
+        "observed_sha": "18c5b6aca732b0332cf1c9daa4ac941d5c0a26c4",
         "state": "RECONCILIATION_REQUIRED"
       }
     ]
@@ -202,7 +202,7 @@
     "unresolved_incident_prevention_count": 8,
     "weird_salvage_count": 2,
     "friday_operator_outcomes": {
-      "runs": 26,
+      "runs": 27,
       "repaired_runs": 0,
       "failed_repairs": 0,
       "retry_recovered_runs": 0,
