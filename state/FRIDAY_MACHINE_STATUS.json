@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-17T21:16:38.798113+00:00",
+  "generated_at": "2026-11-18T14:10:42.182323+00:00",
   "active_project": "FOUNDATION V0 — HUMAN-OWNED SOFTWARE FACTORY",
   "evidence_state": "PARTIALLY_PROVEN",
   "lane": "FRIDAY / PC WORKSHOP DISPOSABLE AIOS PROOF",
@@ -54,7 +54,7 @@
   },
   "remote_authority_observation": {
     "state": "RECONCILIATION_REQUIRED",
-    "observed_at": "2026-11-17T21:16:38.798113+00:00",
+    "observed_at": "2026-11-18T14:10:42.182323+00:00",
     "match": 1,
     "reconciliation_required": 4,
     "unknown": 0,
@@ -64,7 +64,7 @@
         "repo": "Karmicmurphy/Harness-card",
         "branch": "main",
         "approved_sha": null,
-        "observed_sha": "742869f6ed93f82106ff794cbdfd8f8fa87fa551",
+        "observed_sha": "2ea39ff8cf7485d857675efcc527eeb11b12ad43",
         "state": "OBSERVED_GOVERNANCE"
       },
       {
@@ -202,7 +202,7 @@
     "unresolved_incident_prevention_count": 8,
     "weird_salvage_count": 2,
     "friday_operator_outcomes": {
-      "runs": 29,
+      "runs": 30,
       "repaired_runs": 0,
       "failed_repairs": 0,
       "retry_recovered_runs": 0,
